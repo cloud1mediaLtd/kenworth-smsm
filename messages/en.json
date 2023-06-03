@@ -1,0 +1,65 @@
+{
+  "Name": {
+    "title": "S.Med sea Motors",
+    "slogan": "Slogan"
+  },
+  "IndexPage": {
+    "title": "Welcome",
+    "description": "We proudly offer a wide range of vehicles from renowned brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, and Mopar. From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for all your automotive needs."
+  },
+  "AboutPage": {
+    "title": "About",
+    "description": "<p>We proudly offer a wide range of vehicles from renowned brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, and Mopar.</p><p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for all your automotive needs.</p>"
+  },
+  "PartsPage": {
+    "title": "Parts",
+    "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.Our inventory consists of original parts from reputable brands like Mopar, ensuring the highest quality and compatibility with your vehicle.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  },
+  "LocaleLayout": {
+    "title": "next-intl example"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {Arabic} en {English} other {Unknown}}"
+  },
+  "Navigation": {
+    "home": {
+      "title": "Home",
+      "href": "/"
+    },
+    "about": {
+      "title": "About",
+      "href": "/about"
+    },
+    "vehicles": {
+      "title": "Vehicles",
+      "href": "/vehicles"
+    },
+    "parts": {
+      "title": "Spare Parts",
+      "href": "/spareparts"
+    },
+    "contact": {
+      "title": "Contact",
+      "href": "/contact"
+    }
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "title": "Vehicles",
+        "description": "Check out our available models.",
+        "href": "/vehicles"
+      },
+      "source": {
+        "title": "Spare Parts",
+        "description": "Original Mopar spare parts.",
+        "href": "/spareparts"
+      }
+    }
+  }
+}
