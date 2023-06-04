@@ -48,7 +48,19 @@
       "href": "/contact"
     }
   },
+  "Hero": {
+    "title": "New 2024 models available now",
+    "description": "The new arrivals have, well, newly arrived. Check out the latest options and accessories.",
+    "button": "Learn More"
+  },
+
   "Categories": {
+    "content": {
+      "title": "Categories",
+      "description": "Check out our new arrivals.",
+      "browseAll": " Browse all categories"
+    },
+
     "newArrivals": {
       "title": "New Arrivals",
       "description": "Check out our new arrivals.",

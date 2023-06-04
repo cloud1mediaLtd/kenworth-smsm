@@ -51,7 +51,18 @@
     }
   },
 
+  "Hero": {
+    "title": "طرازات 2024 الجديدة متوفرة الآن",
+    "description": "الوافدون الجدد وصلوا حديثًا. تحقق من أحدث الخيارات والملحقات.",
+    "button": "Learn More"
+  },
+
   "Categories": {
+    "content": {
+      "title": "فئات",
+      "description": "Check out our new arrivals.",
+      "browseAll": "تصفح جميع الفئات"
+    },
     "newArrivals": {
       "title": "الوافدين الجدد",
       "description": "تحقق من آخر الوافدين الجدد.",

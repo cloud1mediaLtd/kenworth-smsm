@@ -246,16 +246,16 @@ const Navigation = () => {
 
                   <div className="flex items-center">
                     <a
-                      href="#"
+                      href="tel:+218913868093"
                       className={`text-sm font-medium text-white hover:text-gray-100 ${isRTL ? 'pl-6' : 'pr-6'}`}
                     >
-                      Number
+                      +218 91 386 8093
                     </a>
                     <a
                       href="#"
                       className='text-sm font-medium text-white hover:text-gray-100 '
                     >
-                      Email
+                      info@smsm.ly
                     </a>
                   </div>
                 </div>
@@ -374,7 +374,7 @@ const Navigation = () => {
                       </div>
                       <div className="flex flex-1 items-center lg:hidden">
                         <Link href="/" className={`flex items-center justify-center lg:hidden ${isRTL ? 'ml-auto' : 'mr-auto'}`}>
-                          <span className="sr-only">Your Company</span>
+                          <span className="sr-only">Smsm</span>
                           <img src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="" className="h-8 w-auto" />
                         </Link>
                       </div>
@@ -382,7 +382,7 @@ const Navigation = () => {
                       {/* Logo (lg-) */}
                       <div className={`flex items-center ${isRTL ? 'mr-8' : 'lg:ml-8'}`}>
                         {/* Help */}
-                        <a href="#" className="p-2 text-white">
+                        <a href="/help" className="p-2 text-white">
                           <span className="sr-only">Help</span>
                           <QuestionMarkCircleIcon className="h-6 w-6" aria-hidden="true" />
                         </a>
