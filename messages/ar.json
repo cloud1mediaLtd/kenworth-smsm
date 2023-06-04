@@ -50,6 +50,34 @@
       "href": "/contact"
     }
   },
+
+  "Categories": {
+    "newArrivals": {
+      "title": "الوافدين الجدد",
+      "description": "تحقق من آخر الوافدين الجدد.",
+      "href": "/newarrivals"
+    },
+    "vehicles": {
+      "title": "المركبات",
+      "description": "تحقق من طرازاتنا المتاحة.",
+      "href": "/vehicles"
+    },
+    "spareParts": {
+      "title": "قطع الغيار",
+      "description": "قطع غيار أصلية من Mopar.",
+      "href": "/spareparts"
+    },
+    "service": {
+      "title": "الخدمة",
+      "description": "نقدم مجموعة واسعة من الخدمات.",
+      "href": "/service"
+    },
+    "sale": {
+      "title": "التخفيضات",
+      "description": "تحقق من عروض البيع لدينا.",
+      "href": "/sale"
+    }
+  },
   "PageLayout": {
     "links": {
       "docs": {

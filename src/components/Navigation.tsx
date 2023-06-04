@@ -353,7 +353,7 @@ const Navigation = () => {
                         </Popover.Group>
                       </div>
                       */}
-                      <div className='flex'>
+                      <div className='hidden lg:flex'>
                         {mainNavigation.map(({ key, href, title }) => (
                           <Link className={` flex items-center text-sm font-medium text-white ${isRTL ? 'pl-6' : 'pr-6'}`} key={key} href={href}>
                             {title}

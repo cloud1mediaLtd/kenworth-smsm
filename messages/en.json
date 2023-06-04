@@ -48,6 +48,34 @@
       "href": "/contact"
     }
   },
+  "Categories": {
+    "newArrivals": {
+      "title": "New Arrivals",
+      "description": "Check out our new arrivals.",
+      "href": "/newarrivals"
+    },
+    "vehicles": {
+      "title": "Vehicles",
+      "description": "Check out our available models.",
+      "href": "/vehicles"
+    },
+    "spareParts": {
+      "title": "Spare Parts",
+      "description": "Original Mopar spare parts.",
+      "href": "/spareparts"
+    },
+    "service": {
+      "title": "Service",
+      "description": "We offer a wide range of services.",
+      "href": "/service"
+    },
+    "sale": {
+      "title": "Sale",
+      "description": "Check out our sale items.",
+      "href": "/sale"
+    }
+  },
+
   "PageLayout": {
     "links": {
       "docs": {
