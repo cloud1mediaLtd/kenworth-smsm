@@ -1,7 +1,8 @@
 {
   "Name": {
     "title": "S.Med sea Motors",
-    "slogan": "Slogan"
+    "slogan": "Slogan",
+    "tel": "+218 91 386 8093"
   },
   "IndexPage": {
     "title": "Welcome",
@@ -15,12 +16,21 @@
     "title": "Parts",
     "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.Our inventory consists of original parts from reputable brands like Mopar, ensuring the highest quality and compatibility with your vehicle.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>"
   },
+  "ServicePage": {
+    "title": "Service",
+    "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.Our inventory consists of original parts from reputable brands like Mopar, ensuring the highest quality and compatibility with your vehicle.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>"
+  },
+  "CareerPage": {
+    "title": "Career",
+    "description": "<p>We are the proud official dealer of Stellantis, representing a diverse range of prestigious brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, and Mopar. We also offer genuine spare parts, ensuring the highest quality and compatibility for our customers' vehicles. With our well-equipped workshop located in Tripoli, our skilled technicians provide top-notch service, maintenance, and repairs to keep our customers' vehicles running smoothly. We take pride in offering comprehensive warranty coverage, providing peace of mind and reassurance to our valued customers.</p><p>Joining our team  means becoming part of a dynamic and innovative automotive environment. We value the skills and expertise of our dedicated professionals who contribute to our success. Whether you are passionate about sales, customer service, technical expertise, or other areas of the automotive industry, we provide opportunities for growth, career development, and a rewarding work experience. If you want to be part of a team that strives for excellence, we invite you to explore and apply for the position that suits you.</p>",
+    "openPositions": "Open positions"
+  },
   "NotFoundPage": {
     "title": "Page not found",
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
   },
   "LocaleLayout": {
-    "title": "next-intl example"
+    "title": "S.Med Sea Motors"
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -42,6 +52,10 @@
     "parts": {
       "title": "Spare Parts",
       "href": "/spareparts"
+    },
+    "services": {
+      "title": "Service",
+      "href": "/service"
     },
     "contact": {
       "title": "Contact",
@@ -81,8 +95,8 @@
       "description": "We offer a wide range of services.",
       "href": "/service"
     },
-    "sale": {
-      "title": "Sale",
+    "special": {
+      "title": "Special Offers",
       "description": "Check out our sale items.",
       "href": "/sale"
     }

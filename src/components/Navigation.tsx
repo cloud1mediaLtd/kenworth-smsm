@@ -120,6 +120,7 @@ const Navigation = () => {
     { key: 'about', href: '/about', title: t('about.title') },
     { key: 'vehicles', href: '/vehicles', title: t('vehicles.title') },
     { key: 'parts', href: '/parts', title: t('parts.title') },
+    { key: 'service', href: '/service', title: t('services.title') },
     { key: 'contact', href: '/contact', title: t('contact.title') },
   ];
 
@@ -240,16 +241,17 @@ const Navigation = () => {
             <nav aria-label="Top">
               {/* Top navigation */}
               <div className="bg-gray-900">
-                <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-4 lg:px-8 xl:px-0">
                   {/* Currency selector */}
                   <LocaleSwitcher />
 
-                  <div className="flex items-center">
+                  <div className="flex items-center" dir='ltr'>
                     <a
+                      dir='ltr'
                       href="tel:+218913868093"
-                      className={`text-sm font-medium text-white hover:text-gray-100 ${isRTL ? 'pl-6' : 'pr-6'}`}
+                      className={`text-sm font-medium text-white hover:text-gray-100 ${isRTL ? 'pr-6' : 'pr-6'}`}
                     >
-                      +218 91 386 8093
+                      <span className="ltr">+218 91 386 8093</span>
                     </a>
                     <a
                       href="#"
@@ -263,11 +265,11 @@ const Navigation = () => {
 
               {/* Secondary navigation */}
               <div className="bg-white bg-opacity-10 backdrop-blur-md backdrop-filter">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl px-4 sm:px-4 lg:px-8 xl:px-0">
                   <div>
                     <div className="flex h-16 items-center justify-between">
                       {/* Logo (lg+) */}
-                      <div className="hidden lg:flex">
+                      <div className={`hidden lg:flex ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
                         <a href="#">
                           <span className="sr-only">Your Company</span>
                           <img
@@ -394,10 +396,6 @@ const Navigation = () => {
             </nav>
           </header>
         </div>
-
-
-
-
       </div>
     </section>
   );

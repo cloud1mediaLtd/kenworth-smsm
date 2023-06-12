@@ -1,24 +1,27 @@
 "use client";
 import PageLayout from "components/PageLayout";
-import Brands from "components/brands";
-import PartsFinder from "components/partsFinder/partsFinder";
+
 import { useTranslations } from "next-intl";
 
 
-export default function partsPage() {
-    const t = useTranslations('IndexPage');
+export default function careerPage() {
+    const t = useTranslations('CareerPage');
 
     return (
         <section className=''>
 
             <PageLayout title={t('title')}>
-                <div className="max-w-2xl">
+                <div className="">
                     {t.rich('description', {
                         p: (chunks) => <p className="mt-4">{chunks}</p>,
 
                     })}
                 </div>
-                <Brands />
+
+                <div className="mt-8">
+                    <h2 className="text-2xl font-bold text-gray-700">{t('openPositions')}</h2>
+
+                </div>
             </PageLayout>
 
 

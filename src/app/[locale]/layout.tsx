@@ -6,6 +6,7 @@ import { ReactNode } from 'react';
 import Navigation from 'components/Navigation';
 import Footer from 'components/footer';
 import Categories from 'components/categories';
+import { ClerkProvider } from '@clerk/nextjs'
 
 const tajawal = Tajawal({
   weight: '500',
@@ -51,20 +52,23 @@ export default async function LocaleLayout({
   const messages = await getMessages(locale);
 
   const isRTL = locale === 'ar';
-  const font = isRTL ? tajawal : inter;
+  const font = isRTL ? inter : inter;
 
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
       <body className={clsx(font.className, '')}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navigation />
-          {children}
-          <section className=''>
-            <Categories />
-          </ section>
-
-          <Footer />
-        </NextIntlClientProvider>
+        <ClerkProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navigation />
+            <section className=''>
+              {children}
+              <section className=''>
+                <Categories />
+              </ section>
+            </section>
+            <Footer />
+          </NextIntlClientProvider>
+        </ClerkProvider>
       </body>
     </html>
   );

@@ -21,35 +21,35 @@ export default function Categories() {
     const categories = [] = [
         {
             key: t('newArrivals.title'),
-            href: '#',
+            href: '/new',
             imageSrc: '/fiatThumb.webp',
         },
         {
             key: t('vehicles.title'),
-            href: '#',
+            href: '/vehicles',
             imageSrc: '/jeep.jpg',
         },
         {
             key: t('spareParts.title'),
-            href: '#',
+            href: '/parts',
             imageSrc: '/parts.jpeg',
         },
         {
             key: t('service.title'),
-            href: '#',
+            href: '/service',
             imageSrc: '/moparService.jpeg',
         },
-        { key: t('sale.title'), href: '#', imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg' },
+        { key: t('special.title'), href: '#', imageSrc: '/saleRed.png' },
     ]
 
     return (
 
-        <section aria-labelledby="category-heading" className="pt-24 sm:pt-12 xl:mx-auto xl:max-w-7xl xl:px-8">
-            <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
-                <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
+        <section aria-labelledby="category-heading" className="sm:pt-8 xl:mx-auto xl:max-w-7xl">
+            <div className=" sm:flex sm:items-center sm:justify-between px-5 lg:px-8 xl:px-0">
+                <h2 id="category-heading" className=" text-2xl font-bold tracking-tight text-gray-900">
                     {t('content.title')}
                 </h2>
-                <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+                <a href="#" className=" hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:blocksm:px-8 lg:px-8 xl:px-0">
                     {t('content.browseAll')}
                     <span aria-hidden="true"> {`${isRTL ? '\u2190' : '\u2192'}`}</span>
                 </a>
@@ -57,29 +57,29 @@ export default function Categories() {
 
 
 
-            <div className="mt-4">
-                <div className="-my-2">
-                    <div className="relative  py-2">
-                        <div className="  relative grid grid-cols-1 md:grid-cols-5 gap-5">
-                            {categories.map((category) => (
-                                <a
-                                    key={category.key}
-                                    href={category.href}
-                                    className="relative flex h-32 md:h-72 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75"
-                                >
-                                    <span aria-hidden="true" className="absolute inset-0">
-                                        <img src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
-                                    </span>
-                                    <span
-                                        aria-hidden="true"
-                                        className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
-                                    />
-                                    <span className="relative mt-auto text-center text-xl font-bold text-white">{category.key}</span>
-                                </a>
-                            ))}
-                        </div>
+            <div className="mt-5">
+
+                <div className="relative px-5 lg:px-8 xl:px-0">
+                    <div className="relative grid grid-cols-1 md:grid-cols-5 gap-5">
+                        {categories.map((category) => (
+                            <a
+                                key={category.key}
+                                href={category.href}
+                                className="relative flex h-32 md:h-72 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75"
+                            >
+                                <span aria-hidden="true" className="absolute inset-0">
+                                    <img src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
+                                </span>
+                                <span
+                                    aria-hidden="true"
+                                    className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                                />
+                                <span className="relative mt-auto text-center text-xl font-bold text-white">{category.key}</span>
+                            </a>
+                        ))}
                     </div>
                 </div>
+
             </div>
 
             <div className="mt-6 px-4 sm:hidden">

@@ -1,24 +1,23 @@
 "use client";
 import PageLayout from "components/PageLayout";
-import Brands from "components/brands";
 import PartsFinder from "components/partsFinder/partsFinder";
 import { useTranslations } from "next-intl";
 
 
-export default function partsPage() {
-    const t = useTranslations('IndexPage');
+export default function servicePage() {
+    const t = useTranslations('ServicePage');
 
     return (
         <section className=''>
 
             <PageLayout title={t('title')}>
-                <div className="max-w-2xl">
+                <div className="">
                     {t.rich('description', {
-                        p: (chunks) => <p className="mt-4">{chunks}</p>,
+                        p: (chunks) => <p className="mt-4 text-lg">{chunks}</p>,
 
                     })}
-                </div>
-                <Brands />
+                </div>                <PartsFinder />
+
             </PageLayout>
 
 
