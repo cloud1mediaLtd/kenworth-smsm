@@ -6,7 +6,6 @@ import { ReactNode } from 'react';
 import Navigation from 'components/Navigation';
 import Footer from 'components/footer';
 import Categories from 'components/categories';
-import { ClerkProvider } from '@clerk/nextjs'
 
 const tajawal = Tajawal({
   weight: '500',
