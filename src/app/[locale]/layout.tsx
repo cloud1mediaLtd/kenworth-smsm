@@ -56,18 +56,16 @@ export default async function LocaleLayout({
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
       <body className={clsx(font.className, '')}>
-        <ClerkProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <Navigation />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navigation />
+          <section className=''>
+            {children}
             <section className=''>
-              {children}
-              <section className=''>
-                <Categories />
-              </ section>
-            </section>
-            <Footer />
-          </NextIntlClientProvider>
-        </ClerkProvider>
+              <Categories />
+            </ section>
+          </section>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
