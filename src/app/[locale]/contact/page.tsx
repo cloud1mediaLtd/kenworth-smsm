@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 
 export default function partsPage() {
-    const t = useTranslations('IndexPage');
+    const t = useTranslations('ContactPage');
 
     return (
         <section className=''>

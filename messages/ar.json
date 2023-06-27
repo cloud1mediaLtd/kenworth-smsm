@@ -12,13 +12,21 @@
     "title": "ﻣﻌﻠﻮﻣﺎت ﻋﻨﺎ",
     "description": "<p>اﻟﺘﻮﺟﻴﻪ ﻳﺪﻋﻢ اﻟﺪول واﻟﻠﻐﺎت اﻟﻤﺘﻌﺪدة ﺃﻳﻀًﺎ.</p><p>ﺇذا ﻛﻨﺖ ﺗﺴﺘﺨﺪم اﻟﻠﻐﺔ اﻻﻓﺘﺮاﺿﻴﺔ اﻹﻧﺠﻠﻴﺰﻳﺔ، ﺳﺘﺮى ﻓﻲ ﺷﺮﻳﻂ ﻋﻨﻮان اﻟﻤﺘﺼﻔﺢ ﻋﻠﻰ ﻫﺬه اﻟﺼﻔﺤﺔ.</p><p>ﺇذا ﻗﻤﺖ ﺑﺘﻐﻴﻴﺮ اﻟﻠﻐﺔ ﺇﻟﻰ اﻟﻌﺮﺑﻴﺔ، ﺳﻴﺘﻢ ﺇﺿﺎﻓﺔ اﻟﺮﻣﺰ اﻟﺪوﻟﻲ ﻟﻠﻐﺔ ﻓﻲ ﺑﺪاﻳﺔ ﻋﻨﻮان اﻟﺮاﺑﻂ.</p>"
   },
+  "VehiclesPage": {
+    "title": "ﻤﺮﻛﺒﺎت",
+    "description": "<p>نحن نقدم بفخر مجموعة واسعة من السيارات من العلامات التجارية الشهيرة مثل جيب ودودج ورام و SRT وفيات وكرايسلر وموبار. من المبيعات إلى الخدمة ، نقدم منتجات عالية الجودة وصيانة الخبراء لإبقائك على الطريق. اكتشف التميز في مجال السيارات في S.Med Sea Motors ، شريكك الموثوق به لجميع احتياجات السيارات الخاصة بك. </p>"
+  },
 
   "PartsPage": {
     "title": "ﻗﻄﻊ ﻏﻴﺎر",
-    "description": "<p>ﺳﻮاء ﻛﻨﺖ ﻓﻲ ﺣﺎﺟﺔ ﺇﻟﻰ ﻗﻄﻌﺔ ﻏﻴﺎر ﺃو ﺗﺘﻄﻠﻊ ﺇﻟﻰ ﺗﺤﺴﻴﻦ اداء ﺳﻴﺎرﺗﻚ ، ﻓﻨﺤﻦ ﻧﻮﻓﺮ ﻟﻚ ﻣﺎ ﺗﺤﺘﺎﺟﻪ ﻧﺤﻦ ﻧﻔﺨﺮ ﺑﺘﺰوﻳﺪ ﻋﻤﻼﺋﻨﺎ ﺑﺈﻣﻜﺎﻧﻴﺔ اﻟﻮﺻﻮل ﺇﻟﻰ ﻣﺠﻤﻮﻋﺔ واﺳﻌﺔ ﻣﻦ ﻗﻄﻊ اﻟﻏﻴﺎر اﻷﺻﻠﻴﺔ ﻟﺴﻴﺎراﺗﻚ.</p><p>ﻳﺘﻜﻮن ﻣﺨﺰوﻧﻨﺎ ﻣﻦ ﻗﻄﻊ ﻏﻴﺎر ﺃﺻﻠﻴﺔ ﻣﻦ ﻋﻼﻣﺎت ﺗﺠﺎرﻳﺔ ﻣﺮﻣﻮﻗﺔ ﻣﺜﻞ ﻣﻮﺑﺎر ، ﻣﻤﺎ ﻳﻀﻤﻦ ﺃﻋﻠﻰ ﻣﺴﺘﻮﻳﺎت اﻟﺠﻮدة واﻟﺘﻮاﻓﻖ ﻣﻊ ﺳﻴﺎرﺗﻚ.</p><p>ﻓﺮﻳﻘﻨﺎ ﺟﺎﻫﺰ ﻟﻤﺴﺎﻋﺪﺗﻚ ﻓﻲ اﻟﻌﺜﻮر ﻋﻠﻰ اﻟﺠﺰء اﻟﻤﻨﺎﺳﺐ ﻻﺣﺘﻴﺎﺟﺎﺗﻚ اﻟﺨﺎﺻﺔ ، ﻓﻘﻂ اﺗﺼﻞ ﺑﻨﺎ ﺃو اﺳﺘﺨﺪم ﺧﺪﻣﺔ اﻟﻌﺜﻮر ﻋﻠﻰ اﻷﺟﺰاء.</p><p>ﺑﺎﻹﺿﺎﻓﺔ ﺇﻟﻰ ﻣﺠﻤﻮﻋﺘﻨﺎ اﻟﻮاﺳﻌﺔ ﻣﻦ ﻗﻄﻊ اﻟﻐﻴﺎر ، ﻓﺈﻧﻨﺎ ﻧﻘﺪم ﺃﻳﻀًﺎ ﺧﺪﻣﺔ اﺳﺘﺜﻨﺎﺋﻴﺔ ﻟﻤﺴﺎﻋﺪﺗﻚ ﻓﻲ ﻋﻤﻠﻴﺎت اﻟﺘﺮﻛﻴﺐ واﻹﺻﻼح واﻟﺼﻴﺎﻧﺔ. ﺛﻖ ﺑﻨﺎ ﻟﺘﻠﺒﻴﺔ ﺟﻤﻴﻊ اﺣﺘﻴﺎﺟﺎﺗﻚ ﻣﻦ ﻗﻄﻊ ﻏﻴﺎر اﻟﺴﻴﺎرات واﺧﺘﺒﺮ اﻟﻔﺮق اﻟﺬي ﻳﻤﻜﻦ ﺃن ﺗﺤﺪﺛﻪ ﻗﻄﻊ اﻟﻐﻴﺎر اﻷﺻﻠﻴﺔ وﺧﺪﻣﺔ اﻟﺨﺒﺮاء ﻟﺴﻴﺎرﺗﻚ وﺇﻃﺎﻟﺔ ﻋﻤﺮﻫﺎ ﻋﻠﻰ اﻟﻄﺮﻳﻖ.</p>"
+    "description": "<p>نحن نقدم بفخر مجموعة واسعة من السيارات من العلامات التجارية الشهيرة مثل جيب ودودج ورام و SRT وفيات وكرايسلر وموبار. من المبيعات إلى الخدمة ، نقدم منتجات عالية الجودة وصيانة الخبراء لإبقائك على الطريق. اكتشف التميز في مجال السيارات في S.Med Sea Motors ، شريكك الموثوق به لجميع احتياجات السيارات الخاصة بك.</p>"
   },
   "ServicePage": {
     "title": "خدمة",
+    "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.Our inventory consists of original parts from reputable brands like Mopar, ensuring the highest quality and compatibility with your vehicle.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>"
+  },
+  "ContactPage": {
+    "title": "اﺗﺼﻞ",
     "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.Our inventory consists of original parts from reputable brands like Mopar, ensuring the highest quality and compatibility with your vehicle.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>"
   },
   "CareerPage": {

@@ -1,12 +1,11 @@
 "use client";
 import PageLayout from "components/PageLayout";
 import Brands from "components/brands";
-import PartsFinder from "components/partsFinder/partsFinder";
 import { useTranslations } from "next-intl";
 
 
-export default function partsPage() {
-    const t = useTranslations('IndexPage');
+export default function VehiclePage() {
+    const t = useTranslations('VehiclesPage');
 
     return (
         <section className=''>
@@ -19,6 +18,7 @@ export default function partsPage() {
                     })}
                 </div>
                 <Brands />
+
             </PageLayout>
 
 
