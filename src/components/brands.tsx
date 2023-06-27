@@ -28,7 +28,7 @@ export default function Brands() {
     const isRTL = locale === 'ar';
     return (
         <section className="sm:pt-0 xl:mx-auto xl:max-w-7xl">
-            <div className='grid grid-cols-5 gap-8 my-0 px-5 lg:px-8 xl:px-0'>
+            <div className='grid grid-cols-2 md:grid-cols-5 gap-8 my-0 px-5 lg:px-8 xl:px-0'>
                 {brands.map((brand) => (
                     <div key={brand.ID} className='mx-auto text-center'>
                         <div className=''>
