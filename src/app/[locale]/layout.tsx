@@ -6,6 +6,7 @@ import { ReactNode } from 'react';
 import Navigation from 'components/Navigation';
 import Footer from 'components/footer';
 import Categories from 'components/categories';
+import { useLocale } from 'next-intl';
 
 const tajawal = Tajawal({
   weight: '500',
@@ -44,14 +45,17 @@ export async function generateMetadata({ params: { locale } }: Props) {
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params: { locale }
-}: Props) {
+export default async function LocaleLayout({ children, params }) {
+  const locale = useLocale();
   const messages = await getMessages(locale);
 
   const isRTL = locale === 'ar';
   const font = isRTL ? inter : inter;
+
+  // Show a 404 error if the user requests an unknown locale
+  if (params.locale !== locale) {
+    notFound();
+  }
 
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>

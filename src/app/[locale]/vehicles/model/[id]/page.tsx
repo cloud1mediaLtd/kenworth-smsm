@@ -1,13 +1,30 @@
 //  src/app/en/vehicles/model[id]/page.tsx
 import PageLayout from "components/PageLayout";
+import { useLocale, useTranslations } from "next-intl";
+import {
+    getTranslator,
+    getFormatter,
+    getNow,
+    getTimeZone
+} from 'next-intl/server';
 import Image from "next/image";
-import Link from "next/link";
 
 
+// A function that creates a translator
+async function createTranslator(locale) {
+    const t = await getTranslator(locale, 'ContactPage');
+    return t;
+}
 
+export async function generateMetadata({ params: { locale } }) {
+    const t = await getTranslator(locale, 'LocaleLayout');
+    const format = await getFormatter(locale);
+    const now = await getNow(locale);
+    const timeZone = await getTimeZone(locale);
+}
 export default async function getModel
 
-    ({ params }: { params: { id: string } }) {
+    ({ params }: { params: { id: string } },) {
 
     const model = await fetch(
         `https://blooming-anchorage-31706-0fa311717c9a.herokuapp.com/models/${params.id}`
@@ -16,6 +33,10 @@ export default async function getModel
     });
     console.log("model", model);
 
+    const locale = useLocale();
+
+    const isRTL = locale === 'ar';
+    const t = await getTranslator(locale, 'VehiclesPage');
 
 
     return (
@@ -23,7 +44,7 @@ export default async function getModel
             <main className="sm:pt-0 xl:mx-auto xl:max-w-7xl">
                 <section className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                     <div className='col-span-2'>
-                        <div className='flex items-center justify-center'>
+                        <div className='flex items-center justify-center tracking-normal'>
                             <Image
                                 src={`/${model.Image}`}
                                 alt={`/${model.Name}`}
@@ -32,8 +53,8 @@ export default async function getModel
                             />
                         </div>
                         <hr className='my-4' />
-                        <div className='grid grid-cols-2 gap-5'>
-                            <div className='flex justify-between'>
+                        <div className='hidden md:grid grid-cols-2 gap-5'>
+                            <div className='flex justify-between tracking-normal'>
                                 <div>
                                     <span className='text-base'>Fuel type</span>
                                 </div>
@@ -43,9 +64,9 @@ export default async function getModel
 
 
                             </div>
-                            <div className='flex justify-between'>
+                            <div className='flex justify-between tracking-normal'>
                                 <div>
-                                    <span className='text-base'>Body type</span>
+                                    <span className='text-base'>{t('specs.bodytype')}</span>
                                 </div>
                                 <div>
                                     <span className='text-base'>Saloon</span>
@@ -54,9 +75,9 @@ export default async function getModel
                             </div>
                             <hr />
                             <hr />
-                            <div className='flex justify-between'>
+                            <div className='flex justify-between  tracking-normal'>
                                 <div>
-                                    <span className='text-base'>Engine</span>
+                                    <span className='text-base'>{t('specs.engine')}</span>
                                 </div>
                                 <div>
                                     <span className='text-base'>2.0L</span>
@@ -64,9 +85,9 @@ export default async function getModel
 
 
                             </div>
-                            <div className='flex justify-between'>
+                            <div className='flex justify-between  tracking-normal'>
                                 <div>
-                                    <span className='text-base'>Gear box</span>
+                                    <span className='text-base'>{t('specs.transmission')}</span>
                                 </div>
                                 <div>
                                     <span className='text-base'>Automatic</span>
@@ -86,25 +107,25 @@ export default async function getModel
 
                             </span>
 
-                            <span className='text-2xl font-bolds'>{model.Name}</span>
+                            <span className='text-2xl font-bolds'>{isRTL && model.Name_ar ? model.Name_ar : model.Name}</span>
                         </div>
                         <hr />
 
-                        <p className='text-base '>{model.Description}</p>
+                        <p className='text-base text-center tracking-normal md:text-start'>{isRTL ? model.Description : model.Description_ar}</p>
                         <hr />
                         <div className='space-y-3'>
-                            <p className='text-2xl'>Price: ---,---</p>
-                            <div className='text-sm'>RRP: --,---</div>
-                            <div className='text-sm text-red-600'>You Save: 2000 LD</div>
+                            <p className='text-2xl tracking-normal'>{t('specs.price')} ---,---</p>
+                            <div className='text-sm tracking-normal'>RRP: --,---</div>
+                            <div className='text-sm text-red-600 tracking-normal'>You Save: 2000 LD</div>
                         </div>
                         <hr />
 
-                        <div className='space-y-2'>
-                            <div className='flex h-12 w-full bg-gray-800 hover:bg-gray-900 text-white rounded-sm justify-center items-center'>
-                                <div className='tracking-wide'>Enquire</div>
+                        <div className='flex gap-3'>
+                            <div className='flex h-14 w-full bg-gray-800 hover:bg-gray-900 text-white rounded-lg justify-center items-center'>
+                                <div className='tracking-wide text-lg'>Enquire</div>
                             </div>
-                            <div className='flex h-12 w-full bg-gray-800 hover:bg-gray-900 text-white rounded-sm justify-center items-center'>
-                                <div className='tracking-wide'>Download Pdf</div>
+                            <div className='flex h-14 w-full bg-gray-800 hover:bg-gray-900 text-white rounded-lg justify-center items-center'>
+                                <div className='tracking-wide text-lg'>Download Pdf</div>
                             </div>
                         </div>
                     </div>

@@ -46,7 +46,7 @@ export default function Categories() {
 
         <section aria-labelledby="category-heading" className="sm:pt-8 xl:mx-auto xl:max-w-7xl">
             <div className=" sm:flex sm:items-center sm:justify-between px-5 lg:px-8 xl:px-0">
-                <h2 id="category-heading" className=" text-2xl font-bold tracking-tight text-gray-900">
+                <h2 id="category-heading" className=" text-2xl font-bol text-gray-900 tracking-wide">
                     {t('content.title')}
                 </h2>
                 <a href="#" className=" hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:blocksm:px-8 lg:px-8 xl:px-0">

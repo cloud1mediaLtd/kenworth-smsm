@@ -14,7 +14,15 @@
   },
   "VehiclesPage": {
     "title": "Vehicles",
-    "description": "<p>We proudly offer a wide range of vehicles from renowned brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, and Mopar.</p><p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for all your automotive needs.</p>"
+    "description": "<p>We proudly offer a wide range of vehicles from renowned brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, and Mopar.</p><p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for all your automotive needs.</p>",
+    "specs": {
+      "engine": "Engine",
+      "transmission": "Transmission",
+      "fueltype": "Fuel type",
+      "bodytype": "Body type",
+      "drivetype": "Drive type",
+      "price": "Price"
+    }
   },
   "PartsPage": {
     "title": "Parts",

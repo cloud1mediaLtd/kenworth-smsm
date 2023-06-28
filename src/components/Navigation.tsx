@@ -251,11 +251,11 @@ const Navigation = () => {
                       href="tel:+218913868093"
                       className={`text-sm font-medium text-white hover:text-gray-100 ${isRTL ? 'pr-6' : 'pr-6'}`}
                     >
-                      <span className="ltr">+218 91 386 8093</span>
+                      <span className="ltr ">+218 91 386 8093</span>
                     </a>
                     <a
                       href="#"
-                      className='text-sm font-medium text-white hover:text-gray-100 '
+                      className='text-sm font-medium text-white hover:text-gray-100 tracking-normal'
                     >
                       info@smsm.ly
                     </a>
@@ -357,7 +357,7 @@ const Navigation = () => {
                       */}
                       <div className='hidden lg:flex'>
                         {mainNavigation.map(({ key, href, title }) => (
-                          <Link className={` flex items-center text-sm font-medium text-white ${isRTL ? 'pl-6' : 'pr-6'}`} key={key} href={href}>
+                          <Link className={` flex items-center text-sm font-medium text-white tracking-wide ${isRTL ? 'pl-6' : 'pr-6'}`} key={key} href={href}>
                             {title}
                           </Link>
                         ))}
