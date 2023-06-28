@@ -42,7 +42,7 @@ export default async function getModel
     return (
         <PageLayout title={''}>
             <main className="sm:pt-0 xl:mx-auto xl:max-w-7xl">
-                <section className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                <section className='grid grid-cols-1 md:grid-cols-3 md:gap-8'>
                     <div className='col-span-2'>
                         <div className='flex items-center justify-center tracking-normal'>
                             <Image
@@ -101,13 +101,13 @@ export default async function getModel
                     </div>
                     <div className='space-y-5'>
 
-                        <div className='w-full flex items-center justify-center'>
-                            <span>
-                                <Image className='' src={`/${model.Brand.Image}`} alt={model.Brand.Name} width={300} height={300} />
+                        <div className='grid grid-cols-2 gap-2 items-center justify-center'>
+                            <span className="justify-self-center align-self-center">
+                                <Image className='p-2' src={`/${model.Brand.Image}`} alt={model.Brand.Name} width={220} height={220} />
 
                             </span>
 
-                            <span className='text-2xl font-bolds'>{isRTL && model.Name_ar ? model.Name_ar : model.Name}</span>
+                            <span className='text-xl font-bolds text-center'>{isRTL && model.Name_ar ? model.Name_ar : model.Name}</span>
                         </div>
                         <hr />
 
