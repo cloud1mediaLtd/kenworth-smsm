@@ -99,7 +99,7 @@ export default async function getModel
 
                         </div>
                     </div>
-                    <div className='space-y-5'>
+                    <div className='space-y-5 '>
 
                         <div className='grid grid-cols-2 gap-2 items-center justify-center'>
                             <span className="justify-self-center align-self-center">
