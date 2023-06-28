@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
-import ExternalLink from './ExternalLink';
-import clsx from 'clsx'; // import clsx
+
 import { useLocale } from 'next-intl';
 
 type Props = {
@@ -10,11 +9,11 @@ type Props = {
 };
 
 export default function PageLayout({ children, title }: Props) {
-  const t = useTranslations('PageLayout');
-  const locale = useLocale();
+  // const t = useTranslations('PageLayout');
+  // const locale = useLocale();
 
   // determine if the current locale is 'ar'
-  const isRTL = locale === 'ar';
+  //const isRTL = locale === 'ar';
 
   return (
     <section className='relative xl:mx-auto xl:max-w-7xl'>

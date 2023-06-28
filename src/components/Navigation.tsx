@@ -384,10 +384,10 @@ const Navigation = () => {
                       {/* Logo (lg-) */}
                       <div className={`flex items-center ${isRTL ? 'mr-8' : 'lg:ml-8'}`}>
                         {/* Help */}
-                        <a href="/help" className="p-2 text-white">
+                        <Link href="/faq" className="p-2 text-white">
                           <span className="sr-only">Help</span>
                           <QuestionMarkCircleIcon className="h-6 w-6" aria-hidden="true" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
