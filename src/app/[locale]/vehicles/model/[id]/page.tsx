@@ -111,7 +111,9 @@ export default async function getModel
                         </div>
                         <hr />
 
-                        <p className='text-base text-center tracking-normal md:text-start'>{isRTL ? model.Description : model.Description_ar}</p>
+                        <p className='text-base text-center tracking-normal md:text-start'>
+                            {isRTL && model.Description_ar ? model.Description_ar : model.Description}
+                        </p>
                         <hr />
                         <div className='space-y-3'>
                             <p className='text-2xl tracking-normal'>{t('specs.price')} ---,---</p>
