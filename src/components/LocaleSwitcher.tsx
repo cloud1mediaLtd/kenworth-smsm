@@ -1,9 +1,8 @@
 'use client';
 
 import clsx from 'clsx';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import { usePathname } from 'next-intl/client';
 import { ChangeEvent, useTransition } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
@@ -16,8 +15,16 @@ export default function LocaleSwitcher() {
   const pathname = usePathname();
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
+    const newLocale = event.target.value;
+
+    // Dynamically construct the new path by replacing the current locale with the new locale
+    // Assuming the first segment of the pathname is the current locale
+    const newPathname = pathname.startsWith(`/${locale}`)
+      ? pathname.replace(`/${locale}`, `/${newLocale}`)
+      : `/${newLocale}${pathname}`; // Fallback for when the pathname doesn't start with the locale
+
     startTransition(() => {
-      router.replace(`/${event.target.value}${pathname}`);
+      router.replace(newPathname);
     });
   }
 

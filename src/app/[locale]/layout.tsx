@@ -45,17 +45,19 @@ export async function generateMetadata({ params: { locale } }: Props) {
   };
 }
 
-export default async function LocaleLayout({ children, params }) {
-  const locale = useLocale();
+export default async function LocaleLayout({
+  children,
+  params: { locale }
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
   const messages = await getMessages(locale);
 
   const isRTL = locale === 'ar';
   const font = isRTL ? inter : inter;
 
-  // Show a 404 error if the user requests an unknown locale
-  if (params.locale !== locale) {
-    notFound();
-  }
+
 
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>

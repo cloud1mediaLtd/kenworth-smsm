@@ -1,13 +1,13 @@
 "use client";
 import Image from 'next/image';
-import Link from 'next-intl/link';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function VehiclesPage({ params: { id } }) {
   const [data, setData] = useState(null);
 
   const fetchData = async () => {
-    const res = await fetch(`https://blooming-anchorage-31706-0fa311717c9a.herokuapp.com/vehicles/${id}`);
+    const res = await fetch(`https://smedbackend.fly.dev/vehicles/${id}`);
     const brand = await res.json();
     setData(brand);
     console.log("data", brand);

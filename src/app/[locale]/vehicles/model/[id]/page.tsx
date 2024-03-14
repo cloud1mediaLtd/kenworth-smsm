@@ -27,7 +27,7 @@ export default async function getModel
     ({ params }: { params: { id: string } },) {
 
     const model = await fetch(
-        `https://blooming-anchorage-31706-0fa311717c9a.herokuapp.com/models/${params.id}`
+        `https://smedbackend.fly.dev/models/${params.id}`
     ).then((res) => {
         return res.json();
     });

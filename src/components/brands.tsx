@@ -1,17 +1,24 @@
 "use client";
 import { useLocale } from 'next-intl';
-import Link from 'next-intl/link';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 async function getData() {
-    const res = await fetch('https://blooming-anchorage-31706-0fa311717c9a.herokuapp.com/vehicles');
+    const res = await fetch('https://smedbackend.fly.dev/vehicles');
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
     const data = await res.json();
-    return data;
+
+    data.forEach(brand => {
+        brand.Models.sort((a, b) => a.Name.localeCompare(b.Name));
+    });
+
+    const sortedBrands = data.sort((a, b) => b.Models.length - a.Models.length);
+    return sortedBrands;
 }
+
 
 export default function Brands() {
     const [brands, setBrands] = useState([]);

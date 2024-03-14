@@ -4,8 +4,6 @@ import LocaleSwitcher from './LocaleSwitcher';
 import NavigationLink from './NavigationLink';
 import clsx from 'clsx';
 import { useLocale } from 'next-intl';
-import Link from 'next-intl/link';
-import React, { Fragment, useState } from 'react';
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -15,6 +13,9 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Fragment, useState } from 'react';
+import Link from 'next/link'
+
 
 
 interface NavigationItem {
