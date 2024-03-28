@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import { ChangeEvent, useTransition } from 'react';
+import { type ChangeEvent, useTransition } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 

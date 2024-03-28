@@ -18,7 +18,7 @@ export default function Categories() {
     const titleClass = clsx({ 'pl-5': isRTL, 'pr-5': !isRTL });
 
 
-    const categories = [] = [
+    const categories = [
         {
             key: t('newArrivals.title'),
             href: '/new',
@@ -49,7 +49,7 @@ export default function Categories() {
                 <h2 id="category-heading" className=" text-2xl font-bol text-gray-900 tracking-wide">
                     {t('content.title')}
                 </h2>
-                <a href="#" className=" hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:blocksm:px-8 lg:px-8 xl:px-0">
+                <a href="/" className=" hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:blocksm:px-8 lg:px-8 xl:px-0">
                     {t('content.browseAll')}
                     <span aria-hidden="true"> {`${isRTL ? '\u2190' : '\u2192'}`}</span>
                 </a>
@@ -83,7 +83,7 @@ export default function Categories() {
             </div>
 
             <div className="mt-6 px-4 sm:hidden">
-                <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+                <a href="/" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
                     {t('content.browseAll')}
                     <span aria-hidden="true"> {`${isRTL ? '\u2190' : '\u2192'}`}</span>
                 </a>

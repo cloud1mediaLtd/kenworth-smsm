@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { useLocale } from 'next-intl';
 
 type Props = {
@@ -23,7 +23,6 @@ export default function PageLayout({ children, title }: Props) {
             <h1 className='text-3xl font-semibold leading-tight tracking-tight text-gray-700 md:text-5xl'>
               {title}
             </h1>
-            <p></p>
             <div className='mt-6 text-gray-500 md:text-lg'>{children}</div>
           </div>
         </div>
