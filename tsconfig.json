@@ -28,6 +28,6 @@
     ".next/types/**/*.ts",
     "prettier.config.js",
     "tailwind.config.ts"
-  ],
+, "src/app/[locale]/vehicles/loading.js"  ],
   "exclude": ["node_modules"]
 }

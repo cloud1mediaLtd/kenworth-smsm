@@ -2,26 +2,27 @@
 import PageLayout from "components/PageLayout";
 import { useLocale, useTranslations } from "next-intl";
 import {
-    getTranslator,
     getFormatter,
     getNow,
-    getTimeZone
+    getTimeZone,
+    getTranslations
 } from 'next-intl/server';
 import Image from "next/image";
 
 
 // A function that creates a translator
 async function createTranslator(locale) {
-    const t = await getTranslator(locale, 'ContactPage');
+    const t = await getTranslations({ locale, namespace: 'ContactPage' });
     return t;
 }
 
 export async function generateMetadata({ params: { locale } }) {
-    const t = await getTranslator(locale, 'LocaleLayout');
+    const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
     const format = await getFormatter(locale);
     const now = await getNow(locale);
     const timeZone = await getTimeZone(locale);
 }
+
 export default async function getModel
 
     ({ params }: { params: { id: string } },) {
@@ -36,7 +37,7 @@ export default async function getModel
     const locale = useLocale();
 
     const isRTL = locale === 'ar';
-    const t = await getTranslator(locale, 'VehiclesPage');
+    const t = await getTranslations('VehiclesPage');
 
 
     return (

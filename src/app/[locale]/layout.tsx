@@ -2,19 +2,18 @@ import { Tajawal, Inter } from '@next/font/google';
 import clsx from 'clsx';
 import { notFound } from 'next/navigation';
 import { createTranslator, NextIntlClientProvider } from 'next-intl';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import Navigation from 'components/Navigation';
 import Footer from 'components/footer';
 import Categories from 'components/categories';
-import { useLocale } from 'next-intl';
 
 const tajawal = Tajawal({
-  weight: '500',
+  weight: '400',
   subsets: ['arabic'],
 });
 
 const inter = Inter({
-
+  weight: '500',
   subsets: ['latin'],
 });
 

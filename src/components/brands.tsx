@@ -1,42 +1,34 @@
-"use client";
+
 import { useLocale } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 async function getData() {
-    const res = await fetch('https://smedbackend.fly.dev/vehicles');
+    const res = await fetch('https://smedbackend.fly.dev/vehicles', { next: { revalidate: 3600 } })
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
-    const data = await res.json();
 
-    data.forEach(brand => {
-        brand.Models.sort((a, b) => a.Name.localeCompare(b.Name));
-    });
-
-    const sortedBrands = data.sort((a, b) => b.Models.length - a.Models.length);
-    return sortedBrands;
+    return res.json();
 }
 
 
-export default function Brands() {
-    const [brands, setBrands] = useState([]);
+export default async function Brands({ locale }) {
+    const data = await getData();
 
-    useEffect(() => {
-        getData().then(data => {
-            const sortedBrands = data.sort((a, b) => b.Models.length - a.Models.length);
+    console.log(data);
 
-            setBrands(sortedBrands);
-        });
-    }, []);
-    const locale = useLocale();
+    for (const brand of data) {
+        brand.Models.sort((a, b) => a.Name.localeCompare(b.Name));
+    }
+
 
     const isRTL = locale === 'ar';
     return (
         <section className="sm:pt-0 xl:mx-auto xl:max-w-7xl">
             <div className='grid grid-cols-2 md:grid-cols-5 gap-8 my-0 px-5 lg:px-8 xl:px-0'>
-                {brands.map((brand) => (
+                {data.map((brand) => (
                     <div key={brand.ID} className='mx-auto text-center'>
                         <div className=''>
                             <Link href={`/vehicles/${brand.ID}`}>
