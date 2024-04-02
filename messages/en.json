@@ -10,11 +10,11 @@
   },
   "AboutPage": {
     "title": "About",
-    "description": "<p>We proudly offer a wide range of vehicles from renowned brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, and Mopar.</p><p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for all your automotive needs.</p>"
+    "description": "<p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for your automotive needs.</p>"
   },
   "VehiclesPage": {
     "title": "Vehicles",
-    "description": "<p>We proudly offer a wide range of vehicles from renowned brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, and Mopar.</p><p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for all your automotive needs.</p>",
+    "description": "<p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for your automotive needs.</p>",
     "specs": {
       "engine": "Engine",
       "transmission": "Transmission",
@@ -66,11 +66,11 @@
       "href": "/vehicles"
     },
     "parts": {
-      "title": "Spare Parts",
+      "title": "Parts",
       "href": "/spareparts"
     },
     "services": {
-      "title": "Service",
+      "title": "Book Service",
       "href": "/service"
     },
     "contact": {
@@ -79,8 +79,8 @@
     }
   },
   "Hero": {
-    "title": "New 2024 models available now",
-    "description": "The new arrivals have, well, newly arrived. Check out the latest options and accessories.",
+    "title": "New 2024 models available",
+    "description": "Check out the latest line up.",
     "button": "Learn More"
   },
 

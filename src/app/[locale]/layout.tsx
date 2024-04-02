@@ -5,7 +5,7 @@ import { createTranslator, NextIntlClientProvider } from 'next-intl';
 import type { ReactNode } from 'react';
 import Navigation from 'components/Navigation';
 import Footer from 'components/footer';
-import Categories from 'components/categories';
+import MapComponent from 'components/mapComponent';
 
 const tajawal = Tajawal({
   weight: '400',
@@ -13,7 +13,7 @@ const tajawal = Tajawal({
 });
 
 const inter = Inter({
-  weight: '500',
+  weight: '300',
   subsets: ['latin'],
 });
 
@@ -56,19 +56,19 @@ export default async function LocaleLayout({
   const isRTL = locale === 'ar';
   const font = isRTL ? inter : inter;
 
-
-
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
       <body className={clsx(font.className, '')}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet" />
+
           <Navigation />
           <section className=''>
             {children}
-            <section className=''>
-              <Categories />
-            </ section>
           </section>
+
+          <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
+
           <Footer />
         </NextIntlClientProvider>
       </body>

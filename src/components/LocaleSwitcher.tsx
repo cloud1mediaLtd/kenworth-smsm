@@ -36,9 +36,9 @@ export default function LocaleSwitcher() {
         <label htmlFor="mobile-currency" className="sr-only">
           {t('label')}
         </label>
-        <div className="group relative -ml-2 rounded-md border-transparent focus-within:ring-2 focus-within:ring-white">
+        <div className="group relative rounded-md border-transparent focus-within:ring-2 focus-within:ring-white">
           <select
-            className="flex items-center rounded-md border-transparent bg-none py-0.5 pl-2 pr-5 text-sm font-medium text-gray-500 focus:border-transparent focus:outline-none focus:ring-0 group-hover:text-gray-600 bg-gray-900"
+            className="flex items-center rounded-md border-transparent p-1 pr-3 text-sm font-medium text-gray-200 focus:border-transparent focus:outline-none focus:ring-0 group-hover:text-gray-600 bg-slate-400"
             defaultValue={locale}
             disabled={isPending}
             onChange={onSelectChange}
@@ -49,9 +49,7 @@ export default function LocaleSwitcher() {
               </option>
             ))}
           </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-            <ChevronDownIcon className="h-5 w-5 text-gray-500" aria-hidden="true" />
-          </div>
+
         </div>
       </div>
     </>

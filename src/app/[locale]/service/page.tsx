@@ -16,10 +16,10 @@ export default function servicePage() {
                         p: (chunks) => <p className="mt-4 text-lg">{chunks}</p>,
 
                     })}
-                </div>                <PartsFinder />
+                </div>
 
+                <PartsFinder />
             </PageLayout>
-
 
         </ section>
     );

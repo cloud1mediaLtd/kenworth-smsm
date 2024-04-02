@@ -3,6 +3,7 @@ import { useLocale } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Separator } from './ui/separator';
 
 async function getData() {
     const res = await fetch('https://smedbackend.fly.dev/vehicles', { next: { revalidate: 3600 } })
@@ -26,29 +27,30 @@ export default async function Brands({ locale }) {
 
     const isRTL = locale === 'ar';
     return (
-        <section className="sm:pt-0 xl:mx-auto xl:max-w-7xl">
-            <div className='grid grid-cols-2 md:grid-cols-5 gap-8 my-0 px-5 lg:px-8 xl:px-0'>
-                {data.map((brand) => (
-                    <div key={brand.ID} className='mx-auto text-center'>
-                        <div className=''>
+        <section className="">
+            {data.map((brand) => (
+                <div key={brand.ID}>
+                    <div className='flex gap-4'>
+
+                        <div className='flex gap-4 items-center'>
                             <Link href={`/vehicles/${brand.ID}`}>
-                                <div className='h-40 align-middle flex items-center justify-center p-8'>
-                                    <Image className=' ' src={`/${brand.Image}`} alt={brand.Name} width={180} height={180} />
+                                <div className='w-44 h-44 flex items-center justify-center p-8'>
+                                    <Image className=''
+                                        src={`/${brand.Image}`}
+                                        alt={brand.Name}
+                                        width={180}
+                                        height={180}
+                                    />
                                 </div>
                             </Link>
+                            <Separator orientation='vertical' className='h-36' />
+
                         </div>
-                        <div>
-                            {/*}
-                            <div className='pb-4 border-b border-gray-200'>
-                                <span>{isRTL && brand.Name_ar ? brand.Name_ar : brand.Name}</span>
-
-                            </div>
-                            */}
-
+                        <div className='flex gap-12'>
 
                             {brand.Models.map((model) => (
-                                <Link href={`/vehicles/model/${model.ID}`} key={model.ID}>
-                                    <div key={model.ID} className='border-b border-gray-200 pb-4'>
+                                <Link href={`/vehicles/model/${model.ID}`} key={model.ID} className='flex'>
+                                    <div key={model.ID} className=''>
                                         <div className='h-40 align-middle flex items-center justify-center'>
                                             <Image src={`/${model.Image}`} alt={model.Name} width={180} height={180} />
                                         </div>
@@ -71,13 +73,16 @@ export default async function Brands({ locale }) {
 
 
                                     </div>
+
                                 </Link>
                             ))}
-                        </div>
 
+                        </div>
                     </div>
-                ))}
-            </div>
+                    <Separator className='my-4' />
+
+                </div>
+            ))}
         </section >
     );
 }

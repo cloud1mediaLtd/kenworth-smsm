@@ -15,19 +15,15 @@ export default function PageLayout({ children, title }: Props) {
   const isRTL = locale === 'ar';
 
   return (
-    <section className='relative xl:mx-auto xl:max-w-7xl'>
+    <section className='relative content-container-no-bg mt-6'>
 
-      <div className="flex-grow flex-col py-10 px-8 xl:px-0">
-        <div className='text-3xl font-semibold leading-tight tracking-tight text-blue-500 md:text-5xl'>
-          <div>
-            <h1 className='text-3xl font-semibold leading-tight tracking-tight text-gray-700 md:text-5xl'>
-              {title}
-            </h1>
-            <div className='mt-6 text-gray-500 md:text-lg'>{children}</div>
-          </div>
-        </div>
-
+      <h1 className=''>
+        {title}
+      </h1>
+      <div className='mt-6 '>
+        {children}
       </div>
+
     </ section>
   );
 }

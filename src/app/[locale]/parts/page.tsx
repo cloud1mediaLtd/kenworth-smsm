@@ -11,9 +11,9 @@ export default function partsPage() {
         <section className=''>
 
             <PageLayout title={t('title')}>
-                <div className="">
+                <div className="flex flex-col gap-5">
                     {t.rich('description', {
-                        p: (chunks) => <p className="mt-4 text-lg">{chunks}</p>,
+                        p: (chunks) => <p className="">{chunks}</p>,
 
                     })}
                 </div>                <PartsFinder />

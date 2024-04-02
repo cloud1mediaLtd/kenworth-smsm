@@ -2,26 +2,24 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Hero from 'components/hero';
 
-import Brands from 'components/brands';
-import { Suspense } from 'react';
-
-
 
 export default async function IndexPage() {
 
-
   const locale = useLocale();
-
-
   // add booking for free mot
 
   return (
     <section className=''>
 
       <Hero />
-      <Suspense fallback={<>loadiong...</>}>
-        <Brands locale={locale} />
-      </Suspense>
+      <div className='content-container-no-bg mt-8'>
+
+        <h1>Latest Offers</h1>
+      </div>
+      <div className='content-container-no-bg mt-8'>
+
+        <h1>Visit our showroom</h1>
+      </div>
 
     </ section>
   );

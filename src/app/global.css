@@ -1,3 +1,300 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 224 71.4% 4.1%;
+      --card: 0 0% 100%;
+      --card-foreground: 224 71.4% 4.1%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 224 71.4% 4.1%;
+      --primary: 220.9 39.3% 11%;
+      --primary-foreground: 210 20% 98%;
+      --secondary: 220 14.3% 95.9%;
+      --secondary-foreground: 220.9 39.3% 11%;
+      --muted: 220 14.3% 95.9%;
+      --muted-foreground: 220 8.9% 46.1%;
+      --accent: 220 14.3% 95.9%;
+      --accent-foreground: 220.9 39.3% 11%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 20% 98%;
+      --border: 220 13% 91%;
+      --input: 220 13% 91%;
+      --ring: 224 71.4% 4.1%;
+      --radius: 0.3rem;
+
+      --aside-width: 95%;
+      --aside-width-mobile: 95%;
+      --header-height: 60px;
+      --color-dark: #000;
+      --color-light: #fff;
+    }
+  
+    .dark {
+      --background: 224 71.4% 4.1%;
+      --foreground: 210 20% 98%;
+      --card: 224 71.4% 4.1%;
+      --card-foreground: 210 20% 98%;
+      --popover: 224 71.4% 4.1%;
+      --popover-foreground: 210 20% 98%;
+      --primary: 210 20% 98%;
+      --primary-foreground: 220.9 39.3% 11%;
+      --secondary: 215 27.9% 16.9%;
+      --secondary-foreground: 210 20% 98%;
+      --muted: 215 27.9% 16.9%;
+      --muted-foreground: 217.9 10.6% 64.9%;
+      --accent: 215 27.9% 16.9%;
+      --accent-foreground: 210 20% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 20% 98%;
+      --border: 215 27.9% 16.9%;
+      --input: 215 27.9% 16.9%;
+      --ring: 216 12.2% 83.9%;
+    }
+  }
+  
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.content-container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 14px; 
+  background-color: #F7FAFC;
+  margin: 0 auto;
+
+}
+
+.content-container-no-bg {
+max-width: 1440px;
+width: 100%;
+padding: 0 14px;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media (max-width: 640px) { 
+.content-container-no-bg {
+padding: 0 10px;
+}
+}
+
+
+.contrast-btn {
+  @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+}
+
+.text-xsmall-regular {
+  @apply text-[10px] leading-4 font-normal;
+}
+
+.text-xsmall-semi {
+  @apply text-[10px] leading-4 font-semibold;
+}
+
+.text-small-regular {
+  @apply text-xs leading-5 font-normal;
+}
+
+.text-small-semi {
+  @apply text-xs leading-5 font-semibold;
+}
+
+.text-base-regular {
+  @apply text-sm leading-6 font-normal;
+}
+
+.text-base-semi {
+  @apply text-sm leading-6 font-semibold;
+}
+
+.text-large-regular {
+  @apply text-base leading-6 font-normal;
+}
+
+.text-large-semi {
+  @apply text-base leading-6 font-semibold;
+}
+
+.text-large-bold {
+  @apply text-base leading-6 font-bold;
+}
+
+.text-xlarge-regular {
+  @apply text-lg leading-6 font-normal;
+}
+
+.text-xlarge-semi {
+  @apply text-lg leading-6 font-semibold;
+}
+
+.text-xlarge-bold {
+  @apply text-lg leading-6 font-bold;
+}
+
+
+
+h1 {
+  @apply text-2xl font-semibold;
+}
+
+p {
+  @apply text-large-regular antialiased tracking-normal;
+}
+
+/*
+  * --------------------------------------------------
+  * components/Aside
+  * --------------------------------------------------
+  */
+
+
+
+
+  aside {
+    background: var(--color-light);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    max-width: var(--aside-width);
+    min-width: var(--aside-width);
+    position: fixed;
+    right: calc(-1 * var(--aside-width));
+    top: 0;
+    transition: transform 200ms ease-in-out;
+    z-index: 2000;
+    transform: translateX(100%); /* Move it entirely off-screen to the right */
+
+  }
+  
+  aside header {
+    align-items: center;
+    border-bottom: 1px solid var(--color-dark);
+    display: flex;
+    height: var(--header-height);
+    justify-content: space-between;
+    padding: 0 30px 0 20px;
+  }
+  
+  
+  aside header .close {
+    font-weight: bold;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 200ms;
+
+  }
+
+  
+  aside header .close:hover {
+    opacity: 1;
+  }
+  
+  aside main {
+    margin: 10px 15px 0 10px;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  
+  .overlay .close-outside {
+    background: transparent;
+    border: none;
+    color: transparent;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: calc(100% - var(--aside-width));
+  }
+  
+
+  .overlay .cancel {
+    cursor: default;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .overlay:target {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+
+  }
+  /* reveal aside */
+  .overlay:target aside {
+    transform: translateX(calc(var(--aside-width) * -1));
+  }
+  
+  /*
+  * --------------------------------------------------
+  * components/Header
+  * --------------------------------------------------
+  */
+
+  
+  
+  .menu-aside {
+    display: none;
+    grid-gap: 1rem;
+    @media (min-width: 45em) {
+      display: flex;
+      grid-gap: 1rem;
+      margin-left: 3rem;
+    }
+  }
+
+ 
+  /*
+  * --------------------------------------------------
+  * Slider
+  * --------------------------------------------------
+  */
+
+
+/* This ensures the flex items (logos) wrap */
+.brands-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed */
+  align-items: center;
+  gap: 25px; /* Adjust based on your design */
+}
+
+.brand-item {
+  /* Adjust this width to control when the logos wrap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .brand-item {
+      /* Adjust to fit 100% width if you want each logo to take full width on smaller screens */
+      width: 100%;
+  }
+}
