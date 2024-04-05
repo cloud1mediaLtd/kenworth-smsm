@@ -5,7 +5,6 @@ import { useLocale } from 'next-intl';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { Card } from 'components/ui/card';
-import { Separator } from './ui/separator';
 import BrandsOnly from './brandsonly';
 
 
@@ -15,9 +14,7 @@ export default function Hero() {
     const t = useTranslations('Hero');
     const locale = useLocale();
     const isRTL = locale === 'ar';
-
     return (
-
         <section>
             <div className="relative h-[760px]">
 
@@ -35,7 +32,7 @@ export default function Hero() {
                     </div>
                 </div>
                 <div aria-hidden="true" className="absolute inset-0 bg-black opacity-50" />
-                <div className="relative flex max-w-3xl flex-col justify-center items-center px-6 text-center h-full pb-16">
+                <div className="relative flex  flex-col justify-center items-center px-6 text-center h-full pb-16">
                     <h1 className="text-2xl font-bold tracking-tight text-white lg:text-6xl">{t('title')}</h1>
                     <p className="mt-4 text-xl text-white">
                         {t('description')}
@@ -48,18 +45,16 @@ export default function Hero() {
                     </Button>
                 </div>
             </div>
-            <div className=' content-container-no-bg -mt-10  z-2 relative'>
-                <Card className=''>
-
-                    <BrandsOnly className={"hidden md:block"} locale={locale} />
-
-                    <div className='flex flex-col justify-center h-24 px-12'>
-                        <Button className='w-full' asChild>
-                            <Link href="/vehicles">
-                                View All Vehicles
-                            </Link>
-                        </Button>
+            <div className='content-container-no-bg -mt-10 z-2 relative'>
+                <Card className='relative overflow-hidden'>
+                    {/* Scrollable content container inside the card */}
+                    <div className="brands-scroll-container overflow-x-auto">
+                        <BrandsOnly className={"min-w-[700px]"} locale={locale} />
+                        {/* Padding div to ensure content is not obscured by the overlay */}
+                        <div className="end-padding md:hidden" />
                     </div>
+                    {/* Fixed overlay */}
+                    <div className="brands-overlay md:hidden" />
                 </Card>
             </div>
         </section>

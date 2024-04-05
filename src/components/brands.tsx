@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Separator } from './ui/separator';
+import { Card } from './ui/card';
 
 async function getData() {
     const res = await fetch('https://smedbackend.fly.dev/vehicles', { next: { revalidate: 3600 } })
@@ -29,12 +30,12 @@ export default async function Brands({ locale }) {
     return (
         <section className="">
             {data.map((brand) => (
-                <div key={brand.ID}>
-                    <div className='flex gap-4'>
+                <div key={brand.ID} className='overflow-hidden relative'>
+                    <div className='flex gap-4 brands-scroll-container overflow-x-auto'>
 
                         <div className='flex gap-4 items-center'>
                             <Link href={`/vehicles/${brand.ID}`}>
-                                <div className='w-44 h-44 flex items-center justify-center p-8'>
+                                <div className=' w-16 md:w-28 lg:w-32  h-44 flex items-center justify-center'>
                                     <Image className=''
                                         src={`/${brand.Image}`}
                                         alt={brand.Name}
@@ -46,11 +47,12 @@ export default async function Brands({ locale }) {
                             <Separator orientation='vertical' className='h-36' />
 
                         </div>
-                        <div className='flex gap-12'>
+                        <div className='flex gap-6'>
 
                             {brand.Models.map((model) => (
+
                                 <Link href={`/vehicles/model/${model.ID}`} key={model.ID} className='flex'>
-                                    <div key={model.ID} className=''>
+                                    <Card className='w-40'>
                                         <div className='h-40 align-middle flex items-center justify-center'>
                                             <Image src={`/${model.Image}`} alt={model.Name} width={180} height={180} />
                                         </div>
@@ -58,29 +60,19 @@ export default async function Brands({ locale }) {
                                             <span>{isRTL && model.Name_ar ? model.Name_ar : model.Name}</span>
                                         </div>
                                         <div className="flex flex-wrap pt-2 justify-center">
-                                            {/*}
-                                        <div className="flex items-center justify-center"> {/* Add 'justify-center' class
-                                        {model.Trims.map((trim) => (
-                                            <div className="bg-gray-800 text-white m-1 py-1 px-2 rounded-md text-xs inline-flex items-center" key={trim.ID}>
-                                                <span className="" style={{ lineHeight: '1', verticalAlign: 'middle' }}>
-                                                    {isRTL && trim.Name_ar ? trim.Name_ar : trim.Name}
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                        */}
                                         </div>
-
-
-                                    </div>
-
+                                    </Card>
                                 </Link>
+
                             ))}
-
                         </div>
-                    </div>
-                    <Separator className='my-4' />
+                        <div className="end-padding md:hidden" />
 
+
+                    </div>
+                    <div className="brands-overlay md:hidden" />
+
+                    <Separator className='my-4' />
                 </div>
             ))}
         </section >

@@ -31,7 +31,7 @@ const Navigation = () => {
 
   return (
     <section className='relative shadow-sm'>
-      <nav aria-label="Top" className=''>
+      <nav aria-label="Top" className='py-1'>
         {/* Secondary navigation */}
         <div className="content-container-no-bg">
           <div className="flex py-3 items-center justify-between">

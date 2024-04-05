@@ -14,6 +14,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "www.wikimedia.org",
 			},
+			{
+				protocol: "https",
+				hostname: "automaxgroup.me",
+			},
 		],
 	},
 };

@@ -8,12 +8,12 @@ import Footer from 'components/footer';
 import MapComponent from 'components/mapComponent';
 
 const tajawal = Tajawal({
-  weight: '400',
+  weight: ['300', '400', '500', '700'],
   subsets: ['arabic'],
 });
 
 const inter = Inter({
-  weight: '300',
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
 });
 

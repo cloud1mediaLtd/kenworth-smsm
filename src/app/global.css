@@ -133,15 +133,15 @@ padding: 0 10px;
 }
 
 .text-xlarge-regular {
-  @apply text-lg leading-6 font-normal;
+  @apply text-lg leading-7 font-normal;
 }
 
 .text-xlarge-semi {
-  @apply text-lg leading-6 font-semibold;
+  @apply text-lg leading-7 font-semibold;
 }
 
 .text-xlarge-bold {
-  @apply text-lg leading-6 font-bold;
+  @apply text-lg leading-7 font-bold;
 }
 
 
@@ -184,7 +184,7 @@ p {
     display: flex;
     height: var(--header-height);
     justify-content: space-between;
-    padding: 0 30px 0 20px;
+    padding: 0 40px 0 20px;
   }
   
   
@@ -202,7 +202,7 @@ p {
   }
   
   aside main {
-    margin: 10px 15px 0 10px;
+    margin: 10px 20px 0 10px;
   }
   
   .overlay {
@@ -276,25 +276,38 @@ p {
   */
 
 
-/* This ensures the flex items (logos) wrap */
-.brands-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Adjust as needed */
-  align-items: center;
-  gap: 25px; /* Adjust based on your design */
-}
 
-.brand-item {
-  /* Adjust this width to control when the logos wrap */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-  .brand-item {
-      /* Adjust to fit 100% width if you want each logo to take full width on smaller screens */
-      width: 100%;
+  .brands-scroll-container::-webkit-scrollbar {
+    display: none;
   }
+
+/* Container for scrolling brands */
+.brands-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  position: relative; /* This contains the absolute overlay within */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensures the overlay does not move with the scroll */
+.brands-overlay {
+  position: absolute;
+  top: 0;
+  right: 0; /* Positioned to the right for LTR */
+  bottom: 0;
+  width: 50px;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0)); /* Gradient for LTR */
+  pointer-events: none;
+  z-index: 2;
+}
+
+[dir="rtl"] .brands-overlay {
+  right: auto; /* Reset right positioning */
+  left: 0; /* Position to the left for RTL */
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)); /* Flip gradient direction for RTL */
+}
+
+/* Padding div at the end of the scrollable container */
+.end-padding {
+  min-width: 20px; /* Matches the width of the overlay to ensure content visibility */
 }
