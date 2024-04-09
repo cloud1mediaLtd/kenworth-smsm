@@ -30,7 +30,7 @@ const Navigation = () => {
   ];
 
   return (
-    <section className='relative shadow-sm'>
+    <section className='relative shadow-sm bg-black'>
       <nav aria-label="Top" className='py-1'>
         {/* Secondary navigation */}
         <div className="content-container-no-bg">
@@ -41,7 +41,7 @@ const Navigation = () => {
                 <span className="sr-only">Smsm</span>
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=black"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=white"
                   alt=""
                 />
               </Link>
@@ -49,7 +49,7 @@ const Navigation = () => {
 
             <div className='md:flex items-center gap-6'>
               {mainNavigation.map(({ key, href, title }) => (
-                <Link className={"hidden md:flex items-center text-sm font-medium text-black tracking-wide"} key={key} href={href}>
+                <Link className={"hidden md:flex items-center text-sm font-medium text-white tracking-wide"} key={key} href={href}>
                   {title}
                 </Link>
               ))}
@@ -67,7 +67,7 @@ const Navigation = () => {
                 </Button>
 
                 <a href="#menu-aside" className=''>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-black">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-white">
                     <title>Pass</title>
 
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -90,7 +90,7 @@ export default Navigation;
 function MenuAside({ mainNavigation }) {
   return (
     <Aside id="menu-aside" heading="Menu">
-      <main className="flex flex-col gap-2">
+      <main className="flex flex-col gap-2 pr-12 lg:pr-20 xl:pr-24 pl-3 pt-3">
         {mainNavigation.map(({ key, href, title }) => (
           <div key={key}>
 

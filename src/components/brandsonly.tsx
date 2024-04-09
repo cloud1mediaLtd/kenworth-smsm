@@ -6,9 +6,8 @@ interface PropItems {
     className?: string;
 }
 
-
 async function getData() {
-    const res = await fetch('https://smedbackend.fly.dev/vehicles', { next: { revalidate: 3600 } })
+    const res = await fetch('http://localhost:3000/api/brands', { next: { revalidate: 3600 } })
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }

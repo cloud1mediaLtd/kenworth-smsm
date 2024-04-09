@@ -67,7 +67,6 @@ export default async function LocaleLayout({
             {children}
           </section>
 
-          <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
 
           <Footer />
         </NextIntlClientProvider>

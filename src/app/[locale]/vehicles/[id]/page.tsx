@@ -42,7 +42,7 @@ export default async function VehiclesPage({ params: { id } }) {
                 className='h-20 hidden md:block'
               />
               {
-                isRTL && data.Description_ar ? <p className='text-sm text-gray-500'>{data.Description_ar}</p> : <p className='text-sm text-gray-500'>{data.Description_ar}</p>
+                isRTL && data.Description_ar ? <p className='text-sm text-gray-500'>{data.Description_ar}</p> : <p className='text-sm text-gray-500'>{data.Description}</p>
               }
             </div>
 

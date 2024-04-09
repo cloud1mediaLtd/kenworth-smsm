@@ -1,5 +1,4 @@
 import BrandsOnly from "components/brandsonly";
-import { Card } from "components/ui/card";
 import { Separator } from "components/ui/separator";
 import { useLocale } from "next-intl";
 
@@ -18,7 +17,7 @@ export default function VehiclePageLayout({ children }) {
                     <div className="brands-overlay md:hidden" />
                 </div>
 
-                <Separator className='mb-6' />
+                <Separator className='mb-0' />
                 {children}
             </div>
         </div>

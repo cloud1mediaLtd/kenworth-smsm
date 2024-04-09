@@ -17,7 +17,7 @@ export default function PageLayout({ children, title }: Props) {
   return (
     <section className='relative content-container-no-bg'>
 
-      <h1 className=''>
+      <h1 className='pt-6'>
         {title}
       </h1>
       <div className='mt-6 '>

@@ -16,23 +16,20 @@ export default function Hero() {
     const isRTL = locale === 'ar';
     return (
         <section>
-            <div className="relative h-[760px]">
+            <div className="relative min-h-96">
 
                 {/* Decorative image and overlay */}
-                <div aria-hidden="true" className=" bg-gray-500 absolute inset-0 overflow-hidden">
-                    <div className=''>
-                        <Image
-                            id='hero-image'
-                            src="https://www.jeep.com/content/dam/fca-brands/na/jeep/en_us/2024/wrangler/vlp/desktop/MY24-Wrangler-MCA-Overview-Lightbox-Gallery-Image-3-Desktop.jpg"
-                            alt=""
-                            fill={true}
-                            className='max-h-[760px]}'
-                            style={{ objectFit: "cover" }}
-                        />
-                    </div>
-                </div>
-                <div aria-hidden="true" className="absolute inset-0 bg-black opacity-50" />
-                <div className="relative flex  flex-col justify-center items-center px-6 text-center h-full pb-16">
+                <Image
+                    id='hero-image'
+                    src="/jeep_wrangler_homepage_1920x850.jpg"
+                    alt=""
+                    width={1920}
+                    height={850}
+                    sizes='(max-width: 640px) 640px, 1920px'
+                    className='object-cover w-full h-full min-h-96'
+
+                />
+                {/* <div className="relative flex  flex-col justify-center items-center px-6 text-center h-full py-16">
                     <h1 className="text-2xl font-bold tracking-tight text-white lg:text-6xl">{t('title')}</h1>
                     <p className="mt-4 text-xl text-white">
                         {t('description')}
@@ -43,7 +40,7 @@ export default function Hero() {
                             {t('button')}
                         </Link>
                     </Button>
-                </div>
+                </div> */}
             </div>
             <div className='content-container-no-bg -mt-10 z-2 relative'>
                 <Card className='relative overflow-hidden'>

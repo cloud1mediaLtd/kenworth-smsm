@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
   @layer base {
     :root {
       --background: 0 0% 100%;
@@ -25,7 +23,7 @@
       --border: 220 13% 91%;
       --input: 220 13% 91%;
       --ring: 224 71.4% 4.1%;
-      --radius: 0.3rem;
+      --radius: 0.8rem;
 
       --aside-width: 95%;
       --aside-width-mobile: 95%;
@@ -144,10 +142,16 @@ padding: 0 10px;
   @apply text-lg leading-7 font-bold;
 }
 
-
-
 h1 {
   @apply text-2xl font-semibold;
+}
+
+h2 {
+  @apply text-lg font-semibold;
+}
+
+h3 {
+  @apply text-base font-semibold;
 }
 
 p {
@@ -159,8 +163,6 @@ p {
   * components/Aside
   * --------------------------------------------------
   */
-
-
 
 
   aside {
@@ -184,10 +186,22 @@ p {
     display: flex;
     height: var(--header-height);
     justify-content: space-between;
-    padding: 0 40px 0 20px;
+    padding: 0 100px 0 10px;
+
   }
-  
-  
+
+  @media (max-width: 640px) { 
+    aside header {
+      padding: 0 50px 0 10px;
+    }
+  }
+
+  @media (max-width: 1020px) { 
+    aside header {
+      padding: 0 60px 0 10px;
+    }
+  }
+
   aside header .close {
     font-weight: bold;
     opacity: 0.8;
@@ -196,13 +210,8 @@ p {
 
   }
 
-  
   aside header .close:hover {
     opacity: 1;
-  }
-  
-  aside main {
-    margin: 10px 20px 0 10px;
   }
   
   .overlay {
@@ -231,7 +240,6 @@ p {
     width: calc(100% - var(--aside-width));
   }
   
-
   .overlay .cancel {
     cursor: default;
     height: 100%;
@@ -252,30 +260,9 @@ p {
   
   /*
   * --------------------------------------------------
-  * components/Header
-  * --------------------------------------------------
-  */
-
-  
-  
-  .menu-aside {
-    display: none;
-    grid-gap: 1rem;
-    @media (min-width: 45em) {
-      display: flex;
-      grid-gap: 1rem;
-      margin-left: 3rem;
-    }
-  }
-
- 
-  /*
-  * --------------------------------------------------
   * Slider
   * --------------------------------------------------
   */
-
-
 
   .brands-scroll-container::-webkit-scrollbar {
     display: none;

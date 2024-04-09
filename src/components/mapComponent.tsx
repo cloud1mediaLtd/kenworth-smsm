@@ -8,12 +8,7 @@ interface MapComponentProps {
     latitude: number;
 }
 
-mapboxgl.setRTLTextPlugin(
-    'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
-    null,
-    true // Lazy load the plugin
-);
-
+let rtlPluginSet = false;
 
 const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
     const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -50,6 +45,16 @@ const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
         if (!mapContainerRef.current) return; // Exit if ref isn't set yet
 
         mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN as string;
+
+        if (!rtlPluginSet) {
+            mapboxgl.setRTLTextPlugin(
+                'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
+                null,
+                true // Lazy load the plugin
+            );
+            rtlPluginSet = true; // Update the flag to prevent future calls
+        }
+
 
         const map = new mapboxgl.Map({
             container: mapContainerRef.current,
@@ -115,7 +120,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
         };
     }, [latitude, longitude, hasClickedMap]);
 
-    return <div id='map' ref={mapContainerRef} style={{ width: '100%', height: '400px', marginTop: '25px', position: 'relative' }} />;
+    return <div id='map' ref={mapContainerRef} style={{ width: '100%', height: '400px', position: 'relative' }} />;
 };
 
 export default MapComponent;

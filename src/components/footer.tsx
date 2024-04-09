@@ -1,4 +1,6 @@
 import Link from "next/link"
+import { Separator } from "./ui/separator"
+import MapComponent from "./mapComponent"
 
 
 // const mainNavigation: NavigationItem[] = [
@@ -34,12 +36,22 @@ const footerNavigation = {
 
 export default function Footer() {
     return (
-        <footer aria-labelledby="footer-heading" className="bg-gray-900">
+        <footer aria-labelledby="footer-heading">
+
+            <div className="content-container-no-bg mb-4">
+                <Separator className="my-6" />
+
+                <h1>Visit our showroom</h1>
+
+            </div>
+            <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
+
+
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="content-container-no-bg">
-                <div className="py-20 xl:grid xl:grid-cols-3 xl:gap-8">
+            <div className="content-container-no-bg bg-primary">
+                <div className="py-12 xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="grid grid-cols-2 gap-8 xl:col-span-2">
                         <div className="space-y-12 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
                             <div>
@@ -90,10 +102,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-12 md:mt-16 xl:mt-0">
-                        <h3 className="text-sm font-medium text-white">Find us</h3>
 
-                    </div>
                 </div>
 
                 <div className="border-t border-gray-800 py-10">
