@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Separator } from 'components/ui/separator';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
+import { CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
 
 export default async function IndexPage() {
 
@@ -17,12 +18,13 @@ export default async function IndexPage() {
       <Hero />
 
       <main>
-        <div className='content-container-no-bg mt-3'>
+        <div className='content-container-no-bg mt-4'>
 
           <h1 className='mt-6'>Latest Offers</h1>
 
-          <div className='grid grid-cols-2 gap-6 w-full pt-4'>
-            <Card className='col-span-2 flex overflow-hidden'>
+          <div className='grid grid-cols-4 gap-6 w-full pt-4'>
+
+            <Card className='col-span-4 row-span-2 flex overflow-hidden'>
               <div className='relative min-h-48 basis-3/5'>
                 <Image
                   id='hero-image'
@@ -90,8 +92,11 @@ export default async function IndexPage() {
 
             </Card>
 
-            <Card className='flex flex-col md:flex-row overflow-hidden items-center bg-[#0245B2] text-white'>
-              <div className='relative min-h-32 basis-1/3 min-w-full md:min-w-0'>
+
+
+
+            <Card className='flex flex-col col-span-4 md:flex-row overflow-hidden items-center bg-[#0245B2] text-white'>
+              <div className='relative min-h-32 basis-1/3 min-w-full md:min-w-0 h-full'>
 
                 <Image
                   src='/moparService.jpeg'
@@ -109,7 +114,25 @@ export default async function IndexPage() {
 
             </Card>
 
-            <Card className='flex flex-col md:flex-row overflow-hidden items-center bg-black text-white'>
+            {/* <Link href="/parts">
+              <Card className='flex flex-col col-span-1 md:flex-row overflow-hidden items-center text-white relative p-2' >
+                <div className='relative min-h-32 w-full h-full opacity-10'>
+                  <Image
+                    src='/Mopar_logo.svg'
+                    alt='Mopar'
+                    fill={true}
+                    sizes='(max-width: 640px) 640px, 1920px'
+
+                  />
+                </div>
+                <div className='p-4 absolute inset-0 z-20 text-black'>
+                  <h3>New Online Spare parts search</h3>
+                  <span className='text-xs'>Find out more...</span>
+                </div>
+              </Card>
+            </Link> */}
+
+            <Card className='flex flex-col col-span-4 md:flex-row overflow-hidden items-center bg-black text-white'>
               <div className='relative min-h-32 basis-1/3 min-w-full md:min-w-0'>
                 <Image
                   src='/WINCH_GUARD_LIGHT_MOUNTING BRACKETS.jpg'
@@ -130,6 +153,69 @@ export default async function IndexPage() {
           {/* <Separator className="my-6" />
 
            <h1>Join The Club</h1> */}
+
+          <Separator className="my-6" />
+          <div className='flex flex-col'>
+
+            <h1>Here When You Need Us</h1>
+            <p className='text-base-semi'>
+              Have a question or need some help? We're here for you day and night.
+              Explore the site or contact us by email, chat or phone.
+            </p>
+
+            <div className='grid grid-cols-4 gap-6 pt-6'>
+              <div className='flex flex-col text-center items-center gap-6 p-2' >
+                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                  <span className='text-white'>
+                    <UserCog2 size={50} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Schedule a service
+                </span>
+              </div>
+
+              <div className='flex flex-col text-center items-center gap-6 p-2' >
+                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                  <span className='text-white'>
+                    <HeartPulse size={50} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Vehical Health Report
+                </span>
+              </div>
+
+              <div className='flex flex-col text-center  items-center gap-6 p-2' >
+                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                  <span className='text-white'>
+                    <ListTodo size={50} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Check For Recalls
+                </span>
+              </div>
+
+              <div className='flex flex-col text-center items-center gap-6 p-2' >
+                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                  <span className='text-white'>
+                    <CalendarCheck size={50} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Maintenance Schedule
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+
 
           <Separator className="my-6" />
 
@@ -188,7 +274,6 @@ export default async function IndexPage() {
                 <CardTitle>Benghazi Showroom Now Open</CardTitle>
                 <CardDescription>Just arrived in stock genuine accessoriess</CardDescription>
               </CardHeader>
-
             </Card>
 
           </div>

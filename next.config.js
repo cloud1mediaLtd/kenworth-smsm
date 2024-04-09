@@ -18,6 +18,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "automaxgroup.me",
 			},
+			{
+				protocol: "https",
+				hostname: "cdn-empmerch.newjobs.com",
+			},
 		],
 	},
 };

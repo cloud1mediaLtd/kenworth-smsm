@@ -48,7 +48,7 @@ export default async function getModel
             <Suspense fallback={<>loading...</>}>
 
 
-                <div className='flex flex-col md:flex-row gap-6'>
+                <div className='flex flex-col md:flex-row gap-6 pt-12'>
                     <div className="flex basis-auto md:basis-1/2 relative min-h-[200px]">
                         <Image
                             src={`/${model.Image}`}

@@ -17,7 +17,7 @@ export default function VehiclePageLayout({ children }) {
                     <div className="brands-overlay md:hidden" />
                 </div>
 
-                <Separator className='mb-0' />
+                <Separator className='mb-4' />
                 {children}
             </div>
         </div>
