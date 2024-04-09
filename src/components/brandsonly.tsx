@@ -7,8 +7,8 @@ interface PropItems {
 }
 
 async function getData() {
-    const res = await fetch('http://localhost:3000/api/brands', { next: { revalidate: 3600 } })
-    if (!res.ok) {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL; // Access the environment variable
+    const res = await fetch(`${apiUrl}/brands`, { next: { revalidate: 3600 } }); if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
     return res.json();
