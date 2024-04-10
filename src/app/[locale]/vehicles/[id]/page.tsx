@@ -9,7 +9,7 @@ import { Suspense } from 'react';
 async function getData(id) {
 
   console.log(id)
-  const res = await fetch(`https://smedbackend.fly.dev/vehicles/${id}`);
+  const res = await fetch(`https://smedbackend.fly.dev/vehicles/${id}`, { next: { revalidate: 3600 } });
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');

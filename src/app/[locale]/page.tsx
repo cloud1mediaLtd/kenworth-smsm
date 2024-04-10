@@ -24,8 +24,8 @@ export default async function IndexPage() {
 
           <div className='grid grid-cols-4 gap-6 w-full pt-4'>
 
-            <Card className='col-span-4 row-span-2 flex overflow-hidden'>
-              <div className='relative min-h-48 basis-3/5'>
+            <Card className='flex flex-col col-span-4 md:flex-row overflow-hidden items-center h-64'>
+              <div className='relative h-full w-[400px]'>
                 <Image
                   id='hero-image'
                   src="https://automaxgroup.me/wp-content/uploads/2023/08/2024-Jeep-Grand-Cherokee-4xe.jpg"
@@ -36,17 +36,18 @@ export default async function IndexPage() {
                 />
               </div>
 
-              <div className='flex flex-col w-full'>
+              <div className='flex flex-col grow'>
 
                 <CardHeader>
                   <CardTitle className='text-xlarge-semi'>The all new 2025 Jeep Grand Cheroke</CardTitle>
                 </CardHeader>
 
                 <CardFooter
-                  className='flex flex-wrap items-center gap-3'
+                  className='flex flex-col gap-3'
                 >
-                  <div className='flex flex-wrap lg:flex-nowrap w-full gap-3'>
-                    <Card className='py-3 px-5 flex w-full  gap-3 items-center h-12'>
+                  <div className='w-full flex flex-col gap-3'>
+
+                    <Card className='flex items-center gap-3 px-2 py-1'>
 
                       <Image
                         src='/Mopar_logo.svg'
@@ -65,7 +66,8 @@ export default async function IndexPage() {
 
                     </Card>
 
-                    <Card className='py-3 px-5 flex w-full gap-3 items-center h-12'>
+                    <Card className='flex items-center gap-3 px-2 py-1'>
+
                       <Image
                         src='/logos/bankLogo.png'
                         alt='Mopar'
@@ -95,23 +97,24 @@ export default async function IndexPage() {
 
 
 
-            <Card className='flex flex-col col-span-4 md:flex-row overflow-hidden items-center bg-[#0245B2] text-white'>
-              <div className='relative min-h-32 basis-1/3 min-w-full md:min-w-0 h-full'>
+            <Card className='col-span-4 overflow-hidden items-center hover:bg-[#0245B2]/90 bg-[#0245B2]'>
+              <Link href="/parts" className='h-20 flex items-center'>
+                <div className='relative h-full w-[400px]'>
 
-                <Image
-                  src='/moparService.jpeg'
-                  alt='Mopar'
-                  fill={true}
-                  sizes='(max-width: 640px) 640px, 1920px'
-                  style={{ objectFit: "cover" }}
-                />
+                  <Image
+                    src='/moparService.jpeg'
+                    alt='Mopar'
+                    fill={true}
+                    sizes='(max-width: 640px) 640px, 1920px'
+                    style={{ objectFit: "cover" }}
+                  />
 
-              </div>
-              <div className='p-4'>
-                <h3>Free Oil & filter change on our brands*</h3>
-                <span className='text-xs'>Find out more...</span>
-              </div>
+                </div>
+                <div className='p-4 grow flex flex-col gap-3 text-white'>
+                  <h3>Free Oil & filter change on our brands*</h3>
 
+                </div>
+              </Link>
             </Card>
 
             {/* <Link href="/parts">
@@ -132,20 +135,23 @@ export default async function IndexPage() {
               </Card>
             </Link> */}
 
-            <Card className='flex flex-col col-span-4 md:flex-row overflow-hidden items-center bg-black text-white'>
-              <div className='relative min-h-32 basis-1/3 min-w-full md:min-w-0'>
-                <Image
-                  src='/WINCH_GUARD_LIGHT_MOUNTING BRACKETS.jpg'
-                  alt='Mopar'
-                  fill={true}
-                  sizes='(max-width: 640px) 640px, 1920px'
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className='p-4'>
-                <h3>New Jeep Wrangler Accessories in Stock</h3>
-                <span className='text-xs'>Find out more...</span>
-              </div>
+            <Card className='col-span-4 overflow-hidden items-center hover:bg-slate-50'>
+              <Link href="/parts" className='h-20 flex'>
+                <div className='relative h-full w-[400px]'>
+                  <Image
+                    src='/WINCH_GUARD_LIGHT_MOUNTING BRACKETS.jpg'
+                    alt='Mopar'
+                    fill={true}
+                    sizes='(max-width: 640px) 640px, 1920px'
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div className='p-4 grow flex gap-3 items-center'>
+                  <h3>New Jeep Wrangler Accessories in Stock</h3>
+
+                </div>
+              </Link>
+
             </Card>
 
           </div>
@@ -165,9 +171,9 @@ export default async function IndexPage() {
 
             <div className='grid grid-cols-4 gap-6 pt-6'>
               <div className='flex flex-col text-center items-center gap-6 p-2' >
-                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                <div className='flex h-20 w-20 rounded-full bg-black items-center justify-center'>
                   <span className='text-white'>
-                    <UserCog2 size={50} />
+                    <UserCog2 size={40} />
                   </span>
 
                 </div>
@@ -177,9 +183,9 @@ export default async function IndexPage() {
               </div>
 
               <div className='flex flex-col text-center items-center gap-6 p-2' >
-                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                <div className='flex h-20 w-20 rounded-full bg-black items-center justify-center'>
                   <span className='text-white'>
-                    <HeartPulse size={50} />
+                    <HeartPulse size={40} />
                   </span>
 
                 </div>
@@ -189,9 +195,9 @@ export default async function IndexPage() {
               </div>
 
               <div className='flex flex-col text-center  items-center gap-6 p-2' >
-                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                <div className='flex h-20 w-20 rounded-full bg-black items-center justify-center'>
                   <span className='text-white'>
-                    <ListTodo size={50} />
+                    <ListTodo size={40} />
                   </span>
 
                 </div>
@@ -201,9 +207,9 @@ export default async function IndexPage() {
               </div>
 
               <div className='flex flex-col text-center items-center gap-6 p-2' >
-                <div className='flex h-32 w-32 rounded-full bg-black items-center justify-center'>
+                <div className='flex h-20 w-20 rounded-full bg-black items-center justify-center'>
                   <span className='text-white'>
-                    <CalendarCheck size={50} />
+                    <CalendarCheck size={40} />
                   </span>
 
                 </div>

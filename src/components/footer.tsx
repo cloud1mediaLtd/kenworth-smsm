@@ -14,19 +14,21 @@ import Image from 'next/image';
 //     { key: 'contact', href: '/contact', title: t('contact.title') },
 //   ];
 
+//convert href to name instead of id
+
 
 const footerNavigation = {
     vehicles: [
-        { name: 'Jeep', href: '/vehicles/jeep' },
-        { name: 'Dodge', href: '#' },
-        { name: 'Ram', href: '#' },
-        { name: 'Chrysler', href: '#' },
-        { name: 'Fiat', href: '#' },
+        { name: 'Jeep', href: '/vehicles/3' },
+        { name: 'Dodge', href: '/vehicles/1' },
+        { name: 'Ram', href: '/vehicles/4' },
+        { name: 'Chrysler', href: '/vehicles/2' },
+        { name: 'Fiat', href: '/vehicles/5' },
     ],
     company: [
         { name: 'About', href: '#' },
         { name: 'Warranty', href: '#' },
-        { name: 'Careers', href: '#' },
+        { name: 'Careers', href: '/careers' },
         { name: 'Business Center', href: '#' },
     ],
 
@@ -47,11 +49,26 @@ export default function Footer() {
                 <Separator className="my-6" />
 
                 <h1>Visit our showroom</h1>
-                <div className="bg-slate-50 p-6 mt-4 flex gap-6 items-center ">
-                    <span className="text-large-semi">Tripoli:</span>
-                    <p className="text-base-semi">Al-Swany Road</p>
-                    <Separator orientation="vertical" className="h-6" />
-                    <p className="text-base-semi">+218 477 675 675</p>
+
+                <div className="bg-slate-50 p-6 mt-4 flex gap-6 items-center justify-between">
+                    <div className="flex gap-6">
+                        <span className="text-large-semi">Tripoli:</span>
+                        <p className="text-base-semi">Al-Swany Road</p>
+                        <Separator orientation="vertical" className="h-6" />
+                        <p className="text-base-semi">+218 477 675 675</p>
+                    </div>
+                    <div className="flex gap-3">
+                        <Link href="/contact">
+                            <span className="text-primary underline-offset-4 hover:underline text-base-semi">Contact</span>
+                        </Link>
+                        <Separator orientation="vertical" className="h-6" />
+
+                        <Link href="/business">
+                            <span className="text-primary underline-offset-4 hover:underline text-base-semi">Business Center</span>
+                        </Link>
+
+                    </div>
+
 
                 </div>
 
