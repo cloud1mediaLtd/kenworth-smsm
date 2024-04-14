@@ -6,11 +6,10 @@ import { Separator } from 'components/ui/separator';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
 import { CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
-import { ISbStoriesParams, StoryblokComponent, getStoryblokApi } from '@storyblok/react';
-import { map } from 'lodash';
+import { getStoryblokApi } from '@storyblok/react';
 
 
-export async function fetchData() {
+async function fetchData() {
   let sbParams = { starts_with: "posts" };
 
   const storyblokApi = getStoryblokApi();

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Card } from 'components/ui/card';
 import { Separator } from "components/ui/separator";
 
-export async function fetchData(slug: any) {
+async function fetchData(slug: any) {
     let sbParams = {};
 
     const storyblokApi = getStoryblokApi();
