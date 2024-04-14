@@ -1,3 +1,4 @@
+import { StoryblokComponent, getStoryblokApi } from '@storyblok/react';
 import { Button } from 'components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from 'components/ui/card';
 import { Separator } from 'components/ui/separator';
@@ -17,12 +18,22 @@ async function getData(id) {
   return res.json();
 }
 
+// const fetchStoryblokData = async (slug) => {
+//   const storyblokApi = getStoryblokApi();
+//   const res = await storyblokApi.get(`cdn/stories/vehicles/${slug}`);
+//   if (!res.data) throw new Error('Failed to fetch Storyblok data');
+//   return res.data.story;
+// };
+
 
 export default async function VehiclesPage({ params: { id } }) {
   const data = await getData(id)
+  // const { content } = await fetchStoryblokData(id);
+
   console.log(data)
   const locale = useLocale();
   const isRTL = locale === 'ar';
+
   return (
     <section className='py-6 gap-6 flex flex-col'>
       <Suspense fallback={<>loading...</>}>
@@ -102,6 +113,9 @@ export default async function VehiclesPage({ params: { id } }) {
 
 
       </Suspense>
+
+
+
     </section>
 
   );

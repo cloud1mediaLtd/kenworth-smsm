@@ -6,8 +6,32 @@ import { Separator } from 'components/ui/separator';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
 import { CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
+import { ISbStoriesParams, StoryblokComponent, getStoryblokApi } from '@storyblok/react';
+import { map } from 'lodash';
+
+
+export async function fetchData() {
+  let sbParams = { starts_with: "posts" };
+
+  const storyblokApi = getStoryblokApi();
+  try {
+    return storyblokApi.get(`cdn/stories/`, sbParams, { cache: "no-store" });
+
+  }
+  catch (error) {
+    console.error('error', error);
+    return { data: null };
+  }
+}
+
 
 export default async function IndexPage() {
+  const { data } = await fetchData();
+  // console.log('data', data.stories);
+
+  const stories = data?.stories;
+
+  console.log('stories:', stories);
 
   const locale = useLocale();
   // add booking for free mot
@@ -21,6 +45,8 @@ export default async function IndexPage() {
         <div className='content-container-no-bg mt-4'>
 
           <h1 className='mt-6'>Latest Offers</h1>
+
+
 
           <div className='grid grid-cols-4 gap-6 w-full pt-4'>
 
@@ -220,69 +246,53 @@ export default async function IndexPage() {
             </div>
           </div>
 
-
-
-
           <Separator className="my-6" />
 
-          <h1>News & Events</h1>
+          <Link href="/posts" className='group flex items-center gap-2 hover:text-slate-700'>
+            <h1 className='text-lg font-bold'>News & Events</h1>
+            {/* Use group-hover:flex to show the span only when the parent is hovered */}
+            <span className='opacity-0 group-hover:opacity-100 transition-opacity hidden group-hover:flex items-center'>{'>'}</span>
+          </Link>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 pt-4'>
+          <div className='grid grid-cols-3 gap-6 pt-4'>
+            {stories.map((story) => {
+              const { content } = story;
+              const mainImageBlok = content.body.find(blok => blok.component === 'main_image');
+              const titleBlok = content.body.find(blok => blok.component === 'title');
+              const excerptBlok = content.body.find(blok => blok.component === 'excerpt');
 
-            <Card className='overflow-hidden'>
-              <div className='relative min-h-48 basis-3/5'>
-                <Image
-                  id='hero-image'
-                  src="/logos/10-anniverary-logo.png"
-                  alt=""
-                  fill={true}
-                  sizes='(max-width: 640px) 640px, 1920px'
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>Celebrating 10 years</CardTitle>
-                <CardDescription>Just arrived in stock genuine accessoriess</CardDescription>
-              </CardHeader>
-            </Card>
+              return (
+                <Card key={story.slug} className='overflow-hidden relative'>
+                  <div className='flex flex-col grow'>
 
-            <Card className='overflow-hidden'>
-              <div className='relative min-h-48 basis-3/5'>
-                <Image
-                  id='hero-image'
-                  src="/900x506_cmsv2_80e41573-6970-540b-a802-69b81ce043ed-7192424.webp"
-                  alt=""
-                  fill={true}
-                  sizes='(max-width: 640px) 640px, 1920px'
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>See You At Libya Rally</CardTitle>
-                <CardDescription>Just arrived in stock genuine accessoriess</CardDescription>
-              </CardHeader>
-            </Card>
+                    {mainImageBlok && mainImageBlok.main_image.length > 0 && (
+                      <div className='relative h-44'>
+                        <Image
+                          src={mainImageBlok.main_image[0].filename}
+                          alt=""
+                          fill={true}
+                          sizes='(max-width: 640px) 640px, 1920px'
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    )}
+                    <CardHeader className='h-36'>
+                      <CardTitle>{titleBlok?.title}</CardTitle>
+                      <CardDescription className='line-clamp-2'>{excerptBlok?.excerpt}</CardDescription>
+                    </CardHeader>
+                  </div>
 
-            <Card className='overflow-hidden'>
-              <div className='relative min-h-48 basis-3/5'>
 
-                <Image
-                  id='hero-image'
-                  src="/KRADS_P7.jpg"
-                  alt=""
-                  fill={true}
-                  sizes='(max-width: 640px) 640px, 1920px'
-                  style={{ objectFit: "cover" }}
-                />
-
-              </div>
-              <CardHeader>
-                <CardTitle>Benghazi Showroom Now Open</CardTitle>
-                <CardDescription>Just arrived in stock genuine accessoriess</CardDescription>
-              </CardHeader>
-            </Card>
-
+                  <CardFooter className='flex items-end'>
+                    <Button asChild>
+                      <Link href={`/posts/${story.slug}`}>Read more</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              );
+            })}
           </div>
+
         </div>
 
       </main>

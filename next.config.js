@@ -22,6 +22,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "cdn-empmerch.newjobs.com",
 			},
+			{
+				protocol: "https",
+				hostname: "a.storyblok.com",
+			}
 		],
 	},
 };

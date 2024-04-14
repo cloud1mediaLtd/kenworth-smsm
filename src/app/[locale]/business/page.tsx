@@ -5,7 +5,7 @@ import PageLayout from 'components/PageLayout';
 import Hero from 'components/hero';
 
 export default function aboutPage() {
-  const t = useTranslations('AboutPage');
+  const t = useTranslations('BusinessCenterPage');
 
   return (
     <>

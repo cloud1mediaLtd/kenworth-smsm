@@ -1,5 +1,5 @@
 //  src/app/en/vehicles/model[id]/page.tsx
-import PageLayout from "components/PageLayout";
+import { StoryblokComponent, getStoryblokApi } from "@storyblok/react";
 import { Button } from "components/ui/button";
 import { Card } from "components/ui/card";
 import { Separator } from "components/ui/separator";
@@ -11,43 +11,48 @@ import Image from "next/image";
 import { Suspense } from "react";
 
 async function getData(id: string) {
-    const res = await fetch(`https://smedbackend.fly.dev/vehicles/models/${id}`, { next: { revalidate: 3600 } })
-    if (!res.ok) {
-        throw new Error('Failed to fetch data');
+    try {
+        const res = await fetch(`https://smedbackend.fly.dev/vehicles/models/${id}`, { next: { revalidate: 3600 } })
+        if (!res.ok) {
+            throw new Error('Failed to fetch data');
+        }
+        return res.json();
     }
-
-    return res.json();
+    catch (error) {
+        console.error('error', error);
+        return { data: null };
+    }
 }
 
-// // A function that creates a translator
-// async function createTranslator(locale) {
-//     const t = await getTranslations({ locale, namespace: 'ContactPage' });
-//     return t;
-// }
-
-// export async function generateMetadata({ params: { locale } }) {
-//     const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
-//     const format = await getFormatter(locale);
-//     const now = await getNow(locale);
-//     const timeZone = await getTimeZone(locale);
-// }
+const fetchStoryblokData = async (slug) => {
+    const storyblokApi = getStoryblokApi();
+    try {
+        const res = await storyblokApi.get(`cdn/stories/vehicles/${slug}`);
+        if (!res.data) throw new Error('Failed to fetch Storyblok data');
+        return res.data.story;
+    }
+    catch (error) {
+        console.error('error', error);
+        return { data: null };
+    }
+};
 
 export default async function getModel
+    ({ params: { id } }) {
+    const model = await getData(id);
+    const { content } = await fetchStoryblokData(id);
 
-    ({ params }: { params: { id: string } }) {
-    const model = await getData(params.id);
+    console.log('content:', content);
+
     const locale = useLocale();
     const isRTL = locale === 'ar';
     const t = await getTranslations('VehiclesPage');
 
     // fix suspense
-
     return (
 
-        <section className='flex flex-col'>
+        <section className='relative'>
             <Suspense fallback={<>loading...</>}>
-
-
                 <div className='flex flex-col md:flex-row gap-6 pt-12'>
                     <div className="flex basis-auto md:basis-1/2 relative min-h-[200px]">
                         <Image
@@ -80,7 +85,6 @@ export default async function getModel
                             {isRTL && model.Description_ar ? model.Description_ar : model.Description}
                         </p>
 
-
                         <div className='flex flex-col gap-3'>
 
                             <Button className="w-full py-6">
@@ -98,7 +102,7 @@ export default async function getModel
 
                 <div className="flex flex-col gap-6">
 
-                    {model.Trims?.map((trim, index) => (
+                    {model.Trims?.map((trim) => (
                         <Card key={trim.ID} className='flex flex-col gap-2 p-6'>
                             <div className="flex gap-3 items-center">
                                 <span className='text-xlarge-bold'>{isRTL && trim.Name_ar ? trim.Name_ar : trim.Name}</span>
@@ -108,8 +112,8 @@ export default async function getModel
                             <Separator className="my-0" />
 
                             {trim.OptionSets?.map((optionSet, index) => (
-                                <div className='flex flex-col'>
-                                    <div className="flex gap-4 items-center">
+                                <div key={optionSet.ID} className='flex flex-col'>
+                                    <div className="flex flex-col sm:flex-row gap-4 items-center">
                                         {index + 1}
                                         <Separator orientation='vertical' className='h-4' />
 
@@ -135,7 +139,6 @@ export default async function getModel
                                         </div>
                                     </div>
 
-
                                     {index !== trim.OptionSets.length - 1 && <Separator className="mt-2" />}
 
                                 </div>
@@ -145,36 +148,14 @@ export default async function getModel
                     ))}
 
                 </div>
-                <Separator className="mt-6" />
 
-                {/* <div className=''>
-
-                    <div className='hidden md:grid grid-cols-2 gap-5'>
-                        <div className='flex justify-between tracking-normal'>
-                            <div>
-                                <span className='text-base'>Fuel type</span>
-                            </div>
-                            <div>
-                                <span className='text-base'>Petrol</span>
-                            </div>
-                        </div>
-
-                        <div className='flex justify-between tracking-normal'>
-                            <div>
-                                <span className='text-base'>{t('specs.bodytype')}</span>
-                            </div>
-                            <div>
-                                <span className='text-base'>Saloon</span>
-                            </div>
-                        </div>
-              
-                        
-                        
-                    </div>
-                </div> */}
             </Suspense>
-
-        </section>
+            {content &&
+                <div className="">
+                    <Separator className="mt-6" />
+                    <StoryblokComponent blok={content} />
+                </div>}
+        </section >
 
     );
 }

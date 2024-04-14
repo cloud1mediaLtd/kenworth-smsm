@@ -72,7 +72,6 @@ export default async function Brands({ locale }) {
                     </div>
                     <div className="brands-overlay md:hidden" />
 
-                    <Separator className='my-4' />
                 </div>
             ))}
         </section >
