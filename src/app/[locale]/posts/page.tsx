@@ -8,7 +8,7 @@ import { Button } from 'components/ui/button';
 import Image from 'next/image';
 import { CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
 
-export async function fetchData() {
+async function fetchData() {
     let sbParams = { starts_with: "posts" };
     const storyblokApi = getStoryblokApi();
     try {
@@ -19,7 +19,6 @@ export async function fetchData() {
         return { data: null };
     }
 }
-
 
 export default async function Posts() {
     const { data } = await fetchData();

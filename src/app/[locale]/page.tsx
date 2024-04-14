@@ -119,9 +119,6 @@ export default async function IndexPage() {
 
             </Card>
 
-
-
-
             <Card className='col-span-4 overflow-hidden items-center hover:bg-[#0245B2]/90 bg-[#0245B2]'>
               <Link href="/parts" className='h-20 flex items-center'>
                 <div className='relative h-full w-[400px]'>
