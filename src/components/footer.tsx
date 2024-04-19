@@ -50,7 +50,7 @@ export default function Footer() {
 
                 <h1>Visit our showroom</h1>
 
-                <div className="bg-slate-50 p-6 mt-4 flex gap-6 items-center justify-between">
+                <div className="bg-slate-50 p-6 mt-4 flex flex-col md:flex-row gap-6 items-center justify-between">
                     <div className="flex gap-6">
                         <span className="text-large-semi">Tripoli:</span>
                         <p className="text-base-semi">Al-Swany Road</p>
@@ -122,7 +122,7 @@ export default function Footer() {
                     </div>
 
 
-                    <Card className="bg-slate-50 p-6 justify-center items-center flex">
+                    {/* <Card className="bg-slate-50 p-6 justify-center items-center flex">
                         <div className="flex flex-col gap-6">
                             <div className="flex h-32 w-32 rounded-full bg-black items-center justify-center relative overflow-hidden">
                                 <Image
@@ -135,7 +135,7 @@ export default function Footer() {
                             </div>
                             <span className="text-large-semi">Business Center</span>
                         </div>
-                    </Card>
+                    </Card> */}
 
                 </div>
 

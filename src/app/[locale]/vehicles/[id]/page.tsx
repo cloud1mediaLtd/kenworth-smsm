@@ -1,4 +1,3 @@
-import { StoryblokComponent, getStoryblokApi } from '@storyblok/react';
 import { Button } from 'components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from 'components/ui/card';
 import { Separator } from 'components/ui/separator';
@@ -7,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
-async function getData(id) {
+async function getData(id: string) {
 
   console.log(id)
   const res = await fetch(`https://smedbackend.fly.dev/vehicles/${id}`, { next: { revalidate: 3600 } });

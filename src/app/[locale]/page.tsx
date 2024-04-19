@@ -49,10 +49,11 @@ export default async function IndexPage() {
 
           <div className='grid grid-cols-4 gap-6 w-full pt-4'>
 
-            <Card className='flex flex-col col-span-4 md:flex-row overflow-hidden items-center h-64'>
-              <div className='relative h-full w-[400px]'>
+            <Card className='flex flex-col md:flex-row col-span-4 overflow-hidden'>
+
+
+              <div className='relative h-44 md:h-full md:w-44'>
                 <Image
-                  id='hero-image'
                   src="https://automaxgroup.me/wp-content/uploads/2023/08/2024-Jeep-Grand-Cherokee-4xe.jpg"
                   alt=""
                   fill={true}
@@ -79,7 +80,7 @@ export default async function IndexPage() {
                         alt='Mopar'
                         width={80}
                         height={80}
-                        className=" h-10 w-10"
+                        className="h-10 w-10"
                       />
 
                       <div className='flex flex-row md:flex-col leading-3 gap-1'>
@@ -120,7 +121,7 @@ export default async function IndexPage() {
             </Card>
 
             <Card className='col-span-4 overflow-hidden items-center hover:bg-[#0245B2]/90 bg-[#0245B2]'>
-              <Link href="/parts" className='h-20 flex items-center'>
+              <Link href="/parts" className='h-24 flex items-center'>
                 <div className='relative h-full w-[400px]'>
 
                   <Image
@@ -158,7 +159,7 @@ export default async function IndexPage() {
             </Link> */}
 
             <Card className='col-span-4 overflow-hidden items-center hover:bg-slate-50'>
-              <Link href="/parts" className='h-20 flex'>
+              <Link href="/parts" className='h-24 flex'>
                 <div className='relative h-full w-[400px]'>
                   <Image
                     src='/WINCH_GUARD_LIGHT_MOUNTING BRACKETS.jpg'
@@ -191,7 +192,7 @@ export default async function IndexPage() {
               Explore the site or contact us by email, chat or phone.
             </p>
 
-            <div className='grid grid-cols-4 gap-6 pt-6'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-6'>
               <div className='flex flex-col text-center items-center gap-6 p-2' >
                 <div className='flex h-20 w-20 rounded-full bg-black items-center justify-center'>
                   <span className='text-white'>
@@ -250,40 +251,42 @@ export default async function IndexPage() {
             <span className='opacity-0 group-hover:opacity-100 transition-opacity hidden group-hover:flex items-center'>{'>'}</span>
           </Link>
 
-          <div className='grid grid-cols-3 gap-6 pt-4'>
-            {stories.map((story) => {
+          <div className='grid grid-cols-2 gap-4 pt-4'>
+            {stories.slice(0, 3).map((story, index) => {
               const { content } = story;
               const mainImageBlok = content.body.find(blok => blok.component === 'main_image');
               const titleBlok = content.body.find(blok => blok.component === 'title');
               const excerptBlok = content.body.find(blok => blok.component === 'excerpt');
 
+              const cardClassName = `overflow-hidden relative ${index === 2 ? 'col-span-2' : ''}`;
+
+
               return (
-                <Card key={story.slug} className='overflow-hidden relative'>
-                  <div className='flex flex-col grow'>
+                <Card key={story.slug} className={cardClassName}>
+                  <Link href={`/posts/${story.slug}`}>
 
-                    {mainImageBlok && mainImageBlok.main_image.length > 0 && (
-                      <div className='relative h-44'>
-                        <Image
-                          src={mainImageBlok.main_image[0].filename}
-                          alt=""
-                          fill={true}
-                          sizes='(max-width: 640px) 640px, 1920px'
-                          style={{ objectFit: "cover" }}
-                        />
-                      </div>
-                    )}
-                    <CardHeader className='h-36'>
-                      <CardTitle>{titleBlok?.title}</CardTitle>
-                      <CardDescription className='line-clamp-2'>{excerptBlok?.excerpt}</CardDescription>
-                    </CardHeader>
-                  </div>
+                    <div className='flex flex-col grow'>
+
+                      {mainImageBlok && mainImageBlok.main_image.length > 0 && (
+                        <div className='relative h-44'>
+                          <Image
+                            src={mainImageBlok.main_image[0].filename}
+                            alt=""
+                            fill={true}
+                            sizes='(max-width: 640px) 640px, 1920px'
+                            style={{ objectFit: "cover" }}
+                          />
+                        </div>
+                      )}
+                      <CardHeader className='h-36'>
+                        <CardTitle>{titleBlok?.title}</CardTitle>
+                        <CardDescription className='line-clamp-2'>{excerptBlok?.excerpt}</CardDescription>
+                      </CardHeader>
+                    </div>
 
 
-                  <CardFooter className='flex items-end'>
-                    <Button asChild>
-                      <Link href={`/posts/${story.slug}`}>Read more</Link>
-                    </Button>
-                  </CardFooter>
+
+                  </Link>
                 </Card>
               );
             })}
