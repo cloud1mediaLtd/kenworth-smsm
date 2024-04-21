@@ -220,10 +220,10 @@ export default async function IndexPage() {
                   >
 
                     <div className='flex w-full justify-end items-center gap-3'>
-                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-500'>View Jeep Line up</Link>
-                      <Button asChild className='h-12 justify-end'>
+                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-300'>View Chrysler Line up</Link>
+                      <Button asChild variant={"outline"} size='sm' className='h-12 justify-end'>
                         <Link href="/vehicles/model/16">
-                          Read More
+                          More...
                         </Link>
                       </Button>
                     </div>
@@ -311,10 +311,10 @@ export default async function IndexPage() {
 
 
                     <div className='flex w-full justify-end items-center gap-3'>
-                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-500'>View Jeep Line up</Link>
+                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-300'>View Fiat Professional Line up</Link>
                       <Button asChild className='h-12 justify-end'>
                         <Link href="/vehicles/model/16">
-                          Read More
+                          More...
                         </Link>
                       </Button>
                     </div>
