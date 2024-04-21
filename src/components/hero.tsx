@@ -16,7 +16,7 @@ export default function Hero() {
     const isRTL = locale === 'ar';
     return (
         <section>
-            <div className="relative min-h-96">
+            <div className="relative min-h-[16rem]">
 
                 {/* Decorative image and overlay */}
                 <Image
@@ -26,7 +26,7 @@ export default function Hero() {
                     width={1920}
                     height={850}
                     sizes='(max-width: 640px) 640px, 1920px'
-                    className='object-cover w-full h-full min-h-96'
+                    className='object-cover w-full min-h-[16rem] '
 
                 />
                 {/* <div className="relative flex  flex-col justify-center items-center px-6 text-center h-full py-16">

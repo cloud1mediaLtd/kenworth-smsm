@@ -28,7 +28,7 @@ export default async function Brands({ locale }) {
 
     const isRTL = locale === 'ar';
     return (
-        <section className="">
+        <section className="flex flex-col gap-4">
             {data.map((brand) => (
                 <div key={brand.ID} className='overflow-hidden relative'>
                     <div className='flex gap-4 brands-scroll-container overflow-x-auto'>

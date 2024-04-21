@@ -50,7 +50,7 @@ const tajawal = Tajawal({
 });
 
 const inter = Inter({
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
 });
 
@@ -97,7 +97,7 @@ export default async function LocaleLayout({
 
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
-      <body className={clsx(font.className, '')}>
+      <body className={clsx(font.className, 'bg-slate-100')}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet" />
 
