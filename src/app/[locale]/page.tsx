@@ -97,7 +97,7 @@ export default async function IndexPage() {
 
                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
                           <span className='text-sm font-semibold leading-none'>
-                            3 Years 0r 100,000 Km Warranty
+                            2 Years 0r 60,000 Km Warranty
                           </span>
 
                         </div>
@@ -145,7 +145,7 @@ export default async function IndexPage() {
 
               </Card>
 
-              <Card className='flex flex-col overflow-hidden bg-black'>
+              <Card className='flex flex-col overflow-hidden bg-black col-span-2 md:col-span-1'>
 
                 <div className='relative min-h-52'>
                   <Image
@@ -189,7 +189,7 @@ export default async function IndexPage() {
 
                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
                           <span className='text-sm font-semibold leading-none'>
-                            3 Years 0r 100,000 Km Warranty
+                            2 Years 0r 60,000 Km Warranty
                           </span>
 
                         </div>
@@ -233,7 +233,7 @@ export default async function IndexPage() {
 
               </Card>
 
-              <Card className='flex flex-col overflow-hidden bg-[#9C101A]'>
+              <Card className='flex flex-col overflow-hidden bg-[#9C101A] col-span-2 md:col-span-1'>
 
                 <div className='relative min-h-52'>
                   <Image
@@ -279,7 +279,7 @@ export default async function IndexPage() {
 
                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
                           <span className='text-sm font-semibold leading-none'>
-                            3 Years 0r 100,000 Km Warranty
+                            2 Years 0r 60,000 Km Warranty
                           </span>
 
                         </div>
