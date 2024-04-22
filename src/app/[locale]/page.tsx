@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Separator } from 'components/ui/separator';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
-import { CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
+import { ArrowRightCircleIcon, CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
 import { getStoryblokApi } from '@storyblok/react';
 import { Badge } from 'components/ui/badge';
 
@@ -46,13 +46,14 @@ export default async function IndexPage() {
       <Hero />
 
       <main>
+
         <div className='content-container-no-bg mt-4'>
 
           <h1 className='mt-6'>Latest Offers</h1>
 
           <div className='flex flex-col w-full pt-4'>
 
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-2 gap-8'>
               <Card className='flex flex-col md:flex-row overflow-hidden md:h-80 col-span-2 bg-black'>
 
                 <div className='relative min-h-52 md:h-full md:w-72 lg:w-full basis-1/2'>
@@ -69,42 +70,41 @@ export default async function IndexPage() {
 
                   <CardHeader>
                     <Badge className='bg-[#0245B2]'>New 2025 | Early Bird Offers</Badge>
-                    <div className='text-xl font-bold text-slate-50 flex items-center gap-3 pt-2'>
+                    <div className='text-2xl font-bold text-slate-50 flex items-center gap-3 pt-3'>
                       <Image
                         src='/logos/jeep_logo.svg'
                         alt='Mopar'
-                        width={80}
-                        height={80}
+                        width={100}
+                        height={100}
                         className="h-10 object-contain"
                       />
-                      <Separator orientation='vertical' className='h-4' />
+                      <Separator orientation='vertical' className='h-6' />
                       Grand Cheroke
                     </div>
                   </CardHeader>
 
-                  <CardContent className='h-full flex items-center'>
-                    <div className='w-full flex flex-col gap-3 h-auto'>
+                  <CardContent className='h-full flex flex-col gap-6'>
+                    <h2 className='text-slate-50 '>Setting The Bar For Adventure</h2>
 
-                      <Card className='flex items-center gap-3 px-2 py-1'>
+                    <div className='w-full flex gap-3 h-auto'>
+                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2 bg-black'>
 
                         <Image
-                          src='/Mopar_logo.svg'
+                          src='/Mopar_logo_black.png'
                           alt='Mopar'
                           width={80}
                           height={80}
                           className="h-10 w-10"
                         />
-
                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                          <span className='text-sm font-semibold leading-none'>
-                            2 Years 0r 60,000 Km Warranty
+                          <span className='text-sm font-semibold leading-none text-slate-50'>
+                            Warranty Available
                           </span>
-
                         </div>
 
                       </Card>
 
-                      <Card className='flex items-center gap-3 px-2 py-1'>
+                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2'>
 
                         <Image
                           src='/logos/bankLogo.png'
@@ -115,37 +115,33 @@ export default async function IndexPage() {
                         />
                         <div className='flex flex-col leading-3'>
                           <span className='text-sm font-semibold leading-none'>
-                            Available Via Finance
+                            Finance Available
                           </span>
                         </div>
                       </Card>
-
                     </div>
                   </CardContent>
 
                   <CardFooter
                     className='flex flex-col gap-3'
                   >
-
-
-                    <div className='flex w-full justify-end items-center gap-3'>
+                    <div className='flex w-full justify-end items-center gap-6'>
                       <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-300'>
                         View Jeep Line up
                       </Link>
-                      <Button asChild variant={"outline"} size='sm' className='h-12 justify-end'>
-                        <Link href="/vehicles/model/16">
-                          More...
-                        </Link>
-                      </Button>
+
+                      <Separator orientation='vertical' className='h-4' />
+
+                      <Link href="/vehicles/model/16">
+                        <ArrowRightCircleIcon className='h-12 text-white' />
+                      </Link>
                     </div>
-
-
                   </CardFooter>
                 </div>
 
               </Card>
 
-              <Card className='flex flex-col overflow-hidden bg-black col-span-2 md:col-span-1'>
+              <Card className='flex flex-col overflow-hidden bg-white col-span-2 md:col-span-1'>
 
                 <div className='relative min-h-52'>
                   <Image
@@ -161,7 +157,7 @@ export default async function IndexPage() {
 
                   <CardHeader>
                     <Badge className='bg-[#0245B2]'>New 2025 | Early Bird Offers</Badge>
-                    <div className='text-xl font-bold text-slate-50 flex items-center gap-3 pt-2'>
+                    <div className='text-2xl font-bold text-slate-900 flex items-center gap-3 pt-3'>
                       <Image
                         src='/logos/chryslerlogo.png'
                         alt='Mopar'
@@ -174,10 +170,11 @@ export default async function IndexPage() {
                     </div>
                   </CardHeader>
 
-                  <CardContent className='h-full flex items-center'>
-                    <div className='w-full flex flex-col gap-3 h-auto'>
+                  <CardContent className='h-full flex flex-col gap-6'>
+                    <h2 className='text-slate-700 '>Move In Luxery</h2>
 
-                      <Card className='flex items-center gap-3 px-2 py-1'>
+                    <div className='w-full flex gap-3 h-auto'>
+                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2'>
 
                         <Image
                           src='/Mopar_logo.svg'
@@ -186,17 +183,15 @@ export default async function IndexPage() {
                           height={80}
                           className="h-10 w-10"
                         />
-
                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
                           <span className='text-sm font-semibold leading-none'>
-                            2 Years 0r 60,000 Km Warranty
+                            Warranty Available
                           </span>
-
                         </div>
 
                       </Card>
 
-                      <Card className='flex items-center gap-3 px-2 py-1'>
+                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2'>
 
                         <Image
                           src='/logos/bankLogo.png'
@@ -207,27 +202,25 @@ export default async function IndexPage() {
                         />
                         <div className='flex flex-col leading-3'>
                           <span className='text-sm font-semibold leading-none'>
-                            Available Via Finance
+                            Finance Available
                           </span>
                         </div>
                       </Card>
-
                     </div>
                   </CardContent>
-
                   <CardFooter
                     className='flex flex-col gap-3'
                   >
-
                     <div className='flex w-full justify-end items-center gap-3'>
-                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-300'>View Chrysler Line up</Link>
-                      <Button asChild variant={"outline"} size='sm' className='h-12 justify-end'>
-                        <Link href="/vehicles/model/16">
-                          More...
-                        </Link>
-                      </Button>
-                    </div>
+                      <Link href={"/vehicles/2"} className=' font-semibold text-sm text-slate-600'>
+                        View Chrysler Line up
+                      </Link>
+                      <Separator orientation='vertical' className='h-4' />
 
+                      <Link href="/vehicles/model/5">
+                        <ArrowRightCircleIcon className='h-12 text-slate-600' />
+                      </Link>
+                    </div>
                   </CardFooter>
                 </div>
 
@@ -245,46 +238,38 @@ export default async function IndexPage() {
                   />
                 </div>
 
+
                 <div className='flex flex-col grow'>
 
                   <CardHeader>
                     <Badge className='bg-black'>Fleet | Mega Volume Discounts</Badge>
-                    <div className='text-xl font-bold text-slate-50 flex items-center gap-3 pt-2'>
+                    <h2 className='text-center text-white font-bold text-2xl py-3'>
+                      Professional Range
+                    </h2>
+
+                    <div className='text-xl font-bold text-slate-50 flex items-center justify-center gap-3 pt-2'>
                       <Image
                         src='/logos/Fiat_professional_logo_white.png'
                         alt='Mopar'
-                        width={80}
+                        width={55}
                         height={80}
                         className="h-10 object-contain"
                       />
                       <Separator orientation='vertical' className='h-4' />
-                      Fiat Professional
+                      <Image
+                        src='/logos/ram_professional.jpeg'
+                        alt='Mopar'
+                        width={140}
+                        height={80}
+                        className="h-10 object-contain"
+                      />
+
                     </div>
+
                   </CardHeader>
-
-
 
                   <CardContent className='h-full flex items-center'>
                     <div className='w-full flex flex-col gap-3 h-auto'>
-
-                      <Card className='flex items-center gap-3 px-2 py-1'>
-
-                        <Image
-                          src='/Mopar_logo.svg'
-                          alt='Mopar'
-                          width={80}
-                          height={80}
-                          className="h-10 w-10"
-                        />
-
-                        <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                          <span className='text-sm font-semibold leading-none'>
-                            2 Years 0r 60,000 Km Warranty
-                          </span>
-
-                        </div>
-
-                      </Card>
 
                       <Card className='flex items-center gap-3 px-2 py-1'>
 
@@ -309,34 +294,31 @@ export default async function IndexPage() {
                     className='flex flex-col gap-3'
                   >
 
-
                     <div className='flex w-full justify-end items-center gap-3'>
-                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-300'>View Fiat Professional Line up</Link>
-                      <Button asChild className='h-12 justify-end'>
-                        <Link href="/vehicles/model/16">
-                          More...
-                        </Link>
-                      </Button>
+                      <Link href={"/business"} className=' font-semibold text-sm text-slate-100'>
+                        Visit Business Center
+                      </Link>
+                      <Separator orientation='vertical' className='h-4' />
+
+                      <Link href="/business">
+                        <ArrowRightCircleIcon className='h-12 text-white' />
+                      </Link>
                     </div>
-
-
                   </CardFooter>
                 </div>
 
               </Card>
 
-
-
             </div>
 
+            <Separator className="my-12" />
 
-            <Separator className="my-6" />
+            {/* 
+            <div className='flex flex-col lg:flex-row gap-8'>
 
-            <div className='flex gap-6'>
-
-              <Card className='overflow-hidden items-center hover:bg-[#0245B2]/90 bg-[#0245B2] basis-3/5'>
+              <Card className='overflow-hidden items-center hover:bg-[#0245B2]/90 bg-[#0245B2] md:basis-3/5'>
                 <Link href="/parts" className='h-24 flex items-center'>
-                  <div className='relative h-full w-[400px]'>
+                  <div className='relative h-full w-[300px] max-w-[250px]'>
 
                     <Image
                       src='/moparService.jpeg'
@@ -354,9 +336,9 @@ export default async function IndexPage() {
                 </Link>
               </Card>
 
-              <Card className='overflow-hidden items-center hover:bg-slate-50 basis-2/5'>
+              <Card className='overflow-hidden items-center hover:bg-slate-50 md:basis-2/5'>
                 <Link href="/parts" className='h-24 flex'>
-                  <div className='relative h-full w-[400px]'>
+                  <div className='relative h-full w-[300px] max-w-[250px]'>
                     <Image
                       src='/WINCH_GUARD_LIGHT_MOUNTING BRACKETS.jpg'
                       alt='Mopar'
@@ -373,93 +355,97 @@ export default async function IndexPage() {
 
               </Card>
 
-            </div>
+            </div> */}
 
           </div>
 
           {/* <Separator className="my-6" />
 
-           <h1>Join The Club</h1> */}
+           <h1>Join The Club</h1> 
+           
+                     <Separator className="my-8" />
 
-          <Separator className="my-6" />
-          <div className='flex flex-col'>
+           */}
 
-            <h1>Here When You Need Us</h1>
-            <p className='text-base-semi'>
-              Have a question or need some help? We're here for you day and night.
-              Explore the site or contact us by email, chat or phone.
-            </p>
+        </div>
 
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-6'>
-              <div className='flex flex-col text-center items-center gap-6 p-2' >
-                <div className='flex h-20 w-20 rounded-full bg-[#0245B2] items-center justify-center'>
-                  <span className='text-white'>
-                    <UserCog2 size={40} />
-                  </span>
+        <div className='flex flex-col bg-[#0245B2] p-6 text-slate-50 text-center'>
 
-                </div>
-                <span className='text-large-semi'>
-                  Service
+          <h1>Here When You Need Us</h1>
+          <p className='text-base-semi'>
+            Have a question or need some help? We're here for you day and night.
+            Explore the site or contact us by email, chat or phone.
+          </p>
+
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-6'>
+            <div className='flex flex-col text-center items-center gap-6 p-2' >
+              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                <span className='text-[#0245B2]'>
+                  <UserCog2 size={40} />
                 </span>
+
               </div>
-
-              <div className='flex flex-col text-center items-center gap-6 p-2' >
-                <div className='flex h-20 w-20 rounded-full bg-[#0245B2] items-center justify-center'>
-                  <span className='text-white'>
-                    <HeartPulse size={40} />
-                  </span>
-
-                </div>
-                <span className='text-large-semi'>
-                  Health Report
-                </span>
-              </div>
-
-              <div className='flex flex-col text-center  items-center gap-6 p-2' >
-                <div className='flex h-20 w-20 rounded-full bg-[#0245B2] items-center justify-center'>
-                  <span className='text-white'>
-                    <ListTodo size={40} />
-                  </span>
-
-                </div>
-                <span className='text-large-semi'>
-                  Recalls
-                </span>
-              </div>
-
-              <div className='flex flex-col text-center items-center gap-6 p-2' >
-                <div className='flex h-20 w-20 rounded-full bg-[#0245B2] items-center justify-center'>
-                  <span className='text-white'>
-                    <CalendarCheck size={40} />
-                  </span>
-
-                </div>
-                <span className='text-large-semi'>
-                  Schedule
-                </span>
-              </div>
+              <span className='text-large-semi'>
+                Service
+              </span>
             </div>
-            <Link href="/parts" className='pt-6'>
-              <Card className='flex flex-col col-span-1 md:flex-row overflow-hidden items-center text-white relative p-2' >
-                <div className='relative min-h-32 w-full h-full opacity-10'>
-                  <Image
-                    src='/Mopar_logo.svg'
-                    alt='Mopar'
-                    fill={true}
-                    sizes='(max-width: 640px) 640px, 1920px'
 
-                  />
-                </div>
-                <div className='p-4 absolute inset-0 z-20 text-black'>
-                  <h3>New Online Spare parts search</h3>
-                  <span className='text-xs'>Find out more...</span>
-                </div>
-              </Card>
-            </Link>
+            <div className='flex flex-col text-center items-center gap-6 p-2' >
+              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                <span className='text-[#0245B2]'>
+                  <HeartPulse size={40} />
+                </span>
 
+              </div>
+              <span className='text-large-semi'>
+                Health Report
+              </span>
+            </div>
+
+            <div className='flex flex-col text-center  items-center gap-6 p-2' >
+              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                <span className='text-[#0245B2]'>
+                  <ListTodo size={40} />
+                </span>
+
+              </div>
+              <span className='text-large-semi'>
+                Recalls
+              </span>
+            </div>
+
+            <div className='flex flex-col text-center items-center gap-6 p-2' >
+              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                <span className='text-[#0245B2]'>
+                  <CalendarCheck size={40} />
+                </span>
+
+              </div>
+              <span className='text-large-semi'>
+                Schedule
+              </span>
+            </div>
           </div>
+          <Link href="/parts" className='pt-6'>
+            <Card className='flex flex-col col-span-1 md:flex-row justify-center overflow-hidden items-center text-white relative p-8 hover:shadow-lg' >
+              <Image
+                src='/Mopar_logo.svg'
+                alt='Mopar'
+                fill={true}
+                sizes='(max-width: 640px) 640px, 1920px'
+                className='object-fill opacity-15 py-4'
+              />
+              <div className='p-4 inset-0 z-20 text-black'>
+                <h2 className='text-2xl'>New Online Spare parts search</h2>
+              </div>
+            </Card>
+          </Link>
 
-          <Separator className="my-6" />
+        </div>
+
+        <div className='content-container-no-bg'>
+
+          <Separator className="my-12" />
 
           <Link href="/posts" className='group flex items-center gap-2 hover:text-slate-700'>
             <h1 className='text-lg font-bold'>News & Events</h1>
@@ -475,7 +461,6 @@ export default async function IndexPage() {
               const excerptBlok = content.body.find(blok => blok.component === 'excerpt');
 
               const cardClassName = `overflow-hidden relative ${index === 2 ? 'col-span-2' : ''}`;
-
 
               return (
                 <Card key={story.slug} className={cardClassName}>
@@ -508,7 +493,7 @@ export default async function IndexPage() {
 
         </div>
 
-      </main>
+      </main >
 
     </ section >
   );

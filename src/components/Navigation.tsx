@@ -49,7 +49,7 @@ const Navigation = () => {
 
             <div className='md:flex items-center gap-6'>
               {mainNavigation.map(({ key, href, title }) => (
-                <Link className={"hidden md:flex items-center text-sm font-medium text-white tracking-wide"} key={key} href={href}>
+                <Link className={"hidden md:flex items-center text-base font-medium text-white tracking-wide"} key={key} href={href}>
                   {title}
                 </Link>
               ))}
@@ -57,7 +57,7 @@ const Navigation = () => {
               <div className='flex gap-4 items-center'>
                 <Button
                   asChild
-                  size={"sm"}
+                  size={"default"}
                   variant={"outline"}
                   className="w-full"
                 >
@@ -67,7 +67,7 @@ const Navigation = () => {
                 </Button>
 
                 <a href="#menu-aside" className=''>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8 text-white">
                     <title>Pass</title>
 
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

@@ -29,7 +29,7 @@ export function Aside({
       />
       <aside>
         <header>
-          <h3>{heading}</h3>
+          <h2>{heading}</h2>
           <CloseAside />
         </header>
         <main>{children}</main>
@@ -41,7 +41,7 @@ export function Aside({
 function CloseAside() {
   return (
     /* eslint-disable-next-line jsx-a11y/anchor-is-valid */
-    <a className="close" href="#" onChange={() => history.go(-1)}>
+    <a className="close font-semibold text-2xl" href="#" onChange={() => history.go(-1)}>
       &times;
     </a>
   );
