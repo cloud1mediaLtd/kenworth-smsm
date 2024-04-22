@@ -444,7 +444,9 @@ export default async function IndexPage() {
                   <ArrowRightCircleIcon className='h-12' />
 
                 </div>
-                <Separator orientation='vertical' className='h-8 bg-black w-1 rounded-sm' />
+
+                <Separator orientation='vertical' className='h-8 bg-black w-0.5 rounded-sm' />
+
                 <div className='p-4 inset-0 z-20 text-black flex gap-2 items-center'>
                   <h2 className='text-2xl'>Search Parts Shop</h2>
                   <ArrowRightCircleIcon className='h-12' />
