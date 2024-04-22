@@ -3,11 +3,11 @@ import Hero from 'components/hero';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from 'components/ui/card';
 import Image from 'next/image';
 import { Separator } from 'components/ui/separator';
-import { Button } from 'components/ui/button';
 import Link from 'next/link';
-import { ArrowRightCircleIcon, CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
+import { ArrowRightCircleIcon, CalendarCheck, ChevronLeftSquare, ChevronRightSquare, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
 import { getStoryblokApi } from '@storyblok/react';
 import { Badge } from 'components/ui/badge';
+import PostsPreview from 'components/postsPreview';
 
 
 async function fetchData() {
@@ -51,7 +51,7 @@ export default async function IndexPage() {
 
           <h1 className='mt-6'>Latest Offers</h1>
 
-          <div className='flex flex-col w-full pt-4'>
+          <div className='flex flex-col w-full pt-6'>
 
             <div className='grid grid-cols-2 gap-8'>
               <Card className='flex flex-col md:flex-row overflow-hidden md:h-80 col-span-2 bg-black'>
@@ -69,7 +69,7 @@ export default async function IndexPage() {
                 <div className='flex flex-col grow'>
 
                   <CardHeader>
-                    <Badge className='bg-[#0245B2]'>New 2025 | Early Bird Offers</Badge>
+                    <Badge className='from-[#9C101A] bg-gradient-to-r to-[#340407]'>New 2025 | Early Bird Offers</Badge>
                     <div className='text-2xl font-bold text-slate-50 flex items-center gap-3 pt-3'>
                       <Image
                         src='/logos/jeep_logo.svg'
@@ -87,7 +87,7 @@ export default async function IndexPage() {
                     <h2 className='text-slate-50 '>Setting The Bar For Adventure</h2>
 
                     <div className='w-full flex gap-3 h-auto'>
-                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2 bg-black'>
+                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2 bg-black'>
 
                         <Image
                           src='/Mopar_logo_black.png'
@@ -104,7 +104,7 @@ export default async function IndexPage() {
 
                       </Card>
 
-                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2'>
+                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/logos/bankLogo.png'
@@ -143,7 +143,7 @@ export default async function IndexPage() {
 
               <Card className='flex flex-col overflow-hidden bg-white col-span-2 md:col-span-1'>
 
-                <div className='relative min-h-52'>
+                <div className='relative min-h-56'>
                   <Image
                     src="/300.png"
                     alt=""
@@ -155,13 +155,13 @@ export default async function IndexPage() {
 
                 <div className='flex flex-col grow'>
 
-                  <CardHeader>
-                    <Badge className='bg-[#0245B2]'>New 2025 | Early Bird Offers</Badge>
+                  <CardHeader className=''>
+                    <Badge className='from-[#0245B2] bg-gradient-to-r to-[#0356db]'>New 2025 | Early Bird Offers</Badge>
                     <div className='text-2xl font-bold text-slate-900 flex items-center gap-3 pt-3'>
                       <Image
                         src='/logos/chryslerlogo.png'
                         alt='Mopar'
-                        width={150}
+                        width={170}
                         height={80}
                         className="h-10 object-contain"
                       />
@@ -171,10 +171,12 @@ export default async function IndexPage() {
                   </CardHeader>
 
                   <CardContent className='h-full flex flex-col gap-6'>
-                    <h2 className='text-slate-700 '>Move In Luxery</h2>
+                    <h2 className='text-slate-700 pb-2'>
+                      High-performance And Personal Luxury
+                    </h2>
 
                     <div className='w-full flex gap-3 h-auto'>
-                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2'>
+                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/Mopar_logo.svg'
@@ -191,7 +193,7 @@ export default async function IndexPage() {
 
                       </Card>
 
-                      <Card className='flex items-center gap-3 px-2 py-1 basis-1/2'>
+                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/logos/bankLogo.png'
@@ -228,7 +230,7 @@ export default async function IndexPage() {
 
               <Card className='flex flex-col overflow-hidden bg-[#9C101A] col-span-2 md:col-span-1'>
 
-                <div className='relative min-h-52'>
+                <div className='relative min-h-56'>
                   <Image
                     src="/fiatrange.jpg"
                     alt=""
@@ -238,22 +240,21 @@ export default async function IndexPage() {
                   />
                 </div>
 
-
                 <div className='flex flex-col grow'>
 
-                  <CardHeader>
-                    <Badge className='bg-black'>Fleet | Mega Volume Discounts</Badge>
+                  <CardHeader className=''>
+                    <Badge className='from-black bg-gradient-to-r to-[#4d090e]'>Fleet | Mega Volume Discounts</Badge>
                     <h2 className='text-center text-white font-bold text-2xl py-3'>
                       Professional Range
                     </h2>
 
-                    <div className='text-xl font-bold text-slate-50 flex items-center justify-center gap-3 pt-2'>
+                    <div className='text-xl font-bold text-slate-50 flex items-center justify-center gap-3 '>
                       <Image
                         src='/logos/Fiat_professional_logo_white.png'
                         alt='Mopar'
-                        width={55}
-                        height={80}
-                        className="h-10 object-contain"
+                        width={50}
+                        height={90}
+                        className="h-12 object-contain"
                       />
                       <Separator orientation='vertical' className='h-4' />
                       <Image
@@ -282,7 +283,7 @@ export default async function IndexPage() {
                         />
                         <div className='flex flex-col leading-3'>
                           <span className='text-sm font-semibold leading-none'>
-                            Available Via Finance
+                            Finance Available
                           </span>
                         </div>
                       </Card>
@@ -369,77 +370,90 @@ export default async function IndexPage() {
 
         </div>
 
-        <div className='flex flex-col bg-[#0245B2] p-6 text-slate-50 text-center'>
+        <div className='flex flex-col bg-[#0245B2] py-6 text-slate-50 text-center'>
+          <div className='content-container-no-bg'>
 
-          <h1>Here When You Need Us</h1>
-          <p className='text-base-semi'>
-            Have a question or need some help? We're here for you day and night.
-            Explore the site or contact us by email, chat or phone.
-          </p>
+            <h1>Here When You Need Us</h1>
+            <p className='text-base-semi'>
+              Have a question or need some help? We're here for you day and night.
+              Explore the site or contact us by email, chat or phone.
+            </p>
 
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-6'>
-            <div className='flex flex-col text-center items-center gap-6 p-2' >
-              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
-                <span className='text-[#0245B2]'>
-                  <UserCog2 size={40} />
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-6'>
+              <div className='flex flex-col text-center items-center gap-6 p-2' >
+                <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                  <span className='text-[#0245B2]'>
+                    <UserCog2 size={40} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Service
                 </span>
-
               </div>
-              <span className='text-large-semi'>
-                Service
-              </span>
+
+              <div className='flex flex-col text-center items-center gap-6 p-2' >
+                <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                  <span className='text-[#0245B2]'>
+                    <HeartPulse size={40} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Health Report
+                </span>
+              </div>
+
+              <div className='flex flex-col text-center  items-center gap-6 p-2' >
+                <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                  <span className='text-[#0245B2]'>
+                    <ListTodo size={40} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Recalls
+                </span>
+              </div>
+
+              <div className='flex flex-col text-center items-center gap-6 p-2' >
+                <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
+                  <span className='text-[#0245B2]'>
+                    <CalendarCheck size={40} />
+                  </span>
+
+                </div>
+                <span className='text-large-semi'>
+                  Schedule
+                </span>
+              </div>
             </div>
 
-            <div className='flex flex-col text-center items-center gap-6 p-2' >
-              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
-                <span className='text-[#0245B2]'>
-                  <HeartPulse size={40} />
-                </span>
+            <Link href="/parts" className=''>
+              <Card className='flex flex-col col-span-1 md:flex-row justify-center overflow-hidden items-center text-white relative p-8 hover:shadow-lg mt-8' >
+                <Image
+                  src='/Mopar_logo.svg'
+                  alt='Mopar'
+                  fill={true}
+                  sizes='(max-width: 640px) 640px, 1920px'
+                  className='object-fill opacity-15 py-4'
+                />
+                <div className='p-4 inset-0 z-20 text-black flex gap-2 items-center'>
+                  <h2 className='text-2xl'>Book Service</h2>
 
-              </div>
-              <span className='text-large-semi'>
-                Health Report
-              </span>
-            </div>
+                  <ArrowRightCircleIcon className='h-12' />
 
-            <div className='flex flex-col text-center  items-center gap-6 p-2' >
-              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
-                <span className='text-[#0245B2]'>
-                  <ListTodo size={40} />
-                </span>
+                </div>
+                <Separator orientation='vertical' className='h-8 bg-black w-1 rounded-sm' />
+                <div className='p-4 inset-0 z-20 text-black flex gap-2 items-center'>
+                  <h2 className='text-2xl'>Search Parts Shop</h2>
+                  <ArrowRightCircleIcon className='h-12' />
 
-              </div>
-              <span className='text-large-semi'>
-                Recalls
-              </span>
-            </div>
+                </div>
+              </Card>
+            </Link>
 
-            <div className='flex flex-col text-center items-center gap-6 p-2' >
-              <div className='flex h-20 w-20 rounded-full bg-white items-center justify-center'>
-                <span className='text-[#0245B2]'>
-                  <CalendarCheck size={40} />
-                </span>
-
-              </div>
-              <span className='text-large-semi'>
-                Schedule
-              </span>
-            </div>
           </div>
-          <Link href="/parts" className='pt-6'>
-            <Card className='flex flex-col col-span-1 md:flex-row justify-center overflow-hidden items-center text-white relative p-8 hover:shadow-lg' >
-              <Image
-                src='/Mopar_logo.svg'
-                alt='Mopar'
-                fill={true}
-                sizes='(max-width: 640px) 640px, 1920px'
-                className='object-fill opacity-15 py-4'
-              />
-              <div className='p-4 inset-0 z-20 text-black'>
-                <h2 className='text-2xl'>New Online Spare parts search</h2>
-              </div>
-            </Card>
-          </Link>
 
         </div>
 
@@ -447,51 +461,15 @@ export default async function IndexPage() {
 
           <Separator className="my-12" />
 
-          <Link href="/posts" className='group flex items-center gap-2 hover:text-slate-700'>
-            <h1 className='text-lg font-bold'>News & Events</h1>
-            {/* Use group-hover:flex to show the span only when the parent is hovered */}
-            <span className='opacity-0 group-hover:opacity-100 transition-opacity hidden group-hover:flex items-center'>{'>'}</span>
-          </Link>
+          <PostsPreview stories={stories} />
 
-          <div className='grid grid-cols-2 gap-4 pt-4'>
-            {stories?.slice(0, 3).map((story, index) => {
-              const { content } = story;
-              const mainImageBlok = content.body.find(blok => blok.component === 'main_image');
-              const titleBlok = content.body.find(blok => blok.component === 'title');
-              const excerptBlok = content.body.find(blok => blok.component === 'excerpt');
-
-              const cardClassName = `overflow-hidden relative ${index === 2 ? 'col-span-2' : ''}`;
-
-              return (
-                <Card key={story.slug} className={cardClassName}>
-                  <Link href={`/posts/${story.slug}`}>
-
-                    <div className='flex flex-col grow'>
-
-                      {mainImageBlok && mainImageBlok.main_image.length > 0 && (
-                        <div className='relative h-44'>
-                          <Image
-                            src={mainImageBlok.main_image[0].filename}
-                            alt=""
-                            fill={true}
-                            sizes='(max-width: 640px) 640px, 1920px'
-                            style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                      )}
-                      <CardHeader className='h-36'>
-                        <CardTitle>{titleBlok?.title}</CardTitle>
-                        <CardDescription className='line-clamp-2'>{excerptBlok?.excerpt}</CardDescription>
-                      </CardHeader>
-                    </div>
-
-                  </Link>
-                </Card>
-              );
-            })}
-          </div>
+          <Separator className="my-12" />
 
         </div>
+
+
+
+
 
       </main >
 

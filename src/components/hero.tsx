@@ -7,8 +7,6 @@ import Link from 'next/link';
 import { Card } from 'components/ui/card';
 import BrandsOnly from './brandsonly';
 
-
-
 export default function Hero() {
 
     const t = useTranslations('Hero');
