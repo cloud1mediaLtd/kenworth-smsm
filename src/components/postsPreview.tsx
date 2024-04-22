@@ -23,10 +23,7 @@ export default function PostsPreview({ stories }) {
     }, [api])
 
     const options = {
-        containScroll: false,
-        loop: true,
-        duration: 20,
-        align: 'start',
+
     };
 
     const plugin = React.useRef(
