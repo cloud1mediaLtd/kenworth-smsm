@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import PageLayout from 'components/PageLayout';
-import Hero from 'components/hero';
+import Hero from 'components/index/hero';
 
 export default function aboutPage() {
   const t = useTranslations('AboutPage');

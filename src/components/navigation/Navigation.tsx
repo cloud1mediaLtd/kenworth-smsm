@@ -3,10 +3,10 @@ import { useTranslations } from 'next-intl';
 import clsx from 'clsx';
 import { useLocale } from 'next-intl';
 import Link from 'next/link'
-import { Button } from './ui/button'
-import { Aside } from './aside/Aside';
+import { Button } from '../ui/button'
+import { Aside } from '../aside/Aside';
 import { Separator } from 'components/ui/separator';
-import NavLink from './aside/navLink';
+import NavLink from '../aside/navLink';
 
 
 interface NavigationItem {

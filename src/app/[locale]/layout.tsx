@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import { notFound } from 'next/navigation';
 import { createTranslator, NextIntlClientProvider } from 'next-intl';
 import type { ReactNode } from 'react';
-import Navigation from 'components/Navigation';
-import Footer from 'components/footer';
+import Navigation from 'components/navigation/Navigation';
+import Footer from 'components/navigation/footer';
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 
 

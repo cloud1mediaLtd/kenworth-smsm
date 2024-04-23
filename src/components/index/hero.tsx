@@ -2,10 +2,10 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import Link from 'next/link';
 import { Card } from 'components/ui/card';
-import BrandsOnly from './brandsonly';
+import BrandsOnly from '../brandsonly';
 
 export default function Hero() {
 

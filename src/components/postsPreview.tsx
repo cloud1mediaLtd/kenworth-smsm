@@ -1,12 +1,11 @@
 "use client";
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { ChevronLeftSquare, ChevronRightSquare } from "lucide-react";
 import React from "react";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "./ui/carousel";
 import Image from 'next/image';
 import Autoplay from "embla-carousel-autoplay";
-
 
 
 export default function PostsPreview({ stories }) {
@@ -75,7 +74,6 @@ export default function PostsPreview({ stories }) {
                                             </CardHeader>
                                         </div>
 
-
                                     </Card>
 
                                 </div>
@@ -88,7 +86,7 @@ export default function PostsPreview({ stories }) {
 
             <div className="flex grow  gap-3 justify-center pt-6">
                 <Link href={'/posts'} className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2">
-                    All Posts <span>  </span>
+                    All Posts
                 </Link>
 
                 <div className="flex gap-1">

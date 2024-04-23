@@ -1,8 +1,7 @@
 import Link from "next/link"
-import { Separator } from "./ui/separator"
+import { Separator } from "../ui/separator"
 import MapComponent from "./mapComponent"
-import { Card } from "./ui/card"
-import Image from 'next/image';
+
 
 
 
