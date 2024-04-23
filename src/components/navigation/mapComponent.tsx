@@ -12,7 +12,6 @@ let rtlPluginSet = false;
 
 const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
     const mapContainerRef = useRef<HTMLDivElement>(null);
-    const [hasClickedMap, setHasClickedMap] = useState(false);
 
     class GetDirectionsControl {
 
@@ -61,7 +60,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [longitude, latitude] as LngLatLike,
             zoom: 14.5,
-            scrollZoom: hasClickedMap, // Initially set based on `hasClickedMap` state
+            scrollZoom: false, // Initially set based on `hasClickedMap` state
             pitch: 70,
             bearing: 20,
             antialias: true,
@@ -96,29 +95,11 @@ const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
 
         mapContainerRef.current.appendChild(centerButton);
 
-        const enableScrollZoom = () => map.scrollZoom.enable();
-        const disableScrollZoom = () => map.scrollZoom.disable();
-
-        // Only attach these listeners if map zoom on scroll is initially disabled
-        if (!hasClickedMap) {
-            mapContainerRef.current.addEventListener('mouseenter', enableScrollZoom);
-            mapContainerRef.current.addEventListener('mouseleave', disableScrollZoom);
-            mapContainerRef.current.addEventListener('click', () => {
-                setHasClickedMap(true);
-                map.scrollZoom.enable();
-            });
-        }
-
         return () => {
             map.remove();
             centerButton.remove();
-            if (!hasClickedMap) {
-                mapContainerRef.current?.removeEventListener('mouseenter', enableScrollZoom);
-                mapContainerRef.current?.removeEventListener('mouseleave', disableScrollZoom);
-                mapContainerRef.current?.removeEventListener('click', () => setHasClickedMap(true));
-            }
         };
-    }, [latitude, longitude, hasClickedMap]);
+    }, [latitude, longitude]);
 
     return <div id='map' ref={mapContainerRef} style={{ width: '100%', height: '400px', position: 'relative' }} />;
 };
