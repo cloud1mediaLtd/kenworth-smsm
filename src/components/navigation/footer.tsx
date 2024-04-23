@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { Separator } from "../ui/separator"
 import MapComponent from "./mapComponent"
+import { Card } from "components/ui/card"
+import { MailIcon, PhoneCall } from "lucide-react"
 
 
 
@@ -45,11 +47,10 @@ export default function Footer() {
         <footer aria-labelledby="footer-heading">
 
             <div className="content-container-no-bg mb-4">
-                <Separator className="my-6" />
+                <Separator className="my-12" />
 
-                <h1>Visit our showroom</h1>
 
-                <div className="bg-slate-50 p-6 mt-4 flex flex-col md:flex-row gap-6 items-center justify-between">
+                <Card className="bg-slate-50 p-6 mt-4 flex flex-col md:flex-row gap-6 items-center justify-between">
                     <div className="flex gap-6">
                         <span className="text-large-semi">Tripoli:</span>
                         <p className="text-base-semi">Al-Swany Road</p>
@@ -58,18 +59,22 @@ export default function Footer() {
                     </div>
                     <div className="flex gap-3">
                         <Link href="/contact">
-                            <span className="text-primary underline-offset-4 hover:underline text-base-semi">Contact</span>
+                            <span className="text-primary underline-offset-4 hover:underline text-base-semi">
+                                <PhoneCall />
+                            </span>
                         </Link>
                         <Separator orientation="vertical" className="h-6" />
 
                         <Link href="/business">
-                            <span className="text-primary underline-offset-4 hover:underline text-base-semi">Business Center</span>
+                            <span className="text-primary underline-offset-4 hover:underline text-base-semi">
+                                <MailIcon />
+                            </span>
                         </Link>
 
                     </div>
 
 
-                </div>
+                </Card>
 
             </div>
             <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />

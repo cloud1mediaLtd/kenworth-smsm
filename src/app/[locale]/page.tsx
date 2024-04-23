@@ -4,11 +4,12 @@ import { Card, CardContent, CardFooter, CardHeader } from 'components/ui/card';
 import Image from 'next/image';
 import { Separator } from 'components/ui/separator';
 import Link from 'next/link';
-import { ArrowRightCircleIcon, CalendarCheck, HeartPulse, ListTodo, UserCog2 } from 'lucide-react';
+import { ArrowRightCircleIcon, CalendarCheck, HeartPulse, ListTodo, SearchCheckIcon, UserCog2 } from 'lucide-react';
 import { getStoryblokApi } from '@storyblok/react';
 import { Badge } from 'components/ui/badge';
 import PostsPreview from 'components/postsPreview';
 import MoparSection from 'components/moparSection';
+import { Button } from 'components/ui/button';
 
 
 async function fetchData() {
@@ -48,11 +49,9 @@ export default async function IndexPage() {
 
       <main>
 
-        <div className='content-container-no-bg mt-4'>
+        <div className='content-container-no-bg mt-8'>
 
-          <h1 className='mt-6'>Latest Offers</h1>
-
-          <div className='flex flex-col w-full pt-6'>
+          <div className='flex flex-col w-full'>
 
             <div className='grid grid-cols-2 gap-8'>
               <Card className='flex flex-col md:flex-row overflow-hidden md:h-80 col-span-2 bg-black'>
@@ -84,11 +83,14 @@ export default async function IndexPage() {
                     </div>
                   </CardHeader>
 
-                  <CardContent className='h-full flex flex-col gap-6'>
+                  <CardContent className='h-full flex flex-col gap-3'>
                     <h2 className='text-slate-50 '>Setting The Bar For Adventure</h2>
 
-                    <div className='w-full flex gap-3 h-auto'>
-                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2 bg-black'>
+                    <Separator className="my-0 opacity-35" />
+
+
+                    <div className='w-full flex items-center h-auto'>
+                      <div className='flex  justify-center items-center gap-3 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/Mopar_logo_black.png'
@@ -99,13 +101,16 @@ export default async function IndexPage() {
                         />
                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
                           <span className='text-sm font-semibold leading-none text-slate-50'>
-                            Warranty Available
+                            Warranty
                           </span>
                         </div>
 
-                      </Card>
+                      </div>
 
-                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2'>
+                      <Separator orientation='vertical' className='h-4 bg-slate-400' />
+
+
+                      <div className='flex  justify-center items-center gap-3 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/logos/bankLogo.png'
@@ -115,20 +120,17 @@ export default async function IndexPage() {
                           className=" h-10 w-10"
                         />
                         <div className='flex flex-col leading-3'>
-                          <span className='text-sm font-semibold leading-none'>
-                            Finance Available
+                          <span className='text-sm font-semibold leading-none text-slate-50'>
+                            Finance
                           </span>
                         </div>
-                      </Card>
+                      </div>
                     </div>
-                  </CardContent>
+                    <Separator className="my-0 opacity-35" />
 
-                  <CardFooter
-                    className='flex flex-col gap-3'
-                  >
                     <div className='flex w-full justify-end items-center gap-6'>
-                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-300'>
-                        View Jeep Line up
+                      <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-200'>
+                        view Jeep Line up
                       </Link>
 
                       <Separator orientation='vertical' className='h-4' />
@@ -137,7 +139,9 @@ export default async function IndexPage() {
                         <ArrowRightCircleIcon className='h-12 text-white' />
                       </Link>
                     </div>
-                  </CardFooter>
+
+                  </CardContent>
+
                 </div>
 
               </Card>
@@ -157,7 +161,9 @@ export default async function IndexPage() {
                 <div className='flex flex-col grow'>
 
                   <CardHeader className=''>
-                    <Badge className='from-[#0245B2] bg-gradient-to-r to-[#0356db]'>New 2025 | Early Bird Offers</Badge>
+                    <Badge className='from-[#0245B2] bg-gradient-to-r to-[#0356db]'>
+                      New 2024 | Now in showroom
+                    </Badge>
                     <div className='text-2xl font-bold text-slate-900 flex items-center gap-3 pt-3'>
                       <Image
                         src='/logos/chryslerlogo.png'
@@ -177,7 +183,7 @@ export default async function IndexPage() {
                     </h2>
 
                     <div className='w-full flex gap-3 h-auto'>
-                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2'>
+                      <Card className='flex justify-center items-center gap-4 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/Mopar_logo.svg'
@@ -188,13 +194,13 @@ export default async function IndexPage() {
                         />
                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
                           <span className='text-sm font-semibold leading-none'>
-                            Warranty Available
+                            Warranty
                           </span>
                         </div>
 
                       </Card>
 
-                      <Card className='flex items-center gap-4 px-3 py-1 basis-1/2'>
+                      <Card className='flex justify-center items-center gap-4 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/logos/bankLogo.png'
@@ -205,7 +211,7 @@ export default async function IndexPage() {
                         />
                         <div className='flex flex-col leading-3'>
                           <span className='text-sm font-semibold leading-none'>
-                            Finance Available
+                            Finance
                           </span>
                         </div>
                       </Card>
@@ -271,9 +277,26 @@ export default async function IndexPage() {
                   </CardHeader>
 
                   <CardContent className='h-full flex items-center'>
-                    <div className='w-full flex flex-col gap-3 h-auto'>
+                    <div className='w-full flex gap-3 h-auto'>
 
-                      <Card className='flex items-center gap-3 px-2 py-1'>
+                      <Card className='flex justify-center items-center gap-4 px-3 py-1 basis-1/2 bg-black'>
+
+                        <Image
+                          src='/Mopar_logo_black.png'
+                          alt='Mopar'
+                          width={80}
+                          height={80}
+                          className="h-10 w-10"
+                        />
+                        <div className='flex flex-row md:flex-col leading-3 gap-1'>
+                          <span className='text-sm font-semibold leading-none text-slate-50'>
+                            Warranty
+                          </span>
+                        </div>
+
+                      </Card>
+
+                      <Card className='flex  justify-center items-center gap-4 px-3 py-1 basis-1/2'>
 
                         <Image
                           src='/logos/bankLogo.png'
@@ -284,7 +307,7 @@ export default async function IndexPage() {
                         />
                         <div className='flex flex-col leading-3'>
                           <span className='text-sm font-semibold leading-none'>
-                            Finance Available
+                            Finance
                           </span>
                         </div>
                       </Card>
@@ -311,7 +334,20 @@ export default async function IndexPage() {
 
               </Card>
 
+
             </div>
+            <div className="flex items-center justify-center gap-4 pt-10">
+              <Link
+                href={"/vehicles"}
+                className="flex items-center gap-2 text-black underline underline-offset-2 hover:no-underline"
+              >
+                All Vehicles
+
+              </Link>
+
+            </div>
+
+
 
             <Separator className="my-12" />
 
@@ -379,7 +415,6 @@ export default async function IndexPage() {
 
           <PostsPreview stories={stories} />
 
-          <Separator className="my-12" />
 
         </div>
 

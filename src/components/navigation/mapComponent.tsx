@@ -59,7 +59,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
             container: mapContainerRef.current,
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [longitude, latitude] as LngLatLike,
-            zoom: 14.5,
+            zoom: 15,
             scrollZoom: false, // Initially set based on `hasClickedMap` state
             pitch: 70,
             bearing: 20,

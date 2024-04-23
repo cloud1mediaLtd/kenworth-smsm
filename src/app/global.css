@@ -304,3 +304,17 @@ p {
 .end-padding {
   min-width: 20px; /* Matches the width of the overlay to ensure content visibility */
 }
+
+
+
+
+  /*
+  * --------------------------------------------------
+  * Shadows
+  * --------------------------------------------------
+  */
+
+
+.shadow-circle {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
