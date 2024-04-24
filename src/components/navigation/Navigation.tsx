@@ -7,6 +7,7 @@ import { Button } from '../ui/button'
 import { Aside } from '../aside/Aside';
 import { Separator } from 'components/ui/separator';
 import NavLink from '../aside/navLink';
+import ShopStatus from 'components/navigation/shopstatus';
 
 
 interface NavigationItem {
@@ -48,13 +49,14 @@ const Navigation = () => {
             </div>
 
             <div className='md:flex items-center gap-6'>
-              {mainNavigation.map(({ key, href, title }) => (
+              {/* {mainNavigation.map(({ key, href, title }) => (
                 <Link className={"hidden md:flex items-center text-base font-medium text-white tracking-wide"} key={key} href={href}>
                   {title}
                 </Link>
-              ))}
+              ))} */}
 
               <div className='flex gap-4 items-center'>
+                <ShopStatus />
                 <Button
                   asChild
                   size={"default"}
