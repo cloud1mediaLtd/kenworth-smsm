@@ -6,9 +6,9 @@ export default function VehiclePageLayout({ children }) {
     const locale = useLocale();
     return (
         <div className="">
-            <div className='content-container-no-bg z-2 '>
-                <div className="overflow-hidden sticky top-0 z-50" >
-                    <div className="brands-scroll-container overflow-x-auto">
+            <div className=' z-2 '>
+                <div className="overflow-hidden sticky top-0 z-50 bg-slate-50" >
+                    <div className="brands-scroll-container overflow-x-auto px-4 ">
                         <BrandsOnly className={"min-w-[700px]"} locale={locale} />
                         {/* Padding div to ensure content is not obscured by the overlay */}
                         <div className="end-padding md:hidden" />
@@ -18,7 +18,9 @@ export default function VehiclePageLayout({ children }) {
                 </div>
 
                 <Separator className='mb-4' />
-                {children}
+                <div className="content-container-no-bg">
+                    {children}
+                </div>
             </div>
         </div>
     );
