@@ -1,5 +1,3 @@
-"use client";
-import PageLayout from "components/PageLayout";
 import Brands from "components/brands";
 import { Separator } from "components/ui/separator";
 import { useLocale, useTranslations } from "next-intl";
@@ -13,19 +11,34 @@ export default function VehiclePage() {
     return (
         <section className=''>
 
-            <PageLayout title={t('title')}>
+            <div className="flex flex-col md:flex-row gap-10 items-center pb-12 pt-6">
+                <h1 className=''>
+                    {t('title')}
+                </h1>
+
+                <Separator
+                    orientation='vertical'
+                    className='h-16 md:block hidden'
+                />
                 <div className="flex flex-col gap-5">
                     {t.rich('description', {
                         p: (chunks) =>
                             <p className="">{chunks}</p>,
                     })}
                 </div>
-                <Separator className="my-6" />
-                <Suspense fallback={<>loading...</>}>
-                    <Brands locale={locale} />
-                </Suspense>
 
-            </PageLayout>
+            </div>
+            <Separator
+                orientation='horizontal'
+                className=''
+            />
+
+
+
+            <Suspense fallback={<>loading...</>}>
+                <Brands locale={locale} />
+            </Suspense>
+
 
 
         </ section>

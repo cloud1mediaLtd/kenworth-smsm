@@ -1,6 +1,3 @@
-
-import { useLocale } from 'next-intl';
-import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Separator } from './ui/separator';
@@ -15,7 +12,6 @@ async function getData() {
     return res.json();
 }
 
-
 export default async function Brands({ locale }) {
     const data = await getData();
 
@@ -25,35 +21,29 @@ export default async function Brands({ locale }) {
         brand.Models.sort((a, b) => a.Name.localeCompare(b.Name));
     }
 
-
     const isRTL = locale === 'ar';
     return (
         <section className="flex flex-col gap-4">
             {data.map((brand) => (
                 <div key={brand.ID} className='overflow-hidden relative'>
-                    <div className='flex gap-4 brands-scroll-container overflow-x-auto'>
+                    <div className='flex flex-col items-center'>
 
-                        <div className='flex gap-4 items-center'>
-                            <Link href={`/vehicles/${brand.ID}`}>
-                                <div className=' w-16 md:w-28 lg:w-32  h-44 flex items-center justify-center'>
-                                    <Image className=''
-                                        src={`/${brand.Image}`}
-                                        alt={brand.Name}
-                                        width={180}
-                                        height={180}
-                                    />
-                                </div>
-                            </Link>
-                            <Separator orientation='vertical' className='h-36' />
-
+                        <div className='relative w-full max-w-52 md:max-w-44 h-32'>
+                            <Image
+                                src={`/${brand.Image}`}
+                                alt={brand.Name}
+                                fill={true}
+                                style={{ objectFit: "contain" }}
+                            />
                         </div>
-                        <div className='flex gap-6'>
+
+                        <div className='flex gap-6 brands-scroll-container overflow-x-auto'>
 
                             {brand.Models.map((model) => (
 
-                                <Link href={`/vehicles/model/${model.ID}`} key={model.ID} className='flex'>
-                                    <Card className='w-40'>
-                                        <div className='h-40 align-middle flex items-center justify-center'>
+                                <Link href={`/vehicles/model/${model.ID}`} key={model.ID} className='flex min-w-44'>
+                                    <Card className=''>
+                                        <div className='h-44 align-middle flex items-center justify-center p-1'>
                                             <Image src={`/${model.Image}`} alt={model.Name} width={180} height={180} />
                                         </div>
                                         <div className='text-center pt-4 font-bold'>
@@ -70,6 +60,10 @@ export default async function Brands({ locale }) {
 
 
                     </div>
+                    <Separator
+                        orientation='horizontal'
+                        className='mt-6'
+                    />
                     <div className="brands-overlay md:hidden" />
 
                 </div>

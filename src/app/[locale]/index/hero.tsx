@@ -2,10 +2,10 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
-import { Button } from '../ui/button';
+import { Button } from '../../../components/ui/button';
 import Link from 'next/link';
 import { Card } from 'components/ui/card';
-import BrandsOnly from '../brandsonly';
+import BrandsOnly from '../../../components/brandsonly';
 
 export default function Hero() {
 
@@ -41,7 +41,7 @@ export default function Hero() {
                 </div> */}
             </div>
             <div className='content-container-no-bg -mt-10 z-2 relative'>
-                <Card className='relative overflow-hidden'>
+                <Card className='relative overflow-hidden px-3'>
                     {/* Scrollable content container inside the card */}
                     <div className="brands-scroll-container overflow-x-auto">
                         <BrandsOnly className={"min-w-[700px]"} locale={locale} />

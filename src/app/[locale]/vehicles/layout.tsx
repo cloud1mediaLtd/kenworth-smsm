@@ -6,8 +6,8 @@ export default function VehiclePageLayout({ children }) {
     const locale = useLocale();
     return (
         <div className="">
-            <div className='content-container-no-bg z-2 relative'>
-                <div className="overflow-hidden relative">
+            <div className='content-container-no-bg z-2 '>
+                <div className="overflow-hidden sticky top-0 z-50" >
                     <div className="brands-scroll-container overflow-x-auto">
                         <BrandsOnly className={"min-w-[700px]"} locale={locale} />
                         {/* Padding div to ensure content is not obscured by the overlay */}

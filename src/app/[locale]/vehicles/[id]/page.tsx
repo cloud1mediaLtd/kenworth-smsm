@@ -36,27 +36,25 @@ export default async function VehiclesPage({ params: { id } }) {
   return (
     <section className='py-6 gap-6 flex flex-col'>
       <Suspense fallback={<>loading...</>}>
-        <div>
-          <div className='flex flex-col md:flex-row gap-6 items-center w-full'>
-            <div className='relative w-full max-w-52 md:max-w-44 h-32'>
-              <Image
-                src={`/${data.Image}`}
-                alt={data.Name}
-                fill={true}
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-            <div className='flex gap-6 basis-3/4 items-center'>
-              <Separator
-                orientation='vertical'
-                className='h-20 hidden md:block'
-              />
-              {
-                isRTL && data.Description_ar ? <p className='text-sm text-gray-500'>{data.Description_ar}</p> : <p className='text-sm text-gray-500'>{data.Description}</p>
-              }
-            </div>
-
+        <div className='flex flex-col md:flex-row gap-6 items-center w-full'>
+          <div className='relative w-full max-w-52 md:max-w-44 h-32'>
+            <Image
+              src={`/${data.Image}`}
+              alt={data.Name}
+              fill={true}
+              style={{ objectFit: "contain" }}
+            />
           </div>
+          <div className='flex gap-6 basis-3/4 items-center'>
+            <Separator
+              orientation='vertical'
+              className='h-20 hidden md:block'
+            />
+            {
+              isRTL && data.Description_ar ? <p className='text-sm text-gray-500'>{data.Description_ar}</p> : <p className='text-sm text-gray-500'>{data.Description}</p>
+            }
+          </div>
+
         </div>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
 

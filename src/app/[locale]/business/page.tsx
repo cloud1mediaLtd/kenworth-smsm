@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import PageLayout from 'components/PageLayout';
-import Hero from 'components/index/hero';
+import Hero from 'app/[locale]/index/hero';
 
 export default function aboutPage() {
   const t = useTranslations('BusinessCenterPage');
@@ -12,7 +12,7 @@ export default function aboutPage() {
 
 
       <PageLayout title={t('title')}>
-        <div className="max-w-2xl">
+        <div className="">
           {t.rich('description', {
             p: (chunks) => <p className="mt-4 text-lg">{chunks}</p>,
 

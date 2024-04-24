@@ -23,7 +23,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
 
     return (
         <div className={`flex items-center w-full ${className}`}>
-            <div className={"flex w-full justify-between gap-5 items-center py-3 px-4 h-24"}>
+            <div className={"flex w-full justify-between gap-5 items-center h-20 bg-slate-50"}>
                 {data.map((brand, subIndex) => {
                     const { width, height } = getImageSizeById(brand.ID);
                     return (
@@ -46,7 +46,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
                 })}
                 <div className="h-4 w-0.5 bg-gray-300" />
                 <Image
-                    src='/Mopar_logo.svg'
+                    src='/logos/Mopar_logo.svg'
                     alt='Mopar'
                     width={50}
                     height={50}
@@ -62,11 +62,11 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
 function getImageSizeById(brandId) {
     // Example lookup for image sizes based on brand ID
     const sizeLookup = {
-        '1': { width: 200, height: 200 },
-        '2': { width: 200, height: 200 },
+        '1': { width: 280, height: 280 },
+        '2': { width: 280, height: 280 },
         '3': { width: 200, height: 200 },
-        '4': { width: 200, height: 200 },
-        '5': { width: 200, height: 200 },
+        '4': { width: 280, height: 280 },
+        '5': { width: 120, height: 100 },
         '6': { width: 200, height: 200 },
     };
     // Default size if ID not found in lookup

@@ -10,6 +10,8 @@ import Autoplay from "embla-carousel-autoplay";
 
 export default function PostsPreview({ stories }) {
 
+    console.log(stories)
+
     const [api, setApi] = React.useState<CarouselApi>()
 
 
