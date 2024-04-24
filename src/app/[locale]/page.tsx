@@ -45,16 +45,13 @@ export default async function IndexPage() {
       <main>
 
         <div className='content-container-no-bg mt-8'>
-
           <Offers />
-
         </div>
         <MoparSection />
         <div className='content-container-no-bg'>
           <Separator className="my-12" />
           <PostsPreview stories={stories} />
         </div>
-
 
       </main >
 

@@ -124,7 +124,7 @@ export default function Offers() {
 
                         <CardHeader className='h-32'>
                             <Badge className='flex justify-center from-[#0245B2] bg-gradient-to-r to-[#0356db]'>
-                                Fleet | Mega Discounts
+                                New | Now In Showroom
                             </Badge>
                             <div className="flex relative items-center justify-center gap-3 pt-3" >
                                 <Image

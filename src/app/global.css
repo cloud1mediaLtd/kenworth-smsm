@@ -271,7 +271,12 @@ p {
   */
 
   .brands-scroll-container::-webkit-scrollbar {
-    display: none;
+
+    height: 3px;
+  }
+
+  .brands-scroll-container::-webkit-scrollbar-track {
+    background: #d1d1d1;
   }
 
 /* Container for scrolling brands */
@@ -279,8 +284,27 @@ p {
   display: flex;
   overflow-x: auto;
   position: relative; /* This contains the absolute overlay within */
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: auto;
 }
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6f6f6f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 
 /* Ensures the overlay does not move with the scroll */
 .brands-overlay {
@@ -299,13 +323,6 @@ p {
   left: 0; /* Position to the left for RTL */
   background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)); /* Flip gradient direction for RTL */
 }
-
-/* Padding div at the end of the scrollable container */
-.end-padding {
-  min-width: 20px; /* Matches the width of the overlay to ensure content visibility */
-}
-
-
 
 
   /*

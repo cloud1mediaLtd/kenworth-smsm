@@ -4,7 +4,7 @@ import { Separator } from './ui/separator';
 import { Card } from './ui/card';
 
 async function getData() {
-    const res = await fetch('https://smedbackend.fly.dev/vehicles', { next: { revalidate: 3600 } })
+    const res = await fetch('https://smedbackend.fly.dev/vehicles', { next: { revalidate: 300 } })
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
@@ -57,7 +57,6 @@ export default async function Brands({ locale }) {
                             ))}
                         </div>
                         <div className="end-padding md:hidden" />
-
 
                     </div>
                     <Separator

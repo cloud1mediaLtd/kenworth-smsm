@@ -20,6 +20,7 @@ import Post from 'components/storyblok/Post';
 import Excerpt from 'components/storyblok/Excerpt';
 import MainImage from 'components/storyblok/Main_image';
 import VehicleGallery from 'components/storyblok/vehicleBloks/VehicleGallery';
+import MobileFooter from 'components/navigation/mobileFooter';
 
 const components = {
   page: Page,
@@ -108,6 +109,10 @@ export default async function LocaleLayout({
 
 
           <Footer />
+          <div className="sticky bottom-0 z-50">
+            <MobileFooter />
+          </div>
+
         </NextIntlClientProvider>
       </body>
 

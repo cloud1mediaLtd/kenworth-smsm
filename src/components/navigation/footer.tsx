@@ -51,13 +51,16 @@ export default function Footer() {
 
 
                 <Card className="bg-slate-50 p-6 mt-4 flex flex-col md:flex-row gap-6 items-center justify-between">
+
                     <div className="flex gap-6">
                         <span className="text-large-semi">Tripoli:</span>
                         <p className="text-base-semi">Al-Swany Road</p>
                         <Separator orientation="vertical" className="h-6" />
                         <p className="text-base-semi">+218 477 675 675</p>
                     </div>
+
                     <div className="flex gap-3">
+
                         <Link href="/contact">
                             <span className="text-primary underline-offset-4 hover:underline text-base-semi">
                                 <PhoneCall />
@@ -72,8 +75,6 @@ export default function Footer() {
                         </Link>
 
                     </div>
-
-
                 </Card>
 
             </div>

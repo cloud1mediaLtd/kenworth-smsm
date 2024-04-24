@@ -49,7 +49,6 @@ export default function Hero() {
                         <div className="end-padding md:hidden" />
                     </div>
                     {/* Fixed overlay */}
-                    <div className="brands-overlay md:hidden" />
                 </Card>
             </div>
         </section>
