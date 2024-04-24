@@ -47,7 +47,7 @@ export default function Footer() {
         <footer aria-labelledby="footer-heading">
 
             <div className="content-container-no-bg mb-4">
-                <Separator className="my-12" />
+                <Separator className="mt-12" />
 
 
                 <Card className="bg-slate-50 p-6 mt-4 flex flex-col md:flex-row gap-6 items-center justify-between">

@@ -59,7 +59,7 @@ const Navigation = () => {
                   asChild
                   size={"default"}
                   variant={"outline"}
-                  className="w-full"
+                  className="w-full hidden md:flex"
                 >
                   <Link href={'/service'}>
                     {t('services.title')}
