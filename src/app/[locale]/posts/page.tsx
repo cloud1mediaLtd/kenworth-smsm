@@ -37,7 +37,7 @@ export default async function Posts() {
                 </div>
                 <Separator className='my-3' />
                 <div className='flex flex-col lg:flex-row gap-4'>
-                    <div className='grid grid-cols-2 basis-3/4 gap-6 '>
+                    <div className='grid md:grid-cols-2 basis-3/4 gap-6 '>
                         {data?.stories?.map((story) => {
                             const { content } = story;
                             const mainImageBlok = content.body.find(blok => blok.component === 'main_image');
