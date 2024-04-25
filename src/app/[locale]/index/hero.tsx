@@ -6,6 +6,7 @@ import { Button } from '../../../components/ui/button';
 import Link from 'next/link';
 import { Card } from 'components/ui/card';
 import BrandsOnly from '../../../components/brandsonly';
+import BrandsContainer from 'components/brandsContainer';
 
 export default function Hero() {
 
@@ -43,11 +44,7 @@ export default function Hero() {
             <div className='content-container-no-bg -mt-10 z-10 relative'>
                 <Card className='px-3 sticky top-0 z-20'>
                     {/* Scrollable content container inside the card */}
-                    <div className="brands-scroll-container overflow-x-auto">
-                        <BrandsOnly className="min-w-[700px]" locale={locale} />
-                        {/* Padding div to ensure content is not obscured by the overlay */}
-                        <div className="end-padding md:hidden" />
-                    </div>
+                    <BrandsContainer locale={locale} />
                 </Card>
             </div>
 
