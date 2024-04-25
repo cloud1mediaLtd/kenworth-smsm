@@ -102,7 +102,6 @@ export default async function VehiclesPage({ params: { id } }) {
                 </Button>
               </CardFooter>
 
-
             </Card>
 
           ))}

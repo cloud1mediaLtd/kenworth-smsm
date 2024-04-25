@@ -1,305 +1,110 @@
-import { Badge } from "components/ui/badge";
-import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
-import { Separator } from "components/ui/separator";
-import { ArrowRightCircleIcon } from "lucide-react";
-import Image from 'next/image';
+"use client";
 import Link from "next/link";
+import OfferMainCard from "./offerMainCard";
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
+import { Button } from "components/ui/button";
+import FleetOffers from "./fleetOffersCard";
 
+const offers = [
+    {
+        badge: 'New 2025 | Early Bird Offers',
+        badgeClass: 'bg-black',
+        brand: { name: 'Jeep', logo: '/logos/jeep_logo.svg', logoWidth: 100, logoHeight: 100 },
+        model: {
+            name: 'Grand Cheroke',
+            description: 'Setting The Bar For Adventure',
+            image: '/jeep-grand-cherokee-4xe-overview-canvas-2-1920X922.jpg'
+        },
+        description: 'Setting The Bar For Adventure',
+        warranty: 'Warranty',
+        finance: 'Finance',
+        link: '/vehicles/model/16',
+        bg: 'bg-[#9C101A]'
+    },
+    {
+        badge: 'New | Now In Showroom',
+        badgeClass: 'bg-black',
+        brand: { name: 'Chrysler', logo: '/logos/chryslerlogo.png', logoWidth: 170, logoHeight: 80 },
+        model: {
+            name: '300',
+            description: 'High-performance And Personal Luxury',
+            image: '/2023-chrysler-300-VLP-design-feature-grid-01.avif'
+        },
+        description: 'High-performance And Personal Luxury',
+        warranty: 'Warranty',
+        finance: 'Finance',
+        link: '/vehicles/model/16',
+        bg: 'bg-[#9C101A]'
+    }
+]
 
 export default function Offers() {
+    const [api, setApi] = React.useState<CarouselApi>()
+
+    const scrollPrev = React.useCallback(() => {
+        api?.scrollPrev()
+    }, [api])
+
+    const scrollNext = React.useCallback(() => {
+        api?.scrollNext()
+    }, [api])
+
     return (
         <div className='flex flex-col w-full'>
+            <div className="flex justify-between items-center pb-4">
+                <h1 className='font-bold'>Latest Offers</h1>
+                <div className="flex gap-2 items-center">
 
-            <div className='grid grid-cols-2 gap-8'>
-                <Card className='flex flex-col md:flex-row overflow-hidden md:h-80 col-span-2 bg-black'>
+                    <Link href="/offers"
+                        className='border-2 border-black rounded-full px-3 text-sm'>
+                        More
+                    </Link>
+                    <div className="flex gap-1">
 
-                    <div className='relative min-h-52 md:h-full md:w-72 lg:w-full basis-1/2'>
-                        <Image
-                            src="/jeep-grand-cherokee-4xe-overview-canvas-2-1920X922.jpg"
-                            alt=""
-                            fill={true}
-                            sizes='(max-width: 640px) 640px, 1920px'
-                            className='object-cover w-full h-full'
-                        />
-                    </div>
-
-                    <div className='flex flex-col grow'>
-
-                        <CardHeader>
-                            <Badge className='flex justify-center from-[#9C101A] bg-gradient-to-r to-[#340407]'>New 2025 | Early Bird Offers</Badge>
-                            <div className='flex justify-center text-2xl font-bold text-slate-50 items-center gap-3 pt-3'>
-                                <Image
-                                    src='/logos/jeep_logo.svg'
-                                    alt='Mopar'
-                                    width={100}
-                                    height={100}
-                                    className="h-10 object-contain"
-                                />
-                                <Separator orientation='vertical' className='h-6' />
-                                <div >
-                                    <h2 className="text-2xl font-semibold">
-                                        Grand Cheroke
-                                    </h2>
-                                </div>
-
-                            </div>
-                        </CardHeader>
-
-                        <CardContent className='h-full flex flex-col gap-3 justify-center items-center'>
-                            <h2 className='text-slate-50 '>Setting The Bar For Adventure</h2>
-
-                            <Separator className="my-0 opacity-35" />
-
-
-                            <div className='w-full flex items-center h-auto'>
-                                <div className='flex  justify-center items-center gap-3 px-3 py-1 basis-1/2'>
-
-                                    <Image
-                                        src='/logos/Mopar_logo_black.png'
-                                        alt='Mopar'
-                                        width={80}
-                                        height={80}
-                                        className="h-10 w-10"
-                                    />
-                                    <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                        <span className='text-sm font-semibold leading-none text-slate-50'>
-                                            Warranty
-                                        </span>
-                                    </div>
-
-                                </div>
-
-                                <Separator orientation='vertical' className='h-4 bg-slate-400' />
-
-
-                                <div className='flex  justify-center items-center gap-3 px-3 py-1 basis-1/2'>
-
-                                    <Image
-                                        src='/logos/bankLogo.png'
-                                        alt='Mopar'
-                                        width={50}
-                                        height={50}
-                                        className=" h-10 w-10"
-                                    />
-                                    <div className='flex flex-col leading-3'>
-                                        <span className='text-sm font-semibold leading-none text-slate-50'>
-                                            Finance
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <Separator className="my-0 opacity-35" />
-
-                            <div className='flex w-full justify-end items-center gap-4'>
-                                <Link href={"/vehicles/3"} className=' font-semibold text-sm text-slate-200'>
-                                    view Jeep Line up
-                                </Link>
-
-                                <Separator orientation='vertical' className='h-4' />
-
-                                <Link href="/vehicles/model/16">
-                                    <ArrowRightCircleIcon className='h-12 text-white' />
-                                </Link>
-                            </div>
-
-                        </CardContent>
+                        <button
+                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
+                            <ArrowLeftCircleIcon className='h-6 w-6 text-black' />
+                        </button>
+                        <button
+                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
+                            <ArrowRightCircleIcon className='h-6 w-6 text-black' />
+                        </button>
 
                     </div>
-
-                </Card>
-
-                <Card className='flex flex-col overflow-hidden bg-white col-span-2 md:col-span-1'>
-
-                    <div className='relative min-h-56'>
-                        <Image
-                            src="/300.png"
-                            alt=""
-                            fill={true}
-                            sizes='(max-width: 640px) 640px, 1920px'
-                            className='object-cover w-full h-full'
-                        />
-                    </div>
-
-                    <div className='flex flex-col grow'>
-
-                        <CardHeader className='h-32'>
-                            <Badge className='flex justify-center from-[#0245B2] bg-gradient-to-r to-[#0356db]'>
-                                New | Now In Showroom
-                            </Badge>
-                            <div className="flex relative items-center justify-center gap-3 pt-3" >
-                                <Image
-                                    src='/logos/chryslerlogo.png'
-                                    alt='Mopar'
-                                    width={170}
-                                    height={80}
-                                    className="h-10 object-contain"
-                                />
-                                <Separator orientation='vertical' className='h-4' />
-                                <h2 className='text-center font-bold text-2xl'>
-                                    300
-                                </h2>
-                            </div>
-
-                        </CardHeader>
-
-                        <CardContent className='h-full flex flex-col gap-3 items-center'>
-
-                            <Separator className="my-0 opacity-85" />
-
-                            <h2 className='text-slate-700 pb-2'>
-                                High-performance And Personal Luxury
-                            </h2>
-
-                            <Separator className="my-0 opacity-85" />
-
-
-                            <div className='w-full flex items-center h-auto'>
-                                <div className='flex  justify-center items-center gap-3 px-3 py-1 basis-1/2'>
-
-                                    <Image
-                                        src='/logos/Mopar_logo.svg'
-                                        alt='Mopar'
-                                        width={80}
-                                        height={80}
-                                        className="h-10 w-10"
-                                    />
-                                    <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                        <span className='text-sm font-semibold leading-none text-slate-950'>
-                                            Warranty
-                                        </span>
-                                    </div>
-
-                                </div>
-
-                                <Separator orientation='vertical' className='h-4 bg-slate-400' />
-
-
-                                <div className='flex  justify-center items-center gap-3 px-3 py-1 basis-1/2'>
-
-                                    <Image
-                                        src='/logos/bankLogo.png'
-                                        alt='Mopar'
-                                        width={50}
-                                        height={50}
-                                        className=" h-10 w-10"
-                                    />
-                                    <div className='flex flex-col leading-3'>
-                                        <span className='text-sm font-semibold leading-none text-slate-950'>
-                                            Finance
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <Separator className="my-0 opacity-85" />
-
-                        </CardContent>
-
-                        <CardFooter>
-
-                            <div className='flex w-full justify-end items-center gap-4'>
-                                <Link href={"/vehicles/5"} className=' font-semibold text-sm text-slate-600'>
-                                    View Chrysler Line up
-                                </Link>
-
-                                <Separator orientation='vertical' className='h-4' />
-
-                                <Link href="/vehicles/model/16">
-                                    <ArrowRightCircleIcon className='h-12 text-slate-600' />
-                                </Link>
-                            </div>
-                        </CardFooter>
-
-                    </div>
-
-                </Card>
-
-                <Card className='flex flex-col overflow-hidden bg-[#9C101A] col-span-2 md:col-span-1'>
-
-                    <div className='relative min-h-56'>
-                        <Image
-                            src="/fiatrange.jpg"
-                            alt=""
-                            fill={true}
-                            sizes='(max-width: 640px) 640px, 1920px'
-                            className='object-cover w-full h-full'
-                        />
-                    </div>
-
-                    <div className='flex flex-col grow'>
-
-                        <CardHeader className='h-32'>
-                            <Badge className='flex justify-center from-black bg-gradient-to-r to-[#4d090e]'>
-                                Fleet | Mega Discounts
-                            </Badge>
-
-                            <div className="flex relative items-center justify-center gap-3 pt-3" >
-                                <Image
-                                    src='/logos/Fiat_professional_logo_white.png'
-                                    alt='Mopar'
-                                    width={50}
-                                    height={90}
-                                    className="h-12 object-contain"
-                                />
-                                <Separator orientation='vertical' className='h-4' />
-                                <Image
-                                    src='/logos/ram_professional.jpeg'
-                                    alt='Mopar'
-                                    width={140}
-                                    height={80}
-                                    className="h-10 object-contain"
-                                />
-                            </div>
-                        </CardHeader>
-
-
-                        <CardContent className='h-full flex flex-col gap-3 items-center'>
-
-                            <Separator className="my-0 opacity-85" />
-
-                            <h2 className='text-white pb-2'>
-                                Professional Range
-                            </h2>
-                            <p className="text-md font-semibold text-center text-white">
-                                Complete end-to-end commercial fleet solutions
-                            </p>
-
-                            {/* <Separator className="my-0 opacity-85" /> */}
-
-                        </CardContent>
-
-                        <CardFooter>
-
-                            <div className='flex w-full justify-end items-center gap-4'>
-                                <Link href={"/business"} className=' font-semibold text-sm text-slate-100'>
-                                    Visit Business Center
-                                </Link>
-
-                                <Separator orientation='vertical' className='h-4' />
-
-                                <Link href="/vehicles/model/16">
-                                    <ArrowRightCircleIcon className='h-12 text-slate-100' />
-                                </Link>
-                            </div>
-                        </CardFooter>
-                    </div>
-
-                </Card>
-
-
-            </div>
-            <div className="flex items-center justify-center gap-4 pt-10">
-                <Link
-                    href={"/vehicles"}
-                    className="flex items-center gap-2 text-black underline underline-offset-2 hover:no-underline"
-                >
-                    All Vehicles
-
-                </Link>
+                </div>
 
             </div>
 
+            <Carousel className="w-full px-0 basis-4/6"
+                setApi={setApi}
+                plugins={[
+                    // Autoplay({
+                    //     delay: 15000,
+                    // }),
+                ]}
+                opts={{
+                    loop: true,
+                }}
 
-            <Separator className="my-12" />
+            >
+                <CarouselContent className="-ml-4">
+
+                    {offers.map((offer, index) => {
+                        return (
+                            <CarouselItem key={index}
+                                className="">
+                                <OfferMainCard key={index} offer={offer} />
+                            </CarouselItem>
+                        )
+                    })}
+
+                </CarouselContent>
+
+            </Carousel>
+
 
             {/* 
         <div className='flex flex-col lg:flex-row gap-8'>

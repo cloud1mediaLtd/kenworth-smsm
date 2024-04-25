@@ -2,10 +2,13 @@ import { useLocale } from 'next-intl';
 import Hero from 'app/[locale]/index/hero';
 import { Separator } from 'components/ui/separator';
 import { getStoryblokApi } from '@storyblok/react';
-import PostsPreview from 'components/postsPreview';
+import PostsPreview from 'app/[locale]/index/postsPreview';
 import MoparSection from 'components/moparSection';
 import Offers from './index/offers';
-
+import FleetOffers from './index/fleetOffersCard';
+import { Card } from 'components/ui/card';
+import BrandsOnly from 'components/brandsonly';
+import ServicesSection from './index/servicesSection';
 
 async function fetchData() {
   const sbParams = { starts_with: "posts" };
@@ -20,41 +23,47 @@ async function fetchData() {
   }
 }
 
-
 export default async function IndexPage() {
   const { data, error } = await fetchData();
-  // console.log('data', data.stories);
-
   const stories = data?.stories;
 
-  if (error) {
-    // Handle the error state in the UI
-    console.error('Failed to load stories:', error);
-  }
-
-  // console.log('stories:', stories);
-
   const locale = useLocale();
-  // add booking for free mot
 
   return (
-    <section className=''>
+    <section className='relative'>
 
       <Hero />
-
+      <div className='content-container-no-bg -mt-10 z-10 relative'>
+        <Card className='px-3 sticky top-0 z-20'>
+          {/* Scrollable content container inside the card */}
+          <div className="brands-scroll-container overflow-x-auto">
+            <BrandsOnly className="min-w-[700px]" locale={locale} />
+            {/* Padding div to ensure content is not obscured by the overlay */}
+            <div className="end-padding md:hidden" />
+          </div>
+        </Card>
+      </div>
       <main>
-
-        <div className='content-container-no-bg mt-8'>
+        <div className='content-container-no-bg my-8'>
           <Offers />
+          <Separator className="my-8" />
+          <ServicesSection />
+          <Separator className="my-8" />
+          <FleetOffers />
+          <Separator className="my-8" />
         </div>
+
         <MoparSection />
         <div className='content-container-no-bg'>
-          <Separator className="my-12" />
-          <PostsPreview stories={stories} />
+          <Separator className="my-8" />
+          {stories ? (
+            <PostsPreview stories={stories} />
+          ) : (
+            <p>Failed to load stories. Please refresh the page.</p>
+          )}
         </div>
+      </main>
 
-      </main >
-
-    </ section >
+    </section>
   );
 }

@@ -21,7 +21,7 @@ export default function MoparSection() {
                     </div>
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
                         <div className="flex gap-8 items-center justify-center">
-                            <Card className="flex flex-col justify-center items-center w-32 h-44 p-3 relative">
+                            <Card className="flex flex-col justify-center items-center w-32 h-40 p-3 relative">
                                 <div className="relative w-32 h-32 m-3">
                                     <Image
                                         src='/logos/Mopar_logo.svg'
@@ -32,7 +32,7 @@ export default function MoparSection() {
                                     />
                                 </div>
 
-                                <div>
+                                <div className="text-nowrap text-sm font-semibold">
                                     Genuine Parts
                                 </div>
                             </Card>
