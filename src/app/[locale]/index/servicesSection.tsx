@@ -1,9 +1,6 @@
 import { Badge } from "components/ui/badge";
-import { Button } from "components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
+import { Card } from "components/ui/card";
 import { Separator } from "components/ui/separator";
-import { ArrowRightCircleIcon } from "lucide-react";
-import Link from "next/link";
 
 const sectionFill = [
     {
@@ -48,7 +45,7 @@ export default function ServicesSection() {
                             {section.title}
                         </h2>
                         <Separator className="my-0 opacity-15" />
-                        <p className="text-md font-semibold text-center text-slate-50 text-black">
+                        <p className="text-md font-semibold text-center text-slate-50">
                             {section.description}
                         </p>
 

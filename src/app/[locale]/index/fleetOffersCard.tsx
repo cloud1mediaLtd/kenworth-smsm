@@ -3,7 +3,7 @@ import { Badge } from "components/ui/badge";
 import { CardContent, CardFooter, CardHeader } from "components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
+import { ArrowRightCircleIcon } from "lucide-react";
 import { Separator } from "components/ui/separator";
 
 
@@ -33,7 +33,7 @@ export default function FleetOffers() {
                 </div> */}
 
             </div>
-            <Card className='flex flex-col md:flex-row overflow-hidden bg-slate-700 '>
+            <Card className='flex flex-col md:flex-row overflow-hidden bg-slate-700'>
 
                 <div className='relative w-full min-h-52 basis-5/8'>
                     <Image
@@ -48,11 +48,11 @@ export default function FleetOffers() {
                 <div className='flex flex-col basis-3/8'>
 
                     <CardHeader>
-                        <Badge className='flex justify-center from-black bg-gradient-to-r to-[#4d090e]'>
+                        <Badge className='flex justify-center bg-black'>
                             Fleet | Mega Discounts
                         </Badge>
 
-                        <div className="flex relative items-center justify-center gap-3" >
+                        <div className="flex relative items-center justify-center gap-3 pt-3" >
                             <Image
                                 src='/logos/Fiat_professional_logo_white.png'
                                 alt='Mopar'

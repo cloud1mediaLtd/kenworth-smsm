@@ -19,7 +19,7 @@ export default function MoparSection() {
                             Access genuine parts for your vehicles. Whether you're in need of replacement parts or looking to enhance your vehicle's performance, we've got you covered.
                         </p>
                     </div>
-                    <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                         <div className="flex gap-8 items-center justify-center">
                             <Card className="flex flex-col justify-center items-center w-32 h-40 p-3 relative">
                                 <div className="relative w-32 h-32 m-3">
@@ -69,12 +69,12 @@ export default function MoparSection() {
 
                         </div>
 
-                        <div className="flex flex-col lg:flex-row gap-6 min-w-60">
-                            <Separator className="my-4 opacity-35 lg:hidden" />
+                        <div className="flex flex-col md:flex-row gap-6 min-w-60">
+                            <Separator className="my-4 opacity-35 md:hidden" />
 
-                            <Separator orientation='vertical' className="h-36 opacity-85 hidden lg:flex" />
+                            <Separator orientation='vertical' className="h-36 opacity-85 hidden md:flex" />
 
-                            <div className="flex grow lg:flex-col items-center justify-center gap-4">
+                            <div className="flex grow md:flex-col items-center justify-center gap-4">
                                 <div className='text-black flex gap-2 items-center'>
                                     <Link
                                         href={"/parts"}
@@ -85,8 +85,8 @@ export default function MoparSection() {
                                     </Link>
                                 </div>
 
-                                <Separator orientation='vertical' className='h-6 rounded-sm bg-white lg:hidden' />
-                                <Separator orientation='horizontal' className='w-16 opacity-10 rounded-sm bg-white my-3 hidden lg:flex' />
+                                <Separator orientation='vertical' className='h-6 rounded-sm bg-white md:hidden' />
+                                <Separator orientation='horizontal' className='w-16 opacity-10 rounded-sm bg-white my-3 hidden md:flex' />
 
 
                                 <Button className='bg-white text-[#0245B2] hover:outline hover:text-white gap-2'>

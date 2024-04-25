@@ -52,7 +52,7 @@ export default function PostsPreview({ stories }) {
                 </div>
 
             </div>
-            <Card className="flex">
+            <Card className="flex flex-col lg:flex-row">
                 <Carousel className="w-full px-0 p-4 basis-4/6"
                     setApi={setApi}
                     plugins={[

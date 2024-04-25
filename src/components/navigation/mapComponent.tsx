@@ -1,6 +1,6 @@
 "use client"
 import type React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import mapboxgl, { type LngLatLike } from 'mapbox-gl';
 
 interface MapComponentProps {

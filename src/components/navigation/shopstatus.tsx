@@ -40,7 +40,7 @@ const ShopStatus: React.FC = () => {
         } else if (currentHour < SHOP_CLOSING_HOUR) {
             setStatus({ text: 'Closing Soon', color: 'text-orange-500' });
         } else {
-            setStatus({ text: 'Closed | Open 8 AM tomorrow', color: 'text-red-500' });
+            setStatus({ text: 'Closed | Open 8 am', color: 'text-red-500' });
         }
     };
 

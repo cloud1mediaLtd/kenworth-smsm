@@ -22,7 +22,7 @@ export default function OfferMainCard({ offer }) {
 
                 <div className='flex flex-col basis-3/8'>
 
-                    <CardHeader className="flex justify-center">
+                    <CardHeader className="flex justify-center gap-3">
                         <Badge className={`flex justify-center ${offer.badgeClass}`}>
                             {offer.badge}
                         </Badge>
