@@ -6,9 +6,6 @@ import type { ReactNode } from 'react';
 import Navigation from 'components/navigation/Navigation';
 import Footer from 'components/navigation/footer';
 import { storyblokInit, apiPlugin } from "@storyblok/react";
-
-
-
 import Feature from "components/storyblok/Feature";
 import Grid from "components/storyblok/Grid";
 import Page from "components/storyblok/Page";
