@@ -32,15 +32,15 @@ const ShopStatus: React.FC = () => {
 
         // Normal day/hour checking
         if (currentHour < SHOP_OPENING_HOUR) {
-            setStatus({ text: 'Shop opening Soon', color: 'text-gray-500' });
+            setStatus({ text: 'Opening Soon', color: 'text-gray-500' });
         } else if (currentHour < SHOP_OPENING_HOUR + 1) {
-            setStatus({ text: 'Welcome we are open ', color: 'text-green-500' });
+            setStatus({ text: 'Welcome | We are open ', color: 'text-green-500' });
         } else if (currentHour < SHOP_CLOSING_HOUR - 1) {
-            setStatus({ text: 'Welcome we are open', color: 'text-green-500' });
+            setStatus({ text: 'Welcome | We are open', color: 'text-green-500' });
         } else if (currentHour < SHOP_CLOSING_HOUR) {
             setStatus({ text: 'Closing Soon', color: 'text-orange-500' });
         } else {
-            setStatus({ text: 'Closed, open at 8 AM tomorrow', color: 'text-red-500' });
+            setStatus({ text: 'Closed | Open 8 AM tomorrow', color: 'text-red-500' });
         }
     };
 
