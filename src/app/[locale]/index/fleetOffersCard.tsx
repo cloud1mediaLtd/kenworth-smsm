@@ -33,9 +33,9 @@ export default function FleetOffers() {
                 </div>
 
             </div>
-            <Card className='flex flex-col md:flex-row overflow-hidden bg-slate-700 h-[500px] max-h-[500px]'>
+            <Card className='flex flex-col md:flex-row overflow-hidden bg-slate-700 '>
 
-                <div className='relative min-h-52 md:h-full md:w-72 lg:w-full basis-2/3'>
+                <div className='relative w-full min-h-52 basis-5/8'>
                     <Image
                         src="/fiatrange.jpg"
                         alt=""
@@ -45,7 +45,7 @@ export default function FleetOffers() {
                     />
                 </div>
 
-                <div className='flex flex-col grow'>
+                <div className='flex flex-col basis-3/8'>
 
                     <CardHeader>
                         <Badge className='flex justify-center from-black bg-gradient-to-r to-[#4d090e]'>
@@ -83,23 +83,36 @@ export default function FleetOffers() {
                             Complete end-to-end commercial fleet solutions
                         </p>
 
-                        <Separator className="mt-4 opacity-15" />
+                        <Separator className="mt-4 opacity-15 hidden md:block" />
 
                     </CardContent>
 
-                    <CardFooter>
+                    <CardFooter className="flex justify-between">
 
-                        <div className='flex w-full justify-end items-center gap-4'>
-                            <Link href={"/business"} className=' font-semibold text-sm text-slate-100'>
-                                Visit Business Center
-                            </Link>
+                        <Card className='flex items-center gap-4 bg-black'>
 
-                            <Separator orientation='vertical' className='h-4' />
+                            <div className='flex  justify-center items-center gap-3 px-2 py-1'>
 
-                            <Link href="/vehicles/model/16">
-                                <ArrowRightCircleIcon className='h-12 text-slate-100' />
-                            </Link>
-                        </div>
+                                <Image
+                                    src='/logos/Mopar_logo_black.png'
+                                    alt='Mopar'
+                                    width={80}
+                                    height={80}
+                                    className="h-8 w-8"
+                                />
+                                <div className='flex flex-row md:flex-col leading-3 gap-1'>
+                                    <span className='text-sm font-semibold leading-none text-slate-50'>
+                                        Warranty
+                                    </span>
+                                </div>
+
+                            </div>
+                        </Card>
+
+                        <Link href="/business">
+                            <ArrowRightCircleIcon className='h-8 w-8 text-white' />
+                        </Link>
+
                     </CardFooter>
                 </div>
 

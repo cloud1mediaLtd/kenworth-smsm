@@ -6,9 +6,11 @@ import React from "react";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "../../../components/ui/carousel";
 import Image from 'next/image';
 import Autoplay from "embla-carousel-autoplay";
+import { Separator } from "components/ui/separator";
 
 
 export default function PostsPreview({ stories }) {
+    console.log(stories)
     const [api, setApi] = React.useState<CarouselApi>()
 
     const scrollPrev = React.useCallback(() => {
@@ -18,6 +20,10 @@ export default function PostsPreview({ stories }) {
     const scrollNext = React.useCallback(() => {
         api?.scrollNext()
     }, [api])
+
+    const scrollToIndex = (index) => {
+        api?.scrollTo(index);
+    };
 
     return (
         <>
@@ -51,7 +57,7 @@ export default function PostsPreview({ stories }) {
                     setApi={setApi}
                     plugins={[
                         Autoplay({
-                            delay: 4000,
+                            delay: 12000,
                         }),
                     ]}
                     opts={{
@@ -105,8 +111,16 @@ export default function PostsPreview({ stories }) {
                     </CarouselContent>
 
                 </Carousel>
-                <div className="p-6">
-                    List posts here
+                <div className="flex flex-col p-6">
+                    {stories.map((story, index) => (
+                        <div key={index}>
+                            <Link href={`/posts/${story.slug}`}
+
+                                onMouseEnter={() => scrollToIndex(index)}>{story.name}
+                            </Link>
+                            <Separator className="my-2 opacity-85" />
+                        </div>
+                    ))}
                 </div>
             </Card>
         </>

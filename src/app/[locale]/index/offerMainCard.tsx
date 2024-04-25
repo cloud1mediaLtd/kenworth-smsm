@@ -8,19 +8,19 @@ import Image from "next/image";
 export default function OfferMainCard({ offer }) {
     return (
         <>
-            <Card className={`flex flex-col md:flex-row overflow-hidden h-[400px] ${offer.bg}`}>
+            <Card className={`flex flex-col md:flex-row overflow-hidden ${offer.bg}`}>
 
-                <div className='relative min-h-52 md:h-full md:w-72 lg:w-full basis-3/5'>
+                <div className='relative w-full min-h-52  basis-5/8'>
                     <Image
                         src={offer.model.image}
                         alt={offer.model.name}
                         fill={true}
                         sizes='(max-width: 640px) 640px, 1920px'
-                        className='object-cover w-full h-full'
+                        className='object-cover'
                     />
                 </div>
 
-                <div className='flex flex-col basis-2/5'>
+                <div className='flex flex-col basis-3/8'>
 
                     <CardHeader className="flex justify-center">
                         <Badge className={`flex justify-center ${offer.badgeClass}`}>
@@ -53,7 +53,7 @@ export default function OfferMainCard({ offer }) {
                                 {offer.model.description}
                             </h2>
 
-                            <Separator className="my-0 opacity-35" />
+                            <Separator className="mt-4 opacity-15 hidden md:block" />
                             <p className="text-md font-semibold text-center text-white hidden md:block">
                                 Whether you're in need of replacement parts or looking to enhance your vehicle's performance.
 

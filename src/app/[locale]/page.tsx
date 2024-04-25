@@ -46,8 +46,8 @@ export default async function IndexPage() {
       <main>
         <div className='content-container-no-bg my-8'>
           <Offers />
-          <Separator className="my-8" />
-          <ServicesSection />
+          {/* <Separator className="my-8" />
+          <ServicesSection /> */}
           <Separator className="my-8" />
           <FleetOffers />
           <Separator className="my-8" />
