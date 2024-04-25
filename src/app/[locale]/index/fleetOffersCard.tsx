@@ -12,7 +12,7 @@ export default function FleetOffers() {
         <>
             <div className="flex justify-between items-center pb-4">
                 <h1 className='font-bold'>Business center</h1>
-                <div className="flex gap-2 items-center">
+                {/* <div className="flex gap-2 items-center">
 
                     <Link href="/business"
                         className='border-2 border-black rounded-full px-3 text-sm'>
@@ -30,7 +30,7 @@ export default function FleetOffers() {
                         </button>
 
                     </div>
-                </div>
+                </div> */}
 
             </div>
             <Card className='flex flex-col md:flex-row overflow-hidden bg-slate-700 '>
