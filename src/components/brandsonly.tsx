@@ -24,7 +24,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
 
     return (
         <div className={`flex items-center w-full ${className}`}>
-            <div className={"flex w-full justify-between items-center h-24"}>
+            <div className={"flex w-full justify-between items-center h-20"}>
                 {data.map((brand, subIndex) => {
                     const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.ID);
                     return (

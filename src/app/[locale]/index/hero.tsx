@@ -40,6 +40,16 @@ export default function Hero() {
                     </Button>
                 </div> */}
             </div>
+            <div className='content-container-no-bg -mt-10 z-10 relative'>
+                <Card className='px-3 sticky top-0 z-20'>
+                    {/* Scrollable content container inside the card */}
+                    <div className="brands-scroll-container overflow-x-auto">
+                        <BrandsOnly className="min-w-[700px]" locale={locale} />
+                        {/* Padding div to ensure content is not obscured by the overlay */}
+                        <div className="end-padding md:hidden" />
+                    </div>
+                </Card>
+            </div>
 
         </section>
     );
