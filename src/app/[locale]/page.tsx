@@ -6,11 +6,12 @@ import PostsPreview from 'app/[locale]/index/postsPreview';
 import MoparSection from 'components/moparSection';
 import Offers from './index/offers';
 import FleetOffers from './index/fleetOffersCard';
-import { version } from 'os';
-
 
 async function fetchData() {
-  const sbParams = { starts_with: "posts", version: "published" };
+  const sbParams = {
+    starts_with: "posts",
+
+  };
   const storyblokApi = getStoryblokApi();
 
   try {
