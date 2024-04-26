@@ -37,7 +37,7 @@ const Navigation = () => {
         <div className="content-container-no-bg">
           <div className="flex py-3 items-center justify-between">
             {/* Logo (lg+) */}
-            <div className={` ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
+            <div className={`flex items-center gap-4 font-semibold text-lg tracking-wide ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
               <Link href="/">
                 <span className="sr-only">Smsm</span>
                 <img
@@ -46,6 +46,8 @@ const Navigation = () => {
                   alt=""
                 />
               </Link>
+              <span className="text-white hidden sm:block">S.Mediterranean Motors</span>
+
             </div>
 
             <div className='md:flex items-center gap-6'>

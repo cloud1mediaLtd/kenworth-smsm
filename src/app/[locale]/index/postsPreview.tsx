@@ -10,7 +10,7 @@ import { Separator } from "components/ui/separator";
 
 
 export default function PostsPreview({ stories }) {
-    console.log(stories)
+    // console.log(stories)
     const [api, setApi] = React.useState<CarouselApi>()
 
     const scrollPrev = React.useCallback(() => {
@@ -53,7 +53,7 @@ export default function PostsPreview({ stories }) {
 
             </div>
             <Card className="flex flex-col lg:flex-row">
-                <Carousel className="w-full px-0 p-4 basis-4/6"
+                <Carousel className="w-full px-0 p-4 basis-7/12"
                     setApi={setApi}
                     plugins={[
                         Autoplay({
@@ -80,7 +80,7 @@ export default function PostsPreview({ stories }) {
 
                                 <CarouselItem key={index}
                                     className="">
-                                    <div className="">
+                                    <Link href={`/posts/${story.slug}`}>
                                         <Card className="overflow-hidden">
 
                                             <div className='flex flex-col grow'>
@@ -104,14 +104,14 @@ export default function PostsPreview({ stories }) {
 
                                         </Card>
 
-                                    </div>
+                                    </Link>
                                 </CarouselItem>
                             )
                         })}
                     </CarouselContent>
 
                 </Carousel>
-                <div className="flex flex-col p-6">
+                <div className="flex flex-col p-6 basis-5/12">
                     {stories.map((story, index) => (
                         <div key={index}>
                             <Link href={`/posts/${story.slug}`}

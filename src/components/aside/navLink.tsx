@@ -17,7 +17,7 @@ const NavLink = ({ href, children }) => {
     };
 
     return (
-        <Link href={href} passHref onClick={handleClick}>
+        <Link href={href} passHref onClick={handleClick} className='font-semibold'>
             {children}
         </Link>
     );

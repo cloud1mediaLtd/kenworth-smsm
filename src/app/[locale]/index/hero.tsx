@@ -3,7 +3,8 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { Card } from 'components/ui/card';
-import BrandsContainer from 'components/brandsContainer';
+import BrandsContainer from 'components/brands/brandsContainer';
+import BrandsOnly from 'components/brands/brandsonly';
 
 export default function Hero() {
 
@@ -40,8 +41,10 @@ export default function Hero() {
             </div>
             <div className='content-container-no-bg -mt-10 z-10 relative'>
                 <Card className='px-3 sticky top-0 z-20'>
-                    {/* Scrollable content container inside the card */}
-                    <BrandsContainer locale={locale} />
+                    <div className="brands-scroll-container overflow-x-auto">
+                        <BrandsOnly className="min-w-[700px]" locale={locale} />
+                        <div className="end-padding " />
+                    </div>
                 </Card>
             </div>
 

@@ -6,16 +6,15 @@ import PostsPreview from 'app/[locale]/index/postsPreview';
 import MoparSection from 'components/moparSection';
 import Offers from './index/offers';
 import FleetOffers from './index/fleetOffersCard';
-import { Card } from 'components/ui/card';
-import BrandsOnly from 'components/brandsonly';
-import ServicesSection from './index/servicesSection';
+import { version } from 'os';
+
 
 async function fetchData() {
-  const sbParams = { starts_with: "posts" };
+  const sbParams = { starts_with: "posts", version: "published" };
   const storyblokApi = getStoryblokApi();
 
   try {
-    const response = await storyblokApi.get("cdn/stories/", sbParams);
+    const response = await storyblokApi.get("cdn/stories/", sbParams, { cache: "no-store" });
     return { data: response.data, error: null };
   } catch (error) {
     console.error('Error fetching data:', error);

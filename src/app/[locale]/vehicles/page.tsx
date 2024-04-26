@@ -1,4 +1,4 @@
-import Brands from "components/brands";
+import Brands from "components/brands/brands";
 import { Separator } from "components/ui/separator";
 import { useLocale, useTranslations } from "next-intl";
 import { Suspense } from "react";

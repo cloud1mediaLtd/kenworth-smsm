@@ -14,7 +14,13 @@ async function getData(id: string) {
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
-  return res.json();
+
+  const data = await res.json();
+
+  console.log(data)
+
+
+  return data;
 }
 
 // const fetchStoryblokData = async (slug) => {
@@ -29,7 +35,7 @@ export default async function VehiclesPage({ params: { id } }) {
   const data = await getData(id)
   // const { content } = await fetchStoryblokData(id);
 
-  console.log(data)
+
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
@@ -56,6 +62,7 @@ export default async function VehiclesPage({ params: { id } }) {
           </div>
 
         </div>
+
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
           {data.Models.map((model) => (
@@ -66,7 +73,7 @@ export default async function VehiclesPage({ params: { id } }) {
                   alt={model.Name}
                   fill={true}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style={{ objectFit: "contain" }}
+                  className='object-contain'
                 />
               </div>
 
@@ -107,11 +114,7 @@ export default async function VehiclesPage({ params: { id } }) {
           ))}
         </div>
 
-
       </Suspense>
-
-
-
     </section>
 
   );

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from 'next/image';
-import { Separator } from "./ui/separator";
+import { Separator } from "../ui/separator";
 
 interface PropItems {
     locale: string;
@@ -9,7 +9,7 @@ interface PropItems {
 
 async function getData() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL; // Access the environment variable
-    const res = await fetch(`${apiUrl}/brands`, { next: { revalidate: 60 } }); if (!res.ok) {
+    const res = await fetch(`${apiUrl}/brands`, { next: { revalidate: 200 } }); if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
     return res.json();
@@ -30,7 +30,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
                     return (
                         <>
 
-                            <div className="flex items-center justify-center w-full">
+                            <div key={brand.ID} className="flex items-center justify-center w-full">
                                 <Link href={`/vehicles/${brand.ID}`}
                                     className={`flex items-center justify-center relative ${mobileWidth} ${mobileHeight} md:${width} md:${height}`}
                                 >

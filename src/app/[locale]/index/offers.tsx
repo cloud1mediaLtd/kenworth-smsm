@@ -7,6 +7,7 @@ import React from "react";
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { Button } from "components/ui/button";
 import FleetOffers from "./fleetOffersCard";
+import { Card } from "components/ui/card";
 
 const offers = [
     {
@@ -22,7 +23,7 @@ const offers = [
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/vehicles/model/16',
-        bg: 'bg-[#9C101A]'
+        bg: 'bg-[#9C101A] rounded-none rounded-t-lg border-0'
     },
     {
         badge: 'New | Now In Showroom',
@@ -37,7 +38,7 @@ const offers = [
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/vehicles/model/16',
-        bg: 'bg-[#9C101A]'
+        bg: 'bg-[#9C101A] rounded-none rounded-t-lg border-0'
     }
 ]
 
@@ -53,30 +54,8 @@ export default function Offers() {
     }, [api])
 
     return (
-        <div className='flex flex-col w-full'>
-            <div className="flex justify-between items-center pb-4">
-                <h1 className='font-bold'>Latest Offers</h1>
-                <div className="flex gap-2 items-center">
+        <Card className='flex flex-col w-full bg-black'>
 
-                    <Link href="/offers"
-                        className='border-2 border-black rounded-full px-3 text-sm'>
-                        More
-                    </Link>
-                    <div className="flex gap-1">
-
-                        <button
-                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
-                            <ArrowLeftCircleIcon className='h-6 w-6 text-black' />
-                        </button>
-                        <button
-                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
-                            <ArrowRightCircleIcon className='h-6 w-6 text-black' />
-                        </button>
-
-                    </div>
-                </div>
-
-            </div>
 
             <Carousel className="w-full px-0 basis-4/6"
                 setApi={setApi}
@@ -104,52 +83,30 @@ export default function Offers() {
                 </CarouselContent>
 
             </Carousel>
+            <div className="flex justify-between items-center py-2 px-6">
+                <h2 className='font-bold text-white'>Latest Offers</h2>
+                <div className="flex gap-2 items-center">
 
+                    <Link href="/offers"
+                        className='border-2 border-white rounded-full px-3 text-sm text-white'>
+                        More
+                    </Link>
+                    <div className="flex gap-1">
 
-            {/* 
-        <div className='flex flex-col lg:flex-row gap-8'>
+                        <button
+                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
+                            <ArrowLeftCircleIcon className='h-6 w-6 text-white' />
+                        </button>
+                        <button
+                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
+                            <ArrowRightCircleIcon className='h-6 w-6 text-white' />
+                        </button>
 
-          <Card className='overflow-hidden items-center hover:bg-[#0245B2]/90 bg-[#0245B2] md:basis-3/5'>
-            <Link href="/parts" className='h-24 flex items-center'>
-              <div className='relative h-full w-[300px] max-w-[250px]'>
+                    </div>
+                </div>
 
-                <Image
-                  src='/moparService.jpeg'
-                  alt='Mopar'
-                  fill={true}
-                  sizes='(max-width: 640px) 640px, 1920px'
-                  style={{ objectFit: "cover" }}
-                />
+            </div>
 
-              </div>
-              <div className='p-4 grow flex flex-col gap-3 text-white font-semibold'>
-                <h3 className=''>Free Oil & Filter change*</h3>
-
-              </div>
-            </Link>
-          </Card>
-
-          <Card className='overflow-hidden items-center hover:bg-slate-50 md:basis-2/5'>
-            <Link href="/parts" className='h-24 flex'>
-              <div className='relative h-full w-[300px] max-w-[250px]'>
-                <Image
-                  src='/WINCH_GUARD_LIGHT_MOUNTING BRACKETS.jpg'
-                  alt='Mopar'
-                  fill={true}
-                  sizes='(max-width: 640px) 640px, 1920px'
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className='p-4 grow flex gap-3 items-center'>
-                <h3>New Jeep Wrangler Accessories</h3>
-
-              </div>
-            </Link>
-
-          </Card>
-
-        </div> */}
-
-        </div>
+        </Card>
     );
 }

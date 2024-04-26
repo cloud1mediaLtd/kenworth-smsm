@@ -1,4 +1,4 @@
-import BrandsOnly from "components/brandsonly";
+import BrandsOnly from "components/brands/brandsonly";
 import { Separator } from "components/ui/separator";
 import { useLocale } from "next-intl";
 import Link from "next/link";

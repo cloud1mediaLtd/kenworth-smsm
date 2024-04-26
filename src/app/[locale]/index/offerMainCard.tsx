@@ -10,7 +10,7 @@ export default function OfferMainCard({ offer }) {
         <>
             <Card className={`flex flex-col md:flex-row overflow-hidden ${offer.bg}`}>
 
-                <div className='relative w-full min-h-52  basis-5/8'>
+                <div className='relative w-full min-h-52 basis-7/12'>
                     <Image
                         src={offer.model.image}
                         alt={offer.model.name}
@@ -20,14 +20,14 @@ export default function OfferMainCard({ offer }) {
                     />
                 </div>
 
-                <div className='flex flex-col basis-3/8'>
+                <div className='flex flex-col basis-5/12'>
 
                     <CardHeader className="flex justify-center gap-3">
                         <Badge className={`flex justify-center ${offer.badgeClass}`}>
                             {offer.badge}
                         </Badge>
 
-                        <div className='flex justify-center text-2xl font-bold text-slate-50 items-center gap-3'>
+                        <div className='flex justify-center text-2xl font-bold text-slate-50 items-center gap-3 pt-3'>
                             <Image
                                 src={offer.brand.logo}
                                 alt={`${offer.brand.name} logo`}
@@ -45,7 +45,7 @@ export default function OfferMainCard({ offer }) {
                         </div>
                     </CardHeader>
 
-                    <CardContent className='h-full'>
+                    <CardContent className='h-full flex flex-col gap-3 items-center'>
                         <div className="flex flex-col gap-3 items-center justify-center">
                             <Separator className="my-0 opacity-15" />
 
@@ -54,7 +54,7 @@ export default function OfferMainCard({ offer }) {
                             </h2>
 
                             <Separator className="mt-4 opacity-15 hidden md:block" />
-                            <p className="text-md font-semibold text-center text-white hidden md:block">
+                            <p className="text-sm font-semibold text-center text-white hidden md:block">
                                 Whether you're in need of replacement parts or looking to enhance your vehicle's performance.
 
                             </p>
@@ -66,19 +66,19 @@ export default function OfferMainCard({ offer }) {
 
                     <CardFooter className="flex justify-between">
 
-                        <Card className='flex items-center gap-4 bg-black'>
+                        <Card className='flex items-center gap-4 bg-slate-100'>
 
                             <div className='flex  justify-center items-center gap-3 px-2 py-1'>
 
                                 <Image
-                                    src='/logos/Mopar_logo_black.png'
+                                    src='/logos/Mopar_logo.svg'
                                     alt='Mopar'
                                     width={80}
                                     height={80}
                                     className="h-8 w-8"
                                 />
                                 <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                    <span className='text-sm font-semibold leading-none text-slate-50'>
+                                    <span className='text-sm font-semibold leading-none text-black'>
                                         Warranty
                                     </span>
                                 </div>
