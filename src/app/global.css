@@ -66,7 +66,7 @@
 
 html, body {
   min-height: 100vh;  
-  overflow-x: hidden; 
+
   position: relative;
 }
 
@@ -276,7 +276,7 @@ p {
 
   .brands-scroll-container::-webkit-scrollbar {
 
-    height: 3px;
+    height: 4px;
   }
 
   .brands-scroll-container::-webkit-scrollbar-track {

@@ -2,11 +2,9 @@
 import Link from "next/link";
 import OfferMainCard from "./offerMainCard";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
-import { Button } from "components/ui/button";
-import FleetOffers from "./fleetOffersCard";
+
 import { Card } from "components/ui/card";
 
 const offers = [

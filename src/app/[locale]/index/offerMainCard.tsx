@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function OfferMainCard({ offer }) {
     return (
         <>
-            <Card className={`flex flex-col md:flex-row overflow-hidden ${offer.bg}`}>
+            <Card className={`flex flex-col md:flex-row overflow-hidden h-full ${offer.bg}`}>
 
                 <div className='relative w-full min-h-52 basis-7/12'>
                     <Image

@@ -18,6 +18,7 @@ import Excerpt from 'components/storyblok/Excerpt';
 import MainImage from 'components/storyblok/Main_image';
 import VehicleGallery from 'components/storyblok/vehicleBloks/VehicleGallery';
 import MobileFooter from 'components/navigation/mobileFooter';
+import { ThemeProvider } from 'components/ui/themeProvider';
 
 const components = {
   page: Page,
@@ -95,21 +96,27 @@ export default async function LocaleLayout({
 
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
-      <body className={clsx(font.className, 'bg-slate-100')}>
+      <body className={clsx(font.className, 'bg-slate-50 dark:bg-background')}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet" />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet" />
 
-          <Navigation />
-          <section className=''>
-            {children}
-          </section>
+            <Navigation />
+            <section className=''>
+              {children}
+            </section>
 
 
-          <Footer />
-          <div className="sticky bottom-0 z-50">
-            <MobileFooter />
-          </div>
-
+            <Footer />
+            <div className="sticky bottom-0 z-50">
+              <MobileFooter />
+            </div>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
 

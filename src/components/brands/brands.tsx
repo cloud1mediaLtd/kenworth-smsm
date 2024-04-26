@@ -20,7 +20,7 @@ export default async function Brands({ locale }) {
 
     const isRTL = locale === 'ar';
     return (
-        <section className="flex flex-col gap-4">
+        <section className="flex flex-col gap-6">
             {data.map((brand) => {
                 const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.ID);
                 return (
@@ -34,12 +34,12 @@ export default async function Brands({ locale }) {
 
 function getImageSizeById(brandId) {
     const sizeLookup = {
-        '1': { width: "180px", height: "55px", mobileWidth: "100px", mobileHeight: "30px" },
-        '2': { width: "180px", height: "48px", mobileWidth: "150px", mobileHeight: "36px" },
+        '1': { width: "220px", height: "110px", mobileWidth: "180px", mobileHeight: "36px" },
+        '2': { width: "200px", height: "90px", mobileWidth: "180px", mobileHeight: "70px" },
         '3': { width: "180px", height: "48px", mobileWidth: "150px", mobileHeight: "36px" },
         '4': { width: "180px", height: "48px", mobileWidth: "150px", mobileHeight: "36px" },
-        '5': { width: "180px", height: "48px", mobileWidth: "150px", mobileHeight: "36px" },
-        '6': { width: "180px", height: "48px", mobileWidth: "150px", mobileHeight: "36px" },
+        '5': { width: "180px", height: "48px", mobileWidth: "150px", mobileHeight: "70px" },
+        '6': { width: "180px", height: "48px", mobileWidth: "160px", mobileHeight: "70px" },
     };
     return sizeLookup[brandId] || { width: "100px", height: "100px", mobileWidth: "100px", mobileHeight: "100px" };
 }
