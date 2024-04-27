@@ -40,12 +40,14 @@ export default async function IndexPage() {
           {/* <Separator className="my-8" />
           <ServicesSection /> */}
           <Separator className="my-8" />
-          <FleetOffers />
-          <Separator className="my-8" />
+
         </div>
 
         <MoparSection />
         <div className='content-container-no-bg'>
+          <Separator className="my-8" />
+
+          <FleetOffers />
           <Separator className="my-8" />
           {stories ? (
             <PostsPreview stories={stories} />
