@@ -49,7 +49,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
                 })}
                 <Separator className="h-4 w-0.5 bg-slate-600 mx-6" />
                 <Image
-                    src='/logos/Mopar_logo.svg'
+                    src='/logos/mopar_logo.svg'
                     alt='Mopar'
                     width={60}
                     height={80}

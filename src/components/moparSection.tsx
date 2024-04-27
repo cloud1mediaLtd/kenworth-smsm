@@ -24,7 +24,7 @@ export default function MoparSection() {
                             <Card className="flex flex-col justify-center items-center w-32 h-40 p-3 relative">
                                 <div className="relative w-32 h-32 m-3">
                                     <Image
-                                        src='/logos/Mopar_logo.svg'
+                                        src='/logos/mopar_logo.svg'
                                         alt='Mopar'
                                         fill={true}
                                         sizes='(max-width: 640px) 640px, 1920px'

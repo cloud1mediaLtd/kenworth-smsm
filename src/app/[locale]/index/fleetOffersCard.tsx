@@ -86,7 +86,7 @@ export default function FleetOffers() {
                             <div className='flex justify-center items-center gap-3 px-2 py-1'>
 
                                 <Image
-                                    src='/logos/Mopar_logo_black.png'
+                                    src='/logos/mopar_logo_black.png'
                                     alt='Mopar'
                                     width={80}
                                     height={80}

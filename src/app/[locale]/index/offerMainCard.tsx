@@ -72,7 +72,7 @@ export default function OfferMainCard({ offer }) {
                             <div className='flex  justify-center items-center gap-3 px-2 py-1'>
 
                                 <Image
-                                    src='/logos/Mopar_logo.svg'
+                                    src='/logos/mopar_logo.svg'
                                     alt='Mopar'
                                     width={80}
                                     height={80}
