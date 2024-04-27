@@ -8,6 +8,7 @@ import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { Separator } from "components/ui/separator";
 import React from "react";
 import { CarouselApi } from "components/ui/carousel";
+import { Button } from "components/ui/button";
 
 
 export default function FleetOffers() {
@@ -101,14 +102,18 @@ export default function FleetOffers() {
                         </Card>
 
                         <Link href="/business">
-                            <ArrowRightCircleIcon className='h-8 w-8 text-primary' />
+                            <Button className='flex items-center gap-2'>
+                                <span>
+                                    View
+                                </span>
+                            </Button>
                         </Link>
 
                     </CardFooter>
                 </div>
 
             </Card>
-            <div className="flex justify-between items-center py-2 px-6">
+            <div className="flex justify-between items-center py-3 px-6">
                 <h2 className='font-bold text-white'>Business center</h2>
                 <div className="flex gap-2 items-center">
 

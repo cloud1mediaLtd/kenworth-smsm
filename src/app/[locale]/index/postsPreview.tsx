@@ -26,33 +26,9 @@ export default function PostsPreview({ stories }) {
     };
 
     return (
-        <>
-            <div className="flex justify-between items-center pb-4">
-                <h1 className='font-bold'>
-                    News & Events
-                </h1>
-                <div className="flex gap-2 items-center">
+        <Card className='flex flex-col w-full bg-black'>
+            <Card className='flex flex-col md:flex-row overflow-hidden rounded-none rounded-t-lg border-0'>
 
-                    <Link href="/posts"
-                        className='border-2 border-black rounded-full px-3 text-sm'>
-                        More
-                    </Link>
-                    <div className="flex gap-1">
-
-                        <button
-                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
-                            <ArrowLeftCircleIcon className='h-6 w-6 text-black' />
-                        </button>
-                        <button
-                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
-                            <ArrowRightCircleIcon className='h-6 w-6 text-black' />
-                        </button>
-
-                    </div>
-                </div>
-
-            </div>
-            <Card className="flex flex-col lg:flex-row">
                 <Carousel className="w-full px-0 p-4 basis-7/12"
                     setApi={setApi}
                     plugins={[
@@ -97,7 +73,9 @@ export default function PostsPreview({ stories }) {
                                                     </div>
                                                 )}
                                                 <CardHeader className='h-36'>
-                                                    <CardTitle>{titleBlok?.title}</CardTitle>
+                                                    <CardTitle>
+                                                        {titleBlok?.title}
+                                                    </CardTitle>
                                                     <CardDescription className='line-clamp-2'>{excerptBlok?.excerpt}</CardDescription>
                                                 </CardHeader>
                                             </div>
@@ -123,7 +101,33 @@ export default function PostsPreview({ stories }) {
                     ))}
                 </div>
             </Card>
-        </>
+
+            <div className="flex justify-between items-center py-3 px-6">
+                <h2 className='font-bold text-white'>
+                    News & Events
+                </h2>
+                <div className="flex gap-2 items-center">
+
+                    <Link href="/posts"
+                        className='border-2 border-white rounded-full px-3 text-sm text-white'>
+                        More
+                    </Link>
+                    <div className="flex gap-1">
+
+                        <button
+                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
+                            <ArrowLeftCircleIcon className='h-6 w-6 text-white' />
+                        </button>
+                        <button
+                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
+                            <ArrowRightCircleIcon className='h-6 w-6 text-white' />
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </Card>
 
     );
 }

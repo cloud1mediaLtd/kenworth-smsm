@@ -81,7 +81,7 @@ export default function Offers() {
                 </CarouselContent>
 
             </Carousel>
-            <div className="flex justify-between items-center py-2 px-6">
+            <div className="flex justify-between items-center py-3 px-6">
                 <h2 className='font-bold text-white'>Latest Offers</h2>
                 <div className="flex gap-2 items-center">
 

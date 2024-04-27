@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { Card } from 'components/ui/card';
-import BrandsContainer from 'components/brands/brandsContainer';
 import BrandsOnly from 'components/brands/brandsonly';
 
 export default function Hero() {

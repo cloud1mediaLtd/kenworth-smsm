@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
 import { Separator } from "components/ui/separator";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "components/ui/button";
 
 export default function OfferMainCard({ offer }) {
     return (
@@ -87,7 +88,11 @@ export default function OfferMainCard({ offer }) {
                         </Card>
 
                         <Link href={`${offer.link}`}>
-                            <ArrowRightCircleIcon className='h-8 w-8 text-white' />
+                            <Button className='flex items-center gap-2'>
+                                <span>
+                                    View
+                                </span>
+                            </Button>
                         </Link>
 
                     </CardFooter>
