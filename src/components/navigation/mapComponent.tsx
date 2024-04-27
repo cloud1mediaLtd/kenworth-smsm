@@ -101,7 +101,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
         };
     }, [latitude, longitude]);
 
-    return <div id='map' ref={mapContainerRef} style={{ width: '100%', height: '400px', position: 'relative', marginTop: '-3.5px' }} />;
+    return <div id='map' ref={mapContainerRef} style={{ width: '100%', height: '400px', position: 'relative' }} />;
 };
 
 export default MapComponent;
