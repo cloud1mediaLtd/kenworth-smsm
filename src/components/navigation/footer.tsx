@@ -4,6 +4,7 @@ import MapComponent from "./mapComponent"
 import { Card } from "components/ui/card"
 import { MailIcon, PhoneCall } from "lucide-react"
 import { ModeToggle } from "components/ui/darkToggle"
+import LocaleSwitcher from "components/LocaleSwitcher"
 
 
 
@@ -48,7 +49,7 @@ export default function Footer() {
         <footer aria-labelledby="footer-heading">
 
             <div className="content-container-no-bg mb-4">
-                <Separator className="mt-12" />
+                <Separator className="mt-12 mb-3" />
 
 
                 <Card className="bg-slate-50 p-6 mt-4 flex flex-col md:flex-row gap-6 items-center justify-between">
@@ -81,7 +82,7 @@ export default function Footer() {
             </div>
             <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
 
-            <div className="py-6">
+            <div className="bg-black py-6">
                 <div className="content-container-no-bg grid grid-cols-4 gap-8">
                     <div>
                         <Link href="/vehicles">
@@ -143,10 +144,14 @@ export default function Footer() {
                         </div>
                     </Card> */}
 
+                    <div className="flex gap-5 items-center">
+                        <ModeToggle />
+                        <LocaleSwitcher />
+                    </div>
+
                 </div>
 
                 <div className=" content-container-no-bg border-t border-gray-800 mt-6">
-                    <ModeToggle />
                     <p className="text-sm text-gray-400 py-6">Copyright &copy; 2024 SMSM, Inc.</p>
                 </div>
             </div>

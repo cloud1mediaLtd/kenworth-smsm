@@ -38,18 +38,20 @@ const Navigation = () => {
           <div className="flex py-3 items-center justify-between">
             {/* Logo (lg+) */}
             <div className={`flex items-center gap-4 font-semibold text-lg tracking-wide ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
-              <Link href="/">
+              <Link href="/" className='flex items-center gap-3'>
                 <span className="sr-only">Smsm</span>
                 <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=white"
                   alt=""
                 />
+
+                <span className="text-white hidden sm:block">
+                  S.Mediterranean Motors
+                </span>
               </Link>
-              <span className="text-white hidden sm:block">S.Mediterranean Motors</span>
 
             </div>
-
             <div className='md:flex items-center gap-6'>
               {/* {mainNavigation.map(({ key, href, title }) => (
                 <Link className={"hidden md:flex items-center text-base font-medium text-white tracking-wide"} key={key} href={href}>
