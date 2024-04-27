@@ -21,6 +21,7 @@ export default function FleetOffers() {
     const scrollNext = React.useCallback(() => {
         api?.scrollNext()
     }, [api])
+
     return (
         <Card className="bg-black">
 

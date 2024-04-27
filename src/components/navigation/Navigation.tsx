@@ -60,7 +60,9 @@ const Navigation = () => {
               ))} */}
 
               <div className='flex gap-4 items-center'>
-                <ShopStatus />
+                <a href={"#footer"}>
+                  <ShopStatus />
+                </a>
                 <Button
                   asChild
                   size={"default"}

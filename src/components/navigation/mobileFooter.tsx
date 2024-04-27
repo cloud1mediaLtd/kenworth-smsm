@@ -1,4 +1,4 @@
-import { PhoneIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function MobileFooter() {
@@ -13,6 +13,15 @@ export default function MobileFooter() {
                         >Schedule Service</Link>
                     </span>
                 </div>
+
+                <div className="flex gap-3 items-center justify-center bg-orange-700 p-4 text-white h-18 w-18">
+                    <Link
+                        href={"tel:+442087768925"}>
+                        <MailIcon className="h-6 w-6" />
+
+                    </Link>
+                </div>
+
                 <div className="flex gap-3 items-center justify-center bg-green-700 p-4 text-white h-18 w-18">
                     <Link
                         href={"tel:+442087768925"}>

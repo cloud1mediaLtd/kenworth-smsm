@@ -20,13 +20,13 @@ const ShopStatus: React.FC = () => {
 
         // Check if it's Sunday
         if (currentDay === 6) {
-            setStatus({ text: 'Closed on Saturday', color: 'text-red-500' });
+            setStatus({ text: 'Closed', color: 'text-red-500' });
             return;
         }
 
         // Check if it's Saturday after closing hours
         if (currentDay === 5 && currentHour >= SHOP_CLOSING_HOUR) {
-            setStatus({ text: 'Closed, open on Sundat 8 AM', color: 'text-red-500' });
+            setStatus({ text: 'Closed', color: 'text-red-500' });
             return;
         }
 
@@ -34,9 +34,9 @@ const ShopStatus: React.FC = () => {
         if (currentHour < SHOP_OPENING_HOUR) {
             setStatus({ text: 'Opening Soon', color: 'text-gray-500' });
         } else if (currentHour < SHOP_OPENING_HOUR + 1) {
-            setStatus({ text: 'Welcome | We are open ', color: 'text-green-500' });
+            setStatus({ text: 'Welcome | Open ', color: 'text-green-500' });
         } else if (currentHour < SHOP_CLOSING_HOUR - 1) {
-            setStatus({ text: 'Welcome | We are open', color: 'text-green-500' });
+            setStatus({ text: 'Welcome | Open', color: 'text-green-500' });
         } else if (currentHour < SHOP_CLOSING_HOUR) {
             setStatus({ text: 'Closing Soon', color: 'text-orange-500' });
         } else {
@@ -56,10 +56,10 @@ const ShopStatus: React.FC = () => {
     }, []);
 
     return (
-        <a href={"#map"} className={`${status.color} text-sm text-nowrap flex gap-1.5 items-center`}>
+        <span className={`${status.color} text-sm text-nowrap flex gap-1.5 items-center`}>
             {status.text}
             <MapPinIcon className="h-5 w-5 inline-block" />
-        </a>
+        </span>
     );
 }
 
