@@ -27,9 +27,9 @@ export default function PostsPreview({ stories }) {
 
     return (
         <Card className='flex flex-col w-full bg-black'>
-            <Card className='flex flex-col md:flex-row overflow-hidden rounded-none rounded-t-lg border-0'>
+            <Card className='flex flex-col md:flex-row overflow-hidden rounded-none rounded-t-lg border-0 basis-7/12 w-full'>
 
-                <Carousel className=" px-0 p-4 min-h-52 basis-6/12"
+                <Carousel className=" px-0 p-4 min-h-52 w-full"
                     setApi={setApi}
                     plugins={[
                         Autoplay({
@@ -72,12 +72,16 @@ export default function PostsPreview({ stories }) {
                                                         />
                                                     </div>
                                                 )}
-                                                <CardHeader className='h-36'>
-                                                    <CardTitle>
-                                                        {titleBlok?.title}
-                                                    </CardTitle>
-                                                    <CardDescription className='line-clamp-2'>{excerptBlok?.excerpt}</CardDescription>
-                                                </CardHeader>
+                                                <div className=''>
+                                                    <div className="p-2">
+                                                        <h2>
+                                                            {titleBlok?.title}
+                                                        </h2>
+                                                        <p className='line-clamp-2 pt-3'>{excerptBlok?.excerpt}</p>
+
+                                                    </div>
+
+                                                </div>
                                             </div>
 
                                         </Card>
@@ -89,7 +93,7 @@ export default function PostsPreview({ stories }) {
                     </CarouselContent>
 
                 </Carousel>
-                <div className="flex flex-col p-4 basis-6/12">
+                <div className="flex flex-col p-4 basis-5/12">
                     {stories.map((story, index) => (
                         <div key={index}>
                             <Link href={`/posts/${story.slug}`}

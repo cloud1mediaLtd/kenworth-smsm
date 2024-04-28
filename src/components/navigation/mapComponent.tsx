@@ -66,6 +66,9 @@ const MapComponent: React.FC<MapComponentProps> = ({ longitude, latitude }) => {
             antialias: true,
         });
 
+        map.touchZoomRotate.disable();
+        map.dragPan.disable(); // Disables drag pan, adjust as necessary
+
         map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
         map.addControl(new GetDirectionsControl(), 'top-right');

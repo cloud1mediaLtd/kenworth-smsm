@@ -3,8 +3,8 @@ import PartsFinder from "components/partsFinder/partsFinder";
 import { useTranslations } from "next-intl";
 
 
-export default function partsPage() {
-    const t = useTranslations('PartsPage');
+export default function OffersPage() {
+    const t = useTranslations('OffersPage');
 
     return (
         <section className=''>

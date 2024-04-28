@@ -25,7 +25,6 @@
       "price": "السعر"
     }
   },
-
   "PartsPage": {
     "title": "ﻗﻄﻊ ﻏﻴﺎر",
     "description": "<p>نحن نقدم بفخر مجموعة واسعة من السيارات من العلامات التجارية الشهيرة مثل جيب ودودج ورام و SRT وفيات وكرايسلر وموبار. من المبيعات إلى الخدمة ، نقدم منتجات عالية الجودة وصيانة الخبراء لإبقائك على الطريق. اكتشف التميز في مجال السيارات في S.Med Sea Motors ، شريكك الموثوق به لجميع احتياجات السيارات الخاصة بك.</p>"
@@ -33,6 +32,10 @@
   "ServicePage": {
     "title": "خدمة",
     "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.Our inventory consists of original parts from reputable brands like Mopar, ensuring the highest quality and compatibility with your vehicle.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>"
+  },
+  "OffersPage": {
+    "title": "عروض",
+    "description": "<p>نحن نقدم بفخر مجموعة واسعة من السيارات من العلامات التجارية الشهيرة مثل جيب ودودج ورام و SRT وفيات وكرايسلر وموبار. من المبيعات إلى الخدمة ، نقدم منتجات عالية الجودة وصيانة الخبراء لإبقائك على الطريق. اكتشف التميز في مجال السيارات في S.Med Sea Motors ، شريكك الموثوق به لجميع احتياجات السيارات الخاصة بك.</p>"
   },
   "ContactPage": {
     "title": "اﺗﺼﻞ",
