@@ -114,12 +114,12 @@ export default function FleetOffers() {
                 </div>
 
             </Card>
-            <div className="flex justify-between items-center py-3 px-6">
+            <div className="flex justify-between items-center py-5 px-6">
                 <h2 className='font-bold text-white'>Business center</h2>
                 <div className="flex gap-2 items-center">
 
                     <Link href="/offers"
-                        className='border-2 border-white rounded-full px-3 text-sm text-white'>
+                        className='border-2 border-white rounded-full px-5 text-sm text-white'>
                         More
                     </Link>
                     <div className="flex gap-1">

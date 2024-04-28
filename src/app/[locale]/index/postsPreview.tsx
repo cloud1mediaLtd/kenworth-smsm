@@ -29,7 +29,7 @@ export default function PostsPreview({ stories }) {
         <Card className='flex flex-col w-full bg-black'>
             <Card className='flex flex-col md:flex-row overflow-hidden rounded-none rounded-t-lg border-0'>
 
-                <Carousel className="w-full px-0 p-4 basis-7/12"
+                <Carousel className=" px-0 p-4 min-h-52 basis-6/12"
                     setApi={setApi}
                     plugins={[
                         Autoplay({
@@ -59,7 +59,7 @@ export default function PostsPreview({ stories }) {
                                     <Link href={`/posts/${story.slug}`}>
                                         <Card className="overflow-hidden">
 
-                                            <div className='flex flex-col grow'>
+                                            <div className='flex flex-col '>
 
                                                 {mainImageBlok && mainImageBlok.main_image.length > 0 && (
                                                     <div className='relative h-64'>
@@ -89,7 +89,7 @@ export default function PostsPreview({ stories }) {
                     </CarouselContent>
 
                 </Carousel>
-                <div className="flex flex-col p-6 basis-5/12">
+                <div className="flex flex-col p-4 basis-6/12">
                     {stories.map((story, index) => (
                         <div key={index}>
                             <Link href={`/posts/${story.slug}`}
@@ -102,14 +102,14 @@ export default function PostsPreview({ stories }) {
                 </div>
             </Card>
 
-            <div className="flex justify-between items-center py-3 px-6">
+            <div className="flex justify-between items-center py-5 px-6">
                 <h2 className='font-bold text-white'>
                     News & Events
                 </h2>
                 <div className="flex gap-2 items-center">
 
                     <Link href="/posts"
-                        className='border-2 border-white rounded-full px-3 text-sm text-white'>
+                        className='border-2 border-white rounded-full px-5 text-sm text-white'>
                         More
                     </Link>
                     <div className="flex gap-1">

@@ -1,15 +1,15 @@
-import { ArrowRightCircleIcon } from "lucide-react";
 import { Badge } from "components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
 import { Separator } from "components/ui/separator";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "components/ui/button";
+import { cn } from "lib/utils";
 
 export default function OfferMainCard({ offer }) {
     return (
         <>
-            <Card className={`flex flex-col md:flex-row overflow-hidden h-full ${offer.bg}`}>
+            <Card className={cn(`${offer.bg} bg-[#9C101A] flex flex-col md:flex-row overflow-hidden h-full `)}>
 
                 <div className='relative w-full min-h-52 basis-7/12'>
                     <Image
