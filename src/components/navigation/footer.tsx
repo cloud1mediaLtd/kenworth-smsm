@@ -26,6 +26,9 @@ const footerNavigation = {
         { name: 'Ram', href: '/vehicles/4' },
         { name: 'Chrysler', href: '/vehicles/2' },
         { name: 'Fiat', href: '/vehicles/5' },
+        { name: 'Peugeot', href: '/vehicles/6' },
+        { name: 'Mopar', href: '/parts' },
+
     ],
     company: [
         { name: 'About', href: '#' },
@@ -48,26 +51,22 @@ export default function Footer() {
         <footer aria-labelledby="">
             <Separator className="mt-8 mb-8" />
 
-            <div className="relative bg-black" id="footer">
+            <div className="flex flex-col justify-center relative bg-black" id="footer">
 
-
-                <div className="" style={{ padding: 0, marginTop: '-3.5px' }}>
+                <div className="relative bg-white" style={{ height: "100%", width: " 100%" }}>
                     <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
                 </div>
 
-                <Card className="relative p-4 flex gap-6 items-center justify-between -mt-12 mx-6 z-40 h-24">
+                <Card className="flex justify-between w-full mx-auto max-w-7xl relative p-4 gap-6 items-center -mt-12 z-40 h-24">
 
-                    <div className="flex gap-5 items-center">
+                    <div className="flex flex-col md:flex-row md:gap-5">
                         <span className="text-large-semi">Tripoli</span>
-                        <Separator orientation="vertical" className="h-6 hidden sm:block lg:hidden" />
-
+                        <Separator orientation="vertical" className="h-6 hidden md:block" />
 
                         <p className="text-base-semi">Al-Swany Road - Al-Swany</p>
                     </div>
 
-
                     <div className="flex  gap-5 ">
-
 
                         <ShopStatus />
 
@@ -87,12 +86,9 @@ export default function Footer() {
                             </Link>
                         </div>
 
-
                     </div>
                 </Card>
             </div>
-
-
 
             <div className="bg-black py-6">
                 <div className="content-container-no-bg grid grid-cols-3 gap-8">
@@ -101,21 +97,24 @@ export default function Footer() {
                             <h3 className="text-sm font-medium text-white">
                                 Our Brands</h3>
                         </Link>
-                        <ul className="mt-6 space-y-6">
+                        <Separator className="my-3" />
+                        <div className="grid grid-cols-2 gap-3">
                             {footerNavigation.vehicles.map((item) => (
-                                <li key={item.name} className="text-sm">
+                                <span key={item.name} className="text-sm">
                                     <Link href={item.href} className="text-gray-300 hover:text-white">
                                         {item.name}
                                     </Link>
-                                </li>
+                                </span>
                             ))}
-                        </ul>
+                        </div>
                     </div>
                     <div>
                         <h3 className="text-sm font-medium text-white">
                             Company
                         </h3>
-                        <ul className="mt-6 space-y-6">
+                        <Separator className="my-3" />
+
+                        <ul className="mt-6 space-y-3">
                             {footerNavigation.company.map((item) => (
                                 <li key={item.name} className="text-sm">
                                     <a href={item.href} className="text-gray-300 hover:text-white">
@@ -129,7 +128,9 @@ export default function Footer() {
                         <h3 className="text-sm font-medium text-white">
                             Connect
                         </h3>
-                        <ul className="mt-6 space-y-6">
+                        <Separator className="my-3" />
+
+                        <ul className="mt-6 space-y-3">
                             {footerNavigation.connect.map((item) => (
                                 <li key={item.name} className="text-sm">
                                     <a href={item.href} className="text-gray-300 hover:text-white">

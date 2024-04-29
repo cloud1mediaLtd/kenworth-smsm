@@ -88,7 +88,6 @@ export default function MoparSection() {
                                 <Separator orientation='vertical' className='h-6 rounded-sm bg-white md:hidden' />
                                 <Separator orientation='horizontal' className='w-16 opacity-10 rounded-sm bg-white my-3 hidden md:flex' />
 
-
                                 <Button className='bg-white text-[#0245B2] hover:outline hover:text-white gap-2'>
                                     <Link
                                         href={"/parts"}
@@ -104,9 +103,6 @@ export default function MoparSection() {
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
 
             </div>

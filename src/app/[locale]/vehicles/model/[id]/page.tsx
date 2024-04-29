@@ -112,8 +112,8 @@ export default async function getModel
                             <Separator className="my-0" />
 
                             {trim.OptionSets?.map((optionSet, index) => (
-                                <div key={optionSet.ID} className='flex flex-col'>
-                                    <div className="flex flex-col sm:flex-row gap-4 items-center">
+                                <div key={optionSet.ID} className=''>
+                                    <div className="flex gap-4 items-center">
                                         {index + 1}
                                         <Separator orientation='vertical' className='h-4' />
 

@@ -118,7 +118,7 @@ export default function FleetOffers() {
                 <h2 className='font-bold text-white'>Business center</h2>
                 <div className="flex gap-2 items-center">
 
-                    <Link href="/offers"
+                    <Link href="/business"
                         className='border-2 border-white rounded-full px-5 text-sm text-white'>
                         More
                     </Link>
