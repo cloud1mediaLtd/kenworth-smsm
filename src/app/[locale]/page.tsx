@@ -53,18 +53,18 @@ export default async function IndexPage() {
             </div>
             <div className='flex flex-col lg:flex-row gap-4 p-6 md:p-0'>
               <div className='flex flex-col gap-1 justify-center'>
-                <h2>Welcome to S.Mediterranean Motors</h2>
+                <h2>Welcome To South Mediterranean Sea Motors</h2>
                 <p className='text-sm'>
                   We are the official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
                   We offer a wide range of new vehicles, as well as a full range of services, including maintenance, repairs, and spare parts.
                 </p>
               </div>
-              <div className='lg:p-6 flex lg:flex-col gap-2 items-center  basis-2/4'>
+              <div className='lg:p-6 flex lg:flex-col gap-3 items-center  basis-2/4'>
                 <Button size="lg" className='w-full' asChild>
                   <Link href='/vehicles' className='w-full'>All Vehicles</Link>
                 </Button>
                 <Button size="lg" variant='secondary' className='w-full' asChild>
-                  <Link href='/vehicles' className='w-full'>About</Link>
+                  <Link href='/about' className='w-full'>About</Link>
                 </Button>
               </div>
             </div>
