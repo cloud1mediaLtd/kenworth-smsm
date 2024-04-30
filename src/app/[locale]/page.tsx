@@ -42,7 +42,7 @@ export default async function IndexPage() {
       <main>
         <div className='content-container-no-bg my-8'>
           <Card className='flex justify-between gap-6 items-center text-sm overflow-hidden h-56'>
-            <div className="relative w-56 min-h-52 h-full flex grow bg-black">
+            <div className="relative w-64 min-h-52 h-full md:flex grow bg-black hidden">
               <Image
                 src='/KRADS_P7.jpg'
                 alt='Mopar'
@@ -51,15 +51,15 @@ export default async function IndexPage() {
                 className='object-cover h-full w-full'
               />
             </div>
-            <div className='flex flex-col lg:flex-row gap-4'>
-              <div className='flex flex-col gap-1'>
+            <div className='flex flex-col lg:flex-row gap-4 p-6 md:p-0'>
+              <div className='flex flex-col gap-1 justify-center'>
                 <h2>Welcome to S.Mediterranean Motors</h2>
                 <p className='text-sm'>
                   We are the official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
                   We offer a wide range of new vehicles, as well as a full range of services, including maintenance, repairs, and spare parts.
                 </p>
               </div>
-              <div className='lg:p-6 flex lg:flex-col gap-2 items-center '>
+              <div className='lg:p-6 flex lg:flex-col gap-2 items-center  basis-2/4'>
                 <Button size="lg" className='w-full' asChild>
                   <Link href='/vehicles' className='w-full'>All Vehicles</Link>
                 </Button>

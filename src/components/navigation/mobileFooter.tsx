@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MobileFooter() {
     return (
-        <footer className="flex sm:hidden shadow-lg h-18 border-t">
+        <footer className="flex sm:hidden shadow-lg h-18 border-t" dir="ltr">
             <div className="flex justify-between items-center w-full bg-black">
                 <div className=" px-5 w-full">
                     <span className="flex justify-center w-full">
