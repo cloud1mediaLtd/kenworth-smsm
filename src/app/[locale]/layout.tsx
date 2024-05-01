@@ -111,8 +111,8 @@ export default async function LocaleLayout({
               {children}
             </section>
 
-
             <Footer />
+
             <div className="sticky bottom-0 z-50">
               <MobileFooter />
             </div>

@@ -33,7 +33,7 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
 
             <Card key={brand.ID} className='bg-black'>
                 <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0'>
-                    <div className='flex gap-5 items-center p-4 h-40'>
+                    <div className='flex gap-5 items-center p-4'>
                         <div className='flex items-center justify-center relative' style={{
 
                             height: isMobile ? mobileHeight : height,

@@ -80,7 +80,7 @@ export default function OfferMainCard({ offer }) {
                                 />
                                 <div className='flex flex-row md:flex-col leading-3 gap-1'>
                                     <span className='text-sm font-semibold leading-none text-black'>
-                                        Warranty
+                                        2 years or 100,000 km warranty
                                     </span>
                                 </div>
 

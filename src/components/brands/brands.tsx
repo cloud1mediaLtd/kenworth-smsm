@@ -38,7 +38,7 @@ function getImageSizeById(brandId) {
         '3': { width: "180px", height: "0px", mobileWidth: "150px", mobileHeight: "36px" },
         '4': { width: "180px", height: "0px", mobileWidth: "150px", mobileHeight: "36px" },
         '5': { width: "180px", height: "100px", mobileWidth: "150px", mobileHeight: "70px" },
-        '6': { width: "180px", height: "90px", mobileWidth: "160px", mobileHeight: "70px" },
+        '6': { width: "180px", height: "110px", mobileWidth: "160px", mobileHeight: "80px" },
     };
     return sizeLookup[brandId] || { width: "100px", height: "100px", mobileWidth: "100px", mobileHeight: "100px" };
 }

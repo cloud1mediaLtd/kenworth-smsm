@@ -33,13 +33,9 @@ export default function VehiclePage() {
                 className=''
             />
 
-
-
             <Suspense fallback={<>loading...</>}>
                 <Brands locale={locale} />
             </Suspense>
-
-
 
         </ section>
     );

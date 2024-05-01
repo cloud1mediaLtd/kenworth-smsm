@@ -24,7 +24,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
 
     return (
         <div className={`flex items-center w-full ${className}`}>
-            <div className={"flex w-full justify-between items-center h-20"}>
+            <div className={"flex w-full justify-between items-center h-24"}>
                 {data.map((brand, subIndex) => {
                     const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.ID);
                     return (
@@ -65,12 +65,12 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
 function getImageSizeById(brandId) {
     // Example lookup for image sizes based on brand ID
     const sizeLookup = {
-        '1': { width: "h-10", height: "w-[160px]", mobileWidth: "h-8", mobileHeight: "w-[130px]" },
-        '2': { width: "h-12", height: "w-[150px]", mobileWidth: "h-12", mobileHeight: "w-[140px]" },
-        '3': { width: "h-12", height: "w-[110px]", mobileWidth: "h-12", mobileHeight: "w-[100px]" },
-        '4': { width: "h-16", height: "w-[170px]", mobileWidth: "h-12", mobileHeight: "w-[150px]" },
-        '5': { width: "h-14", height: "w-16", mobileWidth: "h-12", mobileHeight: "w-[49px]" },
-        '6': { width: "h-14", height: "w-16", mobileWidth: "h-12", mobileHeight: "w-[50px]" },
+        '1': { width: "h-10", height: "w-[160px]", mobileWidth: "h-8", mobileHeight: "w-[145px]" },
+        '2': { width: "h-12", height: "w-[150px]", mobileWidth: "h-14", mobileHeight: "w-[150px]" },
+        '3': { width: "h-12", height: "w-[110px]", mobileWidth: "h-14", mobileHeight: "w-[110px]" },
+        '4': { width: "h-16", height: "w-[170px]", mobileWidth: "h-14", mobileHeight: "w-[160px]" },
+        '5': { width: "h-14", height: "w-16", mobileWidth: "h-14", mobileHeight: "w-[55px]" },
+        '6': { width: "h-14", height: "w-16", mobileWidth: "h-14", mobileHeight: "w-[50px]" },
     };
 
 

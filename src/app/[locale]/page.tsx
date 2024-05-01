@@ -69,7 +69,6 @@ export default async function IndexPage() {
               </div>
             </div>
 
-
           </Card>
           <Separator className="my-8" />
 
