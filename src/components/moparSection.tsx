@@ -90,7 +90,7 @@ export default function MoparSection() {
 
                                 <Button className='bg-white text-[#0245B2] hover:outline hover:text-white gap-2'>
                                     <Link
-                                        href={"/parts"}
+                                        href={"/service"}
                                         className="flex items-center gap-2"
                                     >
                                         Book Service

@@ -44,9 +44,10 @@ export default async function IndexPage() {
 
           <div className='flex flex-col lg:flex-row gap-4 p-6 md:p-0 sm:hidden'>
             <div className='flex flex-col gap-1 justify-center'>
-              <h2>Welcome To South Mediterranean Sea Motors</h2>
-              <p className='text-sm'>
-                We are the official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
+              <h1>Welcome</h1>
+              <h2>South Mediterranean Sea Motors</h2>
+              <p className='text-sm text-slate-600'>
+                The official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
                 We offer a wide range of new vehicles, as well as a full range of services, including maintenance, repairs, and spare parts.
               </p>
             </div>
@@ -72,9 +73,10 @@ export default async function IndexPage() {
             </div>
             <div className='flex flex-col lg:flex-row gap-4 p-6 md:p-0'>
               <div className='flex flex-col gap-1 justify-center'>
-                <h2>Welcome To South Mediterranean Sea Motors</h2>
+                <h1>Welcome</h1>
+                <h2>South Mediterranean Sea Motors</h2>
                 <p className='text-sm'>
-                  We are the official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
+                  The official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
                   We offer a wide range of new vehicles, as well as a full range of services, including maintenance, repairs, and spare parts.
                 </p>
               </div>

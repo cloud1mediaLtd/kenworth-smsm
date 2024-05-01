@@ -32,7 +32,7 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
         <div key={brand.ID} >
 
             <Card key={brand.ID} className='bg-black'>
-                <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0'>
+                <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0 pb-3'>
                     <div className='flex gap-5 items-center p-4'>
                         <div className='flex items-center justify-center relative' style={{
 
@@ -71,7 +71,7 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
                     </div>
 
                 </Card>
-                <div className="flex justify-between items-center py-3 px-6">
+                <div className="flex justify-between items-center py-3 px-6 pt-3">
                     <h2 className='font-bold text-white'>{brand.Name}</h2>
                     <div className="flex gap-2 items-center">
 

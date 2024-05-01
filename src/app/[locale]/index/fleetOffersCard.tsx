@@ -82,28 +82,23 @@ export default function FleetOffers() {
 
                     <CardFooter className="flex justify-between">
 
-                        <Card className='flex items-center gap-4 bg-black'>
-
-                            <div className='flex justify-center items-center gap-3 px-2 py-1'>
-
-                                <Image
-                                    src='/logos/mopar_logo_black.png'
-                                    alt='Mopar'
-                                    width={80}
-                                    height={80}
-                                    className="h-8 w-8"
-                                />
-                                <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                    <span className='text-sm font-semibold leading-none text-slate-50'>
-                                        Warranty
-                                    </span>
-                                </div>
-
+                        <Card className='flex items-center gap-2 bg-black px-2 py-1 h-10'>
+                            <Image
+                                src='/logos/mopar_logo_black.png'
+                                alt='Mopar'
+                                width={80}
+                                height={80}
+                                className="h-8 w-8"
+                            />
+                            <div className='flex flex-row md:flex-col leading-3'>
+                                <span className='text-xs md:text-sm font-semibold md:leading-none text-slate-50 leading-tight'>
+                                    2 years or 100,000 km warranty
+                                </span>
                             </div>
                         </Card>
 
                         <Link href="/business">
-                            <Button className='flex items-center gap-2'>
+                            <Button className='flex items-center gap-2 h-10'>
                                 <span>
                                     View
                                 </span>

@@ -31,14 +31,14 @@ const footerNavigation = {
 
     ],
     company: [
-        { name: 'About', href: '#' },
-        { name: 'Warranty', href: '#' },
+        { name: 'About', href: '/about' },
+        { name: 'Warranty', href: '/warranty' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Business Center', href: '#' },
+        { name: 'Business Center', href: '/business' },
     ],
 
     connect: [
-        { name: 'Contact Us', href: '#' },
+        { name: 'Contact Us', href: '/contact' },
         { name: 'Facebook', href: '#' },
         { name: 'Instagram', href: '#' },
 
@@ -109,33 +109,36 @@ export default function Footer() {
                         </div>
                     </div>
                     <div>
+
                         <h3 className="text-sm font-medium text-white">
                             Company
                         </h3>
                         <Separator className="my-3" />
 
-                        <ul className="mt-6 space-y-3">
+                        <ul className="space-y-3">
                             {footerNavigation.company.map((item) => (
                                 <li key={item.name} className="text-sm">
-                                    <a href={item.href} className="text-gray-300 hover:text-white">
+                                    <Link href={item.href} className="text-gray-300 hover:text-white">
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div>
+
                         <h3 className="text-sm font-medium text-white">
                             Connect
                         </h3>
+
                         <Separator className="my-3" />
 
-                        <ul className="mt-6 space-y-3">
+                        <ul className="space-y-3">
                             {footerNavigation.connect.map((item) => (
                                 <li key={item.name} className="text-sm">
-                                    <a href={item.href} className="text-gray-300 hover:text-white">
+                                    <Link href={item.href} className="text-gray-300 hover:text-white">
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
