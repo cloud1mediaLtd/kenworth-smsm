@@ -56,38 +56,44 @@ export default function Footer() {
                 <div className="relative bg-white" style={{ height: "100%", width: " 100%" }}>
                     <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
                 </div>
+                <div className="content-container-no-bg">
+                    <Card className="flex justify-between w-full relative p-4 gap-6 items-center -mt-12 z-40 h-24">
 
-                <Card className="flex justify-between w-full mx-auto max-w-7xl relative p-4 gap-6 items-center -mt-12 z-40 h-24">
+                        <div className="flex flex-col md:flex-row md:gap-5">
+                            <span className="text-large-semi">Tripoli</span>
+                            <Separator orientation="vertical" className="h-6 hidden md:block" />
 
-                    <div className="flex flex-col md:flex-row md:gap-5">
-                        <span className="text-large-semi">Tripoli</span>
-                        <Separator orientation="vertical" className="h-6 hidden md:block" />
-
-                        <p className="text-base-semi">Al-Swany Road - Al-Swany</p>
-                    </div>
-
-                    <div className="flex  gap-5 ">
-
-                        <ShopStatus />
-
-                        <div className="flex justify-between gap-5">
-                            <Link href="/contact" className="hidden lg:block">
-                                <span className="underline-offset-4 hover:underline text-base-semi ">
-                                    +218 91 000 0000
-                                </span>
-                            </Link>
-
-                            <Separator orientation="vertical" className="h-6 hidden lg:block" />
-
-                            <Link href="/contact" className="hidden lg:block">
-                                <span className="underline-offset-4 hover:underline text-base-semi ">
-                                    <MailIcon />
-                                </span>
-                            </Link>
+                            <p className="text-base-semi">Al-Swany Road - Al-Swany</p>
                         </div>
 
-                    </div>
-                </Card>
+                        <div className="flex gap-5 ">
+
+                            <div className="hidden sm:block">
+                                <ShopStatus />
+
+                            </div>
+
+                            <div className="flex justify-between gap-5">
+                                <Link href="/contact" className="hidden lg:block">
+                                    <span className="underline-offset-4 hover:underline text-base-semi ">
+                                        +218 91 000 0000
+                                    </span>
+                                </Link>
+
+                                <Separator orientation="vertical" className="h-6 hidden lg:block" />
+
+                                <Link href="/contact" className="hidden lg:block">
+                                    <span className="underline-offset-4 hover:underline text-base-semi ">
+                                        <MailIcon />
+                                    </span>
+                                </Link>
+                            </div>
+
+                        </div>
+                    </Card>
+                </div>
+
+
             </div>
 
             <div className="bg-black py-6">
