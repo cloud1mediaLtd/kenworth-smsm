@@ -9,10 +9,10 @@ export default function DodgeBrandCard(data) {
     const cardData = data.data;
 
     return (
-        <div key={cardData.brand.id} className="col-span-1 lg:col-span-2">
+        <div key={cardData.brand.id} className="col-span-1 lg:col-span-1">
 
-            <Card key={cardData.brand.id} className='bg-black'>
-                <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0 pb-3'>
+            <Card key={cardData.brand.id} className='bg-[#e3201b]'>
+                <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0 pb-3 bg-black'>
                     <div className='flex gap-5 items-center p-4'>
                         <div className='flex items-center justify-center relative' style={{
 
@@ -30,7 +30,10 @@ export default function DodgeBrandCard(data) {
                         </div>
                         <Separator orientation='vertical' className='h-8' />
                         <div>
-                            Brand tagline here... ff
+                            <span className="text-white">
+                                PERFORMANCE VEHICLES
+                            </span>
+
                         </div>
                     </div>
 
@@ -40,9 +43,9 @@ export default function DodgeBrandCard(data) {
                             <Link href={`/vehicles/model/${model.id}`} key={model.id} className='grow min-w-56'>
                                 <div>
                                     <div className='h-44 align-middle flex items-center justify-center p-1 min-w-44'>
-                                        <Image src={`/${model.image}`} alt={model.name} width={180} height={180} />
+                                        <Image src={`/${model.image}`} alt={model.name} width={250} height={250} />
                                     </div>
-                                    <div className='text-center pt-4 font-bold'>
+                                    <div className='text-center pt-4 font-bold text-white'>
                                         <span>{cardData.isRTL && model.name_ar ? model.name_ar : model.name}</span>
                                     </div>
                                 </div>
