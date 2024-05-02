@@ -1,6 +1,7 @@
 import BrandsContainer from "components/brands/brandsContainer";
 import { Separator } from "components/ui/separator";
 import { useLocale } from "next-intl";
+import VehicleBreadCrumb from "./components/breadCrumb";
 
 export default function VehiclePageLayout({ children }) {
     const locale = useLocale();
@@ -10,9 +11,18 @@ export default function VehiclePageLayout({ children }) {
                 <div className="content-container-no-bg">
                     <BrandsContainer locale={locale} />
                 </div>
+                <Separator className='mb-4' />
+
             </div>
 
-            <Separator className='mb-4' />
+
+
+            <div className="" >
+                <div className="content-container-no-bg">
+                    <VehicleBreadCrumb />
+                </div>
+            </div>
+
             <div className="content-container-no-bg">
                 {children}
             </div>
