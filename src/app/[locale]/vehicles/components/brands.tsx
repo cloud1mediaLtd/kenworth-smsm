@@ -20,8 +20,8 @@ export default async function Brands({ locale }) {
 
     const isRTL = locale === 'ar';
     return (
-        <section className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-            {data.map((brand) => {
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {data?.map((brand) => {
                 const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.id);
                 return (
                     <BrandCard key={brand.id} brand={brand} locale={locale} width={width} height={height} mobileWidth={mobileWidth} mobileHeight={mobileHeight} />

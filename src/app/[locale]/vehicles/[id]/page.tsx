@@ -65,7 +65,8 @@ export default async function VehiclesPage({ params: { id } }) {
 
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
-          {data.models.map((model) => (
+
+          {data.models?.map((model) => (
             <Card key={model.id} className=' w-full gap-6 items-center'>
               <div className='flex relative w-full min-h-[200px] items-center my-5'>
                 <Image

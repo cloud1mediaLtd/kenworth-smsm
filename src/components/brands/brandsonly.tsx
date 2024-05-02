@@ -19,11 +19,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
     const data = await getData();
     const isRTL = locale === 'ar';
 
-    console.log(data);
-
     data.sort((a, b) => a.id - b.id);
-
-
     return (
         <div className={`flex items-center w-full ${className}`}>
             <div className={"flex w-full justify-between items-center h-24"}>
