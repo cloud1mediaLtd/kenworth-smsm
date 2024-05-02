@@ -3,7 +3,6 @@ import { Separator } from "components/ui/separator";
 import { useLocale, useTranslations } from "next-intl";
 import { Suspense } from "react";
 
-
 export default function VehiclePage() {
     const t = useTranslations('VehiclesPage');
     const locale = useLocale();
@@ -30,7 +29,7 @@ export default function VehiclePage() {
             </div>
             <Separator
                 orientation='horizontal'
-                className=''
+                className='my-6'
             />
 
             <Suspense fallback={<>loading...</>}>

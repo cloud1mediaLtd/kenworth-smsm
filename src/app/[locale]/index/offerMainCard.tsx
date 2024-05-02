@@ -65,22 +65,24 @@ export default function OfferMainCard({ offer }) {
 
                     </CardContent>
 
-                    <CardFooter className="flex justify-between">
+                    <CardFooter className="flex justify-between gap-2">
 
-                        <Card className='flex items-center gap-2 bg-slate-100 px-2 py-1 h-10'>
-                            <Image
-                                src='/logos/mopar_logo.svg'
-                                alt='Mopar'
-                                width={80}
-                                height={80}
-                                className="h-8 w-8"
-                            />
-                            <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                <span className='text-xs md:text-sm font-semibold md:leading-none text-black leading-tight'>
-                                    2 years or 100,000 km warranty
-                                </span>
-                            </div>
-                        </Card>
+                        <Link href="/warranty">
+                            <Card className='flex items-center gap-2 bg-slate-100 px-2 py-1 h-10'>
+                                <Image
+                                    src='/logos/mopar_logo.svg'
+                                    alt='Mopar'
+                                    width={80}
+                                    height={80}
+                                    className="h-8 w-8"
+                                />
+                                <div className='flex flex-row md:flex-col leading-3 gap-1'>
+                                    <span className='text-xs md:text-sm font-semibold md:leading-none text-black leading-tight'>
+                                        2 years or 100,000 km warranty
+                                    </span>
+                                </div>
+                            </Card>
+                        </Link>
 
                         <Link href={`${offer.link}`}>
                             <Button className='flex items-center gap-2 h-10'>

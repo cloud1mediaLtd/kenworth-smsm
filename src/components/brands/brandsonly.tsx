@@ -19,24 +19,26 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
     const data = await getData();
     const isRTL = locale === 'ar';
 
-    data.sort((a, b) => a.ID - b.ID);
+    console.log(data);
+
+    data.sort((a, b) => a.id - b.id);
 
 
     return (
         <div className={`flex items-center w-full ${className}`}>
             <div className={"flex w-full justify-between items-center h-24"}>
                 {data.map((brand, subIndex) => {
-                    const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.ID);
+                    const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.id);
                     return (
                         <>
 
                             <div key={brand.ID} className="flex items-center justify-center w-full">
-                                <Link href={`/vehicles/${brand.ID}`}
+                                <Link href={`/vehicles/${brand.id}`}
                                     className={`flex items-center justify-center relative ${mobileWidth} ${mobileHeight} md:${width} md:${height}`}
                                 >
                                     <Image
-                                        src={`/${brand.Image}`}
-                                        alt={brand.Name}
+                                        src={`/${brand.image}`}
+                                        alt={brand.name}
                                         fill={true}
                                         className="object-contain"
                                     />

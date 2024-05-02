@@ -61,7 +61,7 @@ export default async function IndexPage() {
             </div>
           </div>
 
-          <Card className='sm:flex justify-between gap-6 items-center text-sm overflow-hidden h-64 hidden'>
+          <Card className='sm:flex justify-between gap-0 items-center text-sm overflow-hidden h-64 hidden'>
             <div className="relative w-64 min-h-52 h-full md:flex grow bg-black hidden">
               <Image
                 src='/KRADS_P7.jpg'
@@ -71,7 +71,7 @@ export default async function IndexPage() {
                 className='object-cover h-full w-full'
               />
             </div>
-            <div className='flex flex-col lg:flex-row gap-4 p-6 md:p-0'>
+            <div className='flex flex-col lg:flex-row gap-4 p-6 md:p-4'>
               <div className='flex flex-col gap-1 justify-center'>
                 <h1>Welcome</h1>
                 <h2>South Mediterranean Sea Motors</h2>

@@ -45,8 +45,8 @@ export default async function VehiclesPage({ params: { id } }) {
         <div className='flex flex-col md:flex-row gap-6 items-center w-full'>
           <div className='relative w-full max-w-52 md:max-w-44 h-32'>
             <Image
-              src={`/${data.Image}`}
-              alt={data.Name}
+              src={`/${data.image}`}
+              alt={data.name}
               fill={true}
               style={{ objectFit: "contain" }}
             />
@@ -57,7 +57,7 @@ export default async function VehiclesPage({ params: { id } }) {
               className='h-20 hidden md:block'
             />
             {
-              isRTL && data.Description_ar ? <p className='text-sm text-gray-500'>{data.Description_ar}</p> : <p className='text-sm text-gray-500'>{data.Description}</p>
+              isRTL && data.description_ar ? <p className='text-sm text-gray-500'>{data.description_ar}</p> : <p className='text-sm text-gray-500'>{data.description}</p>
             }
           </div>
 
@@ -65,12 +65,12 @@ export default async function VehiclesPage({ params: { id } }) {
 
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
-          {data.Models.map((model) => (
-            <Card key={model.ID} className=' w-full gap-6 items-center'>
+          {data.models.map((model) => (
+            <Card key={model.id} className=' w-full gap-6 items-center'>
               <div className='flex relative w-full min-h-[200px] items-center my-5'>
                 <Image
-                  src={`/${model.Image}`}
-                  alt={model.Name}
+                  src={`/${model.image}`}
+                  alt={model.name}
                   fill={true}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='object-contain'
@@ -81,10 +81,10 @@ export default async function VehiclesPage({ params: { id } }) {
               <CardHeader>
                 <CardTitle>
                   <div className='flex gap-3 items-center'>
-                    <span className='text-xlarge-bold'>{isRTL && data.Name_ar ? data.Name_ar : data.Name}</span>
+                    <span className='text-xlarge-bold'>{isRTL && data.name_ar ? data.name_ar : data.name}</span>
                     <Separator orientation='vertical' className='h-4' />
                     <div className='text-xlarge-bold'>
-                      {isRTL && model.Name_ar ? model.Name_ar : model.Name}
+                      {isRTL && model.name_ar ? model.name_ar : model.name}
                     </div>
                   </div>
                 </CardTitle>
@@ -93,7 +93,7 @@ export default async function VehiclesPage({ params: { id } }) {
 
                 <div className='flex justify-between'>
                   <div className='flex flex-col gap-4'>
-                    <p>{isRTL && model.Description_ar ? model.Description_ar : model.Description}</p>
+                    <p>{isRTL && model.description_ar ? model.description_ar : model.description}</p>
                   </div>
 
                 </div>
@@ -103,7 +103,7 @@ export default async function VehiclesPage({ params: { id } }) {
 
                 </div>
                 <Button asChild>
-                  <Link href={`/vehicles/model/${model.ID}`}>
+                  <Link href={`/vehicles/model/${model.id}`}>
                     {isRTL ? 'عرض' : 'View'}
                   </Link>
                 </Button>

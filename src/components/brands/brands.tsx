@@ -13,18 +13,18 @@ export default async function Brands({ locale }) {
     let data = await getData();
 
     for (const brand of data) {
-        brand.Models.sort((a, b) => a.Name.localeCompare(b.Name));
+        brand.models.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    data.sort((a, b) => a.ID - b.ID);
+    data.sort((a, b) => a.id - b.id);
 
     const isRTL = locale === 'ar';
     return (
-        <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 pt-6">
+        <section className="grid grid-cols-1 xl:grid-cols-2 gap-6">
             {data.map((brand) => {
-                const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.ID);
+                const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.id);
                 return (
-                    <BrandCard key={brand.ID} brand={brand} locale={locale} width={width} height={height} mobileWidth={mobileWidth} mobileHeight={mobileHeight} />
+                    <BrandCard key={brand.id} brand={brand} locale={locale} width={width} height={height} mobileWidth={mobileWidth} mobileHeight={mobileHeight} />
                 )
             })}
         </section >
