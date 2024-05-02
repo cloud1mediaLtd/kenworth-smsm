@@ -31,7 +31,7 @@ const Navigation = () => {
   ];
 
   return (
-    <section className='relative shadow-sm bg-black'>
+    <section className='relative shadow-sm bg-black border-b'>
       <nav aria-label="Top" className='py-1'>
         {/* Secondary navigation */}
         <div className="content-container-no-bg">

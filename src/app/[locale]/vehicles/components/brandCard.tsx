@@ -5,6 +5,8 @@ import { Separator } from 'components/ui/separator';
 import Image from 'next/image';
 import Link from 'next/link';
 import DodgeBrandCard from './dodgeBrandCard';
+import JeepBrandCard from './jeepBrandCard';
+import ChryslerBrandCard from './chryslerBrandCard';
 
 export default function BrandCard({ brand, locale, width, height, mobileWidth, mobileHeight }) {
     // Initialize state without referencing window
@@ -42,9 +44,11 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
         console.log("Card Layout", cardData.brand.id);
         switch (cardData.brand.id) {
             case 1:
-                return <DodgeBrandCard key={cardData.brand.id} data={cardData} />; // Make sure to use the correct component name
-            case 9:
-                return customBrandTwo(cardData);
+                return <DodgeBrandCard key={cardData.brand.id} data={cardData} />;
+            case 2:
+                return <ChryslerBrandCard key={cardData.brand.id} data={cardData} />;
+            case 3:
+                return <JeepBrandCard key={cardData.brand.id} data={cardData} />;
             // Add more cases for other specific brands
             default:
                 return genericBrandCard(cardData);
@@ -57,7 +61,7 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
         return (
             <div key={cardData.brand.id} className='col-span-1'>
 
-                <Card key={cardData.brand.id} className='bg-black'>
+                <Card key={cardData.brand.id} className='bg-black rounded-2xl'>
                     <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0 pb-3'>
                         <div className='flex gap-5 items-center p-4'>
                             <div className='flex items-center justify-center relative' style={{

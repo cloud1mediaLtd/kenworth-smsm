@@ -25,15 +25,16 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
             <div className={"flex w-full justify-between items-center h-24"}>
                 {data.map((brand, subIndex) => {
                     const { width, height, mobileWidth, mobileHeight } = getImageSizeById(brand.id);
+                    const logo = getLogoById(brand.id)
+
                     return (
                         <>
-
                             <div key={brand.ID} className="flex items-center justify-center w-full">
                                 <Link href={`/vehicles/${brand.id}`}
                                     className={`flex items-center justify-center relative ${mobileWidth} ${mobileHeight} md:${width} md:${height}`}
                                 >
                                     <Image
-                                        src={`/${brand.image}`}
+                                        src={logo || `/${brand.image}`}
                                         alt={brand.name}
                                         fill={true}
                                         className="object-contain"
@@ -41,18 +42,19 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
                                 </Link>
                             </div>
                             {subIndex < data.length - 1 && <Separator className="h-4 w-0.5 bg-slate-600 mx-6" />}
-
                         </>
                     );
                 })}
                 <Separator className="h-4 w-0.5 bg-slate-600 mx-6" />
-                <Image
-                    src='/logos/mopar_logo.svg'
-                    alt='Mopar'
-                    width={60}
-                    height={80}
-                    className=""
-                />
+                <Link href={"/parts"} className="flex w-full h-full items-center justify-center">
+                    <Image
+                        src='/logos/mopar_logo.svg'
+                        alt='Mopar'
+                        width={60}
+                        height={80}
+                        className=""
+                    />
+                </Link>
 
             </div>
         </div>
@@ -76,4 +78,12 @@ function getImageSizeById(brandId) {
     const defaultSize = { width: 120, height: 120 };
 
     return sizeLookup[brandId] || defaultSize;
+}
+
+function getLogoById(brandId) {
+    const logoLookup = {
+        // '1': '/logos/dodgelogo.png',
+    };
+
+    return logoLookup[brandId] || null;
 }

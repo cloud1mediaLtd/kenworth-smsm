@@ -15,8 +15,6 @@ export default function VehiclePageLayout({ children }) {
 
             </div>
 
-
-
             <div className="" >
                 <div className="content-container-no-bg">
                     <VehicleBreadCrumb />
