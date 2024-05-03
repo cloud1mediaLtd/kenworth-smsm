@@ -7,6 +7,8 @@ import Link from 'next/link';
 import DodgeBrandCard from './dodgeBrandCard';
 import JeepBrandCard from './jeepBrandCard';
 import ChryslerBrandCard from './chryslerBrandCard';
+import FiatBrandCard from './fiatBrandCard';
+import RamBrandCard from './ramBrandCard';
 
 export default function BrandCard({ brand, locale, width, height, mobileWidth, mobileHeight }) {
     // Initialize state without referencing window
@@ -49,6 +51,10 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
                 return <ChryslerBrandCard key={cardData.brand.id} data={cardData} />;
             case 3:
                 return <JeepBrandCard key={cardData.brand.id} data={cardData} />;
+            case 4:
+                return <RamBrandCard key={cardData.brand.id} data={cardData} />;
+            case 5:
+                return <FiatBrandCard key={cardData.brand.id} data={cardData} />;
             // Add more cases for other specific brands
             default:
                 return genericBrandCard(cardData);
@@ -80,7 +86,7 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
                             </div>
                             <Separator orientation='vertical' className='h-8' />
                             <div>
-                                Brand tagline here...
+                                Motion and Emotion
                             </div>
                         </div>
 

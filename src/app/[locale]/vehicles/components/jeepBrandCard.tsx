@@ -11,8 +11,8 @@ export default function JeepBrandCard(data) {
     return (
         <div key={cardData.brand.id} className="col-span-1 lg:col-span-1 rounded-xl">
 
-            <Card key={cardData.brand.id} className='bg-[#4E5B32] rounded-2xl'>
-                <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg  pb-3 bg-[#4E5B32]'>
+            <Card key={cardData.brand.id} className='bg-[#485F2B] rounded-2xl'>
+                <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg  pb-3'>
                     <div className='flex gap-5 items-center p-4'>
                         <div className='flex items-center justify-center relative' style={{
 
@@ -22,7 +22,7 @@ export default function JeepBrandCard(data) {
                             minWidth: 44
                         }}>
                             <Image
-                                src={`/logos/logo-jeep.avif`}
+                                src={`/${cardData.brand.image}`}
                                 alt={cardData.brand.name}
                                 fill={true}
                                 style={{ objectFit: "contain" }}
@@ -30,7 +30,7 @@ export default function JeepBrandCard(data) {
                         </div>
                         <Separator orientation='vertical' className='h-8' />
                         <div>
-                            <span className="text-white font-semibold">
+                            <span className="font-semibold">
                                 Go Anywhere, Do Anything
                             </span>
 
@@ -45,7 +45,7 @@ export default function JeepBrandCard(data) {
                                     <div className='h-44 align-middle flex items-center justify-center p-1 min-w-44'>
                                         <Image src={`/${model.image}`} alt={model.name} width={250} height={250} />
                                     </div>
-                                    <div className='text-center pt-2 font-bold text-white'>
+                                    <div className='text-center font-bold'>
                                         <span>{cardData.isRTL && model.name_ar ? model.name_ar : model.name}</span>
                                     </div>
                                 </div>

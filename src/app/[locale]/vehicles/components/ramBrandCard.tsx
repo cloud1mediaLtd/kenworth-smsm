@@ -4,14 +4,14 @@ import Link from "next/link";
 import Image from 'next/image';
 
 
-export default function ChryslerBrandCard(data) {
+export default function RamBrandCard(data) {
     console.log("Dodge Brand Card", data.data);
     const cardData = data.data;
 
     return (
         <div key={cardData.brand.id} className="col-span-1 lg:col-span-1 rounded-xl">
 
-            <Card key={cardData.brand.id} className='bg-[#243882] rounded-2xl'>
+            <Card key={cardData.brand.id} className='bg-gray-600 rounded-2xl'>
                 <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg pb-3'>
                     <div className='flex gap-5 items-center p-4'>
                         <div className='flex items-center justify-center relative' style={{
@@ -31,7 +31,7 @@ export default function ChryslerBrandCard(data) {
                         <Separator orientation='vertical' className='h-8' />
                         <div>
                             <span className="font-semibold">
-                                Personal Luxury
+                                Guts. Glory. Ram.
                             </span>
 
                         </div>
