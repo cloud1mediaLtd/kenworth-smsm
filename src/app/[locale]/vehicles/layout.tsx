@@ -2,9 +2,11 @@ import BrandsContainer from "components/brands/brandsContainer";
 import { Separator } from "components/ui/separator";
 import { useLocale } from "next-intl";
 import VehicleBreadCrumb from "./components/breadCrumb";
+import { BreadcrumbProvider } from "./components/breadCrumbContext";
 
-export default function VehiclePageLayout({ children }) {
+export default function VehiclePageLayout({ children, breadcrumbs }) {
     const locale = useLocale();
+
     return (
         <div className="relative">
             <div className="sticky top-0 z-50 bg-slate-50" >
@@ -12,12 +14,11 @@ export default function VehiclePageLayout({ children }) {
                     <BrandsContainer locale={locale} />
                 </div>
                 <Separator className='mb-4' />
-
             </div>
 
-            <div className="" >
+            <div>
                 <div className="content-container-no-bg">
-                    <VehicleBreadCrumb />
+                    <VehicleBreadCrumb breadcrumbs={breadcrumbs} />
                 </div>
             </div>
 
@@ -27,5 +28,3 @@ export default function VehiclePageLayout({ children }) {
         </div>
     );
 }
-
-

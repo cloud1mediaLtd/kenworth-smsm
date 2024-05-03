@@ -10,7 +10,7 @@ export default function VehiclePage() {
     return (
         <section className=''>
 
-            <div className="flex flex-col md:flex-row gap-10 items-center pb-12 pt-6">
+            {/* <div className="flex flex-col md:flex-row gap-10 items-center pb-12 pt-6">
                 <h1 className=''>
                     {t('title')}
                 </h1>
@@ -26,7 +26,8 @@ export default function VehiclePage() {
                     })}
                 </div>
 
-            </div>
+            </div> */}
+
             <Separator
                 orientation='horizontal'
                 className='my-6'

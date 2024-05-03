@@ -1,3 +1,4 @@
+"use client"
 import {
     Breadcrumb,
     BreadcrumbEllipsis,
@@ -7,15 +8,13 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "components/ui/breadcrumb"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "components/ui/dropdown-menu"
+import { useBreadcrumb } from "./breadCrumbContext";
 
 export default function VehicleBreadCrumb() {
+    const breadcrumbs = useBreadcrumb();
+
     return (
+
         <Breadcrumb>
             <BreadcrumbList>
                 <BreadcrumbItem>
@@ -27,7 +26,7 @@ export default function VehicleBreadCrumb() {
                 <BreadcrumbSeparator />
 
                 <BreadcrumbItem>
-                    <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                    <BreadcrumbPage>{breadcrumbs}</BreadcrumbPage>
                 </BreadcrumbItem>
 
             </BreadcrumbList>

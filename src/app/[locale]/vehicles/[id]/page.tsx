@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import VehicleBreadCrumb from '../components/breadCrumb';
+import { BreadcrumbProvider } from '../components/breadCrumbContext';
 
 async function getData(id: string) {
 
@@ -40,7 +40,23 @@ export default async function VehiclesPage({ params: { id } }) {
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
+  // const getBrandBrumb = (id) => {
+
+  //   switch (id) {
+  //     case 1:
+  //       return "Jeep";
+
+  //     default:
+  //       return "Other Brand";
+  //   }
+  // };
+
+
+  // const breadcrumbs = [
+  // ];
+
   return (
+
     <section className='py-6 gap-6 flex flex-col'>
 
       <Suspense fallback={<>loading...</>}>
