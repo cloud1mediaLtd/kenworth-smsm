@@ -46,15 +46,17 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
                     );
                 })}
                 <Separator className="h-4 w-0.5 bg-slate-600 mx-6" />
-                <Link href={"/parts"} className="flex w-full h-full items-center justify-center">
-                    <Image
-                        src='/logos/mopar_logo.svg'
-                        alt='Mopar'
-                        width={60}
-                        height={80}
-                        className=""
-                    />
-                </Link>
+                <div className="flex items-center justify-center h-24 w-24">
+                    <Link href={"/parts"} className="h-[65px] w-[65px]">
+                        <Image
+                            src="/logos/mopar_logo.svg"
+                            alt="Mopar"
+                            width={80}
+                            height={80}
+                            className=""
+                        />
+                    </Link>
+                </div>
 
             </div>
         </div>

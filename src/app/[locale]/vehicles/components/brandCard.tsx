@@ -119,7 +119,6 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
                     </div>
                 </Card>
 
-                <Separator className="mt-4 hidden md:block" />
 
             </div>
         );
