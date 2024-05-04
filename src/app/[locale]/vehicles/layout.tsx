@@ -18,7 +18,7 @@ export default function VehiclePageLayout({ children, breadcrumbs }) {
 
             <div>
                 <div className="content-container-no-bg">
-                    <VehicleBreadCrumb breadcrumbs={breadcrumbs} />
+                    <VehicleBreadCrumb />
                 </div>
             </div>
 
