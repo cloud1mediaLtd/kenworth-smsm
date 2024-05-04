@@ -1,10 +1,9 @@
 import BrandsContainer from "components/brands/brandsContainer";
 import { Separator } from "components/ui/separator";
 import { useLocale } from "next-intl";
-import VehicleBreadCrumb from "./components/breadCrumb";
-import { BreadcrumbProvider } from "./components/breadCrumbContext";
 
-export default function VehiclePageLayout({ children, breadcrumbs }) {
+
+export default function VehiclePageLayout({ children }) {
     const locale = useLocale();
 
     return (
@@ -18,7 +17,6 @@ export default function VehiclePageLayout({ children, breadcrumbs }) {
 
             <div>
                 <div className="content-container-no-bg">
-                    <VehicleBreadCrumb />
                 </div>
             </div>
 
