@@ -50,18 +50,14 @@ export default function OfferMainCard({ offer }) {
                         <div className="flex flex-col gap-3 items-center justify-center">
                             <Separator className="my-0 opacity-15" />
 
-                            <h2 className='text-slate-50 text-base lg:text-lg text-center'>
+                            <h2 className='text-slate-50 text-sm font-semibold lg:text-base text-center'>
                                 {offer.model.description}
                             </h2>
 
-                            <Separator className="mt-4 opacity-15 hidden md:block" />
-                            <p className="text-sm font-semibold text-center text-white hidden md:block">
-                                Whether you're in need of replacement parts or looking to enhance your vehicle's performance.
 
-                            </p>
 
                         </div>
-                        <Separator className="mt-4 opacity-15 hidden md:block" />
+                        <Separator className="opacity-15 hidden md:block" />
 
                     </CardContent>
 

@@ -15,11 +15,6 @@ export default function VehiclePageLayout({ children }) {
                 <Separator className='mb-4' />
             </div>
 
-            <div>
-                <div className="content-container-no-bg">
-                </div>
-            </div>
-
             <div className="content-container-no-bg">
                 {children}
             </div>

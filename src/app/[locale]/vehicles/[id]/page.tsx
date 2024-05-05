@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import { BreadcrumbProvider } from '../components/breadCrumbContext';
+import VehicleBreadCrumb from '../components/breadCrumb';
 
 async function getData(id: string) {
 
@@ -20,16 +20,8 @@ async function getData(id: string) {
 
   console.log(data)
 
-
   return data;
 }
-
-// const fetchStoryblokData = async (slug) => {
-//   const storyblokApi = getStoryblokApi();
-//   const res = await storyblokApi.get(`cdn/stories/vehicles/${slug}`);
-//   if (!res.data) throw new Error('Failed to fetch Storyblok data');
-//   return res.data.story;
-// };
 
 
 export default async function VehiclesPage({ params: { id } }) {
@@ -40,26 +32,15 @@ export default async function VehiclesPage({ params: { id } }) {
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
-  // const getBrandBrumb = (id) => {
-
-  //   switch (id) {
-  //     case 1:
-  //       return "Jeep";
-
-  //     default:
-  //       return "Other Brand";
-  //   }
-  // };
-
-
-  // const breadcrumbs = [
-  // ];
 
   return (
 
-    <section className='py-6 gap-6 flex flex-col'>
+    <section className=' gap-6 flex flex-col'>
 
       <Suspense fallback={<>loading...</>}>
+
+        <VehicleBreadCrumb topLink={data.name} topLinkHref={`${data.id}`} />
+
         <div className='flex flex-col md:flex-row gap-6 items-center w-full'>
           <div className='relative w-full max-w-52 md:max-w-44 h-32'>
             <Image
@@ -78,11 +59,9 @@ export default async function VehiclesPage({ params: { id } }) {
               isRTL && data.description_ar ? <p className='text-sm text-gray-500'>{data.description_ar}</p> : <p className='text-sm text-gray-500'>{data.description}</p>
             }
           </div>
-
         </div>
 
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
-
 
           {data.models?.map((model) => (
             <Card key={model.id} className=' w-full gap-6 items-center'>

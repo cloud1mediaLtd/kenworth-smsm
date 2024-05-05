@@ -8,11 +8,21 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "components/ui/breadcrumb"
-import { useBreadcrumb } from "./breadCrumbContext";
+import Link from "next/link";
 
-export default function VehicleBreadCrumb() {
-    const breadcrumbs = useBreadcrumb();
+interface VehicleBreadCrumbProps {
+    topLink?: string;
+    topLinkHref?: string;
+    secondLink?: string;
+    secondLinkHref?: string;
+}
 
+export default function VehicleBreadCrumb({
+    topLink,
+    topLinkHref,
+    secondLink,
+    secondLinkHref,
+}: VehicleBreadCrumbProps) {
     return (
 
         <Breadcrumb>
@@ -26,8 +36,25 @@ export default function VehicleBreadCrumb() {
                 <BreadcrumbSeparator />
 
                 <BreadcrumbItem>
-                    <BreadcrumbPage>{breadcrumbs}</BreadcrumbPage>
+                    <BreadcrumbPage>
+                        <Link href={`/vehicles/${topLinkHref}`}>
+                            {topLink}
+                        </Link>
+                    </BreadcrumbPage>
                 </BreadcrumbItem>
+
+                {secondLink && secondLinkHref && (
+                    <>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbPage>
+                                <Link href={`/vehicles/model/${secondLinkHref}`}>
+                                    {secondLink}
+                                </Link>
+                            </BreadcrumbPage>
+                        </BreadcrumbItem>
+                    </>
+                )}
 
             </BreadcrumbList>
         </Breadcrumb>

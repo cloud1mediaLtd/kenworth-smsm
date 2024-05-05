@@ -9,6 +9,7 @@ import {
 } from 'next-intl/server';
 import Image from "next/image";
 import { Suspense } from "react";
+import VehicleBreadCrumb from "../../components/breadCrumb";
 
 async function getData(id: string) {
     try {
@@ -53,6 +54,13 @@ export default async function getModel
 
         <section className='relative'>
             <Suspense fallback={<>loading...</>}>
+                <VehicleBreadCrumb
+                    topLink={model.brand.name}
+                    topLinkHref={`${model.brand.id}`}
+                    secondLink={model.name}
+                    secondLinkHref={model.id}
+                />
+
                 <div className='flex flex-col md:flex-row gap-6 pt-12'>
                     <div className="flex basis-auto md:basis-1/2 relative min-h-[200px]">
                         <Image

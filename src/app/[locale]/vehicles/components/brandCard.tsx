@@ -68,7 +68,7 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
             <div key={cardData.brand.id} className='col-span-1'>
 
                 <Card key={cardData.brand.id} className='bg-black rounded-2xl'>
-                    <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0 pb-3'>
+                    <Card className='flex flex-col overflow-hidden rounded-none rounded-t-lg border-0 pb-3  h-[350px]'>
                         <div className='flex gap-5 items-center p-4'>
                             <div className='flex items-center justify-center relative' style={{
 
@@ -93,10 +93,10 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
 
                         <div className='flex gap-2 brands-scroll-container overflow-x-scroll overflow-hidden p-4 grow'>
                             {cardData.brand.models.map((model) => (
-                                <Link href={`/vehicles/model/${model.id}`} key={model.id} className='grow min-w-56'>
+                                <Link href={`/vehicles/model/${model.id}`} key={model.id} className='grow min-w-52'>
                                     <div>
-                                        <div className='h-44 align-middle flex items-center justify-center p-1'>
-                                            <Image src={`/${model.image}`} alt={model.name} width={180} height={180} />
+                                        <div className='h-32 align-middle flex items-center justify-center p-1'>
+                                            <Image src={`/${model.image}`} alt={model.name} width={160} height={160} />
                                         </div>
                                         <div className='text-center pt-4 font-bold'>
                                             <span>{cardData.isRTL && model.name_ar ? model.name_ar : model.name}</span>
@@ -120,15 +120,6 @@ export default function BrandCard({ brand, locale, width, height, mobileWidth, m
                 </Card>
 
 
-            </div>
-        );
-    }
-
-
-    function customBrandTwo(cardData) {
-        return (
-            <div key={cardData.brand.id} >
-                {/* Custom layout for brand ID 2 */}
             </div>
         );
     }
