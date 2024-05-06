@@ -7,8 +7,6 @@ import MoparSection from 'components/moparSection';
 import Offers from './index/offers';
 import FleetOffers from './index/fleetOffersCard';
 import { Button } from 'components/ui/button';
-import { Card } from 'components/ui/card';
-import Image from 'next/image';
 import Link from 'next/link';
 
 
