@@ -30,7 +30,7 @@ export default function VehiclePage() {
 
             </div> */}
 
-            <div className="flex gap-3 items-center hidden">
+            <div className=" gap-3 items-center hidden">
 
                 <span className=" text-sm font-semibold">
                     Recommendations:
