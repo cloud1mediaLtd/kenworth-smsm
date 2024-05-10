@@ -19,6 +19,7 @@ import MainImage from 'components/storyblok/Main_image';
 import VehicleGallery from 'components/storyblok/vehicleBloks/VehicleGallery';
 import MobileFooter from 'components/navigation/mobileFooter';
 import { ThemeProvider } from 'components/ui/themeProvider';
+import HotjarSnippet from 'lib/hotjar';
 
 const components = {
   page: Page,
@@ -118,6 +119,8 @@ export default async function LocaleLayout({
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>
+        <HotjarSnippet />
+
       </body>
 
     </html>
