@@ -1,4 +1,4 @@
-import { UserCog2, HeartPulse, ListTodo, CalendarCheck, ArrowRightCircleIcon, SearchCheckIcon } from "lucide-react";
+import { UserCog2, HeartPulse, ListTodo, CalendarCheck, ArrowRightCircleIcon, SearchCheckIcon, Phone } from "lucide-react";
 import { Card } from "./ui/card";
 import { Separator } from "./ui/separator";
 import Image from 'next/image';
@@ -10,16 +10,17 @@ export default function MoparSection() {
     return (
         <>
 
-            <div className='flex flex-col bg-[#0245B2] py-6 text-slate-50 relative'>
+            <div className='flex flex-col bg-kenbg py-6 text-slate-50 relative'>
                 <div className='content-container-no-bg flex flex-col lg:flex-row items-center gap-6 justify-center'>
 
-                    <div className="relative text-center lg:text-start max-w-2xl">
+                    <div className=" flex flex-col items-center justify-center gap-6 relative text-center lg:text-start max-w-2xl">
                         <h1 className="text-2xl md:text-2xl xl:text-3xl text-balance pb-2">Here When You Need Us</h1>
                         <p>
                             Access genuine parts for your vehicles. Whether you're in need of replacement parts or looking to enhance your vehicle's performance, we've got you covered.
                         </p>
+                        <span className="flex items-center gap-3"><Phone />+218 44 567 567</span>
                     </div>
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+                    {/* <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                         <div className="flex gap-8 items-center justify-center">
                             <Card className="flex flex-col justify-center items-center w-32 h-40 p-3 relative">
                                 <div className="relative w-32 h-32 m-3">
@@ -102,7 +103,7 @@ export default function MoparSection() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>

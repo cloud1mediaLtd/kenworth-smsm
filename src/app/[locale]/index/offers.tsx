@@ -20,7 +20,7 @@ export default function Offers() {
     }, [api])
 
     return (
-        <Card className='flex flex-col w-full bg-black'>
+        <Card className='flex flex-col w-full bg-kenbg rounded-t-2xl'>
 
 
             <Carousel className="w-full px-0 basis-4/6"

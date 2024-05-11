@@ -9,7 +9,7 @@ import { cn } from "lib/utils";
 export default function OfferMainCard({ offer }) {
     return (
         <>
-            <Card className={cn(`${offer.bg} bg-[#9C101A] flex flex-col md:flex-row overflow-hidden h-full`)}>
+            <Card className={cn(`${offer.bg} flex flex-col md:flex-row overflow-hidden h-full`)}>
 
                 <div className='relative w-full min-h-52 basis-7/12'>
                     <Image
@@ -28,7 +28,7 @@ export default function OfferMainCard({ offer }) {
                             {offer.badge}
                         </Badge>
 
-                        <div className='flex justify-center text-2xl font-bold text-slate-50 items-center gap-3 pt-3'>
+                        <div className='flex justify-center text-2xl font-bold text-primary items-center gap-3 pt-3'>
                             <Image
                                 src={offer.brand.logo}
                                 alt={`${offer.brand.name} logo`}
@@ -48,16 +48,16 @@ export default function OfferMainCard({ offer }) {
 
                     <CardContent className='h-full flex flex-col gap-3 items-center'>
                         <div className="flex flex-col gap-3 items-center justify-center">
-                            <Separator className="my-0 opacity-15" />
+                            <Separator className="my-0  opacity-50" />
 
-                            <h2 className='text-slate-50 text-sm font-semibold lg:text-base text-center'>
+                            <h2 className=' text-sm font-semibold lg:text-base text-center'>
                                 {offer.model.description}
                             </h2>
 
 
 
                         </div>
-                        <Separator className="opacity-15 hidden md:block" />
+                        <Separator className=" hidden md:block" />
 
                     </CardContent>
 
@@ -65,16 +65,10 @@ export default function OfferMainCard({ offer }) {
 
                         <Link href="/warranty">
                             <Card className='flex items-center gap-2 bg-slate-100 px-2 py-1 h-10'>
-                                <Image
-                                    src='/logos/mopar_logo.svg'
-                                    alt='Mopar'
-                                    width={80}
-                                    height={80}
-                                    className="h-8 w-8"
-                                />
+
                                 <div className='flex flex-row md:flex-col leading-3 gap-1'>
                                     <span className='text-xs md:text-sm font-semibold md:leading-none text-black leading-tight'>
-                                        2 years or 100,000 km warranty
+                                        5 years or 500,000 km warranty
                                     </span>
                                 </div>
                             </Card>

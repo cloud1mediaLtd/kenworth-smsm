@@ -1,18 +1,18 @@
 export const offers = [
     {
-        badge: 'New 2025 | Early Bird Offers',
-        badgeClass: 'bg-black',
-        brand: { name: 'Jeep', logo: '/logos/jeep_logo.svg', logoWidth: 100, logoHeight: 100 },
+        badge: 'New 2024 | ROCK-SOLID PERFORMANCE',
+        badgeClass: 'bg-kenbg',
+        brand: { name: 'T880', logo: '/logos/kenworth_logo.png', logoWidth: 100, logoHeight: 100 },
         model: {
-            name: 'Grand Cheroke',
-            description: 'Setting The Bar For Adventure',
-            image: '/jeep-grand-cherokee-4xe-overview-canvas-2-1920X922.jpg'
+            name: 'T880',
+            description: 'THE ULTIMATE WORK TRUCK',
+            image: '/t880-carousel.jpg'
         },
         description: 'Setting The Bar For Adventure',
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/vehicles/model/16',
-        bg: ' rounded-none rounded-t-lg border-0 bg-red-00'
+        bg: ' rounded-none rounded-t-lg border-0'
     },
     {
         badge: 'New | Now In Showroom',

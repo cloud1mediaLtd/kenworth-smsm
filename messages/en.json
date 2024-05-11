@@ -1,6 +1,6 @@
 {
   "Name": {
-    "title": "S.Med sea Motors",
+    "title": "Gasos",
     "slogan": "Slogan",
     "tel": "+218 91 386 8093"
   },
@@ -55,7 +55,7 @@
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
   },
   "LocaleLayout": {
-    "title": "S.Med Sea Motors"
+    "title": "Gasos"
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -89,7 +89,7 @@
   },
   "Hero": {
     "title": "New 2024 models available",
-    "description": "Check out the latest line up.",
+    "description": "Driving the Next 100 Years",
     "button": "Learn More"
   },
 

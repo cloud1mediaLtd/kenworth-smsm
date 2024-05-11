@@ -40,51 +40,25 @@ export default async function IndexPage() {
       <main>
         <div className='content-container-no-bg my-8'>
 
-          <div className='flex flex-col lg:flex-row gap-4 p-6 md:p-0 sm:hidden'>
-            <div className='flex flex-col gap-3 justify-center leading-none'>
-              <h1 className='leading-3'>Welcome</h1>
-              <h2 className=' leading-3'>South Mediterranean Sea Motors</h2>
-              <p className='text-sm text-slate-600'>
-                The official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
-                We offer a wide range of new vehicles, as well as a full range of services, including maintenance, repairs, and spare parts.
-              </p>
-            </div>
-            <div className='lg:p-6 flex lg:flex-col gap-3 items-center  basis-2/4'>
-              <Button size="lg" className='w-full' asChild>
-                <Link href='/vehicles' className='w-full'>All Vehicles</Link>
-              </Button>
-              <Button size="lg" variant='secondary' className='w-full' asChild>
-                <Link href='/about' className='w-full'>About</Link>
-              </Button>
-            </div>
-          </div>
 
-          <div className='sm:flex justify-between gap-1 items-center text-sm overflow-hidden hidden p-4'>
-            {/* <div className="relative w-64 min-h-52 h-full md:flex grow bg-black hidden">
-              <Image
-                src='/KRADS_P7.jpg'
-                alt='Mopar'
-                fill={true}
-                sizes='(max-width: 640px) 640px, 1920px'
-                className='object-cover h-full w-full'
-              />
-            </div> */}
+          <div className='flex justify-between gap-1 items-center text-sm overflow-hidden p-4'>
+
             <div className='flex flex-col lg:flex-row gap-4'>
               <div className='flex flex-col gap-1 justify-center'>
                 <div className='flex items-center gap-3'>
                   <h2 className='leading-none text-slate-400'>Welcome</h2>
                   <Separator orientation='vertical' className='h-8' />
-                  <h1 className=' tracking-normal'>South Mediterranean Sea Motors</h1>
+                  <h1 className=' tracking-normal'>Gasos</h1>
                 </div>
 
                 <p className='text-sm pt-1'>
-                  Official dealer of Dodge, Chrysler, Jeep, Ram, Fiat, Peugeot and Mopar in Libya.
+                  Official dealer of Kenworth trucks and genuine parts in Libya.
                   We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.
                 </p>
               </div>
               <div className=' flex lg:flex-col gap-3 items-center  basis-2/4'>
-                <Button size="lg" className='w-full' asChild>
-                  <Link href='/vehicles' className='w-full'>All Vehicles</Link>
+                <Button size="lg" className='w-full bg-kenbg' asChild>
+                  <Link href='/vehicles' className='w-full'>All Trucks</Link>
                 </Button>
                 <Button size="lg" variant='secondary' className='w-full' asChild>
                   <Link href='/about' className='w-full'>About</Link>
@@ -107,11 +81,11 @@ export default async function IndexPage() {
           <Separator className="my-8" />
           <FleetOffers />
           <Separator className="my-8" />
-          {stories ? (
+          {/* {stories ? (
             <PostsPreview stories={stories} />
           ) : (
             <p>Failed to load stories. Please refresh the page.</p>
-          )}
+          )} */}
         </div>
       </main>
 
