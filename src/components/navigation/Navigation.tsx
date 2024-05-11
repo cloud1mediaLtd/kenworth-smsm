@@ -7,6 +7,7 @@ import { Button } from '../ui/button'
 import { Aside } from '../aside/Aside';
 import { Separator } from 'components/ui/separator';
 import NavLink from '../aside/navLink';
+import Logo from './logo';
 
 
 interface NavigationItem {
@@ -35,18 +36,30 @@ const Navigation = () => {
     <section className='relative shadow-sm border-b'>
       <nav aria-label="Top" className='py-1'>
         {/* Secondary navigation */}
-        <div className="content-container-no-bg">
+        <div className="container">
           <div className="flex py-6 items-center justify-between">
             {/* Logo (lg+) */}
             <div className={`flex items-center gap-4 font-semibold text-lg tracking-wide ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
-              <Link href="/" className='flex items-center gap-3'>
+              <Link href="/" className='relative flex items-center gap-3'>
                 <span className="sr-only">Gazos</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=black"
-                  alt=""
-                />
-
+                <svg
+                  className=" w-full h-9 text-red-500 dark:text-red-500"
+                  id="Layer_2"
+                  data-name="Layer 2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 66.87 83.67"
+                >
+                  <defs>
+                    <style>
+                      {`.cls-1 { fill: currentColor; stroke-width: 0px; }`}
+                    </style>
+                  </defs>
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <polygon className="cls-1" points="18.27 26.97 33.84 0 49.41 26.97 33.84 53.95 18.27 26.97" />
+                    <polygon className="cls-1" points="35.72 56.62 51.29 29.65 66.87 56.62 51.29 83.6 35.72 56.62" />
+                    <polygon className="cls-1" points="0 56.69 15.57 29.72 31.15 56.69 15.57 83.67 0 56.69" />
+                  </g>
+                </svg>
                 <span className="">
                   Gasos
                 </span>

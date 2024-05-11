@@ -23,7 +23,7 @@ export default function FleetOffers() {
     }, [api])
 
     return (
-        <Card className="bg-kenbg">
+        <Card className="bg-kenbg rounded-t-2xl">
 
             <Card className='flex flex-col md:flex-row overflow-hidden rounded-none rounded-t-lg border-0'>
 

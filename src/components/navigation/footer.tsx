@@ -95,7 +95,7 @@ export default function Footer() {
                     <div>
                         <Link href="/vehicles">
                             <h3 className="text-sm font-medium text-white">
-                                Our Brands</h3>
+                                Our Trucks</h3>
                         </Link>
                         <Separator className="my-3" />
                         <div className="grid grid-cols-1 gap-3">
@@ -146,7 +146,7 @@ export default function Footer() {
 
                 </div>
 
-                <div className="flex justify-between content-container-no-bg border-t border-gray-800 mt-6">
+                <div className="flex justify-between content-container-no-bg border-t border-background/50 mt-8">
                     <p className="text-sm text-gray-200 py-6">Copyright &copy; 2024 Gasos, Inc.</p>
                     <div className="flex gap-5 items-center">
                         <ModeToggle />
