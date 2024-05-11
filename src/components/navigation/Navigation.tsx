@@ -7,7 +7,6 @@ import { Button } from '../ui/button'
 import { Aside } from '../aside/Aside';
 import { Separator } from 'components/ui/separator';
 import NavLink from '../aside/navLink';
-import ShopStatus from 'components/navigation/shopstatus';
 
 
 interface NavigationItem {
@@ -25,9 +24,11 @@ const Navigation = () => {
   const titleClass = clsx({ 'pl-5': isRTL, 'pr-5': !isRTL });
 
   const mainNavigation: NavigationItem[] = [
-    { key: 'vehicles', href: '/vehicles', title: t('vehicles.title') },
+    { key: 'trucks', href: '/vehicles', title: t('trucks.title') },
     { key: 'parts', href: '/parts', title: t('parts.title') },
+    { key: 'service', href: '/service', title: t('services.title') },
     { key: 'contact', href: '/contact', title: t('contact.title') },
+
   ];
 
   return (
@@ -68,9 +69,7 @@ const Navigation = () => {
               ))} */}
 
               <div className='flex gap-4 items-center'>
-                <a href={"#footer"}>
-                  <ShopStatus />
-                </a>
+
 
 
                 <a href="#menu-aside" className=''>

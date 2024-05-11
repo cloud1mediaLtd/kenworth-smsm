@@ -34,8 +34,10 @@ export default async function IndexPage() {
 
   return (
     <section className='relative'>
+      <div className='relative'>
+        <Hero />
+      </div>
 
-      <Hero />
 
       <main>
         <div className='content-container-no-bg my-8'>

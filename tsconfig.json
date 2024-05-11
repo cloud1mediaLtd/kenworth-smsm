@@ -32,6 +32,6 @@
     ".next/types/**/*.ts",
     "prettier.config.js",
     "tailwind.config.ts"
-, "src/app/[locale]/vehicles/loading.js", "src/lib/hotjar.js"  ],
+, "src/app/[locale]/trucks/loading.js", "src/lib/hotjar.js"  ],
   "exclude": ["node_modules"]
 }

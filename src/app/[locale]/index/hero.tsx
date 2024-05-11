@@ -14,23 +14,18 @@ export default function Hero() {
     const isRTL = locale === 'ar';
     return (
         <section>
-            <div className="relative min-h-[24rem]">
-
+            <div className="relative ">
                 {/* Decorative image and overlay */}
-                <div className='absolute inset-0'>
-                    <Image
-                        id='hero-image'
-                        src="/100home3.jpg"
-                        alt=""
-                        width={1920}
-                        height={850}
-                        sizes='(max-width: 640px) 640px, 1920px'
-                        className='object-cover w-full min-h-[24rem] '
-
-
-                    />
-                </div>
-                <div className="relative flex flex-col justify-center items-center text-center h-full gap-4 pt-16">
+                <Image
+                    id='hero-image'
+                    src="/100home3.jpg"
+                    alt=""
+                    width={1920}
+                    height={850}
+                    sizes='(max-width: 640px) 640px, 1920px'
+                    className=' object-cover w-full min-h-44 '
+                />
+                <div className="absolute inset-0 flex flex-col items-center  h-full gap-4 pt-4 md:pt-16 px-4">
                     <Image
                         id='hero-image'
                         src="/logos/kenworth-100-wordmark.png"
@@ -38,7 +33,7 @@ export default function Hero() {
                         width={1920}
                         height={850}
                         sizes='(max-width: 640px) 640px, 1920px'
-                        className=' object-contain h-20 w-auto'
+                        className='object-contain w-full max-w-[250px]'
                     />
                     {/* <h1 className="text-2xl font-bold tracking-tight text-white lg:text-6xl ">{t('title')}</h1> */}
                     <p className="text-xl md:text-4xl font-semibold text-shadow text-white italic">

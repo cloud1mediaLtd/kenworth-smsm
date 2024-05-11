@@ -1,4 +1,4 @@
-import Brands from "app/[locale]/vehicles/components/brands";
+import Brands from "app/[locale]/trucks/components/brands";
 import { Button } from "components/ui/button";
 import { Separator } from "components/ui/separator";
 import { XIcon } from "lucide-react";
@@ -10,7 +10,7 @@ export default function VehiclePage() {
     const locale = useLocale();
 
     return (
-        <section className=''>
+        <section className='pt-12'>
 
             {/* <div className="flex flex-col md:flex-row gap-10 items-center pb-12 pt-6">
                 <h1 className=''>

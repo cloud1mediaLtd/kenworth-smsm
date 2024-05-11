@@ -23,13 +23,13 @@ export default function FleetOffers() {
     }, [api])
 
     return (
-        <Card className="bg-black">
+        <Card className="bg-kenbg">
 
             <Card className='flex flex-col md:flex-row overflow-hidden rounded-none rounded-t-lg border-0'>
 
                 <div className='relative w-full min-h-52 basis-7/12'>
                     <Image
-                        src="/fiatrange.jpg"
+                        src="/2005.jpg"
                         alt=""
                         fill={true}
                         sizes='(max-width: 640px) 640px, 1920px'
@@ -46,19 +46,11 @@ export default function FleetOffers() {
 
                         <div className="flex relative items-center justify-center gap-3 pt-3" >
                             <Image
-                                src='/logos/fiat_professional_logo.png'
+                                src='/logos/kenworth_logo.png'
                                 alt='Mopar'
-                                width={50}
+                                width={150}
                                 height={90}
-                                className="h-12 object-contain"
-                            />
-                            <Separator orientation='vertical' className='h-4' />
-                            <Image
-                                src='/logos/ram_professional.jpeg'
-                                alt='Mopar'
-                                width={140}
-                                height={80}
-                                className="h-10 object-contain"
+                                className=" object-contain"
                             />
                         </div>
                     </CardHeader>
@@ -69,11 +61,10 @@ export default function FleetOffers() {
                         <Separator className="my-0 opacity-85" />
 
                         <h2 className='text-slate-900 pb-2'>
-                            Professional Range
+                            Fleet Offers
                         </h2>
                         <p className="text-sm font-semibold text-center text-slate-700 hidden md:block">
-                            Whether you're in need of replacement parts or looking to enhance your vehicle's performance.
-
+                            Get the best deals on fleet purchases. We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.
                         </p>
 
                         <Separator className="mt-4 opacity-85 hidden md:block" />
@@ -84,16 +75,10 @@ export default function FleetOffers() {
                         <Link href="/warranty">
 
                             <Card className='flex items-center gap-2 bg-black px-2 py-1 h-10'>
-                                <Image
-                                    src='/logos/mopar_logo_black.png'
-                                    alt='Mopar'
-                                    width={80}
-                                    height={80}
-                                    className="h-8 w-8"
-                                />
+
                                 <div className='flex flex-row md:flex-col leading-3'>
                                     <span className='text-xs md:text-sm font-semibold md:leading-none text-slate-50 leading-tight'>
-                                        2 years or 100,000 km warranty
+                                        5 years or 500,000 km warranty
                                     </span>
                                 </div>
                             </Card>
@@ -111,7 +96,7 @@ export default function FleetOffers() {
                 </div>
 
             </Card>
-            <div className="flex justify-between items-center py-5 px-6">
+            <div className="flex justify-between items-center py-4 px-6">
                 <h2 className='font-bold text-white'>Business center</h2>
                 <div className="flex gap-2 items-center">
 

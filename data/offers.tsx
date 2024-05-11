@@ -2,7 +2,7 @@ export const offers = [
     {
         badge: 'New 2024 | ROCK-SOLID PERFORMANCE',
         badgeClass: 'bg-kenbg',
-        brand: { name: 'T880', logo: '/logos/kenworth_logo.png', logoWidth: 100, logoHeight: 100 },
+        brand: { name: 'T880', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 100 },
         model: {
             name: 'T880',
             description: 'THE ULTIMATE WORK TRUCK',
@@ -16,14 +16,29 @@ export const offers = [
     },
     {
         badge: 'New | Now In Showroom',
-        badgeClass: 'bg-black',
-        brand: { name: 'Chrysler', logo: '/logos/chryslerlogo.png', logoWidth: 170, logoHeight: 80 },
+        badgeClass: 'bg-kenbg',
+        brand: { name: 'C500', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 0 },
         model: {
-            name: '300',
-            description: 'High-performance And Personal Luxury',
-            image: '/2023-chrysler-300-VLP-design-feature-grid-01.avif'
+            name: 'C500',
+            description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
+            image: '/c500-bodybuilder.jpg'
         },
-        description: 'High-performance And Personal Luxury',
+        description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
+        warranty: 'Warranty',
+        finance: 'Finance',
+        link: '/vehicles/model/16',
+        bg: ' rounded-none rounded-t-lg border-0'
+    },
+    {
+        badge: 'New | Now In Showroom',
+        badgeClass: 'bg-kenbg',
+        brand: { name: 'C500', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 0 },
+        model: {
+            name: '963',
+            description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
+            image: '/963.jpeg'
+        },
+        description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/vehicles/model/16',

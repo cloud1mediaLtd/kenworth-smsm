@@ -70,16 +70,16 @@
       "title": "About",
       "href": "/about"
     },
-    "vehicles": {
-      "title": "Vehicles",
-      "href": "/vehicles"
+    "trucks": {
+      "title": "Trucks",
+      "href": "/trucks"
     },
     "parts": {
       "title": "Parts",
       "href": "/spareparts"
     },
     "services": {
-      "title": "Schedule Service",
+      "title": "Service",
       "href": "/service"
     },
     "contact": {

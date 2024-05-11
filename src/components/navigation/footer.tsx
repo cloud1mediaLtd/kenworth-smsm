@@ -21,14 +21,9 @@ import ShopStatus from 'components/navigation/shopstatus';
 
 const footerNavigation = {
     vehicles: [
-        { name: 'Jeep', href: '/vehicles/3' },
-        { name: 'Dodge', href: '/vehicles/1' },
-        { name: 'Ram', href: '/vehicles/4' },
-        { name: 'Chrysler', href: '/vehicles/2' },
-        { name: 'Fiat', href: '/vehicles/5' },
-        { name: 'Peugeot', href: '/vehicles/6' },
-        { name: 'Mopar', href: '/parts' },
-
+        { name: 'T880', href: '/trucks/t880' },
+        { name: 'C500', href: '/trucks/c500' },
+        { name: '963', href: '/trucks/963' },
     ],
     company: [
         { name: 'About', href: '/about' },
@@ -93,7 +88,6 @@ export default function Footer() {
                     </Card>
                 </div>
 
-
             </div>
 
             <div className="bg-black py-6">
@@ -104,7 +98,7 @@ export default function Footer() {
                                 Our Brands</h3>
                         </Link>
                         <Separator className="my-3" />
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 gap-3">
                             {footerNavigation.vehicles.map((item) => (
                                 <span key={item.name} className="text-sm">
                                     <Link href={item.href} className="text-gray-300 hover:text-white">
@@ -153,7 +147,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex justify-between content-container-no-bg border-t border-gray-800 mt-6">
-                    <p className="text-sm text-gray-400 py-6">Copyright &copy; 2024 SMSM, Inc.</p>
+                    <p className="text-sm text-gray-400 py-6">Copyright &copy; 2024 Gasos, Inc.</p>
                     <div className="flex gap-5 items-center">
                         <ModeToggle />
                         <LocaleSwitcher />

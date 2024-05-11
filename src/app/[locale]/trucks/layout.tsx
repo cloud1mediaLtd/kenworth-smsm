@@ -1,6 +1,7 @@
 import BrandsContainer from "components/brands/brandsContainer";
 import { Separator } from "components/ui/separator";
 import { useLocale } from "next-intl";
+import VehicleBreadCrumb from "./components/breadCrumb";
 
 
 export default function VehiclePageLayout({ children }) {
@@ -8,13 +9,6 @@ export default function VehiclePageLayout({ children }) {
 
     return (
         <div className="relative">
-            <div className="sticky top-0 z-50 bg-slate-50" >
-                <div className="content-container-no-bg">
-                    <BrandsContainer locale={locale} />
-                </div>
-                <Separator className='mb-4' />
-            </div>
-
             <div className="content-container-no-bg">
                 {children}
             </div>

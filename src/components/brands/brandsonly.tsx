@@ -7,6 +7,13 @@ interface PropItems {
     className?: string;
 }
 
+const TruckData = [
+    { id: 1, name: "T880", image: "/logos/jeeplogo.png" },
+    { id: 2, name: "C500", image: "/kenworthc500.jpg" },
+    { id: 3, name: "963", image: "/logos/chryslerlogo.png" },
+
+];
+
 async function getData() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL; // Access the environment variable
     const res = await fetch(`${apiUrl}/brands`, { next: { revalidate: 200 } }); if (!res.ok) {
@@ -16,7 +23,7 @@ async function getData() {
 }
 
 export default async function BrandsOnly({ locale, className }: PropItems) {
-    const data = await getData();
+    const data = TruckData;
     const isRTL = locale === 'ar';
 
     data.sort((a, b) => a.id - b.id);
@@ -29,12 +36,12 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
 
                     return (
                         <>
-                            <div key={brand.ID} className="flex items-center justify-center w-full">
+                            <div key={brand.id} className="flex items-center justify-center w-full">
                                 <Link href={`/vehicles/${brand.id}`}
                                     className={`flex items-center justify-center relative ${mobileWidth} ${mobileHeight} md:${width} md:${height}`}
                                 >
                                     <Image
-                                        src={logo || `/${brand.image}`}
+                                        src={logo || `${brand.image}`}
                                         alt={brand.name}
                                         fill={true}
                                         className="object-contain"
@@ -45,18 +52,7 @@ export default async function BrandsOnly({ locale, className }: PropItems) {
                         </>
                     );
                 })}
-                <Separator className="h-4 w-0.5 bg-slate-600 mx-6" />
-                <div className="flex items-center justify-center h-24 w-24">
-                    <Link href={"/parts"} className="h-[65px] w-[65px]">
-                        <Image
-                            src="/logos/mopar_logo.svg"
-                            alt="Mopar"
-                            width={80}
-                            height={80}
-                            className=""
-                        />
-                    </Link>
-                </div>
+
 
             </div>
         </div>
