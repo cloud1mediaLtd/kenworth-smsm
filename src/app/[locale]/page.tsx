@@ -48,13 +48,11 @@ export default async function IndexPage() {
             <div className='flex flex-col lg:flex-row gap-4'>
               <div className='flex flex-col gap-1 justify-center'>
                 <div className='flex items-center gap-3'>
-                  <h2 className='leading-none text-slate-400'>Welcome</h2>
-                  <Separator orientation='vertical' className='h-8' />
-                  <h1 className=' tracking-normal'>Gasos</h1>
+                  <h2 className='leading-none'>Gasos Official dealer of Kenworth trucks and genuine parts in Libya</h2>
+
                 </div>
 
                 <p className='text-sm pt-1'>
-                  Official dealer of Kenworth trucks and genuine parts in Libya.
                   We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.
                 </p>
               </div>

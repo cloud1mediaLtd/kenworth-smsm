@@ -21,7 +21,6 @@ export default function VehicleBreadCrumb({
     topLink,
     topLinkHref,
     secondLink,
-    secondLinkHref,
 }: VehicleBreadCrumbProps) {
     return (
         <div className="py-3 font-semibold">
@@ -36,16 +35,14 @@ export default function VehicleBreadCrumb({
                         </BreadcrumbPage>
                     </BreadcrumbItem>
 
-                    {secondLink && secondLinkHref && (
+                    {secondLink && (
                         <>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
                                 <BreadcrumbPage>
-                                    <Link href={`/trucks/${secondLinkHref}`}>
-                                        <span className="font-semibold">
-                                            {secondLink}
-                                        </span>
-                                    </Link>
+                                    <span className="font-semibold">
+                                        {secondLink}
+                                    </span>
                                 </BreadcrumbPage>
                             </BreadcrumbItem>
                         </>

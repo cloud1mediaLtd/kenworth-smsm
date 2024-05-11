@@ -1,8 +1,5 @@
-import Brands from "app/[locale]/trucks/components/brands";
 import { Button } from "components/ui/button";
-import { XIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { Suspense } from "react";
 import { offers } from "../../../../data/offers";
 import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
 import { Separator } from "components/ui/separator";

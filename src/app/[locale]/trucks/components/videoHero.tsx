@@ -37,7 +37,7 @@ const VideoHero = ({ videoUrl, fallbackImageUrl }) => {
 
     return (
         <div className="relative w-full min-h-[300px] md:min-h-[400px]">
-            {!isVideoLoaded && (
+            {!isVideoLoaded && videoUrl && (
                 <div className="flex justify-center items-center">
                     {/* Fallback Image */}
                     <Image src={fallbackImageUrl} alt="Loading..." width={600} height={1600} className="w-full h-full object-cover min-h-[400px]" />
@@ -50,32 +50,40 @@ const VideoHero = ({ videoUrl, fallbackImageUrl }) => {
                     </div>
                 </div>
             )}
-            <video
-                ref={videoRef}
-                id="video-with-fallback"
-                className={`absolute top-0 left-0 w-full h-full object-cover ${isVideoLoaded ? '' : 'hidden'}`}
-                preload="none"
-                autoPlay
-                loop
-                muted
-            >
-                <source src={videoUrl} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <button
-                onClick={handlePlayPause}
-                className="absolute bottom-4 right-4 p-2 rounded-full z-50 bg-kenbg"
-            >
-                {isPlaying ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M10 9v6m4-6v6m2 0H8m4-6V5m0 14v-2m0 0V5m0 12v2z" />
-                    </svg>
-                ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-6.379-3.694A1 1 0 007 8.234v7.528a1 1 0 001.373.928l6.379-3.694a1 1 0 000-1.856z" />
-                    </svg>
-                )}
-            </button>
+
+            {videoUrl && (
+                <video
+                    ref={videoRef}
+                    id="video-with-fallback"
+                    className={`absolute top-0 left-0 w-full h-full object-cover ${isVideoLoaded ? '' : 'hidden'}`}
+                    preload="none"
+                    autoPlay
+                    loop
+                    muted
+                >
+                    <source src={videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            )}
+            {!videoUrl && (
+                <Image src={fallbackImageUrl} alt="Background" layout="fill" className="object-cover" />
+            )}
+            {videoUrl && (
+                <button
+                    onClick={handlePlayPause}
+                    className="absolute bottom-4 right-4 p-2 rounded-full z-50 bg-kenbg"
+                >
+                    {isPlaying ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 9v6m4-6v6m2 0H8m4-6V5m0 14v-2m0 0V5m0 12v2z" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-6.379-3.694A1 1 0 007 8.234v7.528a1 1 0 001.373.928l6.379-3.694a1 1 0 000-1.856z" />
+                        </svg>
+                    )}
+                </button>
+            )}
         </div>
     );
 };
