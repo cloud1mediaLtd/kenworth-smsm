@@ -34,10 +34,6 @@ const footerNavigation = {
 
     connect: [
         { name: 'Contact Us', href: '/contact' },
-        { name: 'Facebook', href: '#' },
-        { name: 'Instagram', href: '#' },
-
-
     ],
 }
 
