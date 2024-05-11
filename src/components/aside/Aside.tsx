@@ -18,7 +18,7 @@ export function Aside({
   id?: string;
 }) {
   return (
-    <div aria-modal className="overlay" id={id} role="dialog">
+    <div aria-modal className="overlay bg-black" id={id} role="dialog">
       <button
         type="button"
         className="close-outside"
@@ -27,7 +27,7 @@ export function Aside({
           window.location.hash = '';
         }}
       />
-      <aside>
+      <aside className=" bg-background">
         <header>
           <h2>{heading}</h2>
           <CloseAside />

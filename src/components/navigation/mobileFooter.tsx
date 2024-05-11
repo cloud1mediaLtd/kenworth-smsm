@@ -10,17 +10,11 @@ export default function MobileFooter() {
                         <Link
                             href="/quote/schedule"
                             className="bg-slate-50 hover:bg-orange-600 p-2 w-full rounded-md text-small-semi text-center hover:underline underline-offset-2 shadow-sm"
-                        >Schedule Service</Link>
+                        >Contact</Link>
                     </span>
                 </div>
 
-                <div className="flex gap-3 items-center justify-center bg-orange-700 p-4 text-white h-18 w-18">
-                    <Link
-                        href={"tel:+442087768925"}>
-                        <MailIcon className="h-6 w-6" />
 
-                    </Link>
-                </div>
 
                 <div className="flex gap-3 items-center justify-center bg-green-700 p-4 text-white h-18 w-18">
                     <Link

@@ -82,13 +82,13 @@ export default function FleetOffers() {
                                 </div>
                             </Card>
                         </Link>
-                        <Link href="/business">
+                        {/* <Link href="/business">
                             <Button className='flex items-center gap-2 h-10'>
                                 <span>
                                     View
                                 </span>
                             </Button>
-                        </Link>
+                        </Link> */}
 
                     </CardFooter>
                 </div>
@@ -104,14 +104,14 @@ export default function FleetOffers() {
                     </Link>
                     <div className="flex gap-1">
 
-                        <button
+                        {/* <button
                             className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
                             <ArrowLeftCircleIcon className='h-6 w-6 text-white' />
                         </button>
                         <button
                             className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
                             <ArrowRightCircleIcon className='h-6 w-6 text-white' />
-                        </button>
+                        </button> */}
 
                     </div>
                 </div>

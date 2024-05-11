@@ -9,7 +9,7 @@ import { cn } from "lib/utils";
 export default function OfferMainCard({ offer }) {
     return (
         <>
-            <Card className={cn(`${offer.bg} flex flex-col md:flex-row overflow-hidden h-full`)}>
+            <Card className={cn(`${offer.bg} flex flex-col md:flex-row overflow-hidden h-full border-0 rounded-none rounded-t-lg`)}>
 
                 <div className='relative w-full min-h-52 basis-7/12'>
                     <Image

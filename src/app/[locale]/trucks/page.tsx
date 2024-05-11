@@ -17,7 +17,7 @@ export default function VehiclePage() {
     const locale = useLocale();
 
     return (
-        <section className='pt-12'>
+        <section className='pt-12 container'>
 
             {/* <div className="flex flex-col md:flex-row gap-10 items-center pb-12 pt-6">
                 <h1 className=''>
@@ -37,50 +37,11 @@ export default function VehiclePage() {
 
             </div> */}
 
-            <div className=" gap-3 items-center hidden">
-
-                <span className=" text-sm font-semibold">
-                    Recommendations:
-                </span>
-
-                <div className="flex flex-wrap items-center gap-2">
-                    <Button size="sm" className="mr-3">
-                        Staff Pick
-                    </Button>
-                    <Button size="sm" className="mr-3">
-                        Economical
-                    </Button>
-                    <Button size="sm" className="mr-3">
-                        Family
-                    </Button>
-                    <Button size="sm" className="mr-3">
-                        Excutive
-                    </Button>
-                    <Button size="sm" className="mr-3">
-                        Luxury
-                    </Button>
-                    <Button size="sm" className="mr-3">
-                        SUV
-                    </Button>
-                    <Button size="sm" className="mr-3">
-                        Work
-                    </Button>
-
-                    <Button size="sm" className="">
-                        Taxi
-                    </Button>
-                    <span>
-                        <XIcon className="w-4 h-4" />
-                    </span>
-
-                </div>
-
-            </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6">
 
                 {offers.map((offer) => (
 
-                    <Card className={cn(`${offer.bg} flex flex-col md:flex-row overflow-hidden h-full`)}>
+                    <Card className={cn(`${offer.bg} flex flex-col md:flex-row overflow-hidden`)}>
 
                         <div className='relative w-full min-h-52 basis-7/12'>
                             <Image

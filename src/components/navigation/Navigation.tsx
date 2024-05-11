@@ -68,7 +68,7 @@ const Navigation = () => {
               <Separator orientation='vertical' className='h-12' />
 
               <img
-                className="h-10 w-auto"
+                className="h-8 sm:h-10 w-auto"
                 src="/logos/kenworth_logo.png"
                 alt=""
               />
@@ -109,7 +109,7 @@ export default Navigation;
 function MenuAside({ mainNavigation }) {
   return (
     <Aside id="menu-aside" heading="Menu">
-      <main className="flex flex-col gap-2 pr-12 lg:pr-20 xl:pr-24 pl-3 pt-3">
+      <main className="flex flex-col gap-2 pr-12 lg:pr-20 xl:pr-24 pl-3 pt-3 ">
         {mainNavigation.map(({ key, href, title }) => (
           <div key={key}>
 

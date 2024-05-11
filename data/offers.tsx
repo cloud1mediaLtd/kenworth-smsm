@@ -12,7 +12,7 @@ export const offers = [
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/trucks/t880',
-        bg: ' rounded-none rounded-t-lg border-0'
+        bg: '  '
     },
     {
         badge: 'New | Now In Showroom',
@@ -27,7 +27,7 @@ export const offers = [
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/trucks/c500',
-        bg: ' rounded-none rounded-t-lg border-0'
+        bg: '  '
     },
     {
         badge: 'New | Now In Showroom',
@@ -42,6 +42,6 @@ export const offers = [
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/trucks/963',
-        bg: ' rounded-none rounded-t-lg border-0'
+        bg: '  '
     }
 ]
