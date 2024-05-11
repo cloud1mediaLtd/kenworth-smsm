@@ -55,7 +55,7 @@ const Navigation = () => {
               <Separator orientation='vertical' className='h-12' />
 
               <img
-                className="h-8 w-auto"
+                className="h-10 w-auto"
                 src="/logos/kenworth_logo.png"
                 alt=""
               />
