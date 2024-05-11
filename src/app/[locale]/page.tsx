@@ -58,11 +58,11 @@ export default async function IndexPage() {
                   We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.
                 </p>
               </div>
-              <div className=' flex lg:flex-col gap-3 items-center  basis-2/4'>
-                <Button size="lg" className='w-full bg-kenbg' asChild>
-                  <Link href='/vehicles' className='w-full'>All Trucks</Link>
+              <div className='flex lg:flex-col gap-3 items-center  basis-2/4'>
+                <Button size="lg" className='w-full bg-kenbg text-white' asChild>
+                  <Link href='/trucks' className='w-full'>All Trucks</Link>
                 </Button>
-                <Button size="lg" variant='secondary' className='w-full' asChild>
+                <Button size="lg" variant='outline' className='w-full' asChild>
                   <Link href='/about' className='w-full'>About</Link>
                 </Button>
               </div>
@@ -82,7 +82,7 @@ export default async function IndexPage() {
         <div className='content-container-no-bg'>
           <Separator className="my-8" />
           <FleetOffers />
-          <Separator className="my-8" />
+          {/* <Separator className="my-8" /> */}
           {/* {stories ? (
             <PostsPreview stories={stories} />
           ) : (

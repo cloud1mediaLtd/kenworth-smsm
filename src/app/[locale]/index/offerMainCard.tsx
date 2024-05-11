@@ -64,10 +64,10 @@ export default function OfferMainCard({ offer }) {
                     <CardFooter className="flex justify-between gap-2">
 
                         <Link href="/warranty">
-                            <Card className='flex items-center gap-2 bg-slate-100 px-2 py-1 h-10'>
+                            <Card className='flex items-center gap-2 px-2 py-1 h-10'>
 
                                 <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                    <span className='text-xs md:text-sm font-semibold md:leading-none text-black leading-tight'>
+                                    <span className='text-xs font-semibold md:leading-none leading-tight'>
                                         5 years or 500,000 km warranty
                                     </span>
                                 </div>

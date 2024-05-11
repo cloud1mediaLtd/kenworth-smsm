@@ -11,7 +11,7 @@ export const offers = [
         description: 'Setting The Bar For Adventure',
         warranty: 'Warranty',
         finance: 'Finance',
-        link: '/vehicles/model/16',
+        link: '/trucks/t880',
         bg: ' rounded-none rounded-t-lg border-0'
     },
     {
@@ -26,7 +26,7 @@ export const offers = [
         description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
         warranty: 'Warranty',
         finance: 'Finance',
-        link: '/vehicles/model/16',
+        link: '/trucks/c500',
         bg: ' rounded-none rounded-t-lg border-0'
     },
     {
@@ -41,7 +41,7 @@ export const offers = [
         description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
         warranty: 'Warranty',
         finance: 'Finance',
-        link: '/vehicles/model/16',
+        link: '/trucks/963',
         bg: ' rounded-none rounded-t-lg border-0'
     }
 ]

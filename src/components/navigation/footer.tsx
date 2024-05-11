@@ -46,7 +46,7 @@ export default function Footer() {
         <footer aria-labelledby="">
             <Separator className="mt-8 mb-8" />
 
-            <div className="flex flex-col justify-center relative bg-black" id="footer">
+            <div className="flex flex-col justify-center relative bg-kenbg" id="footer">
 
                 <div className="relative bg-white" style={{ height: "100%", width: " 100%" }}>
                     <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
@@ -90,7 +90,7 @@ export default function Footer() {
 
             </div>
 
-            <div className="bg-black py-6">
+            <div className="bg-kenbg py-6">
                 <div className="content-container-no-bg grid grid-cols-3 gap-8">
                     <div>
                         <Link href="/vehicles">
@@ -101,7 +101,7 @@ export default function Footer() {
                         <div className="grid grid-cols-1 gap-3">
                             {footerNavigation.vehicles.map((item) => (
                                 <span key={item.name} className="text-sm">
-                                    <Link href={item.href} className="text-gray-300 hover:text-white">
+                                    <Link href={item.href} className="text-gray-100 hover:text-white">
                                         {item.name}
                                     </Link>
                                 </span>
@@ -118,7 +118,7 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {footerNavigation.company.map((item) => (
                                 <li key={item.name} className="text-sm">
-                                    <Link href={item.href} className="text-gray-300 hover:text-white">
+                                    <Link href={item.href} className="text-gray-100 hover:text-white">
                                         {item.name}
                                     </Link>
                                 </li>
@@ -136,7 +136,7 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {footerNavigation.connect.map((item) => (
                                 <li key={item.name} className="text-sm">
-                                    <Link href={item.href} className="text-gray-300 hover:text-white">
+                                    <Link href={item.href} className="text-gray-100 hover:text-white">
                                         {item.name}
                                     </Link>
                                 </li>
@@ -147,7 +147,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex justify-between content-container-no-bg border-t border-gray-800 mt-6">
-                    <p className="text-sm text-gray-400 py-6">Copyright &copy; 2024 Gasos, Inc.</p>
+                    <p className="text-sm text-gray-200 py-6">Copyright &copy; 2024 Gasos, Inc.</p>
                     <div className="flex gap-5 items-center">
                         <ModeToggle />
                         <LocaleSwitcher />

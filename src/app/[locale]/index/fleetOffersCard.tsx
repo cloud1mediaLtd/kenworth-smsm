@@ -40,7 +40,7 @@ export default function FleetOffers() {
                 <div className='flex flex-col basis-5/12'>
 
                     <CardHeader>
-                        <Badge className='flex justify-center bg-black'>
+                        <Badge className='flex justify-center bg-kenbg'>
                             Fleet | Mega Discounts
                         </Badge>
 
@@ -60,10 +60,10 @@ export default function FleetOffers() {
 
                         <Separator className="my-0 opacity-85" />
 
-                        <h2 className='text-slate-900 pb-2'>
+                        <h2 className=' pb-2'>
                             Fleet Offers
                         </h2>
-                        <p className="text-sm font-semibold text-center text-slate-700 hidden md:block">
+                        <p className="text-sm font-semibold text-center hidden md:block">
                             Get the best deals on fleet purchases. We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.
                         </p>
 
@@ -73,17 +73,15 @@ export default function FleetOffers() {
 
                     <CardFooter className="flex justify-between gap-2">
                         <Link href="/warranty">
+                            <Card className='flex items-center gap-2 px-2 py-1 h-10'>
 
-                            <Card className='flex items-center gap-2 bg-black px-2 py-1 h-10'>
-
-                                <div className='flex flex-row md:flex-col leading-3'>
-                                    <span className='text-xs md:text-sm font-semibold md:leading-none text-slate-50 leading-tight'>
+                                <div className='flex flex-row md:flex-col leading-3 gap-1'>
+                                    <span className='text-xs font-semibold md:leading-none leading-tight'>
                                         5 years or 500,000 km warranty
                                     </span>
                                 </div>
                             </Card>
                         </Link>
-
                         <Link href="/business">
                             <Button className='flex items-center gap-2 h-10'>
                                 <span>

@@ -24,7 +24,7 @@ const Navigation = () => {
   const titleClass = clsx({ 'pl-5': isRTL, 'pr-5': !isRTL });
 
   const mainNavigation: NavigationItem[] = [
-    { key: 'trucks', href: '/vehicles', title: t('trucks.title') },
+    { key: 'trucks', href: '/trucks', title: t('trucks.title') },
     { key: 'parts', href: '/parts', title: t('parts.title') },
     { key: 'service', href: '/service', title: t('services.title') },
     { key: 'contact', href: '/contact', title: t('contact.title') },
