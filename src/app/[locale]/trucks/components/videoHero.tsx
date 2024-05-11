@@ -24,9 +24,9 @@ const VideoHero = ({ videoUrl, fallbackImageUrl }) => {
     }, []);
 
     return (
-        <div className="relative ">
+        <div className="relative w-full">
             {!isVideoLoaded && (
-                <div className="flex justify-center items-center bg-black">
+                <div className="flex justify-center items-center">
                     {/* Fallback Image */}
                     <Image src={fallbackImageUrl} alt="Loading..." width={600} height={1600} className="w-full h-full object-cover min-h-[400px]" />
                     {/* Optional Loading Spinner */}
