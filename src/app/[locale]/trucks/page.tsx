@@ -11,7 +11,7 @@ import { cn } from "lib/utils";
 
 export default function VehiclePage() {
     const t = useTranslations('VehiclesPage');
-    const locale = useLocale();
+    const isRtl = useLocale() === 'ar';
 
     return (
         <section className='pt-12 container'>
@@ -54,7 +54,7 @@ export default function VehiclePage() {
 
                             <CardHeader className="flex justify-center gap-3">
                                 <Badge className={`flex justify-center ${offer.badgeClass}`}>
-                                    {offer.badge}
+                                    {isRtl ? (<span>{offer.badge_ar}</span>) : (<span>{offer.badge}</span>)}
                                 </Badge>
 
                                 <div className='flex justify-center text-2xl font-bold text-primary items-center gap-3 pt-3'>
@@ -80,7 +80,7 @@ export default function VehiclePage() {
                                     <Separator className="my-0  opacity-50" />
 
                                     <h2 className=' text-sm font-semibold lg:text-base text-center'>
-                                        {offer.model.description}
+                                        {isRtl ? (<span>{offer.model.description_ar}</span>) : (<span>{offer.model.description}</span>)}
                                     </h2>
 
 
@@ -97,7 +97,11 @@ export default function VehiclePage() {
 
                                         <div className='flex flex-row md:flex-col leading-3 gap-1'>
                                             <span className='text-xs font-semibold md:leading-none leading-tight'>
-                                                5 years or 500,000 km warranty
+                                                {isRtl ? (
+                                                    <span className='text-xs font-semibold'>ضمان لمدة 5 سنوات أو 500,000 كم</span>
+                                                ) : (
+                                                    <span className='text-xs font-semibold'>5 years or 500,000 km warranty</span>
+                                                )}
                                             </span>
                                         </div>
                                     </Card>
@@ -105,9 +109,11 @@ export default function VehiclePage() {
 
                                 <Link href={`${offer.link}`}>
                                     <Button className='flex items-center gap-2 h-10'>
-                                        <span>
-                                            View
-                                        </span>
+                                        {isRtl ? (
+                                            <span className='text-sm font-semibold'>المزيد</span>
+                                        ) : (
+                                            <span className='text-sm font-semibold'>More</span>
+                                        )}
                                     </Button>
                                 </Link>
 

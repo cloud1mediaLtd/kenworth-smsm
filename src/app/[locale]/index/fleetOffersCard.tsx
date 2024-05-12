@@ -63,7 +63,7 @@ export default function FleetOffers() {
                         <Separator className="my-0 opacity-85" />
 
                         <h2 className=' pb-2'>
-                            {t('title')}
+                            {t('title2')}
                         </h2>
                         <p className="text-sm font-semibold text-center hidden md:block">
                             {t('description')}
@@ -102,7 +102,9 @@ export default function FleetOffers() {
 
             </Card>
             <div className="flex justify-between items-center py-4 px-6">
-                <h2 className='font-bold text-white'>Business center</h2>
+                <h2 className='font-bold text-white'>
+                    {t('title')}
+                </h2>
                 <div className="flex gap-2 items-center">
 
                     <Link href="/business"

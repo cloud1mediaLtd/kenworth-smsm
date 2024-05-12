@@ -47,7 +47,9 @@
     "more": "More"
   },
   "FleetPage": {
-    "title": "Fleet Offers",
+    "title": "Business Center",
+    "title2": "Fleet Offers",
+
     "description": "Get the best deals on fleet purchases. We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts."
   },
   "ContactPage": {

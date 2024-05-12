@@ -58,8 +58,7 @@ export default function OfferMainCard({ offer }) {
 
                             <h2 className=' text-sm font-semibold lg:text-base text-center'>
 
-                                {isRtl ? (<span>{offer.model.description_ar}</span>) : (<span>{offer.model.description}</span>)
-                                }
+                                {isRtl ? (<span>{offer.model.description_ar}</span>) : (<span>{offer.model.description}</span>)}
                             </h2>
                         </div>
                         <Separator className=" hidden md:block" />
