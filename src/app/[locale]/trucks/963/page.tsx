@@ -4,7 +4,6 @@ import VideoHero from "../components/videoHero";
 import Image from "next/image";
 
 
-
 export default function NineSixThreePage() {
     return (
         <div className="flex flex-col">

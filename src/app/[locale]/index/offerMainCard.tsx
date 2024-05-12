@@ -53,9 +53,6 @@ export default function OfferMainCard({ offer }) {
                             <h2 className=' text-sm font-semibold lg:text-base text-center'>
                                 {offer.model.description}
                             </h2>
-
-
-
                         </div>
                         <Separator className=" hidden md:block" />
 

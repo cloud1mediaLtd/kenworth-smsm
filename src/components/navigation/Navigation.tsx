@@ -39,11 +39,11 @@ const Navigation = () => {
         <div className="container">
           <div className="flex py-6 items-center justify-between">
             {/* Logo (lg+) */}
-            <div className={`flex items-center gap-4 font-semibold text-lg tracking-wide ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
+            <div className={`flex flex-nowrap items-center gap-4 font-semibold text-lg tracking-wide ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
               <Link href="/" className='relative flex items-center gap-3'>
                 <span className="sr-only">Gazos</span>
                 <svg
-                  className=" w-full h-9 text-red-500 dark:text-red-500"
+                  className=" h-9 text-red-500 dark:text-red-500"
                   id="Layer_2"
                   data-name="Layer 2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,9 +60,9 @@ const Navigation = () => {
                     <polygon className="cls-1" points="0 56.69 15.57 29.72 31.15 56.69 15.57 83.67 0 56.69" />
                   </g>
                 </svg>
-                <span className="">
-                  Gasos
-                </span>
+                <div className="min-w-14">
+                  {z('title')}
+                </div>
               </Link>
 
               <Separator orientation='vertical' className='h-12' />

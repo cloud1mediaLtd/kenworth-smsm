@@ -7,23 +7,29 @@ import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { Card } from "components/ui/card";
 import { offers } from "../../../../data/offers";
 
-
-export default function Offers() {
-    const [api, setApi] = React.useState<CarouselApi>()
+export default function Offers({ isRtl }) {
+    const [api, setApi] = React.useState<CarouselApi>();
 
     const scrollPrev = React.useCallback(() => {
-        api?.scrollPrev()
-    }, [api])
+        if (isRtl) {
+            api?.scrollNext();
+        } else {
+            api?.scrollPrev();
+        }
+    }, [api, isRtl]);
 
     const scrollNext = React.useCallback(() => {
-        api?.scrollNext()
-    }, [api])
+        if (isRtl) {
+            api?.scrollPrev();
+        } else {
+            api?.scrollNext();
+        }
+    }, [api, isRtl]);
 
     return (
-        <Card className='flex flex-col w-full bg-kenbg rounded-t-2xl'>
-
-
-            <Carousel className="w-full px-0 basis-4/6"
+        <Card className="flex flex-col w-full bg-kenbg rounded-t-2xl">
+            <Carousel
+                className={`w-full px-0 basis-4/6`}
                 setApi={setApi}
                 plugins={[
                     // Autoplay({
@@ -32,48 +38,53 @@ export default function Offers() {
                 ]}
                 opts={{
                     loop: true,
+                    direction: isRtl ? "rtl" : "ltr",
                 }}
-
             >
                 <CarouselContent className="-ml-4">
-
                     {offers.map((offer, index) => {
                         return (
-                            <CarouselItem key={index}
-                                className="">
+                            <CarouselItem key={index} className="">
                                 <OfferMainCard key={index} offer={offer} />
                             </CarouselItem>
-                        )
+                        );
                     })}
-
                 </CarouselContent>
-
             </Carousel>
 
             <div className="flex justify-between items-center py-4 px-6">
-                <h2 className='font-bold text-white'>Latest Offers</h2>
+                <h2 className="font-bold text-white">Latest Offers</h2>
                 <div className="flex gap-2 items-center">
-
-                    <Link href="/offers"
-                        className='border-2 border-white rounded-full px-5 text-sm text-white'>
+                    <Link
+                        href="/offers"
+                        className="border-2 border-white rounded-full px-5 text-sm text-white"
+                    >
                         More
                     </Link>
                     <div className="flex gap-1">
-
                         <button
-                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
-                            <ArrowLeftCircleIcon className='h-6 w-6 text-white' />
+                            className="flex items-center gap-2 text-small-semi hover:text-slate-500 hover:underline underline-offset-2"
+                            onClick={scrollPrev}
+                        >
+                            {isRtl ? (
+                                <ArrowRightCircleIcon className="h-6 w-6 text-white" />
+                            ) : (
+                                <ArrowLeftCircleIcon className="h-6 w-6 text-white" />
+                            )}
                         </button>
                         <button
-                            className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
-                            <ArrowRightCircleIcon className='h-6 w-6 text-white' />
+                            className="flex items-center gap-2 text-small-semi hover:text-slate-500 hover:underline underline-offset-2"
+                            onClick={scrollNext}
+                        >
+                            {isRtl ? (
+                                <ArrowLeftCircleIcon className="h-6 w-6 text-white" />
+                            ) : (
+                                <ArrowRightCircleIcon className="h-6 w-6 text-white" />
+                            )}
                         </button>
-
                     </div>
                 </div>
-
             </div>
-
         </Card>
     );
 }

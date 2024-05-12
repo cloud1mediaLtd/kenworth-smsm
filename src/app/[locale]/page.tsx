@@ -1,4 +1,4 @@
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Hero from 'app/[locale]/index/hero';
 import { Separator } from 'components/ui/separator';
 import { getStoryblokApi } from '@storyblok/react';
@@ -8,7 +8,7 @@ import Offers from './index/offers';
 import FleetOffers from './index/fleetOffersCard';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
-
+import { getTranslations } from 'next-intl/server';
 
 async function fetchData() {
   const sbParams = {
@@ -27,10 +27,15 @@ async function fetchData() {
 }
 
 export default async function IndexPage() {
+
   const { data, error } = await fetchData();
   const stories = data?.stories;
 
+  const t = await getTranslations('IndexPage');
+
   const locale = useLocale();
+
+  const isRtl = locale === 'ar';
 
   return (
     <section className='relative'>
@@ -38,38 +43,32 @@ export default async function IndexPage() {
         <Hero />
       </div>
 
-
       <main>
         <div className='content-container-no-bg my-8'>
 
-
-          <div className='flex justify-between gap-1 items-center text-sm overflow-hidden p-4'>
-
-            <div className='flex flex-col lg:flex-row gap-4'>
-              <div className='flex flex-col gap-1 justify-center'>
-                <div className='flex items-center gap-3'>
-                  <h2 className='leading-none'>Gasos Official dealer of Kenworth trucks and genuine parts in Libya</h2>
-
-                </div>
-
-                <p className='text-sm pt-1'>
-                  We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.
-                </p>
+          <div className='flex flex-col lg:flex-row gap-4'>
+            <div className='flex flex-col gap-1 justify-center lg:basis-2/3'>
+              <div className='flex items-center gap-3'>
+                <h2 className='leading-none'>{t('title')}</h2>
               </div>
-              <div className='flex lg:flex-col gap-3 items-center  basis-2/4'>
-                <Button size="lg" className='w-full bg-kenbg text-white' asChild>
-                  <Link href='/trucks' className='w-full'>All Trucks</Link>
-                </Button>
-                <Button size="lg" variant='outline' className='w-full' asChild>
-                  <Link href='/about' className='w-full'>About</Link>
-                </Button>
-              </div>
+
+              <p className='text-sm pt-1'>
+                {t('description')}
+              </p>
             </div>
-
+            <div className='flex lg:flex-col gap-3 items-center w-full lg:basis-1/3'>
+              <Button size="lg" className='w-full bg-kenbg text-white' asChild>
+                <Link href='/trucks' className='w-full'>{t('all_trucks')}</Link>
+              </Button>
+              <Button size="lg" variant='outline' className='w-full' asChild>
+                <Link href='/trucks' className='w-full'>{t('about')}</Link>
+              </Button>
+            </div>
           </div>
+
           <Separator className="my-8" />
 
-          <Offers />
+          <Offers isRtl={isRtl} />
           {/* <Separator className="my-8" />
           <ServicesSection /> */}
           <Separator className="my-8" />
