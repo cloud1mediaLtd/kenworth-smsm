@@ -7,6 +7,8 @@ import { Button } from 'components/ui/button';
 import Link from 'next/link';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import ServiceSection from 'components/ServiceSection';
+import { use } from 'react';
+import { useLocale } from 'next-intl';
 
 async function fetchData() {
   const sbParams = {
@@ -24,16 +26,17 @@ async function fetchData() {
   }
 }
 
-export default async function IndexPage(params: { locale: string }) {
+export default async function IndexPage() {
+  const locale = useLocale();
 
   const { data, error } = await fetchData();
   const stories = data?.stories;
 
   const t = await getTranslations('IndexPage');
 
-  unstable_setRequestLocale(params.locale);
+  unstable_setRequestLocale(locale);
 
-  const isRtl = params.locale === 'ar';
+  const isRtl = locale === 'ar';
 
   return (
     <section className='relative'>
