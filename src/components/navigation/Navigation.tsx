@@ -7,7 +7,6 @@ import { Aside } from '../aside/Aside';
 import { Separator } from 'components/ui/separator';
 import NavLink from '../aside/navLink';
 
-
 interface NavigationItem {
   key: string;
   href: string;
@@ -73,16 +72,12 @@ const Navigation = () => {
 
             </div>
             <div className='md:flex items-center gap-6'>
-              {/* {mainNavigation.map(({ key, href, title }) => (
-                <Link className={"hidden md:flex items-center text-base font-medium text-white tracking-wide"} key={key} href={href}>
+              {mainNavigation.map(({ key, href, title }) => (
+                <Link className={"hidden md:flex items-center text-base font-medium tracking-wide"} key={key} href={href}>
                   {title}
                 </Link>
-              ))} */}
-
-              <div className='flex gap-4 items-center'>
-
-
-
+              ))}
+              <div className='flex gap-4 items-center md:hidden'>
                 <a href="#menu-aside" className=''>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">
                     <title>Pass</title>

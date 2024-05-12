@@ -1,13 +1,12 @@
 import Hero from 'app/[locale]/index/hero';
 import { Separator } from 'components/ui/separator';
 import { getStoryblokApi } from '@storyblok/react';
-import PostsPreview from 'app/[locale]/index/postsPreview';
-import MoparSection from 'components/moparSection';
 import Offers from './index/offers';
 import FleetOffers from './index/fleetOffersCard';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import ServiceSection from 'components/ServiceSection';
 
 async function fetchData() {
   const sbParams = {
@@ -72,7 +71,7 @@ export default async function IndexPage(params: { locale }) {
           <Separator className="my-8" />
         </div>
 
-        <MoparSection />
+        <ServiceSection />
         <div className='content-container-no-bg'>
           <Separator className="my-8" />
           <FleetOffers />

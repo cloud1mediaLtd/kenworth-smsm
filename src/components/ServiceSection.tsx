@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 
-export default async function MoparSection() {
+export default async function ServiceSection() {
     const t = await getTranslations('ServicePage');
     return (
         <>

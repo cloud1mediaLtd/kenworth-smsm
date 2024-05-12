@@ -118,7 +118,7 @@ export default async function LocaleLayout({
             <Footer />
 
             <div className="sticky bottom-0 z-50">
-              <MobileFooter />
+              <MobileFooter isRtl={isRTL} />
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>
