@@ -94,7 +94,7 @@ export default async function LocaleLayout({
 
 
   const isRTL = locale === 'ar';
-  const font = isRTL ? inter : inter;
+  const font = isRTL ? tajawal : inter;
   unstable_setRequestLocale(locale);
 
 

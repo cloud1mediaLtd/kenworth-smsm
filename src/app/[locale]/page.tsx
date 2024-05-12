@@ -24,7 +24,7 @@ async function fetchData() {
   }
 }
 
-export default async function IndexPage(params: { locale }) {
+export default async function IndexPage(params: { locale: string }) {
 
   const { data, error } = await fetchData();
   const stories = data?.stories;
