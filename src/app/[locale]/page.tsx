@@ -8,7 +8,7 @@ import Offers from './index/offers';
 import FleetOffers from './index/fleetOffersCard';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 async function fetchData() {
   const sbParams = {
@@ -26,16 +26,16 @@ async function fetchData() {
   }
 }
 
-export default async function IndexPage() {
+export default async function IndexPage(params: { locale }) {
 
   const { data, error } = await fetchData();
   const stories = data?.stories;
 
   const t = await getTranslations('IndexPage');
 
-  const locale = useLocale();
+  unstable_setRequestLocale(params.locale);
 
-  const isRtl = locale === 'ar';
+  const isRtl = params.locale === 'ar';
 
   return (
     <section className='relative'>
@@ -45,7 +45,6 @@ export default async function IndexPage() {
 
       <main>
         <div className='content-container-no-bg my-8'>
-
           <div className='flex flex-col lg:flex-row gap-4'>
             <div className='flex flex-col gap-1 justify-center lg:basis-2/3'>
               <div className='flex items-center gap-3'>
@@ -61,7 +60,7 @@ export default async function IndexPage() {
                 <Link href='/trucks' className='w-full'>{t('all_trucks')}</Link>
               </Button>
               <Button size="lg" variant='outline' className='w-full' asChild>
-                <Link href='/trucks' className='w-full'>{t('about')}</Link>
+                <Link href='/about' className='w-full'>{t('about')}</Link>
               </Button>
             </div>
           </div>
@@ -72,7 +71,6 @@ export default async function IndexPage() {
           {/* <Separator className="my-8" />
           <ServicesSection /> */}
           <Separator className="my-8" />
-
         </div>
 
         <MoparSection />

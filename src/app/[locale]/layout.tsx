@@ -20,6 +20,7 @@ import VehicleGallery from 'components/storyblok/vehicleBloks/VehicleGallery';
 import MobileFooter from 'components/navigation/mobileFooter';
 import { ThemeProvider } from 'components/ui/themeProvider';
 import HotjarSnippet from 'lib/hotjar';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 const components = {
   page: Page,
@@ -94,6 +95,8 @@ export default async function LocaleLayout({
 
   const isRTL = locale === 'ar';
   const font = isRTL ? inter : inter;
+  unstable_setRequestLocale(locale);
+
 
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
