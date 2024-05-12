@@ -5,8 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "components/ui/button";
 import { cn } from "lib/utils";
+import { useLocale, useTranslations } from "next-intl";
+import { Span } from "next/dist/trace";
 
 export default function OfferMainCard({ offer }) {
+    const t = useTranslations('OffersPage');
+    const isRtl = useLocale() === 'ar';
+
     return (
         <>
             <Card className={cn(`${offer.bg} flex flex-col md:flex-row overflow-hidden h-full border-0 rounded-none rounded-t-lg`)}>
@@ -25,7 +30,8 @@ export default function OfferMainCard({ offer }) {
 
                     <CardHeader className="flex justify-center gap-3">
                         <Badge className={`flex justify-center ${offer.badgeClass}`}>
-                            {offer.badge}
+                            {isRtl ? (<span>{offer.badge_ar}</span>) : (<span>{offer.badge}</span>)}
+
                         </Badge>
 
                         <div className='flex justify-center text-2xl font-bold text-primary items-center gap-3 pt-3'>
@@ -51,7 +57,9 @@ export default function OfferMainCard({ offer }) {
                             <Separator className="my-0  opacity-50" />
 
                             <h2 className=' text-sm font-semibold lg:text-base text-center'>
-                                {offer.model.description}
+
+                                {isRtl ? (<span>{offer.model.description_ar}</span>) : (<span>{offer.model.description}</span>)
+                                }
                             </h2>
                         </div>
                         <Separator className=" hidden md:block" />
@@ -65,7 +73,11 @@ export default function OfferMainCard({ offer }) {
 
                                 <div className='flex flex-row md:flex-col leading-3 gap-1'>
                                     <span className='text-xs font-semibold md:leading-none leading-tight'>
-                                        5 years or 500,000 km warranty
+                                        {isRtl ? (
+                                            <span className='text-xs font-semibold'>ضمان لمدة 5 سنوات أو 500,000 كم</span>
+                                        ) : (
+                                            <span className='text-xs font-semibold'>5 years or 500,000 km warranty</span>
+                                        )}
                                     </span>
                                 </div>
                             </Card>
@@ -73,9 +85,11 @@ export default function OfferMainCard({ offer }) {
 
                         <Link href={`${offer.link}`}>
                             <Button className='flex items-center gap-2 h-10'>
-                                <span>
-                                    View
-                                </span>
+                                {isRtl ? (
+                                    <span className='text-sm font-semibold'>المزيد</span>
+                                ) : (
+                                    <span className='text-sm font-semibold'>More</span>
+                                )}
                             </Button>
                         </Link>
 

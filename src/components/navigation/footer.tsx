@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link"
 import { Separator } from "../ui/separator"
 import MapComponent from "./mapComponent"
@@ -6,6 +7,8 @@ import { MailIcon, PhoneCall } from "lucide-react"
 import { ModeToggle } from "components/ui/darkToggle"
 import LocaleSwitcher from "components/LocaleSwitcher"
 import ShopStatus from 'components/navigation/shopstatus';
+import { useLocale } from "next-intl";
+import { Span } from "next/dist/trace";
 
 
 // const mainNavigation: NavigationItem[] = [
@@ -26,18 +29,21 @@ const footerNavigation = {
         { name: '963', href: '/trucks/963' },
     ],
     company: [
-        { name: 'About', href: '/about' },
-        { name: 'Warranty', href: '/warranty' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Business Center', href: '/business' },
+        { name: 'About', name_ar: 'حول الشركة', href: '/about' },
+        { name: 'Warranty', name_ar: 'ضمان', href: '/warranty' },
+        { name: 'Careers', name_ar: 'وظائف', href: '/careers' },
+        { name: 'Business Center', name_ar: 'مركز الأعمال', href: '/business' },
     ],
 
     connect: [
-        { name: 'Contact Us', href: '/contact' },
+        { name: 'Contact Us', name_ar: 'اﺗﺼﻞ', href: '/contact' },
     ],
 }
 
 export default function Footer() {
+
+    const isRtl = useLocale() === 'ar';
+
     return (
         <footer aria-labelledby="">
             <Separator className="mt-8 mb-8" />
@@ -51,10 +57,16 @@ export default function Footer() {
                     <Card className="flex justify-between w-full relative p-4 gap-6 items-center -mt-12 z-40 h-24">
 
                         <div className="flex flex-col md:flex-row md:gap-5">
-                            <span className="text-large-semi">Tripoli</span>
+                            <span className="text-large-semi">
+                                {isRtl ? (<span>طرابلس</span>) : (<span>Tripoli</span>)}
+                            </span>
                             <Separator orientation="vertical" className="h-6 hidden md:block" />
 
-                            <p className="text-base-semi">Al-Swany Road - Al-Swany</p>
+                            <p className="text-base-semi">
+                                {isRtl ? (<span>طريق السواني - السواني </span>) : (<span>Al-Swany Road - Al-Swany</span>)}
+
+                            </p>
+
                         </div>
 
                         <div className="flex gap-5 ">
@@ -66,7 +78,7 @@ export default function Footer() {
 
                             <div className="flex justify-between gap-5">
                                 <Link href="/contact" className="hidden lg:block">
-                                    <span className="underline-offset-4 hover:underline text-base-semi ">
+                                    <span dir="ltr" className="underline-offset-4 hover:underline text-base-semi ">
                                         +218 91 000 0000
                                     </span>
                                 </Link>
@@ -91,7 +103,8 @@ export default function Footer() {
                     <div>
                         <Link href="/vehicles">
                             <h3 className="text-sm font-medium text-white">
-                                Our Trucks</h3>
+                                {isRtl ? (<span>شاحنات</span>) : (<span>Our Trucks</span>)}
+                            </h3>
                         </Link>
                         <Separator className="my-3" />
                         <div className="grid grid-cols-1 gap-3">
@@ -99,6 +112,7 @@ export default function Footer() {
                                 <span key={item.name} className="text-sm">
                                     <Link href={item.href} className="text-gray-100 hover:text-white">
                                         {item.name}
+
                                     </Link>
                                 </span>
                             ))}
@@ -107,7 +121,7 @@ export default function Footer() {
                     <div>
 
                         <h3 className="text-sm font-medium text-white">
-                            Company
+                            {isRtl ? (<span>الشركة</span>) : (<span>Company</span>)}
                         </h3>
                         <Separator className="my-3" />
 
@@ -115,7 +129,8 @@ export default function Footer() {
                             {footerNavigation.company.map((item) => (
                                 <li key={item.name} className="text-sm">
                                     <Link href={item.href} className="text-gray-100 hover:text-white">
-                                        {item.name}
+                                        {isRtl ? (<span>{item.name_ar}</span>) : (<span>{item.name}</span>)}
+
                                     </Link>
                                 </li>
                             ))}
@@ -124,7 +139,7 @@ export default function Footer() {
                     <div>
 
                         <h3 className="text-sm font-medium text-white">
-                            Connect
+                            {isRtl ? (<span>اﺗﺼﻞ</span>) : (<span>Connect</span>)}
                         </h3>
 
                         <Separator className="my-3" />
@@ -133,7 +148,7 @@ export default function Footer() {
                             {footerNavigation.connect.map((item) => (
                                 <li key={item.name} className="text-sm">
                                     <Link href={item.href} className="text-gray-100 hover:text-white">
-                                        {item.name}
+                                        {isRtl ? (<span>{item.name_ar}</span>) : (<span>{item.name}</span>)}
                                     </Link>
                                 </li>
                             ))}
@@ -143,7 +158,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex justify-between content-container-no-bg border-t border-background/50 mt-8">
-                    <p className="text-sm text-gray-200 py-6">Copyright &copy; 2024 Gasos, Inc.</p>
+                    <p className="text-sm text-gray-200 py-6">Copyright &copy; 2024 Gasos</p>
                     <div className="flex gap-5 items-center">
                         <ModeToggle />
                         <LocaleSwitcher />

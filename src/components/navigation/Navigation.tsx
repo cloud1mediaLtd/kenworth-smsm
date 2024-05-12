@@ -7,7 +7,6 @@ import { Button } from '../ui/button'
 import { Aside } from '../aside/Aside';
 import { Separator } from 'components/ui/separator';
 import NavLink from '../aside/navLink';
-import Logo from './logo';
 
 
 interface NavigationItem {
@@ -122,24 +121,6 @@ function MenuAside({ mainNavigation }) {
           </div>
         ))}
 
-        <div className="flex flex-col gap-3 grow w-full">
-          <Link href="/pay"
-
-          >
-            <Button
-              size={"default"}
-              className="w-full"
-            >
-              Book a Service
-              <img
-                src="/images/stripe.svg"
-                alt=""
-                className="h-6 w20 object-contain" />
-            </Button>
-
-          </Link>
-
-        </div>
       </main>
     </Aside>
   );

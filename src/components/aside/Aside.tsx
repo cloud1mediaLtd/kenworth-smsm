@@ -29,7 +29,7 @@ export function Aside({
       />
       <aside className=" bg-background">
         <header>
-          <h2>{heading}</h2>
+          <h2></h2>
           <CloseAside />
         </header>
         <main>{children}</main>

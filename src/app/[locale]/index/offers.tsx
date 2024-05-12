@@ -6,8 +6,11 @@ import React from "react";
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { Card } from "components/ui/card";
 import { offers } from "../../../../data/offers";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Offers({ isRtl }) {
+    const t = useTranslations('OffersPage');
+    const locale = useLocale();
     const [api, setApi] = React.useState<CarouselApi>();
 
     const scrollPrev = React.useCallback(() => {
@@ -53,13 +56,13 @@ export default function Offers({ isRtl }) {
             </Carousel>
 
             <div className="flex justify-between items-center py-4 px-6">
-                <h2 className="font-bold text-white">Latest Offers</h2>
+                <h2 className="font-bold text-white">{t('latest_offers')}</h2>
                 <div className="flex gap-2 items-center">
                     <Link
                         href="/offers"
                         className="border-2 border-white rounded-full px-5 text-sm text-white"
                     >
-                        More
+                        {t('more')}
                     </Link>
                     <div className="flex gap-1">
                         <button

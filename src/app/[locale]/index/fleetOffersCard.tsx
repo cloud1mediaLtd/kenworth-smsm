@@ -4,14 +4,16 @@ import { Badge } from "components/ui/badge";
 import { CardContent, CardFooter, CardHeader } from "components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { Separator } from "components/ui/separator";
 import React from "react";
 import { CarouselApi } from "components/ui/carousel";
-import { Button } from "components/ui/button";
+import { useLocale, useTranslations } from "next-intl";
 
 
 export default function FleetOffers() {
+    const t = useTranslations('FleetPage');
+    const isRtl = useLocale() === 'ar';
+
     const [api, setApi] = React.useState<CarouselApi>()
 
     const scrollPrev = React.useCallback(() => {
@@ -61,10 +63,10 @@ export default function FleetOffers() {
                         <Separator className="my-0 opacity-85" />
 
                         <h2 className=' pb-2'>
-                            Fleet Offers
+                            {t('title')}
                         </h2>
                         <p className="text-sm font-semibold text-center hidden md:block">
-                            Get the best deals on fleet purchases. We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.
+                            {t('description')}
                         </p>
 
                         <Separator className="mt-4 opacity-85 hidden md:block" />
@@ -77,11 +79,16 @@ export default function FleetOffers() {
 
                                 <div className='flex flex-row md:flex-col leading-3 gap-1'>
                                     <span className='text-xs font-semibold md:leading-none leading-tight'>
-                                        5 years or 500,000 km warranty
+                                        {isRtl ? (
+                                            <span className='text-xs font-semibold'>ضمان لمدة 5 سنوات أو 500,000 كم</span>
+                                        ) : (
+                                            <span className='text-xs font-semibold'>5 years or 500,000 km warranty</span>
+                                        )}
                                     </span>
                                 </div>
                             </Card>
                         </Link>
+
                         {/* <Link href="/business">
                             <Button className='flex items-center gap-2 h-10'>
                                 <span>
@@ -100,8 +107,13 @@ export default function FleetOffers() {
 
                     <Link href="/business"
                         className='border-2 border-white rounded-full px-5 text-sm text-white'>
-                        More
+                        {isRtl ? (
+                            <span>المزيد</span>
+                        ) : (
+                            <span>More</span>
+                        )}
                     </Link>
+
                     <div className="flex gap-1">
 
                         {/* <button
