@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import PageLayout from 'components/PageLayout';
-import Hero from 'app/[locale]/index/hero';
 import { Separator } from 'components/ui/separator';
 
 export default function aboutPage() {

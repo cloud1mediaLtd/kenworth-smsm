@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Card, CardDescription, CardHeader, CardTitle } from "../../../components/ui/card";
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon, ChevronLeftSquare, ChevronRightSquare } from "lucide-react";
+import { Card } from "../../../components/ui/card";
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import React from "react";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "../../../components/ui/carousel";
 import Image from 'next/image';

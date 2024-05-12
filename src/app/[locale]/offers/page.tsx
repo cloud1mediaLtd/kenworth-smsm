@@ -2,7 +2,6 @@ import PageLayout from "components/PageLayout";
 import PartsFinder from "components/partsFinder/partsFinder";
 import { useTranslations } from "next-intl";
 
-
 export default function OffersPage() {
     const t = useTranslations('OffersPage');
 

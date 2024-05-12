@@ -1,4 +1,3 @@
-import { useLocale, useTranslations } from 'next-intl';
 import Hero from 'app/[locale]/index/hero';
 import { Separator } from 'components/ui/separator';
 import { getStoryblokApi } from '@storyblok/react';

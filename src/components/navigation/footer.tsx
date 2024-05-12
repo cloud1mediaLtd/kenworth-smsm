@@ -3,12 +3,11 @@ import Link from "next/link"
 import { Separator } from "../ui/separator"
 import MapComponent from "./mapComponent"
 import { Card } from "components/ui/card"
-import { MailIcon, PhoneCall } from "lucide-react"
+import { MailIcon } from "lucide-react"
 import { ModeToggle } from "components/ui/darkToggle"
 import LocaleSwitcher from "components/LocaleSwitcher"
 import ShopStatus from 'components/navigation/shopstatus';
 import { useLocale } from "next-intl";
-import { Span } from "next/dist/trace";
 
 
 // const mainNavigation: NavigationItem[] = [

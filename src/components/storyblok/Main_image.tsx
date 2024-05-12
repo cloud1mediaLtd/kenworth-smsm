@@ -1,7 +1,6 @@
 import { storyblokEditable } from "@storyblok/react";
 import Image from 'next/image';
 
-
 const MainImage = ({ blok }) => {
 
     const images = blok.main_image;

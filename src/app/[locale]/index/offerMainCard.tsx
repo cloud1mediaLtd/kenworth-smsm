@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Button } from "components/ui/button";
 import { cn } from "lib/utils";
 import { useLocale, useTranslations } from "next-intl";
-import { Span } from "next/dist/trace";
 
 export default function OfferMainCard({ offer }) {
     const t = useTranslations('OffersPage');

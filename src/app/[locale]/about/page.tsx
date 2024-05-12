@@ -1,5 +1,4 @@
 
-import { useTranslations } from 'next-intl';
 import PageLayout from 'components/PageLayout';
 import { Card } from 'components/ui/card';
 import PostsPreview from '../index/postsPreview';

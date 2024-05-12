@@ -3,8 +3,6 @@ import VehicleBreadCrumb from "../components/breadCrumb";
 import VideoHero from "../components/videoHero";
 import Image from "next/image";
 
-
-
 export default function C550Page() {
     return (
         <div className="flex flex-col">

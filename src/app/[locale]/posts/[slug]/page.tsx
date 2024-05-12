@@ -1,7 +1,5 @@
 import { StoryblokComponent, getStoryblokApi } from "@storyblok/react";
 import Link from "next/link";
-import Image from 'next/image';
-import { Card } from 'components/ui/card';
 import { Separator } from "components/ui/separator";
 
 async function fetchData(slug: any) {

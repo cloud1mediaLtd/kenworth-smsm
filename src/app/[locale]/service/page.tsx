@@ -3,7 +3,6 @@ import PageLayout from "components/PageLayout";
 import PartsFinder from "components/partsFinder/partsFinder";
 import { useTranslations } from "next-intl";
 
-
 export default function servicePage() {
     const t = useTranslations('ServicePage');
 

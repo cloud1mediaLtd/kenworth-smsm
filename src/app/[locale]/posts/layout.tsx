@@ -1,7 +1,4 @@
-import BrandsOnly from "components/brands/brandsonly";
-import { Separator } from "components/ui/separator";
 import { useLocale } from "next-intl";
-import Link from "next/link";
 
 export default function PostsLayout({ children }) {
     const locale = useLocale();
