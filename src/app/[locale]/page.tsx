@@ -45,7 +45,7 @@ export default async function IndexPage() {
       </div>
 
       <main>
-        <div className='content-container-no-bg my-8'>
+        <div className='content-container-no-bg my-12'>
           <div className='flex flex-col lg:flex-row gap-4'>
             <div className='flex flex-col  justify-center lg:basis-2/3 gap-3'>
               <div className='flex items-center gap-3'>
@@ -66,17 +66,17 @@ export default async function IndexPage() {
             </div>
           </div>
 
-          <Separator className="my-8" />
+          <Separator className="my-12" />
 
           <Offers isRtl={isRtl} />
           {/* <Separator className="my-8" />
           <ServicesSection /> */}
-          <Separator className="my-8" />
+          <Separator className="my-12" />
         </div>
 
         <ServiceSection />
         <div className='content-container-no-bg'>
-          <Separator className="my-8" />
+          <Separator className="my-12" />
           <FleetOffers />
           {/* <Separator className="my-8" /> */}
           {/* {stories ? (

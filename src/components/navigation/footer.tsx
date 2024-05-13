@@ -45,7 +45,7 @@ export default function Footer() {
 
     return (
         <footer aria-labelledby="">
-            <Separator className="mt-8 mb-8" />
+            <Separator className="my-12" />
 
             <div className="flex flex-col justify-center relative bg-kenbg" id="footer">
 
