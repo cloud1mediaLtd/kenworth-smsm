@@ -13,7 +13,7 @@ export default function MobileFooter({ isRtl }) {
                             href="/quote/schedule"
                             className="bg-slate-50 hover:bg-orange-600 p-2 w-full rounded-md text-small-semi text-center hover:underline underline-offset-2 shadow-sm"
                         >
-                            {isRtl ? (<span>اﺗﺼاﻞ</span>) : (<span>Contact</span>)}
+                            {isRtl ? (<span>اتصال</span>) : (<span>Contact</span>)}
                         </Link>
                     </span>
                 </div>

@@ -42,7 +42,7 @@ export default function FleetOffers() {
                 <div className='flex flex-col basis-5/12'>
 
                     <CardHeader>
-                        <Badge className='flex justify-center bg-kenbg'>
+                        <Badge className='flex justify-center bg-kenbg text-white'>
                             Fleet | Mega Discounts
                         </Badge>
 

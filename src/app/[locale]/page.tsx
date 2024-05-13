@@ -47,12 +47,12 @@ export default async function IndexPage() {
       <main>
         <div className='content-container-no-bg my-8'>
           <div className='flex flex-col lg:flex-row gap-4'>
-            <div className='flex flex-col gap-1 justify-center lg:basis-2/3'>
+            <div className='flex flex-col  justify-center lg:basis-2/3 gap-3'>
               <div className='flex items-center gap-3'>
-                <h2 className='leading-none'>{t('title')}</h2>
+                <h1 className='leading-none font-bold text-kenbg'>{t('title')}</h1>
               </div>
 
-              <p className='text-sm pt-1'>
+              <p className='text-base font-semibold'>
                 {t('description')}
               </p>
             </div>

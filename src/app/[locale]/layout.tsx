@@ -1,4 +1,4 @@
-import { Tajawal, Inter } from '@next/font/google';
+import { Rubik, Inter } from "next/font/google";
 import clsx from 'clsx';
 import { notFound } from 'next/navigation';
 import { createTranslator, NextIntlClientProvider } from 'next-intl';
@@ -45,8 +45,8 @@ storyblokInit({
 console.log('storyblokInit', storyblokInit);
 
 
-const tajawal = Tajawal({
-  weight: ['300', '400', '500', '700'],
+const tajawal = Rubik({
+  weight: ['300', '400', '500', '700', '800', '900'],
   subsets: ['arabic'],
 });
 

@@ -2,7 +2,7 @@ export const offers = [
     {
         badge: 'New 2024 | ROCK-SOLID PERFORMANCE',
         badge_ar: 'جديد 2024 | أداء صلب',
-        badgeClass: 'bg-kenbg',
+        badgeClass: 'bg-kenbg text-white',
         brand: { name: 'T880', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 100 },
         model: {
             name: 'T880',
@@ -20,7 +20,7 @@ export const offers = [
     {
         badge: 'New | Now In Showroom',
         badge_ar: 'جديد | الآن في المعرض',
-        badgeClass: 'bg-kenbg',
+        badgeClass: 'bg-kenbg text-white',
         brand: { name: 'C500', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 0 },
         model: {
             name: 'C500',
@@ -37,7 +37,7 @@ export const offers = [
     {
         badge: 'New | Now In Showroom',
         badge_ar: 'جديد | الآن في المعرض',
-        badgeClass: 'bg-kenbg',
+        badgeClass: 'bg-kenbg text-white',
         brand: { name: 'C500', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 0 },
         model: {
             name: '963',

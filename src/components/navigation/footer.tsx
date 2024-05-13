@@ -35,7 +35,7 @@ const footerNavigation = {
     ],
 
     connect: [
-        { name: 'Contact Us', name_ar: 'اﺗﺼاﻞ', href: '/contact' },
+        { name: 'Contact Us', name_ar: 'اتصال', href: '/contact' },
     ],
 }
 
