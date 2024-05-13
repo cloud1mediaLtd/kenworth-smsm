@@ -1,11 +1,9 @@
-'use client';
-import { useTranslations } from 'next-intl';
-import clsx from 'clsx';
 import { useLocale } from 'next-intl';
 import Link from 'next/link'
 import { Aside } from '../aside/Aside';
 import { Separator } from 'components/ui/separator';
 import NavLink from '../aside/navLink';
+import { getTranslations } from 'next-intl/server';
 
 interface NavigationItem {
   key: string;
@@ -13,13 +11,10 @@ interface NavigationItem {
   title: string;
 }
 
-const Navigation = () => {
-  const t = useTranslations('Navigation');
-  const z = useTranslations('Name');
-  const locale = useLocale();
-
-  const isRTL = locale === 'ar';
-  const titleClass = clsx({ 'pl-5': isRTL, 'pr-5': !isRTL });
+const Navigation = async () => {
+  const t = await getTranslations('Navigation');
+  const z = await getTranslations('Name');
+  const isRTL = useLocale() === 'ar';
 
   const mainNavigation: NavigationItem[] = [
     { key: 'trucks', href: '/trucks', title: t('trucks.title') },

@@ -8,6 +8,7 @@
  * </Aside>
  * ```
  */
+"use client";
 export function Aside({
   children,
   heading,

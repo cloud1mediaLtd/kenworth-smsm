@@ -20,7 +20,6 @@ import VehicleGallery from 'components/storyblok/vehicleBloks/VehicleGallery';
 import MobileFooter from 'components/navigation/mobileFooter';
 import { ThemeProvider } from 'components/ui/themeProvider';
 import HotjarSnippet from 'lib/hotjar';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
 const components = {
   page: Page,
@@ -68,7 +67,6 @@ async function getMessages(locale: string) {
   }
 }
 
-
 export async function generateMetadata({ params: { locale } }: Props) {
   const messages = await getMessages(locale);
 
@@ -90,12 +88,10 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   const messages = await getMessages(locale);
-  const bridgeOptions = { resolveRelations: ["article.author"] };
 
 
   const isRTL = locale === 'ar';
   const font = isRTL ? tajawal : inter;
-  unstable_setRequestLocale(locale);
 
 
   return (

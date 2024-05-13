@@ -27,6 +27,9 @@ export default function LocaleSwitcher() {
     startTransition(() => {
       router.replace(newPathname);
     });
+
+    router.refresh();
+
   }
 
   return (

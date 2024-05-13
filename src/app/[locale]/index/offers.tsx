@@ -69,7 +69,7 @@ export default function Offers({ isRtl }) {
                 <h2 className="font-bold text-white">{t('latest_offers')}</h2>
                 <div className="flex gap-2 items-center">
                     <Link
-                        href="/offers"
+                        href="/trucks"
                         className="border-2 border-white rounded-full px-5 text-sm text-white"
                     >
                         {t('more')}

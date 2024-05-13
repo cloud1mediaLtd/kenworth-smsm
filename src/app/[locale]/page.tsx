@@ -32,7 +32,7 @@ export default async function IndexPage() {
 
   const t = await getTranslations('IndexPage');
 
-  unstable_setRequestLocale(locale);
+  // unstable_setRequestLocale(locale);
 
   const isRtl = locale === 'ar';
 

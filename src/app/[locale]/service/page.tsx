@@ -13,10 +13,8 @@ export default function servicePage() {
                 <div className="">
                     {t.rich('description', {
                         p: (chunks) => <p className="mt-4 text-lg">{chunks}</p>,
-
                     })}
                 </div>
-
                 <PartsFinder />
             </PageLayout>
 
