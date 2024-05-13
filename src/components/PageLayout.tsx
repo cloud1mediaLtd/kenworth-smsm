@@ -15,7 +15,7 @@ export default function PageLayout({ children, title }: Props) {
   const isRTL = locale === 'ar';
 
   return (
-    <section className='relative content-container-no-bg'>
+    <section className='relative container'>
 
       <div className='flex justify-center'>
         <h1 className='pt-6'>

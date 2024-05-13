@@ -3,11 +3,11 @@ import Link from "next/link"
 import { Separator } from "../ui/separator"
 import MapComponent from "./mapComponent"
 import { Card } from "components/ui/card"
-import { MailIcon } from "lucide-react"
+import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
 import { ModeToggle } from "components/ui/darkToggle"
 import LocaleSwitcher from "components/LocaleSwitcher"
 import ShopStatus from 'components/navigation/shopstatus';
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 
 // const mainNavigation: NavigationItem[] = [
@@ -40,6 +40,7 @@ const footerNavigation = {
 }
 
 export default function Footer() {
+    const t = useTranslations('AboutPage');
 
     const isRtl = useLocale() === 'ar';
 
@@ -53,45 +54,53 @@ export default function Footer() {
                     <MapComponent longitude={13.12761326746804} latitude={32.82114794934512} />
                 </div>
                 <div className="content-container-no-bg">
-                    <Card className="flex justify-between w-full relative p-4 gap-6 items-center -mt-12 z-40 h-24">
 
-                        <div className="flex flex-col md:flex-row md:gap-5">
-                            <span className="text-large-semi">
-                                {isRtl ? (<span>طرابلس</span>) : (<span>Tripoli</span>)}
-                            </span>
-                            <Separator orientation="vertical" className="h-6 hidden md:block" />
+                    <Card className='flex -mt-24 z-40 relative p-4 items-center'>
 
-                            <p className="text-base-semi">
-                                {isRtl ? (<span>طريق السواني - السواني </span>) : (<span>Al-Swany Road - Al-Swany</span>)}
+                        <div className='grid md:grid-cols-2 gap-6 items-center'>
+                            <div className="flex flex-col gap-3 text-sm font-semibold text-center md:text-start">
+                                {t("contact")}
+                            </div>
 
-                            </p>
+                            <div className="flex flex-col">
 
-                        </div>
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex gap-2">
+                                        <MapPinIcon className='h-5 w-5' />
 
-                        <div className="flex gap-5 ">
+                                        <p className="text-sm font-semibold">
+                                            {isRtl ? (<span>٧ كم - طريق السواني,</span>) : (<span>7km - Al-Swany Road,</span>)}
+                                        </p>
+                                        <span className="text-sm font-semibold">
+                                            {isRtl ? (<span>طرابلس - السواني</span>) : (<span>Al-Swany - Tripoli</span>)}
+                                        </span>
 
-                            <div className="hidden sm:block">
-                                <ShopStatus />
+                                    </div>
+                                    <Separator className="" />
+
+                                    <Link href="/contact" className="">
+                                        <span className="underline-offset-4 hover:underline text-sm font-semibold flex gap-3">
+                                            <PhoneIcon className='h-5 w-5' />
+                                            <span dir="ltr">
+                                                +218 91 000 0000
+
+                                            </span>
+                                        </span>
+                                    </Link>
+                                    <Separator className=" " />
+
+                                    <Link href="/contact" className="">
+                                        <span className="underline-offset-4 hover:underline text-sm font-semibold flex gap-3">
+                                            <MailIcon className='h-5 w-5' /> info@gasoslibya.ly
+                                        </span>
+                                    </Link>
+
+                                </div>
 
                             </div>
 
-                            <div className="flex justify-between gap-5">
-                                <Link href="/contact" className="hidden lg:block">
-                                    <span dir="ltr" className="underline-offset-4 hover:underline text-base-semi ">
-                                        +218 91 000 0000
-                                    </span>
-                                </Link>
-
-                                <Separator orientation="vertical" className="h-6 hidden lg:block" />
-
-                                <Link href="/contact" className="hidden lg:block">
-                                    <span className="underline-offset-4 hover:underline text-base-semi ">
-                                        <MailIcon />
-                                    </span>
-                                </Link>
-                            </div>
-
                         </div>
+
                     </Card>
                 </div>
 
@@ -100,8 +109,8 @@ export default function Footer() {
             <div className="bg-kenbg py-6">
                 <div className="content-container-no-bg grid grid-cols-3 gap-8">
                     <div>
-                        <Link href="/vehicles">
-                            <h3 className="text-sm font-medium text-white">
+                        <Link href="/trucks">
+                            <h3 className="text-sm font-semibold text-white">
                                 {isRtl ? (<span>شاحنات</span>) : (<span>Our Trucks</span>)}
                             </h3>
                         </Link>
@@ -119,7 +128,7 @@ export default function Footer() {
                     </div>
                     <div>
 
-                        <h3 className="text-sm font-medium text-white">
+                        <h3 className="text-sm font-semibold text-white">
                             {isRtl ? (<span>الشركة</span>) : (<span>Company</span>)}
                         </h3>
                         <Separator className="my-3" />
@@ -137,7 +146,7 @@ export default function Footer() {
                     </div>
                     <div>
 
-                        <h3 className="text-sm font-medium text-white">
+                        <h3 className="text-sm font-semibold text-white">
                             {isRtl ? (<span>اﺗﺼﻞ</span>) : (<span>Connect</span>)}
                         </h3>
 

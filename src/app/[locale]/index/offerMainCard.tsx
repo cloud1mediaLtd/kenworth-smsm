@@ -6,22 +6,31 @@ import Image from "next/image";
 import { Button } from "components/ui/button";
 import { cn } from "lib/utils";
 import { useLocale, useTranslations } from "next-intl";
+import { useState } from "react";
 
 export default function OfferMainCard({ offer }) {
     const t = useTranslations('OffersPage');
     const isRtl = useLocale() === 'ar';
+    const [imageLoaded, setImageLoaded] = useState(false);
+
 
     return (
         <>
             <Card className={cn(`${offer.bg} flex flex-col md:flex-row overflow-hidden h-full border-0 rounded-none rounded-t-lg`)}>
 
                 <div className='relative w-full min-h-52 basis-7/12'>
+                    {!imageLoaded && (
+                        <div className="absolute inset-0 flex justify-center items-center bg-gray-200">
+                            <span>Loading</span>
+                        </div>
+                    )}
                     <Image
                         src={offer.model.image}
                         alt={offer.model.name}
                         fill={true}
                         sizes='(max-width: 640px) 640px, 1920px'
-                        className='object-cover'
+                        style={{ objectFit: "cover" }}
+                        onLoad={() => setImageLoaded(true)}
                     />
                 </div>
 

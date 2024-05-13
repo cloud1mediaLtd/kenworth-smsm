@@ -41,7 +41,6 @@ export default function PostsPreview({ stories }) {
                         dragFree: true,
                         slidesToScroll: 1,
                     }}
-
                 >
                     <CarouselContent className="-ml-4">
 
@@ -50,17 +49,13 @@ export default function PostsPreview({ stories }) {
                             const mainImageBlok = content.body.find(blok => blok.component === 'main_image');
                             const titleBlok = content.body.find(blok => blok.component === 'title');
                             const excerptBlok = content.body.find(blok => blok.component === 'excerpt');
-
                             const cardClassName = `overflow-hidden relative ${index === 2 ? 'col-span-1' : ''}`;
                             return (
-
                                 <CarouselItem key={index}
                                     className="">
                                     <Link href={`/posts/${story.slug}`}>
                                         <Card className="overflow-hidden">
-
                                             <div className='flex flex-col '>
-
                                                 {mainImageBlok && mainImageBlok.main_image.length > 0 && (
                                                     <div className='relative h-64'>
                                                         <Image
@@ -78,26 +73,20 @@ export default function PostsPreview({ stories }) {
                                                             {titleBlok?.title}
                                                         </h2>
                                                         <p className='line-clamp-2 pt-3'>{excerptBlok?.excerpt}</p>
-
                                                     </div>
-
                                                 </div>
                                             </div>
-
                                         </Card>
-
                                     </Link>
                                 </CarouselItem>
                             )
                         })}
                     </CarouselContent>
-
                 </Carousel>
                 <div className="flex flex-col p-4 basis-5/12">
                     {stories.map((story, index) => (
                         <div key={index}>
                             <Link href={`/posts/${story.slug}`}
-
                                 onMouseEnter={() => scrollToIndex(index)}>{story.name}
                             </Link>
                             <Separator className="my-2 opacity-85" />
@@ -111,13 +100,11 @@ export default function PostsPreview({ stories }) {
                     News & Events
                 </h2>
                 <div className="flex gap-2 items-center">
-
                     <Link href="/posts"
                         className='border-2 border-white rounded-full px-5 text-sm text-white'>
                         More
                     </Link>
                     <div className="flex gap-1">
-
                         <button
                             className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollPrev}>
                             <ArrowLeftCircleIcon className='h-6 w-6 text-white' />
@@ -126,13 +113,9 @@ export default function PostsPreview({ stories }) {
                             className="flex items-center gap-2 text-small-semi  hover:text-slate-500 hover:underline underline-offset-2" onClick={scrollNext}>
                             <ArrowRightCircleIcon className='h-6 w-6 text-white' />
                         </button>
-
                     </div>
                 </div>
             </div>
-
         </Card>
-
     );
 }
-

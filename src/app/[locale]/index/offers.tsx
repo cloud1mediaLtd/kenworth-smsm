@@ -2,11 +2,12 @@
 import Link from "next/link";
 import OfferMainCard from "./offerMainCard";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "components/ui/carousel";
-import React from "react";
+import React, { useEffect } from "react";
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { Card } from "components/ui/card";
 import { offers } from "../../../../data/offers";
 import { useLocale, useTranslations } from "next-intl";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Offers({ isRtl }) {
     const t = useTranslations('OffersPage');
@@ -29,25 +30,34 @@ export default function Offers({ isRtl }) {
         }
     }, [api, isRtl]);
 
+    // useEffect(() => {
+    //     // Ensure carousel updates on locale change or navigation
+    //     api.reInit();
+    // }, [locale, api]);
+
     return (
         <Card className="flex flex-col w-full bg-kenbg rounded-t-2xl">
             <Carousel
+                key={locale} // Force re-render on locale change
                 className={`w-full px-0 basis-4/6`}
                 setApi={setApi}
                 plugins={[
-                    // Autoplay({
-                    //     delay: 15000,
-                    // }),
+                    Autoplay({
+                        delay: 10000,
+                    }),
                 ]}
                 opts={{
                     loop: true,
+
+                    dragFree: true,
+                    slidesToScroll: 1,
                     direction: isRtl ? "rtl" : "ltr",
                 }}
             >
                 <CarouselContent className="-ml-4">
                     {offers.map((offer, index) => {
                         return (
-                            <CarouselItem key={index} className="">
+                            <CarouselItem key={index} className="w-full">
                                 <OfferMainCard key={index} offer={offer} />
                             </CarouselItem>
                         );

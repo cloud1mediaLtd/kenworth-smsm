@@ -5,27 +5,18 @@
     "tel": "+218 91 386 8093"
   },
   "IndexPage": {
-    "title": "Gasos Libya Official dealer of Kenworth trucks and genuine parts",
+    "title": "Gasos Libya Official dealer of Kenworth trucks and parts",
     "description": "We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts.",
     "all_trucks": "All trucks",
     "about": "About"
   },
   "AboutPage": {
     "title": "About",
-    "description": "<p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for your automotive needs.</p>"
-  },
-  "VehiclesPage": {
-    "title": "Vehicles",
-    "description": "<p> From sales to service, we provide quality products and expert maintenance to keep you on the road. Discover automotive excellence at S.Med Sea Motors, your trusted partner for your automotive needs.</p>",
-    "specs": {
-      "engine": "Engine",
-      "transmission": "Transmission",
-      "gears": "Gears",
-      "fueltype": "Fuel type",
-      "bodytype": "Body type",
-      "drivetype": "Drive type",
-      "price": "Price"
-    }
+    "description": "<h1>Welcome</h1><p>As the official dealer of Kenworth in Libya, Gasos Libya is proud to offer a wide range of new vehicles to meet your diverse needs. Our dealership provides more than just quality vehicles; we offer a full suite of services, including maintenance, repairs, and genuine spare parts, ensuring your vehicle performs at its best.</p><p>Our dedicated team of professionals is here to guide you through every step of your automotive journey, whether you're purchasing a new vehicle or need expert care for your existing one. With a focus on exceptional customer service, we strive to build lasting relationships with our clients, providing reliable support and comprehensive solutions.</p>",
+    "history": "<h1>History and Background</h1><p>Gasos Libya has a rich history of excellence and commitment to the automotive industry in Libya. Gasos Libya Ltd quickly forged a strategic partnership with Kenworth, one of the world's leading truck manufacturers, known for their durability and performance. This partnership has been pivotal in positioning Gasos Libya Ltd as a premier dealership in the region, providing top-of-the-line Kenworth trucks tailored to meet the demands of the Libyan market.</p><p>Over the years, Gasos Libya has achieved numerous milestones that mark its growth and success. The dealership has expanded its operations, introducing state-of-the-art service centers and an extensive inventory of Kenworth vehicles, including the versatile T880 and the robust C500. These trucks, renowned for their reliability and efficiency, are particularly well-suited to Libya's diverse and challenging climate, from the scorching desert heat to the rugged terrain. Gasos Libya is dedication to excellence has not only fostered a strong customer base but also having a significant impacted on the local economy by providing reliable transportation solutions and creating job opportunities</p>",
+    "mission": "<h1>Mission and Vision</h1><p>At Gasos Libya, our mission is to redefine the automotive experience in Libya by providing unparalleled access to globally renowned brands. As the official dealer of Kenworth, we are proud to represent these iconic names for the first time in Libya.</p><p>We are committed to offering an exceptional range of new trucks, along with comprehensive after-sales services such as maintenance, repairs, and genuine spare parts. By focusing on quality and customer satisfaction, we aim to build lasting relationships and be a trusted partner for all your automotive needs.</p><p>Gasos Libya is here to deliver an automotive experience that reflects the reliability and innovation of our brands while ensuring that our clients receive personalized support and expertise every step of the way.</p>",
+    "contact": "For more information about our vehicles, services, and special offers, Our team is ready to assist you with any inquiries."
+
   },
   "PartsPage": {
     "title": "Parts",

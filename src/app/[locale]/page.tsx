@@ -1,36 +1,34 @@
 import Hero from 'app/[locale]/index/hero';
 import { Separator } from 'components/ui/separator';
-import { getStoryblokApi } from '@storyblok/react';
 import Offers from './index/offers';
 import FleetOffers from './index/fleetOffersCard';
 import { Button } from 'components/ui/button';
 import Link from 'next/link';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import ServiceSection from 'components/ServiceSection';
-import { use } from 'react';
 import { useLocale } from 'next-intl';
 
-async function fetchData() {
-  const sbParams = {
-    starts_with: "posts",
+// async function fetchData() {
+//   const sbParams = {
+//     starts_with: "posts",
 
-  };
-  const storyblokApi = getStoryblokApi();
+//   };
+//   const storyblokApi = getStoryblokApi();
 
-  try {
-    const response = await storyblokApi.get("cdn/stories/", sbParams, { cache: "no-store" });
-    return { data: response.data, error: null };
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return { data: null, error: error.toString() };
-  }
-}
+//   try {
+//     const response = await storyblokApi.get("cdn/stories/", sbParams, { cache: "no-store" });
+//     return { data: response.data, error: null };
+//   } catch (error) {
+//     console.error('Error fetching data:', error);
+//     return { data: null, error: error.toString() };
+//   }
+// }
 
 export default async function IndexPage() {
   const locale = useLocale();
 
-  const { data, error } = await fetchData();
-  const stories = data?.stories;
+  // const { data, error } = await fetchData();
+  // const stories = data?.stories;
 
   const t = await getTranslations('IndexPage');
 

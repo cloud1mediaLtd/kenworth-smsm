@@ -35,7 +35,7 @@ export default function LocaleSwitcher() {
         <SelectTrigger className="w-[180px] text-white">
           <SelectValue placeholder={t('label')} />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent side='top'>
           <SelectGroup>
             {['en', 'ar'].map((cur) => (
               <SelectItem key={cur} value={cur}>
