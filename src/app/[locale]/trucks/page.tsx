@@ -10,7 +10,7 @@ import { cn } from "lib/utils";
 
 
 export default function VehiclePage() {
-    const t = useTranslations('VehiclesPage');
+    // const t = useTranslations('TrucksPage');
     const isRtl = useLocale() === 'ar';
 
     return (
