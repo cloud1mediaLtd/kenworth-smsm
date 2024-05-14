@@ -1,5 +1,5 @@
 import { Button } from "components/ui/button";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { offers } from "../../../../data/offers";
 import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
 import { Separator } from "components/ui/separator";
@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Badge } from "components/ui/badge";
 import Image from "next/image";
 import { cn } from "lib/utils";
+import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 
 
 export default function VehiclePage() {
@@ -92,11 +93,10 @@ export default function VehiclePage() {
 
                             <CardFooter className="flex justify-between gap-2">
 
-                                <Link href="/warranty">
-                                    <Card className='flex items-center gap-2 px-2 py-1 h-10'>
-
-                                        <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                            <span className='text-xs font-semibold md:leading-none leading-tight'>
+                                <Card className='flex items-center justify-center gap-2 px-2  h-10 w-full'>
+                                    <Link href="/warranty">
+                                        <div className='flex justify-center'>
+                                            <span className='text-xs font-semibold '>
                                                 {isRtl ? (
                                                     <span className='text-xs font-semibold'>ضمان لمدة 5 سنوات أو 500,000 كم</span>
                                                 ) : (
@@ -104,17 +104,20 @@ export default function VehiclePage() {
                                                 )}
                                             </span>
                                         </div>
-                                    </Card>
-                                </Link>
+                                    </Link>
+
+                                </Card>
+
+
 
                                 <Link href={`${offer.link}`}>
-                                    <Button className='flex items-center gap-2 h-10'>
+                                    <span className='flex items-center'>
                                         {isRtl ? (
-                                            <span className='text-sm font-semibold'>المزيد</span>
+                                            <span className='text-sm font-semibold'><ArrowLeftCircle className="h-8 w-8 text-kenbg" /></span>
                                         ) : (
-                                            <span className='text-sm font-semibold'>More</span>
+                                            <span className='text-sm font-semibold'><ArrowRightCircle className="h-8 w-8 text-kenbg" /></span>
                                         )}
-                                    </Button>
+                                    </span>
                                 </Link>
 
                             </CardFooter>

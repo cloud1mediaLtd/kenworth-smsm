@@ -8,27 +8,10 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import ServiceSection from 'components/ServiceSection';
 import { useLocale } from 'next-intl';
 
-// async function fetchData() {
-//   const sbParams = {
-//     starts_with: "posts",
 
-//   };
-//   const storyblokApi = getStoryblokApi();
-
-//   try {
-//     const response = await storyblokApi.get("cdn/stories/", sbParams, { cache: "no-store" });
-//     return { data: response.data, error: null };
-//   } catch (error) {
-//     console.error('Error fetching data:', error);
-//     return { data: null, error: error.toString() };
-//   }
-// }
 
 export default async function IndexPage() {
   const locale = useLocale();
-
-  // const { data, error } = await fetchData();
-  // const stories = data?.stories;
 
   const t = await getTranslations('IndexPage');
 
@@ -67,8 +50,7 @@ export default async function IndexPage() {
           <Separator className="my-12" />
 
           <Offers isRtl={isRtl} />
-          {/* <Separator className="my-8" />
-          <ServicesSection /> */}
+
           <Separator className="my-12" />
         </div>
 
@@ -76,12 +58,7 @@ export default async function IndexPage() {
         <div className='content-container-no-bg'>
           <Separator className="my-12" />
           <FleetOffers />
-          {/* <Separator className="my-8" /> */}
-          {/* {stories ? (
-            <PostsPreview stories={stories} />
-          ) : (
-            <p>Failed to load stories. Please refresh the page.</p>
-          )} */}
+
         </div>
       </main>
 
