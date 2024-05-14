@@ -7,6 +7,7 @@ import { Button } from "components/ui/button";
 import { cn } from "lib/utils";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
+import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 
 export default function OfferMainCard({ offer }) {
     const t = useTranslations('OffersPage');
@@ -73,13 +74,12 @@ export default function OfferMainCard({ offer }) {
 
                     </CardContent>
 
-                    <CardFooter className="flex justify-between gap-2">
+                    <CardFooter className="flex justify-between gap-3">
 
-                        <Link href="/warranty">
-                            <Card className='flex items-center gap-2 px-2 py-1 h-10'>
-
-                                <div className='flex flex-row md:flex-col leading-3 gap-1'>
-                                    <span className='text-xs font-semibold md:leading-none leading-tight'>
+                        <Card className='flex items-center justify-center gap-2 px-2  h-10 w-full'>
+                            <Link href="/warranty">
+                                <div className='flex justify-center'>
+                                    <span className='text-xs font-semibold '>
                                         {isRtl ? (
                                             <span className='text-xs font-semibold'>ضمان لمدة 5 سنوات أو 500,000 كم</span>
                                         ) : (
@@ -87,17 +87,18 @@ export default function OfferMainCard({ offer }) {
                                         )}
                                     </span>
                                 </div>
-                            </Card>
-                        </Link>
+                            </Link>
+
+                        </Card>
 
                         <Link href={`${offer.link}`}>
-                            <Button className='flex items-center gap-2 h-10'>
+                            <span className='flex items-center'>
                                 {isRtl ? (
-                                    <span className='text-sm font-semibold'>المزيد</span>
+                                    <span className='text-sm font-semibold'><ArrowLeftCircle className="h-8 w-8 text-kenbg" /></span>
                                 ) : (
-                                    <span className='text-sm font-semibold'>More</span>
+                                    <span className='text-sm font-semibold'><ArrowRightCircle className="h-8 w-8 text-kenbg" /></span>
                                 )}
-                            </Button>
+                            </span>
                         </Link>
 
                     </CardFooter>

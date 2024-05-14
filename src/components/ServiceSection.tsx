@@ -1,5 +1,8 @@
 import { Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { Separator } from "./ui/separator";
 
 export default async function ServiceSection() {
     const t = await getTranslations('Service_Parts_Page');
@@ -12,7 +15,15 @@ export default async function ServiceSection() {
                         <p className="text-center">
                             {t('service_section.description')}
                         </p>
-                        <span dir="ltr" className="flex items-center gap-3"><Phone />+218 44 567 567</span>
+                        <div className="flex gap-6 items-center">
+                            <span dir="ltr" className="flex items-center gap-3"><Phone />+218 44 567 567</span>
+                            <Separator orientation="vertical" className="h-4" />
+                            <Button asChild>
+                                <Link href={"/service"}>
+                                    {t("title")}
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
