@@ -16,33 +16,20 @@
     "history": "<h1>History and Background</h1><p>Gasos Libya has a rich history of excellence and commitment to the automotive industry in Libya. Gasos Libya Ltd quickly forged a strategic partnership with Kenworth, one of the world's leading truck manufacturers, known for their durability and performance. This partnership has been pivotal in positioning Gasos Libya Ltd as a premier dealership in the region, providing top-of-the-line Kenworth trucks tailored to meet the demands of the Libyan market.</p><p>Over the years, Gasos Libya has achieved numerous milestones that mark its growth and success. The dealership has expanded its operations, introducing state-of-the-art service centers and an extensive inventory of Kenworth truckss, including the versatile T880 and the robust C500. These trucks, renowned for their reliability and efficiency, are particularly well-suited to Libya's diverse and challenging climate, from the scorching desert heat to the rugged terrain. Gasos Libya is dedication to excellence has not only fostered a strong customer base but also having a significant impacted on the local economy by providing reliable transportation solutions and creating job opportunities</p>",
     "mission": "<h1>Mission and Vision</h1><p>At Gasos Libya, our mission is to redefine the automotive experience in Libya by providing unparalleled access to globally renowned brands. As the official dealer of Kenworth, we are proud to represent these iconic names for the first time in Libya.</p><p>We are committed to offering an exceptional range of new trucks, along with comprehensive after-sales services such as maintenance, repairs, and genuine spare parts. By focusing on quality and customer satisfaction, we aim to build lasting relationships and be a trusted partner for all your automotive needs.</p><p>Gasos Libya is here to deliver an automotive experience that reflects the reliability and innovation of our brands while ensuring that our clients receive personalized support and expertise every step of the way.</p>",
     "contact": "For more information about our vehicles, services, and special offers, Our team is ready to assist you with any inquiries."
-
   },
   "Service_Parts_Page": {
     "title": "Service & Parts",
     "maintenance": "<h1>Comprehensive Truck Maintenance</h1><p>We take pride in providing our customers with access to a wide range of genuine parts for your trucks. Whether you're in need of a replacement part or looking to enhance your trucks performance, we've got you covered.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>",
     "repairs": "<h1>Expert Repairs</h1><p>When it comes to repairs, you can trust Gasos Libya to get the job done right. Our highly trained professionals have extensive experience working with Kenworth trucks, guaranteeing precise and effective repairs. Whether it's a minor fix or a major overhaul, we use only genuine Kenworth parts to restore your truck to its peak performance. Our commitment to quality means your truck will be back on the road quickly and safely.</p>",
     "parts": "<h1>Genuine Spare Parts</h1><p>To maintain the integrity and performance of your Kenworth truck, we offer a full range of genuine spare parts. Using original parts ensures compatibility, reliability, and longevity, providing you with peace of mind. Our parts department is well-stocked, and our knowledgeable staff can help you find exactly what you need, whether you're looking for engine components, filters, brakes, or any other parts specific to your Kenworth model.</p>",
-    "diagnostic":"<h1>Advanced Diagnostic Services</h1><p>Accurate diagnostics are the foundation of effective vehicle service. At Libya Gas, we use state-of-the-art diagnostic equipment to identify issues quickly and accurately. Our advanced diagnostic services help prevent potential problems, ensuring your truck performs efficiently and safely. Trust our team to provide thorough assessments and timely solutions to keep your Kenworth truck running smoothly.</p>",
-    "support":"<h1>Customer Support</h1><p>At Libya Gas, exceptional customer service is at the heart of everything we do. Our dedicated support team is here to assist you with any questions or concerns you may have. From scheduling service appointments to providing detailed explanations of the work performed, we ensure a seamless and transparent experience. Your satisfaction is our priority, and we strive to exceed your expectations at every step.</p>",
+    "diagnostic": "<h1>Advanced Diagnostic Services</h1><p>Accurate diagnostics are the foundation of effective vehicle service. At Libya Gas, we use state-of-the-art diagnostic equipment to identify issues quickly and accurately. Our advanced diagnostic services help prevent potential problems, ensuring your truck performs efficiently and safely. Trust our team to provide thorough assessments and timely solutions to keep your Kenworth truck running smoothly.</p>",
+    "support": "<h1>Customer Support</h1><p>At Libya Gas, exceptional customer service is at the heart of everything we do. Our dedicated support team is here to assist you with any questions or concerns you may have. From scheduling service appointments to providing detailed explanations of the work performed, we ensure a seamless and transparent experience. Your satisfaction is our priority, and we strive to exceed your expectations at every step.</p>",
     "warranty": "",
-      "service_section": {
+    "service_section": {
       "title": "Service",
       "message": "Here When You Need Us",
       "description": "Access genuine parts for your vehicles. Whether you're in need of replacement parts or looking to enhance your vehicle's performance, we've got you covered."
     }
-  },
-  "OffersPage": {
-    "title": "Offers",
-    "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>",
-    "latest_offers": "Latest offers",
-    "more": "More"
-  },
-  "FleetPage": {
-    "title": "Business Center",
-    "title2": "Fleet Offers",
-
-    "description": "Get the best deals on fleet purchases. We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts."
   },
   "ContactPage": {
     "title": "Contact",
@@ -57,22 +44,19 @@
     "title": "Business Center",
     "description": "<p>At Gasos Libya, we provide tailored solutions to enhance efficiency and support growth for businesses, government agencies, charities, and organizations. Our services include expert fleet sales, comprehensive B2B packages, and personalized support to meet the unique needs of every client.</p><p>We aim to be a catalyst for your success, offering personalized solutions that empower you to improve operational capabilities and achieve significant impact. Our dedicated team provides the expertise and tools needed to navigate challenges and excel in today's competitive environment.</p>",
     "management": {
-    "desc": "<h1>Fleet Management Solutions</h1><p>At Gasos Libya, we offer customized Fleet Management Solutions to streamline operations, reduce costs, and enhance fleet performance. Let our expert team provide high-quality trucks for your fleet, so you can focus on running your enterprise efficiently.</p>",
-    "maintenance": "<p><strong>Maintenance Plans:</strong> To keep your fleet running smoothly, we offer comprehensive maintenance plans that are essential for prolonging the life and efficiency of your trucks. Our maintenance services ensure that each truck in your fleet is maintained to the highest standards, reducing downtime and operational disruptions.</p>",
-    "customized": "<p><strong>Customized Support:</strong> We recognize diverse sector needs and provide specialized upfitting, from cargo management for logistics to tool racks for construction, to optimize efficiency and functionality.</p>",
-    "scalable": "<p><strong>Large-Scale Contract Experience:</strong>Our expertise in managing substantial fleets allows us to handle contracts efficiently, ensuring precision from consultation through delivery and after-sales support.</p>"
-  },
-  "institutional": {
-    "desc": "<h1>Government and Institutional Sales</h1><p>At Gasos Libya, we specialize in providing truck solutions tailored for government and institutional clients. With extensive experience in navigating the complexities of procurement, we offer compliance, competitive pricing, and customized solutions to meet your specialized needs.</p>",
-    "compliance": "<p><strong>Compliance and Procurement:</strong> We understand government regulations and procurement guidelines, ensuring all vehicle sales and modifications meet compliance standards for a smooth, transparent process.</p>",
-    "customized": "<p><strong>Customized Fleet Solutions:</strong> We understand that every fleet's needs are unique. Our team provides personalized support to help you navigate the complexities of managing a fleet, from acquisition through ongoing maintenance. Whether you need advice on the best truck options for your specific activities or assistance with managing your fleet's servicing schedules, we're here to support every aspect of your fleet management.</p>",
-    "safety": "<p><strong>Safety and Compliance Upgrades:</strong> We modify vehicles with enhanced security features, communication tools, and technology integrations to meet your operational requirements, ensuring alignment with government safety regulations.</p>",
-    "scale": "<p><strong>Large-Scale Contract Experience:</strong> Our expertise in managing substantial fleets allows us to handle contracts efficiently, ensuring precision from consultation through delivery and after-sales support.</p>",
-    "account": "<p><strong>Dedicated Account Management:</strong> We assign account managers to ensure consistent service and communication, providing specialized support tailored to the public sector. Training and Support: We offer training on vehicle operation, maintenance, and safety procedures to help staff utilize the vehicles effectively while adhering to regulatory requirements.</p>",
-    "training": "<p><strong>Training and Support:</strong> We offer training on vehicle operation, maintenance, and safety procedures to help staff utilize the vehicles effectively while adhering to regulatory requirements.</p>"
-
-
-  }
+      "desc": "<h1>Fleet Management Solutions</h1><p>At Gasos Libya, we offer customized Fleet Management Solutions to streamline operations, reduce costs, and enhance fleet performance. Let our expert team provide high-quality trucks for your fleet, so you can focus on running your enterprise efficiently.</p>",
+      "maintenance": "<p><strong>Maintenance Plans:</strong> To keep your fleet running smoothly, we offer comprehensive maintenance plans that are essential for prolonging the life and efficiency of your trucks. Our maintenance services ensure that each truck in your fleet is maintained to the highest standards, reducing downtime and operational disruptions.</p>",
+      "customized": "<p><strong>Customized Support:</strong> We recognize diverse sector needs and provide specialized upfitting, from cargo management for logistics to tool racks for construction, to optimize efficiency and functionality.</p>"
+    },
+    "institutional": {
+      "desc": "<h1>Government and Institutional Sales</h1><p>At Gasos Libya, we specialize in providing truck solutions tailored for government and institutional clients. With extensive experience in navigating the complexities of procurement, we offer compliance, competitive pricing, and customized solutions to meet your specialized needs.</p>",
+      "compliance": "<p><strong>Compliance and Procurement:</strong> We understand government regulations and procurement guidelines, ensuring all vehicle sales and modifications meet compliance standards for a smooth, transparent process.</p>",
+      "customized": "<p><strong>Customized Fleet Solutions:</strong> We understand that every fleet's needs are unique. Our team provides personalized support to help you navigate the complexities of managing a fleet, from acquisition through ongoing maintenance. Whether you need advice on the best truck options for your specific activities or assistance with managing your fleet's servicing schedules, we're here to support every aspect of your fleet management.</p>",
+      "safety": "<p><strong>Safety and Compliance Upgrades:</strong> We modify vehicles with enhanced security features, communication tools, and technology integrations to meet your operational requirements, ensuring alignment with government safety regulations.</p>",
+      "scale": "<p><strong>Large-Scale Contract Experience:</strong> Our expertise in managing substantial fleets allows us to handle contracts efficiently, ensuring precision from consultation through delivery and after-sales support.</p>",
+      "account": "<p><strong>Dedicated Account Management:</strong> We assign account managers to ensure consistent service and communication, providing specialized support tailored to the public sector. Training and Support: We offer training on vehicle operation, maintenance, and safety procedures to help staff utilize the vehicles effectively while adhering to regulatory requirements.</p>",
+      "training": "<p><strong>Training and Support:</strong> We offer training on vehicle operation, maintenance, and safety procedures to help staff utilize the vehicles effectively while adhering to regulatory requirements.</p>"
+    }
   },
   "NotFoundPage": {
     "title": "Page not found",
@@ -98,7 +82,6 @@
       "title": "Trucks",
       "href": "/trucks"
     },
-
     "services_parts": {
       "title": "Service & Parts",
       "href": "/service"
@@ -113,14 +96,12 @@
     "description": "Driving the Next 100 Years",
     "button": "Learn More"
   },
-
   "Categories": {
     "content": {
       "title": "Categories",
       "description": "Check out our new arrivals.",
       "browseAll": " Browse all categories"
     },
-
     "newArrivals": {
       "title": "New Arrivals",
       "description": "Check out our new arrivals.",
@@ -147,7 +128,6 @@
       "href": "/sale"
     }
   },
-
   "PageLayout": {
     "links": {
       "docs": {

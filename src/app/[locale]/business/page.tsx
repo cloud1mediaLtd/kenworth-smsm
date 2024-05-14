@@ -50,16 +50,6 @@ export default async function aboutPage() {
             })}
           </div>
 
-          <div className="flex flex-col gap-3">
-            {t.rich('management.scalable', {
-              h1: (chunks) => <h1 className="">{chunks}</h1>,
-              p: (chunks) => <p className="">{chunks}</p>,
-              ul: (chunks) => <ul className="">{chunks}</ul>,
-              li: (chunks) => <ul className="">{chunks}</ul>,
-              strong: (chunks) => <strong className="">{chunks}</strong>,
-            })}
-          </div>
-
           <Separator className="my-0" />
 
           <div className="flex flex-col gap-3">

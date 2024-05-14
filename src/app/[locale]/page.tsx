@@ -37,7 +37,7 @@ export default async function IndexPage() {
   const isRtl = locale === 'ar';
 
   return (
-    <section className='relative'>
+    <section className='relative animate-in'>
       <div className='relative'>
         <Hero />
       </div>

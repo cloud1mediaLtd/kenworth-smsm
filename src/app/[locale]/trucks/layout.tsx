@@ -5,7 +5,7 @@ export default function VehiclePageLayout({ children }) {
     const locale = useLocale();
 
     return (
-        <div className="relative">
+        <div className="relative animate-in">
             <div className="">
                 {children}
             </div>
