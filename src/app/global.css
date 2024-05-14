@@ -380,7 +380,7 @@ p {
 .nav-link {
   position: relative;
   display: inline-block;
-  padding-bottom: 5px; /* Adjust based on your spacing needs */
+  padding-bottom: 2px; /* Adjust based on your spacing needs */
 }
 
 .nav-link::after {

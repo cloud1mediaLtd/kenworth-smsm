@@ -15,15 +15,13 @@ export default function NavigationLink({ href, ...rest }: Props) {
   const cleanedPathname = pathname.replace(`/${locale}`, ''); // Remove the locale segment
   const isActive = cleanedPathname === href;
 
-  console.log(`Link: ${href}, isActive: ${isActive}`); // Log to verify
-
   return (
     <Link
       aria-current={isActive ? 'page' : undefined}
       className={clsx(
         'nav-link',
         isActive && 'nav-link-active',
-        'px-3 transition-colors font-bold'
+        'transition-colors font-bold'
       )}
       href={href}
       {...rest}

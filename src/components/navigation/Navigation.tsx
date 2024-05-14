@@ -62,12 +62,15 @@ const Navigation = async () => {
                 alt=""
               />
             </div>
-            <div className="md:flex items-center gap-6">
-              {mainNavigation.map(({ key, href, title }) => (
-                <NavigationLink key={key} href={href}>
-                  {title}
-                </NavigationLink>
-              ))}
+            <div className="">
+              <div className='md:flex items-center gap-6 hidden'>
+                {mainNavigation.map(({ key, href, title }) => (
+                  <NavigationLink key={key} href={href}>
+                    {title}
+                  </NavigationLink>
+                ))}
+              </div>
+
               <div className="flex gap-4 items-center md:hidden">
                 <a href="#menu-aside">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">
