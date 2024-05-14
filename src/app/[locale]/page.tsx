@@ -47,7 +47,7 @@ export default async function IndexPage() {
           <div className='flex flex-col lg:flex-row gap-4'>
             <div className='flex flex-col  justify-center lg:basis-2/3 gap-3'>
               <div className='flex items-center gap-3'>
-                <h1 className='leading-none font-bold text-kenbg'>{t('title')}</h1>
+                <h1 className=' font-bold text-kenbg'>{t('title')}</h1>
               </div>
 
               <p className='text-base font-semibold'>
