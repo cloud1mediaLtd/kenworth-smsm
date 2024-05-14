@@ -19,7 +19,7 @@ export default function careerPage() {
                 </div>
 
                 <div className="mt-8">
-                    <h2 className="text-2xl font-bold text-gray-700">{t('openPositions')}</h2>
+                    <h2 className="">{t('openPositions')}</h2>
 
                 </div>
             </PageLayout>

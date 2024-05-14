@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import type { ReactNode } from 'react';
 import { useLocale } from 'next-intl';
+import { Separator } from './ui/separator';
 
 type Props = {
   children?: ReactNode;
@@ -18,10 +19,13 @@ export default function PageLayout({ children, title }: Props) {
     <section className='relative container'>
 
       <div className='flex justify-center'>
-        <h1 className='pt-6'>
+        <h1 className='pt-12'>
           {title}
         </h1>
+
       </div>
+
+      <Separator className='my-12' />
 
       <div className='mt-6 '>
         {children}

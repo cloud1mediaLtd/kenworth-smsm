@@ -29,7 +29,6 @@ const footerNavigation = {
     ],
     company: [
         { name: 'About', name_ar: 'حول الشركة', href: '/about' },
-        { name: 'Warranty', name_ar: 'ضمان', href: '/warranty' },
         { name: 'Careers', name_ar: 'وظائف', href: '/careers' },
         { name: 'Business Center', name_ar: 'مركز الأعمال', href: '/business' },
     ],
