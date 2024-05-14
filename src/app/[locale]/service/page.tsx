@@ -1,10 +1,8 @@
-"use client";
 import PageLayout from "components/PageLayout";
-import PartsFinder from "components/partsFinder/partsFinder";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function servicePage() {
-    const t = useTranslations('Service_Parts_Page');
+export default async function servicePage() {
+    const t = await getTranslations('Service_Parts_Page');
 
     return (
         <section className=''>

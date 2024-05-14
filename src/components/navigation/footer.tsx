@@ -146,7 +146,7 @@ export default function Footer() {
                     <div>
 
                         <h3 className="text-sm font-semibold text-white">
-                            {isRtl ? (<span>اﺗﺼﻞ</span>) : (<span>Connect</span>)}
+                            {isRtl ? (<span>اتصال</span>) : (<span>Connect</span>)}
                         </h3>
 
                         <Separator className="my-3" />
