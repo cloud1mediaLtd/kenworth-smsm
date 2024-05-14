@@ -31,6 +31,17 @@
       "description": "Access genuine parts for your vehicles. Whether you're in need of replacement parts or looking to enhance your vehicle's performance, we've got you covered."
     }
   },
+  "OffersPage": {
+    "title": "Offers",
+    "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>",
+    "latest_offers": "Latest offers",
+    "more": "More"
+  },
+  "FleetPage": {
+    "title": "Business Center",
+    "title2": "Fleet Offers",
+    "description": "Get the best deals on fleet purchases. We offer a wide range of new vehicles, plus a full range of services, including maintenance, repairs, and spare parts."
+  },
   "ContactPage": {
     "title": "Contact",
     "description": "<p>For more information about our vehicles, services, and special offers, Our team is ready to assist you with any inquiries.</p>"
