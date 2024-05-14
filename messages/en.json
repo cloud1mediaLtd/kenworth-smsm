@@ -12,20 +12,21 @@
   },
   "AboutPage": {
     "title": "About",
-    "description": "<h1>Welcome</h1><p>As the official dealer of Kenworth in Libya, Gasos Libya is proud to offer a wide range of new vehicles to meet your diverse needs. Our dealership provides more than just quality vehicles; we offer a full suite of services, including maintenance, repairs, and genuine spare parts, ensuring your vehicle performs at its best.</p><p>Our dedicated team of professionals is here to guide you through every step of your automotive journey, whether you're purchasing a new vehicle or need expert care for your existing one. With a focus on exceptional customer service, we strive to build lasting relationships with our clients, providing reliable support and comprehensive solutions.</p>",
-    "history": "<h1>History and Background</h1><p>Gasos Libya has a rich history of excellence and commitment to the automotive industry in Libya. Gasos Libya Ltd quickly forged a strategic partnership with Kenworth, one of the world's leading truck manufacturers, known for their durability and performance. This partnership has been pivotal in positioning Gasos Libya Ltd as a premier dealership in the region, providing top-of-the-line Kenworth trucks tailored to meet the demands of the Libyan market.</p><p>Over the years, Gasos Libya has achieved numerous milestones that mark its growth and success. The dealership has expanded its operations, introducing state-of-the-art service centers and an extensive inventory of Kenworth vehicles, including the versatile T880 and the robust C500. These trucks, renowned for their reliability and efficiency, are particularly well-suited to Libya's diverse and challenging climate, from the scorching desert heat to the rugged terrain. Gasos Libya is dedication to excellence has not only fostered a strong customer base but also having a significant impacted on the local economy by providing reliable transportation solutions and creating job opportunities</p>",
+    "description": "<h1>Welcome</h1><p>As the official dealer of Kenworth in Libya, Gasos Libya is proud to offer a wide range of new vehicles to meet your diverse needs. Our dealership provides more than just quality vehicles; we offer a full suite of services, including maintenance, repairs, and genuine spare parts, ensuring your vehicle performs at its best.</p><p>Our dedicated team of professionals is here to guide you through every step of your automotive journey, whether you're purchasing a new truck or need expert care for your existing one. With a focus on exceptional customer service, we strive to build lasting relationships with our clients, providing reliable support and comprehensive solutions.</p>",
+    "history": "<h1>History and Background</h1><p>Gasos Libya has a rich history of excellence and commitment to the automotive industry in Libya. Gasos Libya Ltd quickly forged a strategic partnership with Kenworth, one of the world's leading truck manufacturers, known for their durability and performance. This partnership has been pivotal in positioning Gasos Libya Ltd as a premier dealership in the region, providing top-of-the-line Kenworth trucks tailored to meet the demands of the Libyan market.</p><p>Over the years, Gasos Libya has achieved numerous milestones that mark its growth and success. The dealership has expanded its operations, introducing state-of-the-art service centers and an extensive inventory of Kenworth truckss, including the versatile T880 and the robust C500. These trucks, renowned for their reliability and efficiency, are particularly well-suited to Libya's diverse and challenging climate, from the scorching desert heat to the rugged terrain. Gasos Libya is dedication to excellence has not only fostered a strong customer base but also having a significant impacted on the local economy by providing reliable transportation solutions and creating job opportunities</p>",
     "mission": "<h1>Mission and Vision</h1><p>At Gasos Libya, our mission is to redefine the automotive experience in Libya by providing unparalleled access to globally renowned brands. As the official dealer of Kenworth, we are proud to represent these iconic names for the first time in Libya.</p><p>We are committed to offering an exceptional range of new trucks, along with comprehensive after-sales services such as maintenance, repairs, and genuine spare parts. By focusing on quality and customer satisfaction, we aim to build lasting relationships and be a trusted partner for all your automotive needs.</p><p>Gasos Libya is here to deliver an automotive experience that reflects the reliability and innovation of our brands while ensuring that our clients receive personalized support and expertise every step of the way.</p>",
     "contact": "For more information about our vehicles, services, and special offers, Our team is ready to assist you with any inquiries."
 
   },
-  "PartsPage": {
-    "title": "Parts",
-    "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>Our team is ready to assist you in finding the right part for your specific needs just give us a call or use our parts finder service.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>"
-  },
-  "ServicePage": {
-    "title": "Service",
-    "description": "<p>We take pride in providing our customers with access to a wide range of genuine parts for your vehicles. Whether you're in need of a replacement part or looking to enhance your vehicle's performance, we've got you covered.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>",
-    "service_section": {
+  "Service_Parts_Page": {
+    "title": "Service & Parts",
+    "maintenance": "<h1>Comprehensive Truck Maintenance</h1><p>We take pride in providing our customers with access to a wide range of genuine parts for your trucks. Whether you're in need of a replacement part or looking to enhance your trucks performance, we've got you covered.</p><p>In addition to our extensive parts selection, we also offer exceptional service to help you with installations, repairs, and maintenance. Trust us for all your automotive part needs and experience the difference that genuine parts and expert service can make for your vehicle and extend its road life.</p>",
+    "repairs": "<h1>Expert Repairs</h1><p>When it comes to repairs, you can trust Gasos Libya to get the job done right. Our highly trained professionals have extensive experience working with Kenworth trucks, guaranteeing precise and effective repairs. Whether it's a minor fix or a major overhaul, we use only genuine Kenworth parts to restore your truck to its peak performance. Our commitment to quality means your truck will be back on the road quickly and safely.</p>",
+    "parts": "<h1>Genuine Spare Parts</h1><p>To maintain the integrity and performance of your Kenworth truck, we offer a full range of genuine spare parts. Using original parts ensures compatibility, reliability, and longevity, providing you with peace of mind. Our parts department is well-stocked, and our knowledgeable staff can help you find exactly what you need, whether you're looking for engine components, filters, brakes, or any other parts specific to your Kenworth model.</p>",
+    "diagnostic":"<h1>Advanced Diagnostic Services</h1><p>Accurate diagnostics are the foundation of effective vehicle service. At Libya Gas, we use state-of-the-art diagnostic equipment to identify issues quickly and accurately. Our advanced diagnostic services help prevent potential problems, ensuring your truck performs efficiently and safely. Trust our team to provide thorough assessments and timely solutions to keep your Kenworth truck running smoothly.</p>",
+    "support":"<h1>Customer Support</h1><p>At Libya Gas, exceptional customer service is at the heart of everything we do. Our dedicated support team is here to assist you with any questions or concerns you may have. From scheduling service appointments to providing detailed explanations of the work performed, we ensure a seamless and transparent experience. Your satisfaction is our priority, and we strive to exceed your expectations at every step.</p>",
+
+      "service_section": {
       "title": "Service",
       "message": "Here When You Need Us",
       "description": "Access genuine parts for your vehicles. Whether you're in need of replacement parts or looking to enhance your vehicle's performance, we've got you covered."
@@ -80,12 +81,9 @@
       "title": "Trucks",
       "href": "/trucks"
     },
-    "parts": {
-      "title": "Parts",
-      "href": "/spareparts"
-    },
-    "services": {
-      "title": "Service",
+
+    "services_parts": {
+      "title": "Service & Parts",
       "href": "/service"
     },
     "contact": {

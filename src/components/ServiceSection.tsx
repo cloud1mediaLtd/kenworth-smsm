@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export default async function ServiceSection() {
-    const t = await getTranslations('ServicePage');
+    const t = await getTranslations('Service_Parts_Page');
     return (
         <>
             <div className='flex flex-col bg-kenbg py-6 text-slate-50 relative'>

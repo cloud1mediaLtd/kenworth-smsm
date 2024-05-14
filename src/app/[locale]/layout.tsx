@@ -21,27 +21,27 @@ import MobileFooter from 'components/navigation/mobileFooter';
 import { ThemeProvider } from 'components/ui/themeProvider';
 import HotjarSnippet from 'lib/hotjar';
 
-const components = {
-  page: Page,
-  post: Post,
-  feature: Feature,
-  grid: Grid,
-  teaser: Teaser,
-  title: Title,
-  excerpt: Excerpt,
-  textarea: TextArea,
-  image: Image,
-  main_image: MainImage,
-  vehicle_gallery: VehicleGallery
-};
+// const components = {
+//   page: Page,
+//   post: Post,
+//   feature: Feature,
+//   grid: Grid,
+//   teaser: Teaser,
+//   title: Title,
+//   excerpt: Excerpt,
+//   textarea: TextArea,
+//   image: Image,
+//   main_image: MainImage,
+//   vehicle_gallery: VehicleGallery
+// };
 
-storyblokInit({
-  accessToken: process.env.STORYBLOK_API_TOKEN,
-  use: [apiPlugin],
-  components,
-});
+// storyblokInit({
+//   accessToken: process.env.STORYBLOK_API_TOKEN,
+//   use: [apiPlugin],
+//   components,
+// });
 
-console.log('storyblokInit', storyblokInit);
+// console.log('storyblokInit', storyblokInit);
 
 
 const tajawal = Rubik({
@@ -89,10 +89,8 @@ export default async function LocaleLayout({
 }) {
   const messages = await getMessages(locale);
 
-
   const isRTL = locale === 'ar';
   const font = isRTL ? tajawal : inter;
-
 
   return (
     <html className="" lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>

@@ -18,8 +18,7 @@ const Navigation = async () => {
 
   const mainNavigation: NavigationItem[] = [
     { key: 'trucks', href: '/trucks', title: t('trucks.title') },
-    { key: 'parts', href: '/parts', title: t('parts.title') },
-    { key: 'service', href: '/service', title: t('services.title') },
+    { key: 'service', href: '/service', title: t('services_parts.title') },
     { key: 'contact', href: '/contact', title: t('contact.title') },
 
   ];
