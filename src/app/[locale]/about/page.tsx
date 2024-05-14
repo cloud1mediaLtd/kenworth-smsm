@@ -1,8 +1,6 @@
-
 import PageLayout from 'components/PageLayout';
 import { useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-
 
 export default async function aboutPage() {
   const t = await getTranslations('AboutPage');
@@ -36,11 +34,7 @@ export default async function aboutPage() {
             })}
           </div>
 
-
-
         </div>
-
-
 
         {/* <div className='flex flex-col gap-6 pt-12'>
 

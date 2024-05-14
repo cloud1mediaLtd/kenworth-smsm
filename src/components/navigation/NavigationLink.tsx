@@ -11,14 +11,19 @@ type Props = Omit<ComponentProps<typeof Link>, 'href'> & {
 
 export default function NavigationLink({ href, ...rest }: Props) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const locale = pathname.split('/')[1]; // Extract the locale
+  const cleanedPathname = pathname.replace(`/${locale}`, ''); // Remove the locale segment
+  const isActive = cleanedPathname === href;
+
+  console.log(`Link: ${href}, isActive: ${isActive}`); // Log to verify
 
   return (
     <Link
-      aria-current={isActive}
+      aria-current={isActive ? 'page' : undefined}
       className={clsx(
-        'inline-block px-3 transition-colors font-bold',
-        isActive ? 'text-white' : 'text-gray-200 hover:text-gray-100'
+        'nav-link',
+        isActive && 'nav-link-active',
+        'px-3 transition-colors font-bold'
       )}
       href={href}
       {...rest}

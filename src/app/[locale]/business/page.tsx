@@ -1,4 +1,3 @@
-
 import PageLayout from 'components/PageLayout';
 import { Separator } from 'components/ui/separator';
 import { getTranslations } from 'next-intl/server';
