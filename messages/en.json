@@ -55,7 +55,24 @@
   },
   "BusinessCenterPage": {
     "title": "Business Center",
-    "description": "<p>We are the proud official dealer of Fiat Chrysler Automobile, representing a diverse range of prestigious brands such as Jeep, Dodge, Ram, SRT, Fiat, Chrysler, Peogeut and Mopar. We also offer genuine spare parts, ensuring the highest quality and compatibility for our customers' vehicles. With our well-equipped workshop located in Tripoli, our skilled technicians provide top-notch service, maintenance, and repairs to keep our customers' vehicles running smoothly. We take pride in offering comprehensive warranty coverage, providing peace of mind and reassurance to our valued customers.</p>"
+    "description": "<p>At Gasos Libya, we provide tailored solutions to enhance efficiency and support growth for businesses, government agencies, charities, and organizations. Our services include expert fleet sales, comprehensive B2B packages, and personalized support to meet the unique needs of every client.</p><p>We aim to be a catalyst for your success, offering personalized solutions that empower you to improve operational capabilities and achieve significant impact. Our dedicated team provides the expertise and tools needed to navigate challenges and excel in today's competitive environment.</p>",
+    "management": {
+    "desc": "<h1>Fleet Management Solutions</h1><p>At Gasos Libya, we offer customized Fleet Management Solutions to streamline operations, reduce costs, and enhance fleet performance. Let our expert team provide high-quality trucks for your fleet, so you can focus on running your enterprise efficiently.</p>",
+    "maintenance": "<p><strong>Maintenance Plans:</strong> To keep your fleet running smoothly, we offer comprehensive maintenance plans that are essential for prolonging the life and efficiency of your trucks. Our maintenance services ensure that each truck in your fleet is maintained to the highest standards, reducing downtime and operational disruptions.</p>",
+    "customized": "<p><strong>Customized Support:</strong> We recognize diverse sector needs and provide specialized upfitting, from cargo management for logistics to tool racks for construction, to optimize efficiency and functionality.</p>",
+    "scalable": "<p><strong>Large-Scale Contract Experience:</strong>Our expertise in managing substantial fleets allows us to handle contracts efficiently, ensuring precision from consultation through delivery and after-sales support.</p>"
+  },
+  "institutional": {
+    "desc": "<h1>Government and Institutional Sales</h1><p>At Gasos Libya, we specialize in providing truck solutions tailored for government and institutional clients. With extensive experience in navigating the complexities of procurement, we offer compliance, competitive pricing, and customized solutions to meet your specialized needs.</p>",
+    "compliance": "<p><strong>Compliance and Procurement:</strong> We understand government regulations and procurement guidelines, ensuring all vehicle sales and modifications meet compliance standards for a smooth, transparent process.</p>",
+    "customized": "<p><strong>Customized Fleet Solutions:</strong> We understand that every fleet's needs are unique. Our team provides personalized support to help you navigate the complexities of managing a fleet, from acquisition through ongoing maintenance. Whether you need advice on the best truck options for your specific activities or assistance with managing your fleet's servicing schedules, we're here to support every aspect of your fleet management.</p>",
+    "safety": "<p><strong>Safety and Compliance Upgrades:</strong> We modify vehicles with enhanced security features, communication tools, and technology integrations to meet your operational requirements, ensuring alignment with government safety regulations.</p>",
+    "scale": "<p><strong>Large-Scale Contract Experience:</strong> Our expertise in managing substantial fleets allows us to handle contracts efficiently, ensuring precision from consultation through delivery and after-sales support.</p>",
+    "account": "<p><strong>Dedicated Account Management:</strong> We assign account managers to ensure consistent service and communication, providing specialized support tailored to the public sector. Training and Support: We offer training on vehicle operation, maintenance, and safety procedures to help staff utilize the vehicles effectively while adhering to regulatory requirements.</p>",
+    "training": "<p><strong>Training and Support:</strong> We offer training on vehicle operation, maintenance, and safety procedures to help staff utilize the vehicles effectively while adhering to regulatory requirements.</p>"
+
+
+  }
   },
   "NotFoundPage": {
     "title": "Page not found",
