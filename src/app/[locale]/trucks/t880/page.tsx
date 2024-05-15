@@ -3,7 +3,6 @@ import VehicleBreadCrumb from "../components/breadCrumb";
 import VideoHero from "../components/videoHero";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { ReactNode } from "react";
 import SectionA from "../components/sectionA";
 
 type Props = {

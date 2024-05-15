@@ -6,7 +6,6 @@ import { Card } from "components/ui/card"
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
 import { ModeToggle } from "components/ui/darkToggle"
 import LocaleSwitcher from "components/LocaleSwitcher"
-import ShopStatus from 'components/navigation/shopstatus';
 import { useLocale, useTranslations } from "next-intl";
 
 

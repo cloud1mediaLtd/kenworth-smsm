@@ -6,16 +6,16 @@ import { Button } from 'components/ui/button';
 import Link from 'next/link';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import ServiceSection from 'components/ServiceSection';
-import { useLocale } from 'next-intl';
 
+type Props = {
+  params: { locale: string };
+};
 
-
-export default async function IndexPage() {
-  const locale = useLocale();
+export default async function IndexPage({ params: { locale } }: Props) {
 
   const t = await getTranslations('IndexPage');
 
-  // unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(locale);
 
   const isRtl = locale === 'ar';
 

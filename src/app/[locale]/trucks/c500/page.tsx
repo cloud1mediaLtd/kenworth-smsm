@@ -1,8 +1,7 @@
 import { Separator } from "components/ui/separator";
 import VehicleBreadCrumb from "../components/breadCrumb";
 import VideoHero from "../components/videoHero";
-import { ReactNode } from "react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import SectionA from "../components/sectionA";
 
 type Props = {
@@ -12,6 +11,9 @@ type Props = {
 export default async function C550Page({ params: { locale } }: Props) {
     const t = await getTranslations("TrucksPage")
     const isRtl = locale === "ar"
+
+    unstable_setRequestLocale(locale);
+
 
     return (
         <div className="flex flex-col">

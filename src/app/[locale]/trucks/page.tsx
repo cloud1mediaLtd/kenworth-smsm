@@ -1,4 +1,3 @@
-import { Button } from "components/ui/button";
 import { useLocale } from "next-intl";
 import { offers } from "../../../../data/offers";
 import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
@@ -8,32 +7,19 @@ import { Badge } from "components/ui/badge";
 import Image from "next/image";
 import { cn } from "lib/utils";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import PageLayout from "components/PageLayout";
 
+type Props = {
+    params: { locale: string };
+};
 
-export default function VehiclePage() {
-    // const t = useTranslations('TrucksPage');
-    const isRtl = useLocale() === 'ar';
+export default async function VehiclePage({ params: { locale } }: Props) {
+    const t = await getTranslations('TrucksPage');
+    const isRtl = locale === 'ar';
 
     return (
-        <section className='pt-12 container'>
-
-            {/* <div className="flex flex-col md:flex-row gap-10 items-center pb-12 pt-6">
-                <h1 className=''>
-                    {t('title')}
-                </h1>
-
-                <Separator
-                    orientation='vertical'
-                    className='h-16 md:block hidden'
-                />
-                <div className="flex flex-col gap-5">
-                    {t.rich('description', {
-                        p: (chunks) =>
-                            <p className="">{chunks}</p>,
-                    })}
-                </div>
-
-            </div> */}
+        <PageLayout title={t('title')} >
 
             <div className="flex flex-col gap-6">
 
@@ -139,6 +125,6 @@ export default function VehiclePage() {
                 <Brands locale={locale} />
             </Suspense> */}
 
-        </ section>
+        </ PageLayout>
     );
 }
