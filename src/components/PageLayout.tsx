@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import type { ReactNode } from 'react';
 import { useLocale } from 'next-intl';
 import { Separator } from './ui/separator';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
   children?: ReactNode;
@@ -14,6 +15,8 @@ export default function PageLayout({ children, title }: Props) {
 
   // determine if the current locale is 'ar'
   const isRTL = locale === 'ar';
+  unstable_setRequestLocale(locale);
+
 
   return (
     <section className='relative container animate-in'>

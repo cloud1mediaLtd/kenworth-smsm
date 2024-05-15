@@ -1,10 +1,17 @@
 import PageLayout from 'components/PageLayout';
 import { useLocale } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-export default async function aboutPage() {
+type Props = {
+  params: { locale: string };
+};
+
+export default async function aboutPage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
   const t = await getTranslations('AboutPage');
   const isRtl = useLocale() === "ar"
+
 
   return (
     <>

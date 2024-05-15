@@ -2,11 +2,18 @@ import { Separator } from "components/ui/separator";
 import VehicleBreadCrumb from "../components/breadCrumb";
 import VideoHero from "../components/videoHero";
 import SectionA from "../components/sectionA";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 
-export default async function NineSixThreePage() {
+type Props = {
+    params: { locale: string };
+};
+
+export default async function NineSixThreePage({ params: { locale } }: Props) {
+    unstable_setRequestLocale(locale);
+
     const t = await getTranslations("TrucksPage")
+
 
     return (
         <div className="flex flex-col">

@@ -1,8 +1,14 @@
+import { unstable_setRequestLocale } from "next-intl/server";
 
-import { useLocale } from "next-intl";
+export default function VehiclePageLayout({
+    children,
+    params: { locale }
+}: {
+    children: React.ReactNode;
+    params: { locale: string };
+}) {
+    unstable_setRequestLocale(locale);
 
-export default function VehiclePageLayout({ children }) {
-    const locale = useLocale();
 
     return (
         <div className="relative animate-in">

@@ -11,8 +11,9 @@ type Props = {
 };
 
 export default function partsPage({ params: { locale } }: Props) {
-    const t = useTranslations('ContactPage');
     unstable_setRequestLocale(locale);
+
+    const t = useTranslations('ContactPage');
     const isRtl = locale === "ar"
 
 

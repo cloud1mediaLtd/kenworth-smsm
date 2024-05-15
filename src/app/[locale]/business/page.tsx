@@ -1,9 +1,16 @@
 import PageLayout from 'components/PageLayout';
 import { Separator } from 'components/ui/separator';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-export default async function aboutPage() {
+type Props = {
+  params: { locale: string };
+};
+
+export default async function aboutPage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
   const t = await getTranslations('BusinessCenterPage');
+
 
   return (
     <>

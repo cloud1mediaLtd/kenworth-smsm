@@ -9,11 +9,10 @@ type Props = {
 };
 
 export default async function C550Page({ params: { locale } }: Props) {
-    const t = await getTranslations("TrucksPage")
-    const isRtl = locale === "ar"
-
     unstable_setRequestLocale(locale);
 
+    const t = await getTranslations("TrucksPage")
+    const isRtl = locale === "ar"
 
     return (
         <div className="flex flex-col">

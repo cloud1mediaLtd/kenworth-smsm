@@ -1,11 +1,15 @@
-"use client";
+
 import PageLayout from "components/PageLayout";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
+type Props = {
+    params: { locale: string };
+};
 
+export default async function careerPage({ params: { locale } }: Props) {
+    unstable_setRequestLocale(locale);
 
-export default function careerPage() {
-    const t = useTranslations('CareerPage');
+    const t = await getTranslations('CareerPage');
 
     return (
         <section className=''>

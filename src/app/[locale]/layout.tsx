@@ -20,6 +20,8 @@ import VehicleGallery from 'components/storyblok/vehicleBloks/VehicleGallery';
 import MobileFooter from 'components/navigation/mobileFooter';
 import { ThemeProvider } from 'components/ui/themeProvider';
 import HotjarSnippet from 'lib/hotjar';
+import { locales } from "config";
+import { getMessages, getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 // const components = {
 //   page: Page,
@@ -59,24 +61,17 @@ type Props = {
   params: { locale: string };
 };
 
-async function getMessages(locale: string) {
-  try {
-    return (await import(`../../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }: Props) {
-  const messages = await getMessages(locale);
-
-  // You can use the core (non-React) APIs when you have to use next-intl
-  // outside of components. Potentially this will be simplified in the future
-  // (see https://next-intl-docs.vercel.app/docs/next-13/server-components).
-  const t = createTranslator({ locale, messages });
+export async function generateMetadata({
+  params: { locale }
+}: Omit<Props, 'children'>) {
+  const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
 
   return {
-    title: t('LocaleLayout.title')
+    title: t('title')
   };
 }
 
@@ -87,7 +82,9 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const messages = await getMessages(locale);
+  const messages = await getMessages();
+
+  unstable_setRequestLocale(locale);
 
   const isRTL = locale === 'ar';
   const font = isRTL ? tajawal : inter;

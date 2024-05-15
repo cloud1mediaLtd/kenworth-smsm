@@ -7,7 +7,7 @@ import { Badge } from "components/ui/badge";
 import Image from "next/image";
 import { cn } from "lib/utils";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import PageLayout from "components/PageLayout";
 
 type Props = {
@@ -15,8 +15,14 @@ type Props = {
 };
 
 export default async function VehiclePage({ params: { locale } }: Props) {
+
+    unstable_setRequestLocale(locale);
+
+
     const t = await getTranslations('TrucksPage');
     const isRtl = locale === 'ar';
+
+
 
     return (
         <PageLayout title={t('title')} >

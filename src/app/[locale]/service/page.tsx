@@ -1,8 +1,15 @@
 import PageLayout from "components/PageLayout";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export default async function servicePage() {
+type Props = {
+    params: { locale: string };
+};
+
+export default async function servicePage({ params: { locale } }: Props) {
+    unstable_setRequestLocale(locale);
+
     const t = await getTranslations('Service_Parts_Page');
+
 
     return (
         <section className=''>

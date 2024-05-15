@@ -12,10 +12,10 @@ type Props = {
 };
 
 export default async function IndexPage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
 
   const t = await getTranslations('IndexPage');
 
-  unstable_setRequestLocale(locale);
 
   const isRtl = locale === 'ar';
 
