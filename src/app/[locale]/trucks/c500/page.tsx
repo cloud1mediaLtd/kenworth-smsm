@@ -6,7 +6,6 @@ import { getTranslations } from "next-intl/server";
 import SectionA from "../components/sectionA";
 
 type Props = {
-    children: ReactNode;
     params: { locale: string };
 };
 
