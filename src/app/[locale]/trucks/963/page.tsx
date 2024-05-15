@@ -4,13 +4,9 @@ import VideoHero from "../components/videoHero";
 import SectionA from "../components/sectionA";
 import { getTranslations } from "next-intl/server";
 
-type Props = {
-    params: { locale: string };
-};
 
-export default async function NineSixThreePage({ params: { locale } }: Props) {
+export default async function NineSixThreePage() {
     const t = await getTranslations("TrucksPage")
-    const isRtl = locale === "ar"
 
     return (
         <div className="flex flex-col">
