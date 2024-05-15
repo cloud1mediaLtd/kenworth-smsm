@@ -2,23 +2,21 @@ import { Separator } from "components/ui/separator";
 import VehicleBreadCrumb from "../components/breadCrumb";
 import VideoHero from "../components/videoHero";
 import SectionA from "../components/sectionA";
-import { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 
 type Props = {
-    children: ReactNode;
     params: { locale: string };
 };
 
 export default async function NineSixThreePage({ params: { locale } }: Props) {
     const t = await getTranslations("TrucksPage")
     const isRtl = locale === "ar"
+
     return (
         <div className="flex flex-col">
             <div className="container relative">
                 <VehicleBreadCrumb topLink={"Kenworth"} topLinkHref={``} secondLink="963" secondLinkHref="963" />
             </div>
-
 
             <div className="relative">
 
@@ -34,7 +32,6 @@ export default async function NineSixThreePage({ params: { locale } }: Props) {
                 </div>
 
             </div>
-
 
             <div className="container flex flex-col gap-12">
 
@@ -72,7 +69,6 @@ export default async function NineSixThreePage({ params: { locale } }: Props) {
                 <Separator className="my-0" />
 
             </div>
-
 
         </div>
     )

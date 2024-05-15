@@ -27,7 +27,6 @@ const SectionA = async ({ title, title2, desc, desc2, image }: Props) => {
                     : (<>
                         Add Image
                     </>)}
-
             </div>
 
             <div className="relative flex flex-col gap-4 basis-2/3">
@@ -39,7 +38,6 @@ const SectionA = async ({ title, title2, desc, desc2, image }: Props) => {
                             </h2>
                             <p>
                                 {desc}
-
                             </p>
                         </div>
                     </div>
@@ -51,7 +49,6 @@ const SectionA = async ({ title, title2, desc, desc2, image }: Props) => {
                             </h2>
                             <p>
                                 {desc2}
-
                             </p>
                         </div>
                     </div>
