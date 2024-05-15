@@ -76,12 +76,12 @@ export default async function T880Page({ params: { locale } }: Props) {
                     desc2={t("kent880.section.desc2")}
                     image="/t880-work-truck-bg.jpg" />
 
-                <Separator className="my-0" />
+                {/* <Separator className="my-0" /> */}
 
             </div>
 
 
-            <div className=" bg-muted/80 py-12 mt-12">
+            {/* <div className=" bg-muted/80 py-12 mt-12">
                 <div className="container pb-6">
                     <h2 className="text-xl md:text-2xl font-bold">
                         T880 {t("specs.title")}
@@ -118,9 +118,9 @@ export default async function T880Page({ params: { locale } }: Props) {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
 
-            <div className="container">
+            {/* <div className="container">
                 <Separator className="my-12" />
                 <div className="flex flex-col items-center justify-center">
                     <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -147,16 +147,16 @@ export default async function T880Page({ params: { locale } }: Props) {
                     </div>
                 </div>
                 <Separator className="my-12" />
-            </div>
+            </div> */}
 
 
 
-            <div className="container">
+            {/* <div className="container">
                 <Separator className="my-12" />
 
-            </div>
+            </div> */}
 
-            <div className="flex flex-col lg:flex-row gap-6 relative container">
+            {/* <div className="flex flex-col lg:flex-row gap-6 relative container">
 
                 <div className='relative min-h-52 basis-1/3'>
                     <Image
@@ -185,7 +185,7 @@ export default async function T880Page({ params: { locale } }: Props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )

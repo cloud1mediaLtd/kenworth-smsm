@@ -1,4 +1,3 @@
-"use client"
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -6,6 +5,7 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "components/ui/breadcrumb"
+import { Slash } from "lucide-react";
 import Link from "next/link";
 
 interface VehicleBreadCrumbProps {
@@ -35,7 +35,10 @@ export default function VehicleBreadCrumb({
 
                     {secondLink && (
                         <>
-                            <BreadcrumbSeparator />
+                            <BreadcrumbSeparator >
+                                <Slash />
+                            </BreadcrumbSeparator >
+
                             <BreadcrumbItem>
                                 <BreadcrumbPage>
                                     <span className="font-semibold">

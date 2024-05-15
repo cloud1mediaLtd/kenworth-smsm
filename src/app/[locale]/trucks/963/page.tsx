@@ -67,7 +67,7 @@ export default async function NineSixThreePage({ params: { locale } }: Props) {
                     desc={t("kent963.section.desc")}
                     title2={t("kent963.section.title2")}
                     desc2={t("kent963.section.desc2")}
-                    image="/963.jpeg" />
+                    image="/2005.jpg" />
 
                 <Separator className="my-0" />
 

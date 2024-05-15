@@ -82,7 +82,7 @@ export default function OfferMainCard({ offer }) {
                     <CardFooter className="flex justify-between gap-3">
 
                         <Card className='flex items-center justify-center gap-2 px-2  h-10 w-full'>
-                            <Link href="/warranty">
+                            <Link href="/about#warranty">
                                 <div className='flex justify-center'>
                                     <span className='text-xs font-semibold '>
                                         {isRtl ? (
