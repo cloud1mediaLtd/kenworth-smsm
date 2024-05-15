@@ -73,6 +73,43 @@
     "title": "Page not found",
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
   },
+  "TrucksPage": {
+    "specs": {
+      "title": "Specifications",
+      "engine": "Engine",
+      "transmission": "Specifications"
+    },
+    "kent880": {
+      "title": "CONFIGURED FOR ROCK-SOLID PERFORMANCE IN EVERY APPLICATION",
+      "description": "The work you do requires everything you've got and then some. Same for your trucks and the people who drive them. With the T880, you've got a dependable, versatile vehicle capable of performing your toughest jobs. Day in, day out. A truck designed at its core with the strength, stamina and operating economy you need to move your business ahead. Bulk tractor. Tanker. Dump truck. Mixer. Heavy hauler. Refuse truck. Logger. The next time your job requires maximum effort, dispatch the one truck that's equipped to handle it: your Kenworth T880. It's The World's Best® way to get work done.",
+      "section": {
+        "title": "PERFORMANCE",
+        "desc": "Advanced technology and street-smart design — sloped hood, fuel-efficient drivetrain, aerodynamic and job-specific options, unconventional maneuverability and supremely comfortable driving environment — make a Kenworth T880 the ideal business partner.",
+        "title2": "DURABLE AERODYNAMIC SIDE MIRRORS",
+        "desc2": "Cowl mounted for better stability and located farther forward and lower to optimize rearward visibility. The convex portion is 37 percent larger than Kenworth's standard convex mirror design"
+      }
+    },
+    "kentC500": {
+      "title": "TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS",
+      "description": "The work you do demands exceptional strength and resilience. The same goes for your trucks and the drivers behind the wheel. With the C500, you have a robust and versatile vehicle engineered to tackle the most demanding jobs. Day after day. Built with unmatched durability, endurance, and operational efficiency,  designed to propel your business forward. Whether you're hauling heavy loads, operating in off-road conditions, or handling specialized applications like logging or mining, equipped to meet your highest expectations. For the next challenging task, rely on the one truck that's ready for anything.",
+      "section": {
+        "title": "PERFORMANCE",
+        "desc": "The C500 offers a choice of two hoods, made from fiberglass or sheet metal, and can accommodate a 1780 square-inch cooling module. This feature enables enhanced cooling capacity, resulting in an increase in stationary horsepower capability up to 600 hp and Gross Combination Weights up to 200,000lbs without requiring application approval.",
+        "title2": "TOUGHNESS",
+        "desc2": "Renowned for its ability to tackle any job with ease, the C500 features a high-mounted engine that is easily accessible. You can choose between the award-winning Cummins or PACCAR engines, which when combined with the C500's robust frame, provides ample horsepower to handle even the most challenging tasks."
+      }
+    },
+    "kent963": {
+      "title": "Kings Of The Desert",
+      "description": "The work you do demands unparalleled strength and reliability. The same applies to your trucks and the drivers behind the wheel. With the Kenworth 963, you have a powerful and adaptable vehicle designed to conquer the most challenging tasks. Day after day. Engineered with superior durability, endurance, and operational efficiency to drive your business forward. Whether you're navigating tough terrains, hauling heavy loads, or managing specialized applications like oil field work or construction, the 963 is equipped to exceed your highest expectations. For the next demanding job, trust the one truck that's built for anything.",
+      "section": {
+        "title": "SPECIALIZED APPLICATIONS",
+        "desc": "The C500 offers a choice of two hoods, made from fiberglass or sheet metal, and can accommodate a 1780 square-inch cooling module. This feature enables enhanced cooling capacity, resulting in an increase in stationary horsepower capability up to 600 hp and Gross Combination Weights up to 200,000lbs without requiring application approval.",
+        "title2": "UNMSTCHED DURABILITY AND STRENGTH",
+        "desc2": "The Kenworth 963 is built to withstand the harshest conditions and the heaviest loads. Its robust frame and reinforced chassis provide exceptional stability and strength, ensuring your truck can handle the toughest jobs with ease. Whether you're navigating rough terrains or operating in extreme environments, the 963 stands resilient and ready."
+      }
+    }
+  },
   "LocaleLayout": {
     "title": "Gasos"
   },

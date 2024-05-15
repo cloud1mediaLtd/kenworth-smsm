@@ -2,16 +2,23 @@ import { Separator } from "components/ui/separator";
 import VehicleBreadCrumb from "../components/breadCrumb";
 import VideoHero from "../components/videoHero";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { ReactNode } from "react";
+import SectionA from "../components/sectionA";
 
+type Props = {
+    children: ReactNode;
+    params: { locale: string };
+};
 
-
-export default function T880Page() {
+export default async function T880Page({ params: { locale } }: Props) {
+    const t = await getTranslations("TrucksPage")
+    const isRtl = locale === "ar"
     return (
         <div className="flex flex-col">
             <div className="container relative">
                 <VehicleBreadCrumb topLink={"Kenworth"} topLinkHref={``} secondLink="T880" secondLinkHref="t880" />
             </div>
-
 
             <div className="relative">
                 {/* <video className="" width="1600" height="600" preload="none" autoPlay loop muted>
@@ -27,15 +34,14 @@ export default function T880Page() {
 
                 <div className="absolute inset-0 container pt-4 z-30">
                     <div className="flex justify-center items-center h-full">
-                        <h1 className="text-shadow text-4xl text-white">T800</h1>
+                        <h1 className="text-shadow text-4xl text-white opacity-50">T800</h1>
 
                     </div>
                 </div>
 
             </div>
 
-            <div className="container">
-
+            <div className="container flex flex-col gap-12">
 
                 <div className="flex flex-col pt-12 gap-6">
                     <div className="flex gap-4 justify-center">
@@ -46,40 +52,44 @@ export default function T880Page() {
                         />
                         <Separator orientation='vertical' className='h-12' />
                         <h1>T800</h1>
-
                     </div>
 
                     <div className="flex flex-col gap-4 md:text-center">
                         <h2 className="text-xl md:text-2xl font-bold">
-                            CONFIGURED FOR ROCK-SOLID PERFORMANCE IN EVERY APPLICATION.
+                            {t("kent880.title")}
                         </h2>
                         <p>
-                            The work you do requires everything you've got and then some.
-                            Same for your trucks and the people who drive them. With the T880,
-                            you've got a dependable, versatile vehicle capable of performing your toughest jobs.
-                            Day in, day out. A truck designed at its core with the strength,
-                            stamina and operating economy you need to move your business ahead.
-                            Bulk tractor. Tanker. Dump truck. Mixer. Heavy hauler. Refuse truck.
-                            Logger. The next time your job requires maximum effort,
-                            dispatch the one truck that's equipped to handle it: your Kenworth T880.
-                            It's The World's Best® way to get work done.
+                            {t("kent880.description")}
+
                         </p>
                     </div>
                 </div>
-                <Separator className="my-12" />
+
+                <Separator className="my-0" />
+
+                <SectionA
+                    title={t("kent880.section.title")}
+                    desc={t("kent880.section.desc")}
+                    title2={t("kent880.section.title2")}
+                    desc2={t("kent880.section.desc2")}
+                    image="/t880-work-truck-bg.jpg" />
+
+                <Separator className="my-0" />
+
             </div>
 
-            <div className=" bg-muted/80 py-12">
+
+            <div className=" bg-muted/80 py-12 mt-12">
                 <div className="container pb-6">
                     <h2 className="text-xl md:text-2xl font-bold">
-                        Kenworth T880 specifications
+                        T880 {t("specs.title")}
                     </h2>
 
                 </div>
 
                 <div className="container flex flex-col lg:flex-row gap-8 text-sm md:text-base">
                     <div className="flex flex-col gap-2 bg-">
-                        <span className=" underline underline-offset-4">Engine / Powertrain</span>
+                        <span className=" underline underline-offset-4">{t("specs.engine")}</span>
                         <ul className=" list-inside list-disc">
                             <li>PACCAR MX-13 Engine</li>
                             <li>12.9 Liter</li>
@@ -137,46 +147,7 @@ export default function T880Page() {
                 <Separator className="my-12" />
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-6 relative container">
-                <div className='relative min-h-52 basis-1/3'>
-                    <Image
-                        src={"/t880-work-truck-bg.jpg"}
-                        alt=""
-                        fill={true}
-                        sizes='(max-width: 640px) 640px, 1920px'
-                        className='object-cover'
-                    />
-                </div>
-                <div className="relative flex flex-col gap-4 basis-2/3">
-                    <div className="flex flex-col gap-6">
-                        <div className="flex relative z-20">
-                            <div className="flex flex-col gap-2 justify-center">
-                                <h2 className="text-xl md:text-2xl font-bold">
-                                    PERFORMANCE
-                                </h2>
-                                <p>
-                                    Advanced technology and street-smart design — sloped hood, fuel-efficient drivetrain,
-                                    aerodynamic and job-specific options, unconventional maneuverability and supremely comfortable driving environment
-                                    — make a Kenworth T880 the ideal business partner.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div className="flex relative z-20">
-                            <div className="flex flex-col gap-2 justify-center">
-                                <h2 className="text-2xl font-bold">
-                                    DURABLE AERODYNAMIC SIDE MIRRORS
-                                </h2>
-                                <p>
-                                    Cowl mounted for better stability and located farther forward and lower to optimize rearward visibility.
-                                    The convex portion is 37 percent larger than Kenworth's standard convex mirror design
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
             <div className="container">
                 <Separator className="my-12" />

@@ -3,7 +3,6 @@ import { Card, CardContent, CardFooter, CardHeader } from "components/ui/card";
 import { Separator } from "components/ui/separator";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "components/ui/button";
 import { cn } from "lib/utils";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
@@ -21,10 +20,16 @@ export default function OfferMainCard({ offer }) {
 
                 <div className='relative w-full min-h-52 basis-7/12'>
                     {!imageLoaded && (
-                        <div className="absolute inset-0 flex justify-center items-center bg-gray-200">
-                            <span>Loading</span>
+                        <div className="flex justify-center items-center h-full w-full relative">
+                            <img
+                                src={"/t880-carousel.jpg"}
+                                alt={offer.model.name}
+                                sizes='(max-width: 640px) 640px, 1920px'
+                                className="h-full w-full object-cover"
+                            />
                         </div>
                     )}
+
                     <Image
                         src={offer.model.image}
                         alt={offer.model.name}
