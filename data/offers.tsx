@@ -1,7 +1,7 @@
 export const offers = [
     {
-        badge: 'New 2024 | ROCK-SOLID PERFORMANCE',
-        badge_ar: 'جديد 2024 | أداء صلب',
+        badge: '',
+        badge_ar: '',
         badgeClass: 'bg-kenbg text-white',
         brand: { name: 'T880', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 100 },
         model: {
@@ -18,31 +18,31 @@ export const offers = [
         bg: '  '
     },
     {
-        badge: 'New | Now In Showroom',
-        badge_ar: 'جديد | الآن في المعرض',
+        badge: '',
+        badge_ar: '',
         badgeClass: 'bg-kenbg text-white',
         brand: { name: 'C500', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 0 },
         model: {
             name: 'C500',
-            description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
-            description_ar: 'التصدي لأصعب التطبيقات الخارجية.',
+            description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS',
+            description_ar: 'التصدي لأصعب التطبيقات الخارجية',
             image: '/c500-bodybuilder.jpg'
         },
-        description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
+        description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS',
         warranty: 'Warranty',
         finance: 'Finance',
         link: '/trucks/c500',
         bg: '  '
     },
     {
-        badge: 'New | Now In Showroom',
-        badge_ar: 'جديد | الآن في المعرض',
+        badge: '',
+        badge_ar: '',
         badgeClass: 'bg-kenbg text-white',
         brand: { name: 'C500', logo: '/logos/kenworth_logo.png', logoWidth: 150, logoHeight: 0 },
         model: {
             name: '963',
-            description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',
-            description_ar: 'التصدي لأصعب التطبيقات الخارجية.',
+            description: 'Kings Of The Desert',
+            description_ar: 'ملوك الصحراء',
             image: '/963.jpeg'
         },
         description: 'TACKLING THE TOUGHEST OFF-ROAD APPLICATIONS.',

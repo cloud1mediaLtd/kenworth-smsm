@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Separator } from "../ui/separator"
 import MapComponent from "./mapComponent"
 import { Card } from "components/ui/card"
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
+import { Globe, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
 import { ModeToggle } from "components/ui/darkToggle"
 import LocaleSwitcher from "components/LocaleSwitcher"
 import { useLocale, useTranslations } from "next-intl";
@@ -77,11 +77,18 @@ export default function Footer() {
                                     <Separator className="" />
 
                                     <Link href="/contact" className="">
-                                        <span className="underline-offset-4 hover:underline text-sm font-semibold flex gap-3">
-                                            <PhoneIcon className='h-5 w-5' />
-                                            <span dir="ltr">
-                                                +218 91 000 0000
+                                        <span className="flex gap-3">
+                                            <span dir="ltr" className="underline-offset-4 hover:underline text-sm font-semibold flex gap-3">
+                                                <PhoneIcon className='h-5 w-5' />
+                                                +(210) 92 000 3049
+                                            </span>
 
+                                            <Separator orientation="vertical" className="h-4" />
+
+                                            <span dir="ltr" className="underline-offset-4 hover:underline text-sm font-semibold flex gap-3">
+                                                <Globe className='h-5 w-5' />
+
+                                                +(206) 696 5040
                                             </span>
                                         </span>
                                     </Link>
@@ -89,7 +96,7 @@ export default function Footer() {
 
                                     <Link href="/contact" className="">
                                         <span className="underline-offset-4 hover:underline text-sm font-semibold flex gap-3">
-                                            <MailIcon className='h-5 w-5' /> info@gasoslibya.ly
+                                            <MailIcon className='h-5 w-5' /> info@gasosly.com
                                         </span>
                                     </Link>
 

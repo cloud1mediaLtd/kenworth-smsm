@@ -11,7 +11,7 @@ export default function MobileFooter({ isRtl }) {
                 <div className=" px-5 w-full">
                     <Button variant="secondary" className="flex justify-center w-full">
                         <Link
-                            href="/quote/schedule"
+                            href="/contact"
                             className=" p-2 w-full rounded-md text-small-semi text-center hover:underline underline-offset-2 shadow-sm"
                         >
                             {isRtl ? (<span>اتصال</span>) : (<span>Contact</span>)}
@@ -21,7 +21,7 @@ export default function MobileFooter({ isRtl }) {
 
                 <div className="flex gap-3 items-center justify-center bg-green-700 p-4 text-white h-18 w-18">
                     <Link
-                        href={"tel:+442087768925"}>
+                        href={"tel:+210920003049"}>
                         <PhoneIcon className="h-6 w-6" />
                     </Link>
                 </div>

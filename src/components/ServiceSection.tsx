@@ -12,7 +12,7 @@ export default async function ServiceSection() {
                 <div className='content-container-no-bg flex flex-col lg:flex-row items-center gap-6 justify-center'>
                     <div className=" flex flex-col items-center justify-center gap-6 relative text-center lg:text-start max-w-2xl">
                         <h1 className="text-2xl md:text-2xl xl:text-3xl text-balance">{t('service_section.message')}</h1>
-                        <p className="text-center">
+                        <p className="text-center text-balance text-lg font-semibold">
                             {t('service_section.description')}
                         </p>
                         <div className="flex gap-6 items-center">
