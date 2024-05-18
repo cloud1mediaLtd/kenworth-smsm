@@ -4,6 +4,7 @@ import VideoHero from "../components/videoHero";
 import Image from "next/image";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import SectionA from "../components/sectionA";
+import { TruckIcon } from "lucide-react";
 
 type Props = {
     params: { locale: string };
@@ -66,6 +67,25 @@ export default async function T880Page({ params: { locale } }: Props) {
                         </p>
                     </div>
                 </div>
+                <Separator className="my-0" />
+
+                <div className="flex gap-5 items-center">
+                    <span>
+                        {isRtl ? "متوفرة:" : "Available as:"}
+                    </span>
+                    <div className="flex gap-5 items-center">
+                        <span className="flex gap-5">
+                            <TruckIcon size={24} />
+                            {isRtl ? "كابينة يومية" : "Day Cab"}
+                        </span>
+                        <Separator orientation='vertical' className='h-8' />
+                        <span className="flex gap-5">
+                            <TruckIcon size={24} />
+                            {isRtl ? "نائمة 40 بوصة" : "40\" Sleeper"}
+                        </span>
+                    </div>
+                </div>
+
 
                 <Separator className="my-0" />
 
