@@ -10,6 +10,34 @@ type Props = {
     params: { locale: string };
 };
 
+export async function generateMetadata({
+    params: { locale }
+}: Omit<Props, 'children'>) {
+    const t = await getTranslations({ locale, namespace: 'TrucksPage' });
+
+    return {
+        title: t('kent880.name'),
+        description: t('kent880.description'), // Add description translation
+        keywords: 'Kenworth, T880, Trucks, Heavy Duty', // Add relevant keywords
+        viewport: 'width=device-width, initial-scale=1',
+        canonical: 'https://gazos.vercel.app/trucks/t880', // Update with your canonical URL
+        openGraph: {
+            title: t('kent880.name'),
+            description: t('kent880.description'),
+            url: 'https://gazos.vercel.app/trucks/t880', // Update with your URL
+            type: 'website',
+            images: [
+                {
+                    url: 'https://gazos.vercel.app/_next/image?url=%2Ft880-work-truck-bg.jpg&w=3840&q=75', // Add a relevant image URL
+                    width: 800,
+                    height: 600,
+                    alt: 'Kenworth T880'
+                }
+            ]
+        }
+    };
+}
+
 export default async function T880Page({ params: { locale } }: Props) {
     unstable_setRequestLocale(locale);
 
