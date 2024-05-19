@@ -1,7 +1,6 @@
 import { Separator } from "components/ui/separator";
 import VehicleBreadCrumb from "../components/breadCrumb";
 import VideoHero from "../components/videoHero";
-import Image from "next/image";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import SectionA from "../components/sectionA";
 import { TruckIcon } from "lucide-react";
@@ -19,7 +18,6 @@ export async function generateMetadata({
         title: t('kent880.name'),
         description: t('kent880.description'), // Add description translation
         keywords: 'Kenworth, T880, Trucks, Heavy Duty', // Add relevant keywords
-        viewport: 'width=device-width, initial-scale=1',
         canonical: 'https://gazos.vercel.app/trucks/t880', // Update with your canonical URL
         openGraph: {
             title: t('kent880.name'),
@@ -35,6 +33,12 @@ export async function generateMetadata({
                 }
             ]
         }
+    };
+}
+
+export function generateViewport() {
+    return {
+        viewport: 'width=device-width, initial-scale=1'
     };
 }
 
