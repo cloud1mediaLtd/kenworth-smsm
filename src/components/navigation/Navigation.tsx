@@ -36,16 +36,16 @@ const Navigation = async () => {
               <Link href="/" className="relative flex items-center gap-3">
                 <span className="sr-only">Gazos</span>
                 <img
-                  className="h-8 w-auto dark:hidden"
+                  className="h-8 min-w-8 w-auto dark:hidden"
                   src="https://tailwindui.com/img/logos/mark.svg?color=black"
                   alt="Light Logo"
                 />
                 <img
-                  className="h-8 w-auto hidden dark:block"
+                  className="h-8 min-w-8 w-auto hidden dark:block"
                   src="https://tailwindui.com/img/logos/mark.svg?color=white"
                   alt="Dark Logo"
                 />
-                <div className="min-w-14">
+                <div className="min-w-14 hidden md:block">
                   {z('title')}
                 </div>
               </Link>
