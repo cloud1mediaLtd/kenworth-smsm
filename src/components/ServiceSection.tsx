@@ -16,7 +16,8 @@ export default async function ServiceSection() {
                             {t('service_section.description')}
                         </p>
                         <div className="flex gap-6 items-center">
-                            <span dir="ltr" className="flex items-center gap-3"><Phone />+218 44 567 567</span>
+                            <span dir="ltr" className="flex items-center gap-3"><Phone />
+                                +(210) 92 000 3049</span>
                             <Separator orientation="vertical" className="h-4" />
                             <Button asChild>
                                 <Link href={"/service"}>

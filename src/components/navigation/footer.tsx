@@ -171,7 +171,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex justify-between content-container-no-bg border-t border-background/50 mt-8">
-                    <p className="text-sm text-gray-200 py-6">Copyright © 2024 Gasos Libya</p>
+                    <p className="text-sm text-gray-200 py-6">Copyright © 2024</p>
                     <div className="flex gap-5 items-center">
                         <ModeToggle />
                         <LocaleSwitcher />

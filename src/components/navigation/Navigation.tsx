@@ -5,6 +5,7 @@ import { Separator } from 'components/ui/separator';
 import NavigationLink from './NavigationLink'; // Ensure this path is correct
 import { getTranslations } from 'next-intl/server';
 import NavLink from 'components/aside/navLink';
+import { useTheme } from 'next-themes';
 
 interface NavigationItem {
   key: string;
@@ -17,11 +18,14 @@ const Navigation = async () => {
   const z = await getTranslations('Name');
   const isRTL = useLocale() === 'ar';
 
+
   const mainNavigation: NavigationItem[] = [
     { key: 'trucks', href: '/trucks', title: t('trucks.title') },
     { key: 'service', href: '/service', title: t('services_parts.title') },
     { key: 'contact', href: '/contact', title: t('contact.title') },
   ];
+
+
 
   return (
     <section className="relative shadow-sm border-b">
@@ -31,24 +35,16 @@ const Navigation = async () => {
             <div className={`flex flex-nowrap items-center gap-4 font-semibold text-lg tracking-wide ${isRTL ? 'mr-0' : 'lg:ml-0'}`}>
               <Link href="/" className="relative flex items-center gap-3">
                 <span className="sr-only">Gazos</span>
-                <svg
-                  className="h-9 text-red-500 dark:text-red-500"
-                  id="Layer_2"
-                  data-name="Layer 2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 66.87 83.67"
-                >
-                  <defs>
-                    <style>
-                      {`.cls-1 { fill: currentColor; stroke-width: 0px; }`}
-                    </style>
-                  </defs>
-                  <g id="Layer_1-2" data-name="Layer 1">
-                    <polygon className="cls-1" points="18.27 26.97 33.84 0 49.41 26.97 33.84 53.95 18.27 26.97" />
-                    <polygon className="cls-1" points="35.72 56.62 51.29 29.65 66.87 56.62 51.29 83.6 35.72 56.62" />
-                    <polygon className="cls-1" points="0 56.69 15.57 29.72 31.15 56.69 15.57 83.67 0 56.69" />
-                  </g>
-                </svg>
+                <img
+                  className="h-8 w-auto dark:hidden"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=black"
+                  alt="Light Logo"
+                />
+                <img
+                  className="h-8 w-auto hidden dark:block"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                  alt="Dark Logo"
+                />
                 <div className="min-w-14">
                   {z('title')}
                 </div>
